@@ -3,10 +3,10 @@ De mergetool is een krachtige tool waarmee allerhande fulfilment acties of ander
 
 De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inrichten van de juiste acties. Vereiste voorkennis voor succesvol gebruik zijn:
 
-•	XML kennis
-•	SQL kennis
-•	CallPro Datamodel kennis
-•	Optioneel: HTML kennis
+* XML kennis
+* SQL kennis
+* CallPro Datamodel kennis
+* Optioneel: HTML kennis
 
 ## XML kennis
 De Mergetool wordt bestuurd door een configuratiebestand met een XML structuur. Dit standaard fileformaat gebruiken wij een geformaliseerde configuratie af te dwingen.
@@ -266,49 +266,52 @@ Een `actie` is een onderdeel van een `query`, en zal voor ieder record uit de qu
 Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen dezelfde loop/query zit (zelfde niveau). In dit voorbeeld heeft Actie A geen effect op Actie B of C.
 ```xml
 <Query>
- <Query>
- <SQL>
- <Actie A>
- </Actie A>
- </Query>
- <Query>
- <SQL>
- <Actie B>
- </Actie B>
- </Query>
+    <SQL></SQL>
+    <Query>
+    <SQL></SQL>
+        <Actie A>
+        </Actie A>
+    </Query>
+    <Query>
+    <SQL></SQL>
+        <Actie B>
+        </Actie B>
+    </Query>
 </Query>
 <Actie C>
 </Actie C>
+
 ```
 
 ### Onsuccesfull en OnFailure
 Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat van de buitenste is dit:
 ```xml
 <Query>
- <Query>
- <SQL>
- </Query>
- <Query>
- <SQL>
- </Query>
- <Actie A>
- <OnSuccesfull>
- <Actie C>
- </Actie C>
- </OnSuccesfull>
- </Actie A>
- <Actie B>
- <OnSuccesfull>
- <Actie C>
- </Actie C>
- </OnSuccesfull>
- </Actie B>
+<SQL></SQL>
+    <Query>
+    <SQL></SQL>
+    </Query>
+    <Query>
+    <SQL></SQL>
+    </Query>
+    <Actie A>
+    <OnSuccesfull>
+        <Actie C>
+        </Actie C>
+    </OnSuccesfull>
+    </Actie A>
+    <Actie B>
+    <OnSuccesfull>
+        <Actie C>
+        </Actie C>
+    </OnSuccesfull>
+    </Actie B>
 </Query>
 ```
 Naast de OnSuccesfull is er ook een OnFailure. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
 
-### Conditional acties
+### Conditional attribuut
 Dat wil zeggen dat een actie alleen wordt uitgevoerd als aan een bepaalde voorwaarde (condition) wordt voldaan.
 ```xml
 <Action Type=”eMail” Condition=”%VARIABLE.TESTVALUE% = 1”>
@@ -508,6 +511,8 @@ Een pagina kan worden opgemaakt met drie afzonderlijke html delen, de header, de
 footer en de content(body). Header en Footer zijn (evenals margins) optioneel.
 Daarnaast kan nog de pagina size worden opgegeven. Deze staat standaard op A4. De parameter bestaat uit een voor gedefinieerde paginagrootte zoals A4, A3, Letter etc., of uit een breedte en hoogte in cm of inch. Bijvoorbeeld: 21.0cm;29.7cm
 
+![page-size](page-size.png)
+
 ### TAG Action
 ```xml
 <Action Type=”TAG”>
@@ -525,7 +530,7 @@ loglevel kan een andere level worden gebruikt. Mogelijkheden zijn: debug, trace,
     <Variable Name="varname" Type=”reference|value”>1</Variable>
 </Action>
 ```
-De set actie set variabelen die in vervolg acties kunnen worden gebruikt. De variabelen krijgen de naam VARIABLE.varname. Standaard is een variabele een reference, dit 21 betekend dat de waarde 1-op-1 wordt overgenomen bij later gebruik. Wanneer type=”value” dan wordt de gemergde waarde meegenomen voor later gebruik.
+De set actie set variabelen die in vervolg acties kunnen worden gebruikt. De variabelen krijgen de naam `VARIABLE.varname`. Standaard is een variabele een reference, dit betekend dat de waarde 1-op-1 wordt overgenomen bij later gebruik. Wanneer type=”value” dan wordt de gemergde waarde meegenomen voor later gebruik.
 
 ### URL Action
 ```xml
@@ -547,7 +552,7 @@ De URL wordt opgeroepen, en het resultaat (html pagina) wordt in de collectionse
 Dit actie werkt alleen i.c.m. CallPro, en zal een CallPro resource type proberen te laden.
 De ResourceID is verplicht, evenals een geldig ResourceType. De volgende
 Resourcetypen worden ondersteund:
-| Resource | |
+| ResourceType | |
 | - | - |
 | ENTRY | Extra: Alle scriptvelden zijn dan beschikbaar via de collectie |
 | EXPORTDEF | Extra: EXTERNAL, INTERNAL en TEMPLATE zijn beschikbaar External is een gescheiden lijst met de externe veldnamen. Internal is een gescheiden lijst met de interne veldnamen Template is een gescheiden lijst met interne veldnamen inclusief de collecties (CALLIST of CLENTRIES) Filter expressie voor de export
@@ -598,7 +603,7 @@ Dit voorbeeld importeert de excelsheet “theData” in Excel bestand test.xlsx 
 Verstuurd een sm bericht (message) naar recipient(s). Recipients mag 1 zijn, maar ook meerdere komma gescheiden mobiele nummers. Standaard wordt verstuurd via Speakup, maar ook spryng kan worden gekozen als SMS gateway voor Belgie.
 
 ### API Action
-De API action is niet direct bedoeld voor fulfilment, maar wordt gebruikt als configuratie voor een query-engine. Een API action mag ook alleen bestaan in API configs. Dit zijn configs waar het schedule van het type “API” is. De config kan alleen worden gestart middels een API call naar de Mergetool service, en levert uitvoer als json bericht.
+De API action is niet direct bedoeld voor fulfilment, maar wordt gebruikt als configuratie voor een query-engine. Een API action moet in een config met schedule type API worden geplaatst. De config kan alleen worden gestart middels een API call naar de Mergetool service, en levert uitvoer als json bericht.
 Voorbeeld van een API script dat actieve gebruikers oplevert.
 ```xml
 <Settings>
@@ -635,13 +640,18 @@ from AgentDefs a join resdefs r on a.ResID=r.ResID Where r.ResID >= 0
 </Settings>
 ```
 
+Deze api kan worden opgeroepen met ene REST call naar `http://server:port/api/agentlist`
+
+
 ### Webservice Action
-De webservice action is een generieke methode om webservices aan te roepen, en
-resultaten terug te ontvangen. Bijvoorbeeld:
+De webservice action is een generieke methode om webservices aan te roepen, en resultaten terug te ontvangen. Bijvoorbeeld:
 ```xml 
 <Action Type="webservice" Collection="address">
     <library>addresspro</library>
     <url>http://addresspro.net</url>
+    <authorization>url | basic auth</authorization>
+    <username></username>
+    <password></password>
     <header name="Authorization">apikey %Variable.AddressProToken%</header>
     <method type="GET">api/Address/GetAddressRecord</method>
     <postcode>9727DL</postcode>
@@ -657,9 +667,6 @@ Voorbeeld Microsoft Teams:
 <Action Type="webservice" Collection="teams" Condition="false">
     <library>teams</library>
     <url>https://outlook.office.com/webhook/zzzzzz-yyyy-43a1-xxxxggggggggggggggggg-a95d-4eb3-8eb9-9f84226449ec/</url>
-    <authorization>url | basic auth</authorization>
-    <username></username>
-    <password></password>
     <method type="POST">IncomingWebhook/xxxxxxxxxxxxxxf/85bbbbb-5aaaa-41ce8a52-b437f5f50a44</method>
     <header name="contenttype">application/json</header>
     <header name="accept">application/json</header>
@@ -669,6 +676,7 @@ Voorbeeld Microsoft Teams:
     </payload>
 </Action>
 ```
+Bovenstaande webservice call zou een nieuwe post plaats in een Teams channel.
 
 ## Systeemvelden
 De mergetool kent een aantal systeemvelden die beschikbaar zijn in de collectie `SYS`, `ENVIRONMENT` en `VARIABLE`. Deeze laatste bevat alle gedefinieerde environment variabelen op de machine en optioneel via de .config gezette variabelen. Onderstaande is ene uitdraai van de standaard inhoud.
@@ -694,27 +702,14 @@ Geeft als resultaat
 <td>DT</td>
 <td>
 Specificeer een datum/tijd formaat. Er kan gebruik worden gemaakt van
-de volgende combinaties (en meer):
-d :08/17/2000
-D :Thursday, August 17, 2005
-f :Thursday, August 17, 2005 16:32
-F :Thursday, August 17, 2005 16:32:32
-g :08/17/2005 16:32
-G :08/17/2005 16:32:32
-m :August 17
-r :Thu, 17 Aug 2005 23:32:32 GMT
-s :2005-08-17T16:32:32
-t :16:32
-T :16:32:32
-u :2000-08-17 23:32:32Z
-U :Thursday, August 17, 2005 23:32:32
-y :August, 2005
-dddd, MMMM dd yyyy :Thursday, August 17 2005
-ddd, MMM d "'"yy :Thu, Aug 17 '05
-dddd, MMMM dd :Thursday, August 17
-M/yy :8/00
-dd-MM-yy :17-08-05
-ddMMyyyy :17082005
+de volgende combinaties (volledige lijst op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">docs.microsoft.com</a>:<br/>
+<br/>dddd, MMMM dd yyyy :Thursday, August 17 2015
+<br/>ddd, MMM d "'"yy :Thu, Aug 17 '15
+<br/>dddd, MMMM dd :Thursday, August 17
+<br/>M/yy :8/15
+<br/>dd-MM-yy :17-08-15
+<br/>ddMMyyyy :17082015
+<br/>dd-MM-yyyy HH:mm : 17-08-2015 09:15
 </td>
 </tr>
 <tr>
@@ -722,22 +717,24 @@ ddMMyyyy :17082005
 <td>
 Alignment van de tekst.
 [L|C|M|R]<character><width>
-L=links uitlijnen, C en M zijn centreren, R=rechts uitlijnen
-Character is het uitlijn tekens. Bijvoorbeeld een spatie ‘ ‘
-Width is de lengte van het veld.
+<br/>L=links uitlijnen
+<br/>C en M zijn centreren
+<br/>R=rechts uitlijnen
+<br/>Character is het uitlijn tekens. Bijvoorbeeld een spatie ‘ ‘
+<br/>Width is de lengte van het veld.
+<br/>\ALR 10 geeft een rechts uitgelijn veld van 10 posities waarbij het uitlijnteken een spatie is.
 </td>
 </tr>
 <tr>
 <td>CC</td>
 <td>
 Hoofdletter/kleineletter conversie
-0|1|2|3
-0=De eerste letter wordt een hoofdletter, de rest klein.
-1=Iedere eerste letter (na spatie of -) wordt een
-hoofdletter.
-2=Alles hoofdletters
-3=Alles kleine letters
-4=Initialen, resultaat is een lijst met letters en punten.
+<br/>0|1|2|3
+<br/>0=De eerste letter wordt een hoofdletter, de rest klein.
+<br/>1=Iedere eerste letter (na spatie of -) wordt een hoofdletter.
+<br/>2=Alles hoofdletters
+<br/>3=Alles kleine letters
+<br/>4=Initialen, resultaat is een lijst met letters en punten.
 </td>
 </tr>
 <tr>
@@ -749,35 +746,32 @@ Kommagescheiden lijst. Werkt als volgt:
 Als de veldwaarde a is wordt een 1 weergegeven
 Als de veldwaarde b is wordt een 2 weergegeven
 Als de veldwaarde c is wordt een 3 weergegeven
-29
+
 Binnen de " " mogen ook weer velden worden gebruikt.
-Als de veldwaarde niet voorkomt wordt er niets vervangen
-tenzij als laatste tupple een ””,”default value” wordt
-meegegeven.
+Als de veldwaarde niet voorkomt wordt er niets vervangen.
 </td>
 </tr>
 <tr>
 <td>TF</td>
 <td>Formateer het telefoonnummer.
-Gebruik:
-F - Netnummer – abonneenummer (050-5275525)
-N - alleen netnummer (050)
-A - alleen abonnenummer (5275525)
+<br/>Gebruik:
+<br/>F - Netnummer – abonneenummer (050-5275525)
+<br/>N - alleen netnummer (050)
+<br/>A - alleen abonnenummer (5275525)
 </td>
 </tr>
 <tr>
 <td>TR</td>
 <td>Spaties links en/of rechts worden verwijderd.
-L|R|A
-L - verwijder spaties voor de tekst
-R - verwijder spaties na de tekst
-A – L en R (default)
+<br/>L|R|A
+<br/>L - verwijder spaties voor de tekst
+<br/>R - verwijder spaties na de tekst
+<br/>A – L en R (default)
 </td>
 </tr>
 <tr>
 <td>QS</td>
-<td>Quote save
-Vervangt enkele quotes door dubbele.
+<td>Quote save. Vervangt enkele quotes door dubbele.
 Het quote karakter moet mee worden gegeven als parameter
 Bijvoorbeeld: \QS’
 </td>
@@ -823,7 +817,11 @@ Vervangt alle [CR][LF] door < BR />
 <td>FL</td>
 <td>Floatingpoint format function
 \FL "<format>"
-Format is een C# format specifier voor floating points
+Format is een C# format specifier voor floating points zoals beschreven op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">docs.microsoft.com</a>:<br/>
+<br/>f2: 2 decimalen 12.34
+<br/>f1: 1 decimaal 12.3
+<br/>p2: 2 decimale percentage 12.34 %
+<br/>c2: 2 decimale bedragen &euro; 12.34
 </td>
 </tr>
 <tr>
