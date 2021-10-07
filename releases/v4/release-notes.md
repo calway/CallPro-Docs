@@ -1,6 +1,16 @@
 # CallPro v4.3.2 Release Notes
+Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen minor-versienummering hebben zijn de Release Notes onderverdeeld per CallPro module. 
 
-# CallPro v4.3.2 Releases
+* [Resource Explorer](#resource-explorer-releases)
+* [Scriptmodule](#scriptmodule-releases)
+
+<br/>
+
+***
+
+<br/>
+
+# Resource Explorer Releases
 
 * [7 Oktober 2021 - CallPro v4.3.2.23](#callpro-v43223)
 * [10 september 2021 - CallPro v4.3.2.23](#callpro-v43221-22)
@@ -51,3 +61,6 @@ Op diverse plaatsen is de "Kiezen kolommen..." context-menu optie verbeterd. Als
 ## Weergegeven bestandsnamen snel openen
 In schermen wara bestandsnamen worden afgebeeld kan dit bestand door middel van een dubbel-klik worden geopent. Ook kan vanuit he context-menu de bestands locatie worden geopend in de Windows File Explorer.
 
+<br/>
+
+# Scriptmodule Releases
