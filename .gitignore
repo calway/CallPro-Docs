@@ -19,8 +19,9 @@ mono_crash.*
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
+## More specific due to my usage of releases root folder
+*/[Rr]elease/
+*/[Rr]eleases/
 x64/
 x86/
 [Aa][Rr][Mm]/
