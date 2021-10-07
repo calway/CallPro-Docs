@@ -712,7 +712,7 @@ Geeft als resultaat
 <td>DT</td>
 <td>
 Specificeer een datum/tijd formaat. Er kan gebruik worden gemaakt van
-de volgende combinaties (volledige lijst op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">docs.microsoft.com</a>:<br/>
+de volgende combinaties (volledige lijst op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
 <br/>dddd, MMMM dd yyyy :Thursday, August 17 2015
 <br/>ddd, MMM d "'"yy :Thu, Aug 17 '15
 <br/>dddd, MMMM dd :Thursday, August 17
@@ -827,7 +827,7 @@ Vervangt alle [CR][LF] door < BR />
 <td>FL</td>
 <td>Floatingpoint format function
 \FL "<format>"
-Format is een C# format specifier voor floating points zoals beschreven op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">docs.microsoft.com</a>:<br/>
+Format is een C# format specifier voor floating points zoals beschreven op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
 <br/>f2: 2 decimalen 12.34
 <br/>f1: 1 decimaal 12.3
 <br/>p2: 2 decimale percentage 12.34 %
