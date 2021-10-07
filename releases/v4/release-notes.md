@@ -2,8 +2,8 @@
 
 # CallPro v4.3.2 Releases
 
-* [7 Oktober 2021 - CallPro v4.3.2.23](#callpro-v4.3.2.23)
-* [10 september 2021 - CallPro v4.3.2.23](#callpro-v4.3.2.21-22)
+* [7 Oktober 2021 - CallPro v4.3.2.23](#callpro-v43223)
+* [10 september 2021 - CallPro v4.3.2.23](#callpro-v43221-22)
 
 <br/>
 
