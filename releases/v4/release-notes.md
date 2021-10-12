@@ -12,8 +12,9 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 
 # Resource Explorer Releases
 
-* [7 Oktober 2021 - CallPro v4.3.2.23](#callpro-v43223)
-* [10 september 2021 - CallPro v4.3.2.23](#callpro-v43221-22)
+* [12 Oktober 2021 - Resource Explorer v4.3.2.24](#resource-explorer-v43224)
+* [7 Oktober 2021 - Resource Explorer v4.3.2.23](#resource-explorer-v43223)
+* [10 september 2021 - Resource Explorer v4.3.2.23](#resource-explorer-v43221-22)
 
 <br/>
 
@@ -21,7 +22,20 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 
 <br/>
 
-# CallPro v4.3.2.23
+# Resource Explorer v4.3.2.24
+*beschikbaar op 12 oktober 2021*
+
+Dit is een kritische bugfix release.
+
+# Bugfix
+
+## Scriptdefinitie veldnaam lengte bugfix
+Bij het wijzigen van de scriptdefinitie werd niet gecontroleerd of de veldnaam maximaal 25 tekens lang is waardoor bij het bijwerken van de bellijsten die zijn gebseerd op deze scriptdefinitie een mismatch kan ontstaan tussen het veld in de database (langer dan 25 tekens) en he tveld dat uiteindelijk in de scriptdefinite wordt bewaard (maximaal 25 tekens).
+Het resultaat is dat de betreffende bellijsten die zijn gebaseerd op deze scriptdefinitie niet meer bruikbaar zijn omdat de scriptdefinite velden `noemt` die fysiek niet in de datasbe staan odner die naam. 
+
+<br/>
+
+# Resource Explorer v4.3.2.23
 *beschikbaar op 7 oktober 2021*
 
 In deze release zijn de volgende functies toegevoegd, gewijzigd of verbeterd.
@@ -31,10 +45,12 @@ In deze release zijn de volgende functies toegevoegd, gewijzigd of verbeterd.
 
 ## Importdefinitie ne Scriptdefinitie aanmaken gecombineerd
 In deze release is het inrichten van een nieuwe campagne verbeterd door het maken van de importdefinitie en de scriptdefinitie te combineren. 
-Een aangeleverd importbestand kan nu bij het maken van de importdefinitie ook driect worden gebruitk om een bijbehorende scriptdefinite te maken.
+Een aangeleverd importbestand kan nu bij het maken van de importdefinitie ook direct worden gebruikt om een bijbehorende scriptdefinitie te maken.
+
+<br/>
 
 
-# CallPro v4.3.2.21-22
+# Resource Explorer v4.3.2.21-22
 *beschikbaar op 10 september 2021*
 
 In deze release zijn de volgende functies toegevoegd, gewijzigd of verbeterd.
