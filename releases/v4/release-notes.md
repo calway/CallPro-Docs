@@ -14,7 +14,7 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 
 * [12 Oktober 2021 - Resource Explorer v4.3.2.24](#resource-explorer-v43224)
 * [7 Oktober 2021 - Resource Explorer v4.3.2.23](#resource-explorer-v43223)
-* [10 september 2021 - Resource Explorer v4.3.2.23](#resource-explorer-v43221-22)
+* [10 september 2021 - Resource Explorer v4.3.2.21-22](#resource-explorer-v43221-22)
 
 <br/>
 
