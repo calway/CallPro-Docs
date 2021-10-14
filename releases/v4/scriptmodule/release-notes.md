@@ -69,16 +69,20 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ***
 ## v4.3.2.77 - 2020-12-18
 ### Fixed
+
 ***
 ## v4.3.2.76 - 2020-08-18
 ### Fixed
+
 ***
 ## v4.3.2.75 - 2020-07-23
 ### Fixed
+
 ***
 ## v4.3.2.74 - 2020-07-20
 ### Changed
-- Supprt menu item toegevoegd
+- Support menu item toegevoegd
+
 ***
 ## v4.3.2.73 - 2020-07-15
 ### Fixed
@@ -98,6 +102,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ## v4.3.2.68 - 2021-06-09
 ### Changed
 -- Usabality verbetering Entry Find module
+
 ***
 ## v4.3.2.67 - 2020-06-08
 ### Fixed
@@ -105,6 +110,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ## v4.3.2.66 - 2020-05-28
 ### Changed
 -- Versienummer controle bijgesteld voor auto-update process
+
 ***
 ## v4.3.2.65 - 2020-03-18
 ### Changed
