@@ -1,4 +1,4 @@
-# Autoscript v4 Release Notes
+# Autoscript Release Notes
 Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v4/release-notes.md) te vinden.
 
 <br/>
