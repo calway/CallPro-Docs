@@ -463,7 +463,7 @@ worden gebruikt.
 | %AGENT.GENDER% | Geslacht M/V | 
 | %AGENT.MOBILETELNR% | Mobiele telefoonnummer | 
 | %AGENT.HOMETELNR% | Vast telefoonnummer | 
-| %AGENT.\_\_\_\_\_% | Aanvullend worden alle variabelen die bij de agent zijn vastgelegd ook opgenomen. **LET OP! Indien een variabele naam overeenkomt met een van de bovenstaande velden wordt deze waarde overschreven!** | 
+| %AGENT._____% | Aanvullend worden alle variabelen die bij de agent zijn vastgelegd ook opgenomen. **LET OP! Indien een variabele naam overeenkomt met een van de bovenstaande velden wordt deze waarde overschreven!** | 
 
 | Veld                | Waarde |
 | ------------------- | ------ |
@@ -498,11 +498,11 @@ worden gebruikt.
 
 | Veld                | Waarde                                                   |
 | ------------------- | -------------------------------------------------------- |
-| %SCRIPT.\_\_\_\_\_% | Voor elk veld uit de scriptdefinitie is er een variabele |
+| %SCRIPT._____% | Voor elk veld uit de scriptdefinitie is er een variabele |
 
 | Veld                | Waarde                                                   |
 | ------------------- | -------------------------------------------------------- |
-| %VARIABLE.\_\_\_\_\_% | Voor elke variabele dis is gedefinieerd op de scriptdefinitie is er een waarde. Daarna worden de variabelen op de campagne opgenomen. ** LET OP! Als op de campagne variabelen met dezelfde naam als op de scriptdefinitie zijn gedefinieerd dan worden deze waarden overschreven en blijft de waarde die is gedefinieerd bij de campagne over. ** |
+| %VARIABLE._____% | Voor elke variabele dis is gedefinieerd op de scriptdefinitie is er een waarde. Daarna worden de variabelen op de campagne opgenomen. ** LET OP! Als op de campagne variabelen met dezelfde naam als op de scriptdefinitie zijn gedefinieerd dan worden deze waarden overschreven en blijft de waarde die is gedefinieerd bij de campagne over. ** |
 
 
 ## [Geavanceerde opmaak met het autoscript](geavanceerde-autoscript-opmaak.md)
@@ -516,14 +516,14 @@ worden gebruikt.
 # Belscript systeemvelden (deprecated)
 
 In het belscript worden de velden voorafgegaan door een speciale prefix
-**script\_**. De waarden van deze velden worden in de CallPro-database
+**script_**. De waarden van deze velden worden in de CallPro-database
 opgeslagen. De prefix wordt in het belscript toegevoegd aan de veldnaam
 om duidelijk het onderscheid aan te geven tussen bellijstvelden en
 overige velden in het script.
 
 Belscript-systeemvelden worden aan het belscript meegegeven. De waarden
 van deze velden zijn dus beschikbaar in het belscript. Ze zijn te
-herkennen aan de prefix **script\_sys\_** en worden gezet door
+herkennen aan de prefix **script_sys_** en worden gezet door
 **CallPro**.
 
 Wij raden af om deze methode te gebruiken en adviseren in de plaats
@@ -531,33 +531,33 @@ daarvan de object hierarchische velden in te zetten.
 
 | Systeemveld                      | Hierarchisch veld                                            | Betekenis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| script\_sys\_agentid             | script\_sys\_oagent\_id                                      | Dit is de unieke code van de agent die op dit moment contact legt met het telefoonnummer.  |
-| script\_sys\_agentname           | script\_sys\_oagent\_name                                    | Dit is de naam zoals die voor de agent is vastgelegd.  |
-| script\_sys\_clentryid           | script\_sys\_oentry\_id                                      | De unieke identificatie van de huidige item dat wordt weergegeven door het belscript. |
-| script\_sys\_callagentid         | script\_sys\_oentry\_ocallbackagent\_id                      | De unieke code van de agent die de vorige belpoging heeft gedaan. |
-| script\_sys\_callagentname       | script\_sys\_oentry\_ocallbackagent\_name                    | De naam van de agent die de vorige belpoging heeft gedaan.  |
-| script\_sys\_callbegindatetime   | script\_sys\_                                                | De datum + tijd van de start van het gesprek. Dit is het tijdstip waarop het bellijstitem is aangeboden bij de agent. Dit komt niet exact overeen met het tijdstip waarop de agent contact legt.  |
-| script\_sys\_callbegindate       | script\_sys\_                                                | Het datum-deel van het veld CallBegin.  |
-| script\_sys\_callbegintime       | script\_sys\_                                                | Het tijd-deel van het veld CallBegin. |
-| script\_sys\_scriptname          | script\_sys\_                                                | De naam van het belscript dat wordt weergegeven in de Script Explorer.  |
-| script\_sys\_calllistid          | script\_sys\_ocalllist\_id                                   | De unieke code van de bellijst waaruit het huidige weergegeven item komt.  |
-| script\_sys\_calllistname        | script\_sys\_ocalllist\_name                                 | De naam van de bellijst.  |
-| script\_sys\_importid            | script\_sys\_oentry\_importid                                | De unieke code van de Import die het huidige item heeft toegevoegd aan de bellijst.  |
-| script\_sys\_callstatusid        | script\_sys\_oentry\_ocallstatus\_id                         | De belopdrachtstatus die het item had op het moment dat het aan de Agent is aangeboden. De standaard bij CallPro geleverde belopdrachtstatussen hebben de volgende id's: nieuwe belopdracht (0), verwerkt (1), sit tone (2), geen gehoor (3), voicemail (4), fax/modem (5), in gesprek (6), terugbellen (7), afspraak (8) (bij de agendamodule). |
-| script\_sys\_callstatusname      | script\_sys\_oentry\_ocallstatus\_name                       | De omschrijving van de belopdrachtstatus. |
-| script\_sys\_callstatusdatetime  | script\_sys\_oentry\_callstatdatetime                        | De datum + tijd waarop de belopdrachtstatus is gezet. In het belscript kan dit veld worden gebruikt om te refereren naar het vorige contact. |
-| script\_sys\_callpriority        | script\_sys\_oentry\_statpriority                            | De prioriteit van het item in de bellijst. Des te hoger de waarde, des te lager de prioriteit. Voor meer uitleg over Statusprioriteiten. |
-| script\_sys\_noreachflag         | script\_sys\_oentry\_noreachflag                             | Met deze vlag wordt aangegeven of het item een **Niet bereikt**-status had op het moment dat het aan de Agent is aangeboden. Dit veld kan worden gebruikt in het belscript om een gewijzigde tekst weer te geven. |
-| script\_sys\_callstatuscatid     | script\_sys\_                                                | De unieke code van de prioriteit van de belopdrachtstatus. Er zijn vier categorieën: Niet bereikt (waarde=1), terugbellen (waarde=2), verwerkt (waarde=3) en nieuwe belopdracht (waarde=4). De prioriteit bepaalt de verwerkingsvolgorde van de belopdrachten.  |
-| script\_sys\_nrofattempts        | script\_sys\_oentry\_nrofattempts                            | Dit veld geeft het totaal aantal belpogingen aan op dit telefoonnummer. |
-| script\_sys\_nrofnoreach         | script\_sys\_oentry\_nrofnoreach                             | Dit veld geeft het aantal belpogingen waarbij voor de optie **Niet bereikt** is gekozen sinds het laatste contact. Telkens als contact is geweest en het gesprek wordt beëindigd met **Verwerk** of **Terugbellen** wordt deze telling op 0 gezet.  |
-| script\_sys\_entrynote           | script\_sys\_oentry\_notes                                   | Opmerkingen die aan een belopdracht kunnen worden toegevoegd. |
-| script\_sys\_campaignid          | script\_sys\_ocampaign\_id                                   | De unieke code van de campagne waarin de huidig geactiveerde bellijst staat. |
-| script\_sys\_campaignname        | script\_sys\_ocampaign\_name                                 | De naam van de campagne. |
-| script\_sys\_cli                 | script\_sys\_odialer\_                                       | Voor het inbound CLI-nummer. |
-| script\_sys\_ddi                 | script\_sys\_odialer\_                                       | Voor het inbound DDI-nummer.  |
-| script\_sys\_dialmode            | script\_sys\_odialer\_                                       | De dial-mode van de agent; 1=outbound, 5=inbound.  |
-| script\_sys\_lastcontactdatetime | script\_sys\_oentry\_olastcontactattempt\_ callbegindatetime | Dit veld geeft de tijd aan waarop het laatst contact is geweest met de klant/prospect.  |
+| script_sys_agentid             | script_sys_oagent_id                                      | Dit is de unieke code van de agent die op dit moment contact legt met het telefoonnummer.  |
+| script_sys_agentname           | script_sys_oagent_name                                    | Dit is de naam zoals die voor de agent is vastgelegd.  |
+| script_sys_clentryid           | script_sys_oentry_id                                      | De unieke identificatie van de huidige item dat wordt weergegeven door het belscript. |
+| script_sys_callagentid         | script_sys_oentry_ocallbackagent_id                      | De unieke code van de agent die de vorige belpoging heeft gedaan. |
+| script_sys_callagentname       | script_sys_oentry_ocallbackagent_name                    | De naam van de agent die de vorige belpoging heeft gedaan.  |
+| script_sys_callbegindatetime   | script_sys_                                                | De datum + tijd van de start van het gesprek. Dit is het tijdstip waarop het bellijstitem is aangeboden bij de agent. Dit komt niet exact overeen met het tijdstip waarop de agent contact legt.  |
+| script_sys_callbegindate       | script_sys_                                                | Het datum-deel van het veld CallBegin.  |
+| script_sys_callbegintime       | script_sys_                                                | Het tijd-deel van het veld CallBegin. |
+| script_sys_scriptname          | script_sys_                                                | De naam van het belscript dat wordt weergegeven in de Script Explorer.  |
+| script_sys_calllistid          | script_sys_ocalllist_id                                   | De unieke code van de bellijst waaruit het huidige weergegeven item komt.  |
+| script_sys_calllistname        | script_sys_ocalllist_name                                 | De naam van de bellijst.  |
+| script_sys_importid            | script_sys_oentry_importid                                | De unieke code van de Import die het huidige item heeft toegevoegd aan de bellijst.  |
+| script_sys_callstatusid        | script_sys_oentry_ocallstatus_id                         | De belopdrachtstatus die het item had op het moment dat het aan de Agent is aangeboden. De standaard bij CallPro geleverde belopdrachtstatussen hebben de volgende id's: nieuwe belopdracht (0), verwerkt (1), sit tone (2), geen gehoor (3), voicemail (4), fax/modem (5), in gesprek (6), terugbellen (7), afspraak (8) (bij de agendamodule). |
+| script_sys_callstatusname      | script_sys_oentry_ocallstatus_name                       | De omschrijving van de belopdrachtstatus. |
+| script_sys_callstatusdatetime  | script_sys_oentry_callstatdatetime                        | De datum + tijd waarop de belopdrachtstatus is gezet. In het belscript kan dit veld worden gebruikt om te refereren naar het vorige contact. |
+| script_sys_callpriority        | script_sys_oentry_statpriority                            | De prioriteit van het item in de bellijst. Des te hoger de waarde, des te lager de prioriteit. Voor meer uitleg over Statusprioriteiten. |
+| script_sys_noreachflag         | script_sys_oentry_noreachflag                             | Met deze vlag wordt aangegeven of het item een **Niet bereikt**-status had op het moment dat het aan de Agent is aangeboden. Dit veld kan worden gebruikt in het belscript om een gewijzigde tekst weer te geven. |
+| script_sys_callstatuscatid     | script_sys_                                                | De unieke code van de prioriteit van de belopdrachtstatus. Er zijn vier categorieën: Niet bereikt (waarde=1), terugbellen (waarde=2), verwerkt (waarde=3) en nieuwe belopdracht (waarde=4). De prioriteit bepaalt de verwerkingsvolgorde van de belopdrachten.  |
+| script_sys_nrofattempts        | script_sys_oentry_nrofattempts                            | Dit veld geeft het totaal aantal belpogingen aan op dit telefoonnummer. |
+| script_sys_nrofnoreach         | script_sys_oentry_nrofnoreach                             | Dit veld geeft het aantal belpogingen waarbij voor de optie **Niet bereikt** is gekozen sinds het laatste contact. Telkens als contact is geweest en het gesprek wordt beëindigd met **Verwerk** of **Terugbellen** wordt deze telling op 0 gezet.  |
+| script_sys_entrynote           | script_sys_oentry_notes                                   | Opmerkingen die aan een belopdracht kunnen worden toegevoegd. |
+| script_sys_campaignid          | script_sys_ocampaign_id                                   | De unieke code van de campagne waarin de huidig geactiveerde bellijst staat. |
+| script_sys_campaignname        | script_sys_ocampaign_name                                 | De naam van de campagne. |
+| script_sys_cli                 | script_sys_odialer_                                       | Voor het inbound CLI-nummer. |
+| script_sys_ddi                 | script_sys_odialer_                                       | Voor het inbound DDI-nummer.  |
+| script_sys_dialmode            | script_sys_odialer_                                       | De dial-mode van de agent; 1=outbound, 5=inbound.  |
+| script_sys_lastcontactdatetime | script_sys_oentry_olastcontactattempt_ callbegindatetime | Dit veld geeft de tijd aan waarop het laatst contact is geweest met de klant/prospect.  |
 
 # Object hiërarchische velden
 
@@ -577,8 +577,8 @@ objecten worden ondersteund:
 | oDialer           | Het dialer object dat wordt gebruikt                                      |
 
 Sommige objecten zijn afhankelijk van de context waarin ze worden
-gebruikt. Bijvoorbeeld script\_sys\_oagent\_name Geeft de naam van de
-agent dis is ingelogd. Terwijl script\_sys\_oentry\_ocallbackagent\_name
+gebruikt. Bijvoorbeeld script_sys_oagent_name Geeft de naam van de
+agent dis is ingelogd. Terwijl script_sys_oentry_ocallbackagent_name
 de naam geeft van de agent die op de huidige belopdracht staat ingesteld
 als terugbelagent.
 

@@ -36,7 +36,7 @@ Met deze systeemactie wordt het terugbellen scherm geactiveerd. De Agent
 is vrij om een van de terugbel belopdrachtstatussen te kiezen uit de
 keuzelijst.
 
-\#SCRIPT\_SELECTSTAT?STATCAT=CALLBACK
+\#SCRIPT_SELECTSTAT?STATCAT=CALLBACK
 
 ### Verwerkscherm
 
@@ -44,7 +44,7 @@ Met deze systeemactie wordt het verwerk scherm geactiveerd. De agent is
 vrij om een van de verwerkt belopdrachtstatussen te kiezen uit de
 keuzelijst.
 
-\#SCRIPT\_SELECTSTAT?STATCAT=PROCESS
+\#SCRIPT_SELECTSTAT?STATCAT=PROCESS
 
 ### Niet-bereikt scherm
 
@@ -52,7 +52,7 @@ Met deze systeemactie wordt het Niet bereikt scherm geactiveerd. De
 agent is vrij om een van de Niet bereikt belopdrachtstatussen te kiezen
 uit de keuzelijst.
 
-\#SCRIPT\_SELECTSTAT?STATCAT=NOREACH
+\#SCRIPT_SELECTSTAT?STATCAT=NOREACH
 
 ### Belopdracht afcoderen
 
@@ -61,7 +61,7 @@ terugbellenscherm, het verwerkscherm of het niet-bereiktscherm. In het
 betreffende scherm is de belopdrachtstatus geselecteerd en kan niet
 gewijzigd worden.
 
-\#SCRIPT\_SELECTSTAT?STATCODE=\<status-code\>\[\&AUTOSELECT\]\[\&CALLBACKEXPR=\<callback-expr\>\]\[\&CALLBACKAGENT=\<agent-pad\>\[\&PRIORITY=\<number\>\]\[\&MOVEENTRY=\<bellijst-pad\>\]\[\&CHANGENOTE={
+\#SCRIPT_SELECTSTAT?STATCODE=\<status-code\>\[\&AUTOSELECT\]\[\&CALLBACKEXPR=\<callback-expr\>\]\[\&CALLBACKAGENT=\<agent-pad\>\[\&PRIORITY=\<number\>\]\[\&MOVEENTRY=\<bellijst-pad\>\]\[\&CHANGENOTE={
 ON | OFF }\]\[\&CHANGETELNR={ ON | OFF }\]
 
 Een aantal paramaters is optioneel. Deze parameters bepalen enkele extra
@@ -83,7 +83,7 @@ Met deze systeemactie kan een externe windows applicatie worden geopend.
 Geef het complete pad op naar de .EXE of .BAT/.CMD van het programma
 gestart moet worden.
 
-\#SCRIPT\_WINEXEC?FILE=\<bestandsnaam\>
+\#SCRIPT_WINEXEC?FILE=\<bestandsnaam\>
 
 ### Herstellen/annuleren wijzigingen
 
@@ -92,7 +92,7 @@ pagina worden teruggezet naar de waarden zoals ze waren toen de pagina
 werd geladen. Let op\! Dit geldt alleen voor de velden die op deze
 pagina staan.
 
-\#SCRIPT\_RESTOREINPUT
+\#SCRIPT_RESTOREINPUT
 
 ### Aanmelden
 
@@ -102,7 +102,7 @@ ervoor dat het dialoogvenster dat normaal wel wordt getoond niet wordt
 getoond. Zonder AUTOSELECT wordt de meegegeven keuze (als die er is) als
 standaardkeuze gebruikt.
 
-\#SCRIPT\_SUBSCRIBE?\[DIALMODE={OUTBOUND | INBOUND | CALLBLENDING
+\#SCRIPT_SUBSCRIBE?\[DIALMODE={OUTBOUND | INBOUND | CALLBLENDING
 }\[\&AUTOSELECT\]
 
 ### Pauze
@@ -118,7 +118,7 @@ pauze-stand zonder tussenkomst van een bevestigingscherm met de vraag
 De andere twee parameters SET en CLEAR zorgen respectievelijk voor het
 instellen en het opheffen van het pauze-verzoek.
 
-\#SCRIPT\_BREAK?\[{ SET | CLEAR }\]\[\&NOCONFIRM\]
+\#SCRIPT_BREAK?\[{ SET | CLEAR }\]\[\&NOCONFIRM\]
 
 ### Uitloggen
 
@@ -130,7 +130,7 @@ vraag "wilt u na het beëindigen van het gesprek uitloggen?". De andere
 twee parameters SET en CLEAR zorgen respectievelijk voor het instellen
 en het opheffen van het uitlog-verzoek.
 
-\#SCRIPT\_LOGOUT?\[{ SET | CLEAR }\]\[\&NOCONFIRM\]
+\#SCRIPT_LOGOUT?\[{ SET | CLEAR }\]\[\&NOCONFIRM\]
 
 ### Telefoonnummer kiezen
 
@@ -140,7 +140,7 @@ ook worden gebruikt om een tweede, alternatief nummer, te bellen. Met de
 optionele parameter TELNR kan een willekeurig telefoonnummer ingesteld
 worden.
 
-\#SCRIPT\_DIAL?\[TELNR=\<telefoonnummer\>\] \[\&AUTOSELECTSTAT= { TRUE |
+\#SCRIPT_DIAL?\[TELNR=\<telefoonnummer\>\] \[\&AUTOSELECTSTAT= { TRUE |
 FALSE } \]
 
 ### Beëindig gesprek
@@ -148,7 +148,7 @@ FALSE } \]
 Met deze systeemactie wordt een actief gesprek beëindigd, de
 telefoonlijn wordt opgehangen.
 
-\#SCRIPT\_HANGUP
+\#SCRIPT_HANGUP
 
 ### Doorschakelen naar Bel-me-niet IVR
 
@@ -156,19 +156,19 @@ Indien de bel-me-niet module beschikbaar is in de licentie wordt met
 deze systeemactie een actief gesprek doorgezet naar de IVR voor een
 bel-me-niet registratie. De agent komt hiermee in wrapup.
 
-\#SCRIPT\_REGDONOTCALL
+\#SCRIPT_REGDONOTCALL
 
 ### Dialing configuratie
 
 Met deze actie wordt het Dialing Configuratiescherm opgeroepen.
 
-\#SCRIPT\_DIALOPTIONS
+\#SCRIPT_DIALOPTIONS
 
 ### Verander wachtwoord
 
 Met deze systeemactie kan de agent zijn wachtwoord wijzigen.
 
-\#SCRIPT\_CHANGEPASSWORD
+\#SCRIPT_CHANGEPASSWORD
 
 ### Nieuwe belopdracht
 
@@ -179,21 +179,21 @@ een campagne en bellijst heeft geselecteerd wordt het
 Belopdracht-eigenschappenscherm geopend en kunnen de gegevens van de
 nieuwe belopdracht worden ingevoerd.
 
-\#SCRIPT\_NEWENTRY
+\#SCRIPT_NEWENTRY
 
 ### Zoek belopdracht
 
 Met deze menuoptie wordt het Belopdracht/Prospect Zoeken-applet geopend.
 Deze actie is alleen beschikbaar voor <span class="underline">inbound</span> campagnes.
 
-\#SCRIPT\_SEARCHENTRY
+\#SCRIPT_SEARCHENTRY
 
 ### Terug navigeren
 
 Bestaat het script uit meerdere pagina's dan kan deze actie worden
 gebruikt om een stap terug te doen naar de vorige pagina.
 
-\#SCRIPT\_BACK
+\#SCRIPT_BACK
 
 ### Vooruit navigeren
 
@@ -202,13 +202,13 @@ om weer naar voren te stappen in het script. De knop kan alleen worden
 gebruikt om de stappen die terug zijn genomen ongedaan te maken en is
 niet bedoeld om door het script te bladeren.
 
-\#SCRIPT\_FORWARD
+\#SCRIPT_FORWARD
 
 ### Belopdracht eigenschappen
 
 Met deze actie wordt het belopdracht-eigenschappenscherm opgeroepen.
 
-\#SCRIPT\_PROPERTYENTRY
+\#SCRIPT_PROPERTYENTRY
 
 ### Oproep agendamodule
 
@@ -218,7 +218,7 @@ dient de naam van de agenda te bevatten). Met de parameter DISABLESWITCH
 kan in de agenda voorkomen worden dat de gebruiker tussen meerdere
 agenda's kan schakelen.
 
-\#SCRIPT\_CALLMODULE?MODULE=CALENDAR.APP\[\&CALENDAR=\<calendar\>\]\[\&DISABLESWITCH\]
+\#SCRIPT_CALLMODULE?MODULE=CALENDAR.APP\[\&CALENDAR=\<calendar\>\]\[\&DISABLESWITCH\]
 
 ### Volgende belopdracht
 
@@ -232,7 +232,7 @@ geannuleerd. Bij uitloggen na instellen van een belopdracht wordt de
 belopdracht automatisch vrijgegeven. De belopdracht mag niet al in
 gebruik (vergrendeld) zijn bij de aanvraag.
 
-\#SCRIPT\_NEXTENTRY?{ ENTRYID=\<entryid\>\&CAMPAIGNID=\<campaignid\> |
+\#SCRIPT_NEXTENTRY?{ ENTRYID=\<entryid\>\&CAMPAIGNID=\<campaignid\> |
 CLEAR }\[\&PROMPT\]
 
 ### Call blending; overschakelen op andere dial mode
@@ -242,7 +242,7 @@ inbound of outbound switchen. Het commando werkt analoog aan een
 Pauze-verzoek; het verzoek zal ingewilligd worden indien het systeem
 daar toe in staat is.
 
-\#SCRIPT\_SWITCHDIALMODE?\[{ SET | CLEAR
+\#SCRIPT_SWITCHDIALMODE?\[{ SET | CLEAR
 }\]\[\&NOCONFIRM\]\[CAMPAIGNID=\<id\>\&NEWENTRY\]
 
 Met de optie CAMPAIGNID=\<id\>\&NEWENTRY schakelt CallPro voor de
@@ -256,27 +256,27 @@ die inbound aan het bellen is, kan zichzelf via deze scriptactie
 (tijdelijk) afmelden bij de dialer waardoor hij geen gesprekken meer
 ontvangt.
 
-\#SCRIPT\_SETAGENT?MODE={ READY | NOT\_READY }
+\#SCRIPT_SETAGENT?MODE={ READY | NOT_READY }
 
 ### Cancel belopdracht; de belopdracht wordt beëindigd zonder te bewaren
 
 Hiermee een agent een belopdracht beëindigen zonder te bewaren. Deze
 systeemactie werkt alleen in inbound campagnes.
 
-\#SCRIPT\_CANCELENTRY
+\#SCRIPT_CANCELENTRY
 
 ### Speciale hyperlink anchors
 
 Met deze speciale anchors kan binnen de pagina worden gesprongen waarbij
 bepaald gedrag kan worden onderdrukt.
 
-\#\<name\>\&SCRIPT\_OPTION={ NODATA | NOSAVE | NORESTORE }
+\#\<name\>\&SCRIPT_OPTION={ NODATA | NOSAVE | NORESTORE }
 
 ### Opnemen gesprek
 
 Met deze systeemactie kan de opname van het gesprek worden gestuurd.
 
-\#SCRIPT\_RECORDING?ACTION={ START | STOP | RESUME | PAUSE | TOGGLE }
+\#SCRIPT_RECORDING?ACTION={ START | STOP | RESUME | PAUSE | TOGGLE }
 
 ### Gesprek direct doorschakelen (blind transfer)
 
@@ -284,11 +284,11 @@ Met deze systeemactie wordt een actief gesprek (live call) direct
 doorgeschakeld naar het opgegeven nummer. De agent schakelt hierdoor
 naar de wrapup fase.
 
-\#SCRIPT\_TRANSFER?TYPE=BLIND\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
+\#SCRIPT_TRANSFER?TYPE=BLIND\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
 
 Een alternatieve variant hierop is:
 
-\#SCRIPT\_TRANSFER?TYPE=BLINDEARLYMEDIA\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
+\#SCRIPT_TRANSFER?TYPE=BLINDEARLYMEDIA\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
 
 Deze variant schakelt het audiokanaal aal door voordat de target heeft
 opgenomen. Dit is vooral bruikbaar als er doorgeschakeld wordt naar
@@ -303,27 +303,27 @@ geparkeerd. Deze variant is bedoeld als de Agent uit meerdere nummers
 kan kiezen en niet direct het eerste nummer geprobeerd moet worden maar
 de agent nog tijd nodig heeft om het juiste nummer te vinden/kiezen.
 
-\#SCRIPT\_TRANSFER?TYPE=ATTENDEDPREVIEW\&CONTEXT=dialer-transfer
+\#SCRIPT_TRANSFER?TYPE=ATTENDEDPREVIEW\&CONTEXT=dialer-transfer
 
 Met deze systeemactie wordt het doorverbinden van een actief gesprek
 (live call) met ruggespraak gestart en wordt direct het nummer gebeld
 waarmee doorverbonden gaat worden na ruggespraak.
 
-\#SCRIPT\_TRANSFER?TYPE=ATTENDED\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
+\#SCRIPT_TRANSFER?TYPE=ATTENDED\&CONTEXT=dialer-transfer\&TARGET=\<telefoonnummer\>
 
 ### Doorverbinden met ruggespraak annuleren
 
 Met deze systeemactie wordt een actieve doorverbind actie geannuleerd en
 krijgt de agent de beller weer aan de lijn.
 
-\#SCRIPT\_TRANSFER?TYPE=ABORT
+\#SCRIPT_TRANSFER?TYPE=ABORT
 
 Met deze systeemactie wordt een actieve doorverbind doel (gesprek)
 beëindigt maar blijft de attended transfer actief. Hiermee kan de agent
 een nieuwe attended transfer target bellen (met TYPE=ATTENDED) en blijft
 het gesprek dat doorgeschakeld moet worden in de wacht staan.
 
-\#SCRIPT\_TRANSFER?TYPE=SOFTABORT
+\#SCRIPT_TRANSFER?TYPE=SOFTABORT
 
 ### Doorverbinden met ruggespraak voltooien
 
@@ -331,7 +331,7 @@ Met deze systeemactie wordt een actieve doorverbind actie afgerond. De
 Agent komt hierdoor in wrapupfase en de beller is doorverbonden met de
 externe/andere partij.
 
-\#SCRIPT\_TRANSFER?TYPE=COMPLETE
+\#SCRIPT_TRANSFER?TYPE=COMPLETE
 
 ### Doorverbinden wissel gesprekken
 
@@ -339,7 +339,7 @@ Met deze systeemactie kan tijdens een actieve doorverbind actie met
 ruggespraak worden gewisseld tussen de beller en de externe/andere
 partij voor ruggespraak.
 
-\#SCRIPT\_TRANSFER?TYPE=SWITCHPARTIES
+\#SCRIPT_TRANSFER?TYPE=SWITCHPARTIES
 
 ### Verstuur DTMF-tonen
 
@@ -347,14 +347,14 @@ Met deze systeemactie kunnen DTMF tonen worden gestuurd die nodig zijn
 om in een gesprek door een IVR de navigeren. Dit werkt alleen met G711
 codec.
 
-\#SCRIPT\_SENDDTMF?DIGITS=\<digits\>
+\#SCRIPT_SENDDTMF?DIGITS=\<digits\>
 
 ### Zet een gesprek on hold
 
 Met deze systeemactie kan een actief gesprek (live call) on hold worden
 gezet zodat de beller niet hoort wat de agent zegt.
 
-\#SCRIPT\_HOLD?{ ON | OFF | TOGGLE }
+\#SCRIPT_HOLD?{ ON | OFF | TOGGLE }
 
 # Belscript (querystring) parameters
 

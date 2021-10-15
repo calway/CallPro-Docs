@@ -252,7 +252,7 @@ scriptdefinitie. Kies de benodigde belopdrachtstatussen uit de lijst.
 ### Test de nieuwe scriptdefinitie
 
 Maak met de scriptdefinitie een test bellijst. Om duidelijk te maken dat
-dit een test bellijst is kan het woord “\_test” achter de naam van de
+dit een test bellijst is kan het woord “_test” achter de naam van de
 bellijst worden toegevoegd. Voeg daarna een aantal belopdrachten toe aan
 de bellijst via right-click “Nieuwe belopdracht...”.
 
@@ -294,9 +294,9 @@ verrijkingsvelden ook toe. Soms bevat het belscript ook enkele
 scriptvelden die voor de callflow zijn toegevoegd, maar niet naar de
 opdrachtgever terug geleverde hoeven te worden, neem deze dan ook niet
 op in de exportdefinitie. Ook de systeemvelden van CallPro hoeven niet
-allemaal te worden terug geleverd. Het belresultaat (sys\_callstatusname
-of sys\_callstatuscode), de bellijstnaam (sys\_calllistname) en de
-unieke interne code van CallPro (sys\_clentryid) zijn altijd handig om
+allemaal te worden terug geleverd. Het belresultaat (sys_callstatusname
+of sys_callstatuscode), de bellijstnaam (sys_calllistname) en de
+unieke interne code van CallPro (sys_clentryid) zijn altijd handig om
 op te nemen. Andere systeemvelden kunnen naar behoefte worden
 toegevoegd.
 
@@ -328,7 +328,7 @@ betreffende velden uit het importbestand niet geïmporteerd.
 ![](./media/image87.png) ![](./media/image88.png)
 
 In sommige gevallen heeft CallPro standaard een verkeerde keuze gemaakt
-voor het Datatype. Voor het Addr\_number veld in het bovenstaande
+voor het Datatype. Voor het Addr_number veld in het bovenstaande
 screenshot heeft CallPro gezien dat er alleen cijfers in het veld staan
 en aangenomen dat het veld numeriek(2) moet zijn. De standaard velden
 van CallPro gebruiken het karakter(10) type voor het huisnummer en het
@@ -384,7 +384,7 @@ niet. Ook zijn bepaalde tekens niet toegestaan in de kolomnaam. Vermijd
 het gebruik van de speciale tekens, behalve de underscore, die op een
 toetsenbord zijn te vinden zoals \!@\#$%^&\*+=-\~\`:;”’\[\]}{\<\>,./?\\|
 Het gebruik van spatie’s wordt afgeraden, maar CallPro zal deze
-vervangen door een underscore (\_) teken.
+vervangen door een underscore (_) teken.
 
 Kolomnamen moeten uniek zijn. Het is niet toegestaan om een kolomnaam
 twee keer te gebruiken voor verschillende kolommen. Ook mogen bepaalde
@@ -458,7 +458,7 @@ en letter in twee aparte kolommen zijn aangeleverd samen te voegen.
 
 Sommige adressen leveranciers plaatsen de postcode en plaats in 1 kolom.
 Als er verder niks met de gegevens gedaan hoeft te worden raden wij aan
-om de waarde in het “addr\_city” veld te importeren. Is het echter de
+om de waarde in het “addr_city” veld te importeren. Is het echter de
 bedoeling dat het adres wel kan worden aangepast, of moet het adres
 gebruikt worde nicm de reistijdcontrole van CallPro dan dienen postcode
 een plaats te worden gescheiden. Door het nette formaat van de

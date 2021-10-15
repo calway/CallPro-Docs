@@ -40,17 +40,17 @@ Kijk voor inspiratie en mogelijkheden van de MetroUI stijl op de website
 binnen CallPro omdat sommige controls via jQuery worden gemaakt en
 hierdoor het in de opmaakcode gedefinieerde input veld niet wordt
 gebruikt voor de opslag van de veldwaarde. CallPro kijkt altijd alleen
-naar de originele input tag met de naam script\_\<veldnaam\> Als jQuery
+naar de originele input tag met de naam script_\<veldnaam\> Als jQuery
 onder water in het DOM model nieuwe velden aanmaakt zijn deze niet
-gekoppeld tenzij ze ook de script\_\<veldnaam\> naam krijgen.
+gekoppeld tenzij ze ook de script_\<veldnaam\> naam krijgen.
 
 ### Plaats velden binnen een tabcontrol
 
 Om velden in het autoscript in een tabcontrol te plaatsen zijn 2 extra
 scriptvelden nodig. De velden worden verder niet gebruikt dus het beste
-kan het veldtype op karakter(1) worden gezet. De TAB01\_BEGIN wordt
+kan het veldtype op karakter(1) worden gezet. De TAB01_BEGIN wordt
 boven het eerste veld geplaatst dat in de tabcontrol moet komen en
-TAB01\_END wordt na het laatste veld geplaatst. Bij beide velden wordt
+TAB01_END wordt na het laatste veld geplaatst. Bij beide velden wordt
 de optie “Genereer geen regel opmaak (html) om de velden” aangegeven en
 ook “Laatste veld op regel”. Het voorgaande veld moet ook de optie
 “Laatste veld op regel” aan hebben staan zodat de tabcontrol op een
@@ -112,7 +112,7 @@ onzichtbaar gemaakt in het autoscript.
 ### Custom validatie tijdens afcoderen
 
 Tijdens het afcoderen roept het autoscript een functie
-“Custom\_ValidationCheck” uitgevoerd. Als paramater wordt een
+“Custom_ValidationCheck” uitgevoerd. Als paramater wordt een
 javascript object met de status code die is geklikt doorgegeven. Als
 resultaat geeft deze functie een boolean terug die aangeeft of het
 afcoderen door mag gaan of niet.
@@ -125,28 +125,28 @@ ingevuld. Doorgaan wordt deze functie in de variabele SCRIPT.HEADER
 geplaatst.
 
 ```
-function Custom\_ValidationCheck(status) {
+function Custom_ValidationCheck(status) {
 var validationResult = true;
 switch(status.code)
 {
     case "780":
         // Basic gedrag.
-        setFieldValue("script\_app\_email\_to",
-        getFieldValue("script\_name\_email"));
-        setFieldValue("script\_exp\_app","");
+        setFieldValue("script_app_email_to",
+        getFieldValue("script_name_email"));
+        setFieldValue("script_exp_app","");
         break;
     case "710":
-        if(getFieldValue("script\_info")=="")
+        if(getFieldValue("script_info")=="")
         {
         status.errors.add("Kies eerst een informatiepakket");
         validationResult = false;
         }
-        if(getFieldValue("script\_info\_email\_to")=="")
+        if(getFieldValue("script_info_email_to")=="")
         {
         status.errors.add("Kies een email adres voor de verzending");
         validationResult = false;
         }
-        if(\!checkValidEmail("script\_info\_email\_to"))
+        if(\!checkValidEmail("script_info_email_to"))
         {
         status.errors.add("Het opgegeven email adres is niet geldig");
         validationResult = false;
@@ -154,7 +154,7 @@ switch(status.code)
         if(validationResult)
         {
         // Last check still valid
-        setFieldValue("script\_exp\_info","");
+        setFieldValue("script_exp_info","");
         }
         break;
 }

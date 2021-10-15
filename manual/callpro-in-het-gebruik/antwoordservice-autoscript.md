@@ -21,7 +21,7 @@ De velden die verplicht zijn voor de antwoordservice zijn: ContactID,
 ContactName, ContactAction, SendEmail, SendSMS, ContactNote. De velden
 ResponseAction en ResponseNote worden gebruikt vanuit de Customer Portal
 login van de klant en worden niet weergegeven in het belscript. Ook de
-drie EXP\_EMAIL, EXP\_SMS, EXP\_RAPPORT velden zijn verplicht en worden
+drie EXP_EMAIL, EXP_SMS, EXP_RAPPORT velden zijn verplicht en worden
 door de fulfilment procedure gebruikt.
 
 ### Contactpersonen (ContactID)
