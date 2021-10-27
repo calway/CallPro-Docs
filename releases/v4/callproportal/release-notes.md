@@ -7,6 +7,12 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 <br/>
 
+## v4.3.2.58 - 2021-10-27
+### Changed
+- Bij het zoeken naar gespreksopnames kan nu ook een specifieke status worden gebruikt. Voorheen kon alleen binnen de gevonden gespreksopnames lokaal worden gefiltert op status, wat bij grotere periodes het effect had dat niet altijd alle gespreksopnames werden weergegeven. Nu wordt op de server een filter gezet en komen alleen die gespreksopnames in de zoekresultaten.
+- Het afspelen van gespreksopnames is efficienter gemaakt. Voorheen werden gesprekken bewaard in een formaat waar de browser niet direct me overweg kon, waardoor conversie naar mp3 nodig was. Deze conversie levert, zeker bij lange gesprekken, een grote belasting op de webserver. Omdat deze conversie onnodig is is deze verwijderd.
+
+***
 ## v4.3.2.57 - 2021-09-14
 ### Fixed
 - Fix audioplayer weergave issue door update in Chromium player
