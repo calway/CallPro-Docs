@@ -7,28 +7,31 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
-## v4.3.2.119 - 2021-10-08
+## v4.3.2.120 - 2021-10-29
+## Added
+- Toevoeging van GetCampaignMessages endpoint in services voor een lijst met de ingestelde campagne notities.
 
+## v4.3.2.119 - 2021-10-08
 ### Changed
 - metroui/leaderboard gebruikt nu campagne doelstelling parameters. De oude maatwerk `score.conversion` en `score.type` variabelen zijn niet meer nodig op de campagne.
 
 ***
 ## v4.3.2.118 - 2021-05-15
 ### Changed
-- changed all references to goCallPro to use window.external in Javascript
+- Alle referenties naar goCallPro gewijzigd in window.external in Javascript
 
 ***
 ## v4.3.2.117 - 2020-11-11
 ### Fixed
-- Fixed breaking change in pagina's met pullmenu na update metroui naar laatste v3 versie
+- Breaking change opgelost in pagina's met pullmenu na update metroui naar laatste v3 versie
 
 ### Added
-- Toevoeging van GetBirthDays endpoint in services voor ene lijst met agents die binnenkort jarig zijn.
+- Toevoeging van GetBirthDays endpoint in services voor een lijst met agents die binnenkort jarig zijn.
 - Added $scope scriptfields to the Script controller for future angular features
 
 ### Changed
 - overrides.css grotendeels teruggedraaid naar default metroui gedrag voor meer wit ruimte om velden
-- Leaderboard Agent en Campaignname velden van 50 naar 128 tekens zoals in Callpro ook bijgesteld
+- Leaderboard Agent en Campaignname velden van 50 naar 128 tekens zoals in CallPro ook bijgesteld
 - Changed dateformat from dd/mm/yyyy to dd-mm-yyyy
 
 ***
