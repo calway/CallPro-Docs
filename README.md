@@ -11,6 +11,11 @@ Dit zijn de Docs pages voor CallPro.
 
 ## Installatie en onderhoud
 
+### Integraties
+
+* [Facebook Lead naar CallPro via Zapier](./guides/Facebook-Lead-to-CallPro-using-Zapier-Webhook.md)
+* [Microsoft Form naar CallPro via Microsoft Flow](./guides/Microsoft-Form-to-CallPro-using-Microsoft-Flow.md)
+
 ### Scriptmodule
 * [Microsip instellingen synchronisatie](./install/scriptmodule/microsip-instellingen-synchronisatie/README.md)
  
