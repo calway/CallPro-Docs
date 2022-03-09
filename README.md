@@ -1,8 +1,6 @@
 # CallPro
 Dit zijn de Docs pages voor CallPro.
 
-* [Release Notes](./releases/v4/release-notes)
-
 ## Handleidingen
 
 * [CallPro in het gebruik](./manual/callpro-in-het-gebruik/README.md)
@@ -18,4 +16,8 @@ Dit zijn de Docs pages voor CallPro.
 
 ### Scriptmodule
 * [Microsip instellingen synchronisatie](./install/scriptmodule/microsip-instellingen-synchronisatie/README.md)
- 
+
+## Release notes
+
+* [CallPro v4 Release Notes](./releases/v4/release-notes)
+* [BETA CallPro v5 Release Notes](./releases/v5/release-notes)
