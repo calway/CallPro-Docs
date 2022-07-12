@@ -58,7 +58,7 @@ voorzien. Als voorbeeld staat hier de gebruiker “Ad Viseur”
 ![](./media/image5.png) 
 ![](./media/image6.png)
 
-## Stap 2- Verberg de security groep uit adreslijsten
+## Stap 2 - Verberg de security groep uit adreslijsten
 
 Na het maken kan deze groep nog worden verborgen in adreslijsten van
 Exchange zodat deze niet voor reguliere gebruikers zichtbaar is.
