@@ -1,4 +1,4 @@
-# Calendarsync instellingen Office 365 OAuth Flow
+# Calendarsync instellingen Microsoft 365 OAuth Flow
 > Microsoft heeft aangekondigd dat per 1-10-2022 Basic Authentication deprecated wordt verklaard en zal worden verwijderd uit Exchange EactiveSync (EAS), POP, IMAP, Remote Powershell, Exchange Web Services (EWS), Offline Address Book (OAB) en Outlook for Windows.
 
 Om gebruik te kunnen blijven van de CallPro CalendarSync module adviseren wij klanten uiterlijk na de migratie naar CallPro 5.0 met klanten af te stemmen over de nieuwe instellingen die nodig zijn.
@@ -7,7 +7,7 @@ Om gebruik te kunnen blijven van de CallPro CalendarSync module adviseren wij kl
 
 
 ## Registreer een applicatie in AzureAd
-De klant moet in zijn/haar Office 365 omgeving in Azure Active Directory een applicatie aanmaken voor de Agenda synchronisatie.
+De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een applicatie aanmaken voor de Agenda synchronisatie.
 
 1. Ga naar de Azure portal en log in met een administrator account die Applicatie registraties kan aanmaken.
 
@@ -43,7 +43,7 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 * Check nu bij **API Permissions** in de Manage sectie dat de `full_access_as_app` recht is toegekend.
 Als bij de klant security policies actief zijn die het niet toestaan om `full_access` rechten toe te kennen dan dienen beperkte rechten voor de "Office 365 Exchange Online" te worden gegeven die voldoende zijn om Agenda's te synchroniseren.
 * Selecteer nu **Grant admin consent for org** en accepteer de consent dialoog.
-* Ga nu naar **Certificatesw & Secrets** in het navigatie menu in de **Manage** sectie
+* Ga nu naar **Certificates & Secrets** in het navigatie menu in de **Manage** sectie
 * Selecteer **New client secret**, geef dit een duidelijke omschrijving, kies de levensduur zo lang mogelijk tenzij er bedrijfspolicies zijn die korte secrets eisen. Dit is de periode dat dit secret door de CallPro CalendarSync van het call center gebruikt kan worden. Hoe korter hoe vaker dit moet worden bijgewerkt door zowel Bedrijf als call center.
 * Noteer de **Value** deze is later niet meer oproepbaar dus vergeet dit niet.
 
