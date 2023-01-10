@@ -26,7 +26,7 @@ XML bestaat uit een geneste structuur. Dit houdt in dat Tags genest zijn binnen 
 ```
 Naast Tags en waarden zijn er nog **attributen**. Deze zeggen al iets over de waarde. Bijvoorbeeld:
 ```xml
-<Persoon geslacht=”Man”>
+<Persoon geslacht="Man">
 <Voornaam>Ron</Voornaam>
 <Achternaam>Heller</Achternaam>
 </Persoon>
@@ -100,16 +100,16 @@ Mogelijke commandline parameters zijn:
         </Cron>
     </Schedule>
     <ConnectString>database connectionstring</ConnectString>
-    <MailServer [Domain=”maildomain”] 
-        [DefaultTimeOutSeconds=”300”]
-        [Username=”username”]
-        [Password=”password”]
-        [Userdomain=”userdomain”]
+    <MailServer [Domain="maildomain"] 
+        [DefaultTimeOutSeconds="300"]
+        [Username="username"]
+        [Password="password"]
+        [Userdomain="userdomain"]
     >
         [smtpserver,only for SMTP mail actions]
     </MailServer>
     <LoggingLevel>level</LoggingLevel>
-    <ErrorsMailTo From=”[weergave naam]”>[email adres]</ErrorsMailTo>
+    <ErrorsMailTo From="[weergave naam]">[email adres]</ErrorsMailTo>
     <CryptoKey>[cryptokey]</CryptoKey>
     <RegionalSettings>
         <Language>nl-NL</Language>
@@ -208,8 +208,8 @@ Acties zijn specifieke settings in de configuratie file die betrekking hebben op
 Een Query levert zoals gezegd een recordset op. Dit is een lijst met data uit de database. Deze data is te refereren door gebruik te maken van een collectie naam en de veldnamen. Een collectienaam wordt als attribuut meegeven aan de SQL tag (zie verder). Dit bepaald de naam van de recordset. Een collectie heeft daarna 1 of meer velden, ook wel kolommen genoemd. Deze zijn te refereren door de kolomnaam uit de query. Bijvoorbeeld:
 
 ```xml
-<Query Condition=”yes|no|expression”>
-    <SQL Collection=”collectionname”>select * from table</SQL>
+<Query Condition="yes|no|expression">
+    <SQL Collection="collectionname">select * from table</SQL>
     [one or more Actions; <Action>]
     [one or more Queries; <Query>]
 </Query>
@@ -225,22 +225,22 @@ Binnen een query kunnen weer 1 of meerdere (sub)query’s worden gedefinieerd. D
 In plaats van een query kan ook een repeat blok worden gemaakt. Een repeatblok ziet er als volgt uit:
 ```xml
 <Repeat>
-    <Counter Collection=”dummy”>10</Counter>
+    <Counter Collection="dummy">10</Counter>
     [one or more Actions; <Action>]
     [one or more Queries; <Query>]
 </Repeat>
 ```
 Binnen de repeat kunnen net als bij een Query actions worden gedefinieerd. Het voorbeeld blok zal alle geneste acties 10x uitvoeren. De variabele %dummy.recordnr% bevat het huidige iteratie nummer en is zero-based.
 Naast een teller kan ook een opsomming worden meegeven die komma gescheiden is.
-Bijvoorbeeld: <Counter Collection=”set”>a,b,c,10</Counter>
+Bijvoorbeeld: <Counter Collection="set">a,b,c,10</Counter>
 De volgende merge velden worden dan gemaakt:
-%set.Recordnr% en %set.Value% met de waarden 0,”a” |1,”b” | 2,”c” en 3,”10”
+%set.Recordnr% en %set.Value% met de waarden 0,"a" |1,"b" | 2,"c" en 3,"10"
 
 ### Excel loop
 Een excel loop is vergelijkbaar met een Query loop. De data komt echter uit een excel sheet.
 ```xml
 <Excel>
-    <FileName Collection=”excelrows” sheet=”sheet1”></FileName>
+    <FileName Collection="excelrows" sheet="sheet1"></FileName>
     [one or more Actions; <Action>]
     [one or more Queries; <Query>]
 </Excel>
@@ -314,19 +314,19 @@ DEBUG.ACTION en DEBUG.LASTERROR
 ### Conditional attribuut
 Dat wil zeggen dat een actie alleen wordt uitgevoerd als aan een bepaalde voorwaarde (condition) wordt voldaan.
 ```xml
-<Action Type=”eMail” Condition=”%VARIABLE.TESTVALUE% = 1”>
+<Action Type="eMail" Condition="%VARIABLE.TESTVALUE% = 1">
 
 </Action>
 ```
 
 In dit voorbeeld wordt de eMail actie alleen uitgevoerd wanneer VARIABLE.TESTVALUE evalueert naar 1. In de condition kan gebruikt worden gemaakt van de volgende operators: =, <>, <, >, <=, >= en ><. De variabelen worden geanalyseerd en geëvalueerd op types: string, integer, decimaal of datum.
-De laatste operator >< werkt al een “in” statement, bijvoorbeeld:
+De laatste operator >< werkt al een “in" statement, bijvoorbeeld:
 3 >< (1,2,3,4,5) zal true opleveren.
 
 ### Cryptokey attribuut
 In de header van iedere action kan een optionele cryptokey worden meegegeven. Deze wordt gebruikt in de xx switch om een mergestring te encrypten. De crytpo key die zo wordt ingesteld geldt alleen voor alle acties en queries binnen deze action. Bijvoorbeeld:
 ```xml
-<Action Type=”eMail” cryptokey=”%VARIABLE.CRYPTOKEY%”>
+<Action Type="eMail" cryptokey="%VARIABLE.CRYPTOKEY%">
 …
 </Action>
 ```
@@ -334,11 +334,11 @@ In de header van iedere action kan een optionele cryptokey worden meegegeven. De
 ### Merge action
 De merge actie is de meest voorkomende actie die wordt gebruik om uitvoer te genereren. Deze actie neeemt een input template en genereert output in een bestand.
 ```xml
-<Action Type=”Merge”>
-    <Input source=”BLOB|FILE”>inputtemplate</Input>
-    <Output Append=”yes|no” Print=”yes|no”
-        EOL=”windows|unix|<characters>”
-        Encoding=”<encoding>”>outputfile</Output>
+<Action Type="Merge">
+    <Input source="BLOB|FILE">inputtemplate</Input>
+    <Output Append="yes|no" Print="yes|no"
+        EOL="windows|unix|<characters>"
+        Encoding="<encoding>">outputfile</Output>
 </Action>
 ```
 De input template kan uit de database komen, of uit een bestand. Voor bestanden worden enkele typen herkend zoals Word (extensie .docx) of Excel (extensie .xlsx) of tekstbestanden.
@@ -356,9 +356,9 @@ Om Excel als input template te gebruiken voor een merge dient dit bestand aan en
 4. Indien per export record meerdere Excel rijen geschreven moetne worden kan ook een name region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
 
 ```xml
-<Action Type=”Merge”>
-    <Input Sheet=”belopdrachten”>inputtemplate.xlsx</Input>
-    <Output Sheet=”%SYS.DATE%”>output-%SYS.DATE%.xlsx</Output>
+<Action Type="Merge">
+    <Input Sheet="belopdrachten">inputtemplate.xlsx</Input>
+    <Output Sheet="%SYS.DATE%">output-%SYS.DATE%.xlsx</Output>
     <MergeCopy>infosheet</MergeCopy>
     <Copy>pivotsheet</Copy>
     <Copy>grafieksheet</Copy>
@@ -390,52 +390,78 @@ De optionele `Encoding`attribuut geeft aan welke encoding wordt gebruikt om het 
 * Bigendianunicode - Bigendian Unicode
 * ascii
 
-> Let op: Wanneer een input template meerdere keren gemergd moet worden gebruikt dan innersource=”file” bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts” 1x gemergd.
+> Let op: Wanneer een input template meerdere keren gemergd moet worden gebruikt dan innersource="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
 
 
 ### Email action
 ```xml
-<Action Type=”eMail”>
-    <System>Exchange|SMTP</System>
-    <MailServer [Domain=”maildomain”] [DefaultTimeOutSeconds=”0”]
-        [Username=”username”]
-        [Password=”password”]
-        [Userdomain=”userdomain”] >
+<Action Type="eMail">
+    <System>SMTP|Exchange|exchange_ews_basic_auth|m365_graph_api</System>
+    <MailServer [Domain="maildomain"] [DefaultTimeOutSeconds="0"]
+        [Username="username"]
+        [Password="password"]
+        [Userdomain="userdomain"] 
+        [applicationid]="ApplicationId"
+        [tenantid]= "tenantId"
+        [clientsecret] = "clientSecret" >
         [smtpserver,only for SMTP mail actions]
     </MailServer>
     <ReadReceipt>YES|NO</ReadReceipt>
-    <From Name=”friendlyname”>van</From>
-    <Onbehalfof Name=”friendlyname”>van</Onbehalfof>
-    <Recipient Type=”TO|CC|BCC” Name=”friendlyname” MergeTwice=”TRUE|FALSE”
-        Validate=”TRUE|FALSE”>emailadres</Recipient>
-    <Subject MergeTwice=”TRUE|FALSE”>onderwerpregel</Subject>
-    <Header Name=”headertag”>van</Header>
-    <Body Merge=”YES|NO” InnerSource=”BLOB|FILE”
-        BodyType=”HTML|PLAIN”>emailbodytext</Body>
-    <Attachment [cid=”content-Id”] [type=”FILE|TEXT|BLOB”]
-        [OutputFile=”attachmentfilename”] [Seperator=”+” PathPrefix=”path only”>
+    <From Name="friendlyname">van</From>
+    <Onbehalfof Name="friendlyname">van</Onbehalfof>
+    <Recipient Type="TO|CC|BCC" Name="friendlyname" MergeTwice="TRUE|FALSE"
+        Validate="TRUE|FALSE">emailadres</Recipient>
+    <Subject MergeTwice="TRUE|FALSE">onderwerpregel</Subject>
+    <Header Name="headertag">van</Header>
+    <Body Merge="YES|NO" InnerSource="BLOB|FILE"
+        BodyType="HTML|PLAIN">emailbodytext</Body>
+    <Attachment [cid="content-Id"] [type="FILE|TEXT|BLOB"]
+        [OutputFile="attachmentfilename"] [Seperator="+" PathPrefix="path only">
         attachmentfile
     </Attachment>
 </Action>
 ```
-De recipient en attachment tags mogen vaker voorkomen binnen de email actie. De attachment file mag ook een wildcard naam zijn in plaats van 1 specifieke filename.
-Er dient minimaal 1 TO recipient te zijn. Meerdere recipients kunnen zowel in aparte recipient tags, als binnen een recipeint tagd als , of ; gescheiden lijst worden opgegeven.
+#### System en MailServer
+Het mail system dat gebruikt kan worden voor het versturen van email.
+Standaard worden de gegevens overgenomen van de globale MailServer instellingen uit de settings sectie. Wanneer de MailServer tag wordt opgenomen overschrijft dit de globale instellingen voor deze actie.
+
+##### SMTP
+Hiermee wordt de mail verstuurd via een smtp server. De `MailServer` tag die volgt geeft dan het server adres aan en in de parameters `Username`, `Password` voor het inloggen met basic authentication.
+##### exchange_ews_basic_auth of Exchange
+Dit is een Exchange webservice koppeling die gebruik maakt van basic authentication. De naam `Exchange` is behouden voor backward compatibility. Gebruik in de `MailServer` tag ghet server adres en in de paramaters `Username`, `Password`, en optioneel `Userdomain` de naam van Active Directory.
+> Vanaf 1-10-2022 kan dit **niet** meer gebruikt worden met Office 365 omdat Microsoft Basic Authentication daar heeft uitgeschakelt. Sinds 2018 geeft Microsoft al aan dat de webservices obsolete zijn en niet verder worden doorontiwkkeld. Het wordt geadviseerd om over te stappen op de Microsoft Graph API.
+De exchange webservice koppeling kan nog steeds gebruikt worden voor on-premise Exchange servers of mail servers die compatible zijn met de Exchange WebServices.
+##### m365_graph_api
+Hierbij wordt gebruik gemaakt van de Microsoft Graph API. De `MailServer` tag heeft geen inhoud maar wel de parameters `applicationid`, `tenantid` en `clientsecret`. Maak in Azure Portal een App registration die deze gegevens oplevert. 
+#### ReadReciept
+Geeft aan of de verzender van de email een lees bevestiging wilt ontvangen.
+#### From
+Het From adres voor de email. Als parameter kan ook een `Name` worden opgegeven die als friendlyname wordt gebruikt.
+#### OnbehalfOf
+Indien gezet wordt dit gebruikt om een `onbehalf of` in te stellen. Ook bij deze tag kan een parameter `Name` worden gebruikt die als friendlyname wordt gebruikt. 
+#### Recipient
+De recipient tag mag vaker voorkomen binnen de email actie. 
+Er dient minimaal 1 TO recipient te zijn. Meerdere recipients kunnen zowel in aparte recipient tags, als binnen een recipient tag als , of ; gescheiden lijst worden opgegeven. Bij de recipient kan ook een friendlyname worden meegegeven in de `Name` parameter.
+De `Validate` parameter bepaald of een poging wordt gedaan om te controleren dat het opgegeven email adres geldig is door contact op te nemen met de mailserver van het domein.
+
+#### Subject
+De onderwerp regel van de email
+#### Header
+#### Body
+De email body tekst
+#### Attachment
+De Attachment tag mag vaker voorkomen binnen de email actie. De attachment file mag ook een wildcard naam zijn in plaats van 1 specifieke filename.
 
 De content-Id is optioneel bij een attachment, en zorgt ervoor dat een afbeelding in de mailbody wordt weergegeven wanneer daar een img tag staat met dezelfde content-Id Bijvoorbeeld: `<IMG SRC=cid:<content-id> />`
 
 Voor attachment is File de default, dus de attachment moet een bestaande file zijn.
-Wanneer blob of text worden gebruikt komt de inhoud van de attachment uit een
-database veld (collection). Alles ook mogelijk icm de Content-ID
-De emailbodytext mag zowel een ascii tekst bestand zijn als een HTML bestand
-(Source=FILE) of een blob (Source=BLOB). Wanneer de optionele Merge tag NO is wordt dit bestand niet gemerged, de default hiervoor is echter YES.
-De System tag is optioneel, en is default outlook (emails komen dan in de drafts of concepten en worden NIET direct verstuurd). Exchange wordt alleen ondersteund vanaf Exchange server 2008 of hoger.
-De MailServer tag is optioneel. Standaard worden de gegevens overgenomen uit de
-global MailServer uit de settings sectie. Wanneer in de MailAction een mailServer tag staat worden de mailserver aangevuld of gewijzigd voor deze actie.
+Wanneer blob of text worden gebruikt komt de inhoud van de attachment uit een database veld (collection). Alles ook mogelijk icm de Content-ID
+De emailbodytext mag zowel een ascii tekst bestand zijn als een HTML bestand (Source=FILE) of een blob (Source=BLOB). Wanneer de optionele Merge tag NO is wordt dit bestand niet gemerged, de default hiervoor is echter YES.
 
 
 ### SQL Action
 ```xml
-<Action Type=”SQL”>
+<Action Type="SQL">
     <SQL>querystring</SQL>
     <ConnectionString>connectstring</ConnectionString>
 </Action>
@@ -446,19 +472,19 @@ gebruikt.
 
 ### File Action
 ```xml
-<Action Type=”FILECOPY”>
+<Action Type="FILECOPY">
     <Sourcefile>filename1</Sourcefile>
-    <Destinationfile Overwrite=”YES|NO” Compress=”YES|NO”>filename2</Destinationfile>
+    <Destinationfile Overwrite="YES|NO" Compress="YES|NO">filename2</Destinationfile>
 </Action>
 ```
 Deze actie kan worden gebruikt om een file te kopiëren. Als de destinationfile al bestaat en overwrite = YES dan wordt de file overschreven door eerst de oude te verwijderen. De compress optie kan optioneel meegegeven worden om het uitvoerbestand de gzippen.
 
 ### ZIP Action
 ```xml
-<Action Type=”ZIP”>
+<Action Type="ZIP">
     <Sourcefile>filename1</Sourcefile>
     <Sourcefile>filename2</Sourcefile>
-    <Destinationfile Overwrite=”YES|NO” Append=”YES|NO”>filename2</Destinationfile>
+    <Destinationfile Overwrite="YES|NO" Append="YES|NO">filename2</Destinationfile>
     <Password>wachtwoord(optioneel)</Password>
 </Action>
 ```
@@ -467,7 +493,7 @@ Deze actie kan worden gebruikt om één of meerdere Sourcefiles te bundelen in �
 ### FTP Action
 ```xml
 <Action Type="FTP">
-    <Sourcepath recursive=”true”>c:\data\sample\output*</Sourcepath>
+    <Sourcepath recursive="true">c:\data\sample\output*</Sourcepath>
     <Sourcefiles>*.pdf</Sourcefiles>
     <Destinationpath>/upload/</Destinationpath>
     <Destinationfile>kopie.pdf</Destinationfile>
@@ -484,7 +510,7 @@ fingerprint. Passive is standaard false, met de Passive tag kan deze op YES word
 
 | Tag | Omschrijving |
 | - | - |
-| Sourcepath | Optioneel. Dit is het pad waarin gezocht wordt naar bestanden die gekopieerd moeten worden. Er kan gebruik gemaakt worden van een wildcard. Standaard wordt er recursief gezocht, dus ook subfolders die aan de wildcard voldoen worden gebruikt voor de ftp. Zonder wildcard worden er niet gezocht, en is dit “slechts” een statisch pad. Vergeet niet af te sluiten met een \ omdat anders de laatste map de wildcard wordt! |
+| Sourcepath | Optioneel. Dit is het pad waarin gezocht wordt naar bestanden die gekopieerd moeten worden. Er kan gebruik gemaakt worden van een wildcard. Standaard wordt er recursief gezocht, dus ook subfolders die aan de wildcard voldoen worden gebruikt voor de ftp. Zonder wildcard worden er niet gezocht, en is dit “slechts" een statisch pad. Vergeet niet af te sluiten met een \ omdat anders de laatste map de wildcard wordt! |
 | Sourcefiles | Zonder wildcard resulteert dit in 1 file, met wildcard wordt gezocht naar voorkomens van bestanden die aan de wildcard voldoen. Sourcefile  mag een pad bevatten als er geen sourcepath meegegeven is! |
 | Destinationpath | Rootfolder voor de ftp actie. GEEN wildcards! |
 | Destinationfile | Optioneel, uitvoer bestandnaam, GEEN wildcards!. Kan alleen gebruikt worden wanneer er slechts een sourcefile is. De file wordt nml. telkens overschreven als er meerdere sourcefiles zijn. |
@@ -492,15 +518,15 @@ fingerprint. Passive is standaard false, met de Passive tag kan deze op YES word
 
 ### PDF action
 ```xml
-<Action Type=”PDF” Engine=”EO|essentialobjects” EmbedFonts=”YES|NO”>
-    <InputFile Source=”BLOB|FILE”
-        Location=”header|footer|content”>inputtemplate</InputFile>
-    <OutputFile Print=”yes|no”>outputfile</OutputFile>
+<Action Type="PDF" Engine="EO|essentialobjects" EmbedFonts="YES|NO">
+    <InputFile Source="BLOB|FILE"
+        Location="header|footer|content">inputtemplate</InputFile>
+    <OutputFile Print="yes|no">outputfile</OutputFile>
     <Margins>l;r;t;b;h;f</Margins>
     <Page>DEF|w;h</Page>
 </Action>
 ```
-M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. Dit bestand kan vervolgens worden gebruikt als email bijlage of direct afgedrukt worden (Print = “Yes”). Voor de actie is een licentie nodig op de pdf engine. Voor de pdf-engine is ABC voorlopig nog de standaard i.v.m. backwards compatibility.
+M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. Dit bestand kan vervolgens worden gebruikt als email bijlage of direct afgedrukt worden (Print = “Yes"). Voor de actie is een licentie nodig op de pdf engine. Voor de pdf-engine is ABC voorlopig nog de standaard i.v.m. backwards compatibility.
 Let wel op dat deze engine in een nieuwe release vervalt.
 Voor de nieuwe Engine (EO) zijn Margins optioneel. De parameters voor de margins zijn als volgt (puntkomma gescheiden):
 | | | 
@@ -525,8 +551,8 @@ Daarnaast kan nog de pagina size worden opgegeven. Deze staat standaard op A4. D
 
 ### TAG Action
 ```xml
-<Action Type=”TAG”>
-    <TAG errorlevel=”<loglevel>”>tagstring1</TAG>
+<Action Type="TAG">
+    <TAG errorlevel="<loglevel>">tagstring1</TAG>
     <TAG>tagstring2</TAG>
     <TAG>tagstring3</TAG>
 </Action>
@@ -537,14 +563,14 @@ loglevel kan een andere level worden gebruikt. Mogelijkheden zijn: debug, trace,
 ### SET Action
 ```xml 
 <Action Type="SET">
-    <Variable Name="varname" Type=”reference|value”>1</Variable>
+    <Variable Name="varname" Type="reference|value">1</Variable>
 </Action>
 ```
-De set actie set variabelen die in vervolg acties kunnen worden gebruikt. De variabelen krijgen de naam `VARIABLE.varname`. Standaard is een variabele een reference, dit betekend dat de waarde 1-op-1 wordt overgenomen bij later gebruik. Wanneer type=”value” dan wordt de gemergde waarde meegenomen voor later gebruik.
+De set actie set variabelen die in vervolg acties kunnen worden gebruikt. De variabelen krijgen de naam `VARIABLE.varname`. Standaard is een variabele een reference, dit betekend dat de waarde 1-op-1 wordt overgenomen bij later gebruik. Wanneer type="value" dan wordt de gemergde waarde meegenomen voor later gebruik.
 
 ### URL Action
 ```xml
-<Action Type=”URL” Collection=”collectionname”>
+<Action Type="URL" Collection="collectionname">
 <URL>tagstring1</URL>
 <optioneleparameters>waarde</optioneleparameters>
 </Action>
@@ -553,8 +579,8 @@ De URL wordt opgeroepen, en het resultaat (html pagina) wordt in de collectionse
 
 ### Resource Action
 ```xml
-<Action Type=”Resource” Collection=”collectionname”
-    Report=”True|False”>
+<Action Type="Resource" Collection="collectionname"
+    Report="True|False">
     <ResourceType>EXPORTDEF|ENTRY|…</ResourceType>
     <ResourceID>id</ResourceID>
 </Action>
@@ -575,14 +601,14 @@ Naast enkele extra velden zijn alle standaard properties en resvariables beschik
 
 ### Export Action
 ```xml
-<Action Type=”Export”>
+<Action Type="Export">
     <CallListID>id</CallListID>
     <ExportID>id</ExportID>
     <Header>id</Header>
     <Detail>id</Detail>
     <Filter>filterconditie(sql)</Filter>
-    <OutputFile Type=”Excel|Text”
-        Sheet=”sheet1”>filename</OutputFile>
+    <OutputFile Type="Excel|Text"
+        Sheet="sheet1">filename</OutputFile>
 </Action>
 ```
 Deze actie maakt een export zoals CallPro dat ook doet. De keuze is een export naar excel of naar een text bestand. I.c.m. met de Resource action automatiseert deze actie een volwaardige export, zie voorbeeld:
@@ -598,11 +624,11 @@ Deze actie importeert een bestand (Excel) naar een bellijst in CallPro op dezelf
         sheet="theData">%ENVIRONMENT.CURRENTDIRECTORY%\test.xlsx</InputFile>
 </Action>
 ```
-Dit voorbeeld importeert de excelsheet “theData” in Excel bestand test.xlsx naar bellijst %INFO.CALLLISTID%. Sheet is optioneel, standaard wordt de eerste sheet gebruikt.
+Dit voorbeeld importeert de excelsheet “theData" in Excel bestand test.xlsx naar bellijst %INFO.CALLLISTID%. Sheet is optioneel, standaard wordt de eerste sheet gebruikt.
 
 ### SMS Action
 ```xml
-<Action Type=”SMS” gateway=”speakup|spryng”>
+<Action Type="SMS" gateway="speakup|spryng">
     <Username>username</Username>
     <Password>username</Password>
     <Originator>username</Originator>
@@ -795,7 +821,7 @@ Vervang alle CR en LF door een spatie.
 <tr>
 <td>IF</td>
 <td>If then else constructie
-\IF “condition”?”then-value”:”else-value”
+\IF “condition"?"then-value":"else-value"
 Condition, then-value en else-value mogen zowel constante teksten zijn,
 als velden.
 Bijvoorbeeld: %R.COUNTRY% \IF "NL"?"%R.ZIP R.CITY%":"%R.CITY
@@ -804,7 +830,7 @@ R.ZIP%"
 </tr>
 <tr>
 <td>CO</td>
-<td>Zelfde als de IF, maar dan met een “bevat” vergelijking i.p.v. gelijk-aan
+<td>Zelfde als de IF, maar dan met een “bevat" vergelijking i.p.v. gelijk-aan
 </td>
 </tr>
 <tr>
@@ -849,7 +875,7 @@ file+path naam.
 <tr>
 <td>CU</td>
 <td>Change the current culture (restore afterwards to original culture).
-\CU”nl-NL” or \CU”fr-FR”
+\CU"nl-NL" or \CU"fr-FR"
 </td>
 </tr>
 <tr>
