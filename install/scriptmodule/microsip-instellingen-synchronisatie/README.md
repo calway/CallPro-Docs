@@ -1,5 +1,16 @@
 # Microsip instellingen synchronisatie
-**Scriptmodule vanaf v4.3.65**
+## Scriptmodule vanaf v5.0.0
+
+1. Installeer de Scriptmodule via [installer.callpro.nl](https://installer.callpro.nl)
+1. In de Config database van CallPro moet een key aanwezig zijn.
+ ![](./media/image2.png)
+1. Controleer dat in de Dialing configuratie bij Dialer eigenschappen
+    voor de “ASTERISK2” dialer de hostname of IP van de asterisk correct
+    staat ingesteld.  
+    ![](./media/image4.png)
+
+
+## Scriptmodule vanaf v4.3.2.65
 
 Met de nieuwe script.net module (vanaf v4.3.2.65) wordt het beheer van
 de microsip instellingen synchronisatie vereenvoudigd. De instellingen
@@ -7,8 +18,7 @@ van microsip worden overgenomen uit de Seat instellingen, en de Asterisk
 instelling wordt van het dial apparaat gehaald. Hiervoor dient de
 best-practise installatie richtlijn te worden gevolgd.
 
-1.  Zorg ervoor dat de scriptmodule in een sub-folder staat waar ook de
-    portable versie van microsip is geïnstalleerd.  
+1.  Zorg ervoor dat de scriptmodule in een sub-folder staat waar ook de portable versie van microsip is geïnstalleerd.  
     ![](./media/image1.png)
 
 2.  In de Config database van CallPro moet een key aanwezig zijn.

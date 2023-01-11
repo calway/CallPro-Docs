@@ -7,7 +7,7 @@ Dit zijn de Docs pages voor CallPro.
 * [Fulfilment module handleiding](./manual/fulfilment/README.md)
 * [Calendarsync instellingen in Office 365](./manual/calendarsync/calendarsync-instellingen-office-365/README.md)
 * [Calendarsync instellingen in Microsoft 365 OAuth flow](./manual/calendarsync/calendarsync-instellingen-microsoft-365-oauth-flow/README.md)
-* [Calendarsync instelling voor Microsoft 365 GraphAPI](./manual/calendarsync/calendarsync-instellingen-microsoft-365-graph-api/README.md)
+* [Calendarsync instelling voor Microsoft 365 Graph API](./manual/calendarsync/calendarsync-instellingen-microsoft-365-graph-api/README.md)
 
 ## Installatie en onderhoud
 

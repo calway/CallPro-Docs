@@ -1,6 +1,6 @@
 # Calendarsync instellingen Office 365 Graph API
 
-Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft vanaf v5.0.0 ondersteuning voor deze nieuwe manier van werken met Microsoft 365. Volg de onderstaande stappen om een App reguistratie te maken die kan worden gebruikt met de CallPro.
+Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft vanaf v5.0.0 ondersteuning voor deze nieuwe manier van werken met Microsoft 365. Volg de onderstaande stappen om een App registratie te maken die kan worden gebruikt met de CallPro.
 
 
 ## Registreer een applicatie in AzureAd
