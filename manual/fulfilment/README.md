@@ -1,5 +1,5 @@
-# Inleiding
-De mergetool is een krachtige tool waarmee allerhande fulfilment acties of andere nabewerkingsacties kunnen worden geautomatiseerd. Mogelijkheden van de tool zijn het automatisch e-mailen, brieven maken, wijzigingen doorvoeren in de database, communiceren met externe bronnen (webservices & API’s).
+# Fulfilment handleiding
+De Mergetool is een krachtige tool waarmee allerhande fulfilment acties of andere nabewerkingsacties kunnen worden geautomatiseerd. Mogelijkheden van de tool zijn het automatisch e-mailen, brieven maken, wijzigingen doorvoeren in de database, communiceren met externe bronnen (webservices & API’s).
 
 De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inrichten van de juiste acties. Vereiste voorkennis voor succesvol gebruik zijn:
 
@@ -15,9 +15,9 @@ De basis voor XML zijn tags en waarden, bijvoorbeeld:
 ```xml
 <Naam>Ron</Naam>
 ```
-Hierin is `<Naam>` de starttag, en `</Naam>` de eind-tag. Daartussen is dan de waarde te vinden, in dit geval Ron. Tags zijn hoofdlettergevoelig.
+Hierin is `<Naam>` de starttag, en `</Naam>` de eind-tag. Daartussen is dan de waarde te vinden, in dit geval Ron. Tags in de Mergtool zijn **niet**  hoofdlettergevoelig.
 
-XML bestaat uit een geneste structuur. Dit houdt in dat Tags genest zijn binnen andere tags. Bijvoorbeeld:
+XML bestaat uit een geneste structuur. Dit houdt in dat Tags genest zijn binnen andere Tags. Bijvoorbeeld:
 ```xml
 <Persoon>
 <Voornaam>Ron</Voornaam>
@@ -33,10 +33,10 @@ Naast Tags en waarden zijn er nog **attributen**. Deze zeggen al iets over de wa
 ```
 Hierin is `geslacht` het attribuut met de waarde Man. 
 
-Met deze wetenschap zou u in staat moeten zijn een MergeTool configfile te maken en aan te passen qua structuur. Verderop in deze handleiding worden de tags en attributen besproken die de Mergetool gebruikt.
+Met deze basis kennis van XML kunnen MergeTool configfiles gemaakt en bewerkt worden qua structuur. Verderop in deze handleiding worden de tags en attributen besproken die de Mergetool gebruikt.
 
 ## SQL Kennis
-SQL (Sequential Query Language) is een programmeertaal om tegen een database te praten. Meestal bedoel om informatie op te vragen uit de database, maar ook om wijzigingen aan te brengen in de database.
+SQL (Structured Query Language) is een programmeertaal om tegen een database te praten. Meestal bedoeld om informatie op te vragen uit de database, maar ook om wijzigingen aan te brengen in de database.
 
 Belangrijk voor de Mergetool is het opvragen van informatie uit de database. Hiervoor bestaat het sql-statement SELECT
 
@@ -48,47 +48,32 @@ Dus: KIES kolommen UIT TABEL tabel DIE VOLDOEN AAN filter
 
 Bijvoorbeeld:
 ```
-SELECT Name_First, Name_Last FROM callpro._r1212 WHERE Name_Gender = ‘Male’
+SELECT name_first, name_last FROM callpro._r1212 WHERE name_gender = ‘Male’
 ```
 Dit zal een lijst opleveren met voor- en achternamen van alle mannen uit de tabel met naam `callpro._r1212`, (een bellijst).
 
-Belangrijk is dit weten welke kolommen je beschikbaar hebt in een tabel, en welke je nodig hebt. Daarnaast moet je enige kennis hebben van het CallPro datamodel om de juiste query’s te formuleren.
+Belangrijk is te weten welke kolommen je beschikbaar hebt in een tabel, en welke je nodig hebt. Daarnaast moet je enige kennis hebben van het CallPro datamodel om de juiste query’s te formuleren.
 SQL kennis is breed te vinden op internet met veel voorbeelden en uitleg. In deze handleiding gaan we niet verder in op SQL kennis, maar verwijzen we naar andere documentatie.
 
 # CallPro Datamodel
 Het CallPro datamodel is niet erg moeilijk te begrijpen. Voor de mergetool zijn een aantal dingen belangrijk. Dit zijn gegevens die vaak zullen worden opgevraagd. We gaan daarom kort in op deze gegevens, en laten de rest van het datamodel buiten beschouwing in deze handleiding.
-Alles in CallPro heet Resource. Een bellijst is een resource, een agent is een resource.
-Maar ook een agenda is een resource. Alle definities van Resources staan in de tabel met de naam ResDefs. Belangrijke kolommen zijn dan:
+Alles in CallPro heet Resource. Een bellijst is een resource, een agent is een resource, maar ook een agenda is een resource. Alle definities van Resources staan in de tabel met de naam ResDefs. Belangrijke kolommen zijn dan:
 | kolom | Omschrijving |
 | - | - |
-| ResID | Dit is de uniekmaker van de resource, een getal tussen 0 en 2 miljard. |
+| ResID | Dit is een unieke numerieke identificatie van de resource, een getal tussen 0 en 2 miljard. |
 | Name | Dit is de (korte) naam van de resource |
-|ResType | Dit is het type van de resource, dus agent, bellijst of agenda. |
+| ResType | Dit is het type van de resource, dus agent, bellijst of agenda. |
 
-Een bellijst heeft naast een definitie ook inhoud. Deze is te vinden in twee tabellen, namelijk CLENTRIES en `_R<ResID>`. Samen vormen deze de inhoud van de bellijst. Hierin staan alle systeem kolommen in de tabel CLENTRIES, en alle gebruikerskolommen in de tabel `_R<ResID>`
+Een bellijst heeft naast een definitie ook inhoud. Deze is te vinden in twee tabellen, namelijk `CLENTRIES` en `_R<ResID>`. Samen vormen deze de inhoud van de bellijst. Hierin staan alle systeem kolommen in de tabel `CLENTRIES`, en alle gebruikerskolommen in de tabel `_R<ResID>`
 Op basis van de kolom CLENTRYID zijn de gegevens uit beide tabellen bij elkaar te vinden omdat de CLENTRYID een unieke waarde is voor een belopdracht of adres.
 Bijvoorbeeld:
 ```
-Select R.*, C.TelNr from CallPro._R212 R inner join CLEntries C on
-R.CLEntryID = C.CLEntryID Where R.Name_Gender = ‘Male’
+SELECT script.*, entry.telnr 
+FROM callpro._R212 script 
+INNER JOIN clentries entry ON script.clentryid = entry.cleentryid 
+WHERE script.name_gender = `Male`
 ```
-Deze query levert alle kolommen uit bellijst 212 gefilter op “mannen “ aangevuld met het telefoonnummer.
-
-## Commandline
-De mergetool is een console applicatie, dat betekend dat deze wordt opgestart vanuit een command prompt, of dos-box. De mergetool heeft een aantal command line parameters die meegegevens worden via de opdrachtregel, bijvoorbeeld:
-```
-Mergetool.exe –L:C:\Data\Logfiles
-```
-
-Mogelijke commandline parameters zijn:
-| paramater | omschrijving| 
-| - | - | 
-| -L | Zie voorbeeld, direct na de L volgt het pad waar de logfile terecht moeten komen. |
-| -Eval | Start een visuele expressie evaluator, handig om eenvoudige expressies te testen, om of fouten op te sporen. |
-| -C | Concurrency level (aantal simultane fulfilments) |
-| -install | Installeer de mergetool als een windows service |
-| -uninstall | Deinstalleer de mergetool |
-| -service | Start de mergetool als een service (gedrag) vanuit de console |
+Deze query levert alle kolommen uit bellijst 212 gefilter op “mannen“ aangevuld met het telefoonnummer.
 
 # Configuratiebestand
 
@@ -109,7 +94,9 @@ Mogelijke commandline parameters zijn:
         [smtpserver,only for SMTP mail actions]
     </MailServer>
     <LoggingLevel>level</LoggingLevel>
-    <ErrorsMailTo From="[weergave naam]">[email adres]</ErrorsMailTo>
+    <Errors>
+        <email From="[from adres]">[email adres]</email>
+    </Errors>
     <CryptoKey>[cryptokey]</CryptoKey>
     <RegionalSettings>
         <Language>nl-NL</Language>
@@ -139,7 +126,7 @@ Dit zijn de algemene settings die globaal gelden voor alle MergeTool acties die 
 Dit is de database connectie naar de CallPro database. Deze tag is optioneel en hoeft alleen te worden ingevuld als een andere database dan de Callpro database gebruikt dient te worden. Een connectie string ziet er als volgt uit:
 
 ``` 
-data source=<servername>;initial catalog=<databasename>;Application Name=CallPro Fulfilment; user id=<db-user>;password=<db-password>;persist security info=False;
+data source=<servername>;initial catalog=<databasename>;Application Name=CallPro Fulfilment; user id=<db-user>;password=<db-password>;persist security info=False;TrustServerCertificates=true
 ```
 * `servername` is de naam van de sql server machine
 * `databasename` is de naam van de database op de eerder genoemde server
@@ -150,9 +137,9 @@ In deze connectie string kan optioneel een `querytimeout=30;` attribuut worden m
 > Let op: Wanneer de connectionstring naar een andere database wijst dan de CallPro database kan er geen gebruik worden gemaakt van resource acties.
 
 ### MailServer
-De mailserver tag is optioneel en hoeft allee te worden gebruitk als een andere mailserver dan de standaard mailserver gebruikt dient te worden voor het versturen van mail in deze .config.
+De mailserver tag is optioneel en hoeft alleen te worden gebruikt als een andere mailserver dan de standaard mailserver gebruikt dient te worden voor het versturen van mail in deze .config.
 
-Voor SMTP servers staat de servernaam of ip-adres ingevuld als waarde. Voor Exchange zijn de attributen zoals domein, username etc verplicht. Indien er gebruik van SSL gemaakt moet worden geeft dan direct na de URL de Ssl-poort op, bijvoorbeeld:
+Voor SMTP servers staat de servernaam of ip-adres ingevuld als waarde. Voor Exchange zijn de attributen zoals domein, username etc verplicht. Indien er gebruik van SSL gemaakt moet worden geeft dan direct na de URL de ssl-poort op, bijvoorbeeld:
 ```
 smtp.office365.com:587
 ```
@@ -167,7 +154,7 @@ Logginglevel bepaald hoeveel informatie de Mergetool naar een logbestand schrijf
 | info, information | Alleen interessante informatie en hoger |
 | warn,  warning | Alleen waarschuwingen en hoger |
 | error | Alleen errors en hoger |
-| fatal | Alleen fatal errors |
+| fatal, critical | Alleen fatal errors |
 
 Wanneer de logginglevel in de config ontbreekt wordt de logginglevel uit de applicatie configuratie gehaald.
 
@@ -178,9 +165,18 @@ worden aangezet door een expressie op te nemen als Tag attribuut, bijvoorbeeld:
 ```
 Dit zal een logregel opleveren waarbij de logmelding vooraf wordt gegaan door `e:<entryid>`
 
-### ErrorsMailTo
+### Error mail notificatie
 Een logfile wordt altijd aangemaakt. Deze logfile kan optioneel worden gemaild naar een email adres dat hier wordt ingesteld. De logfile wordt alleen verstuurd wanneer er logmeldingen zijn van het type error.
-De ErrorMailTo en de ErrorMailFrom mogen in globaal in de applicatie configuratie worden opgenomen. Deze is dan niet nodig in de config.
+```xml
+<Errors>
+    <email From="[from adres]">[email adres waar de log file naar to gemailt wordt]</email>
+</Errors>
+```
+
+> **DEPRECATED**: In versie van de mergetool voor 5.0.0 was de syntax anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
+```xml
+<ErrorsMailTo>[email adres waar de log file naar to gemailt wordt]</ErrorsMailTo>
+```
 
 ### CryptoKey
 Deze optionele parameter kan worden gebruik om data te encrypten voor bijvoorbeeld vertrouwelijke oproepen naar de CallPro portal die in een email meegestuurd worden.
@@ -268,12 +264,12 @@ Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen deze
 <Query>
     <SQL></SQL>
     <Query>
-    <SQL></SQL>
+        <SQL></SQL>
         <Actie A>
         </Actie A>
     </Query>
     <Query>
-    <SQL></SQL>
+        <SQL></SQL>
         <Actie B>
         </Actie B>
     </Query>
@@ -289,26 +285,26 @@ Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat
 <Query>
 <SQL></SQL>
     <Query>
-    <SQL></SQL>
+        <SQL></SQL>
     </Query>
     <Query>
-    <SQL></SQL>
+        <SQL></SQL>
     </Query>
     <Actie A>
-    <OnSuccesfull>
-        <Actie C>
-        </Actie C>
-    </OnSuccesfull>
+        <OnSuccesfull>
+            <Actie C>
+            </Actie C>
+        </OnSuccesfull>
     </Actie A>
     <Actie B>
-    <OnSuccesfull>
-        <Actie C>
-        </Actie C>
-    </OnSuccesfull>
+        <OnSuccesfull>
+            <Actie C>
+            </Actie C>
+        </OnSuccesfull>
     </Actie B>
 </Query>
 ```
-Naast de OnSuccesfull is er ook een OnFailure. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
+Naast de `OnSuccesfull` is er ook een `OnFailure`. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
 
 ### Conditional attribuut
@@ -344,13 +340,13 @@ De merge actie is de meest voorkomende actie die wordt gebruik om uitvoer te gen
 De input template kan uit de database komen, of uit een bestand. Voor bestanden worden enkele typen herkend zoals Word (extensie .docx) of Excel (extensie .xlsx) of tekstbestanden.
 
 #### Word
-Voor het gebruik van Word als merge template dient de `source=file` te worden gebruikt en moet het bestand de .docx extensie hebben (en uiteraard ene Microsoft Word bestand zijn). Van ieder record wordt een input template gemerged (Source=FILE).
-Voor Microsoft Word kan bij de ouput gebruik worden gemaakt van het attribuut `print=yes` om het gegenereerde bestand automatisch te printen.
+Voor het gebruik van Word als merge template dient de `source=file` te worden gebruikt en moet het bestand de .docx extensie hebben (en uiteraard een Microsoft Word bestand zijn). Van ieder record wordt een input template gemerged (Source=FILE).
+Op windows kan voor Microsoft Word kan bij de ouput gebruik worden gemaakt van het attribuut `print=yes` om het gegenereerde bestand automatisch te printen.
 
 #### Excel
 Om Excel als input template te gebruiken voor een merge dient dit bestand aan enkele voorwaarden te voldoen.
 
-1. Het bestand moet ene Excel bestand zijn met extensie .xlsx
+1. Het bestand moet een Excel bestand zijn met extensie .xlsx
 2. Het Excel bestand moet minimaal 1 worksheet bevatten.
 3. Regel 1 in het Excelbestand bevat de header regel en regel 2 in het excel bestand bevat de detail regel.
 4. Indien per export record meerdere Excel rijen geschreven moetne worden kan ook een name region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
@@ -429,7 +425,7 @@ Standaard worden de gegevens overgenomen van de globale MailServer instellingen 
 Hiermee wordt de mail verstuurd via een smtp server. De `MailServer` tag die volgt geeft dan het server adres aan en in de parameters `Username`, `Password` voor het inloggen met basic authentication.
 ##### exchange_ews_basic_auth of Exchange
 Dit is een Exchange webservice koppeling die gebruik maakt van basic authentication. De naam `Exchange` is behouden voor backward compatibility. Gebruik in de `MailServer` tag ghet server adres en in de paramaters `Username`, `Password`, en optioneel `Userdomain` de naam van Active Directory.
-> Vanaf 1-10-2022 kan dit **niet** meer gebruikt worden met Office 365 omdat Microsoft Basic Authentication daar heeft uitgeschakelt. Sinds 2018 geeft Microsoft al aan dat de webservices obsolete zijn en niet verder worden doorontiwkkeld. Het wordt geadviseerd om over te stappen op de Microsoft Graph API.
+> Vanaf 1-10-2022 kan dit **niet** meer gebruikt worden met Microsoft/Office 365 omdat Microsoft Basic Authentication vanaf die datum heeft uitgeschakelt. Sinds 2018 geeft Microsoft al aan dat de webservices obsolete zijn en niet verder worden doorontwikkeld. Het wordt geadviseerd om over te stappen op de Microsoft Graph API.
 De exchange webservice koppeling kan nog steeds gebruikt worden voor on-premise Exchange servers of mail servers die compatible zijn met de Exchange WebServices.
 ##### m365_graph_api
 Hierbij wordt gebruik gemaakt van de Microsoft Graph API. De `MailServer` tag heeft geen inhoud maar wel de parameters `applicationid`, `tenantid` en `clientsecret`. Maak in Azure Portal een App registration die deze gegevens oplevert. 
