@@ -173,7 +173,7 @@ Een logfile wordt altijd aangemaakt. Deze logfile kan optioneel worden gemaild n
 </Errors>
 ```
 
-> **DEPRECATED**: In versie van de mergetool voor 5.0.0 was de syntax anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
+> **DEPRECATED**: In versies van de mergetool voor 5.0.0 was de syntax anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
 ```xml
 <ErrorsMailTo>[email adres waar de log file naar to gemailt wordt]</ErrorsMailTo>
 ```
@@ -279,7 +279,9 @@ Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen deze
 
 ```
 
-### Onsuccesfull en OnFailure
+### OnSuccess en OnFailure
+> **DEPRECATED** In versies van de mergetool voor 5.0.0 was de tag OnSuccesful maar deze wordt vanaf 5.0.0 vervangen door OnSuccess. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt.
+
 Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat van de buitenste is dit:
 ```xml
 <Query>
@@ -291,20 +293,20 @@ Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat
         <SQL></SQL>
     </Query>
     <Actie A>
-        <OnSuccesfull>
+        <OnSuccess>
             <Actie C>
             </Actie C>
-        </OnSuccesfull>
+        </OnSuccess>
     </Actie A>
     <Actie B>
-        <OnSuccesfull>
+        <OnSuccess>
             <Actie C>
             </Actie C>
-        </OnSuccesfull>
+        </OnSuccess>
     </Actie B>
 </Query>
 ```
-Naast de `OnSuccesfull` is er ook een `OnFailure`. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
+Naast de `OnSucces` is er ook een `OnFailure`. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
 
 ### Conditional attribuut
