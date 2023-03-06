@@ -174,6 +174,7 @@ Een logfile wordt altijd aangemaakt. Deze logfile kan optioneel worden gemaild n
 ```
 
 > **DEPRECATED**: In versies van de mergetool voor 5.0.0 was de syntax anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
+
 ```xml
 <ErrorsMailTo>[email adres waar de log file naar to gemailt wordt]</ErrorsMailTo>
 ```
@@ -193,8 +194,8 @@ Aan een config kunnen meerdere schedules worden toegevoegd.
         <Expression>5,20,40,55 * * * *</Expression>
     </Cron>
 </Schedule>
-
 ```
+
 Voor de exacte syntax van deze cron regels kijk op [Crontab Guru](https://crontab.guru) waar je eenvoudig een scheduke kutn maken.
 
 ## Queries en Acties
