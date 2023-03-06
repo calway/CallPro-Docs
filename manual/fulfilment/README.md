@@ -246,17 +246,13 @@ Sheet bepaald de naam van de sheet met daarin de data.
 ## Acties
 Een `actie` is een onderdeel van een `query`, en zal voor ieder record uit de query worden uitgevoerd. Als voor een record een actie niet uitgevoerd kan worden omdat bijvoorbeeld een template niet bestaat dan worden alle volgende acties overgeslagen voor dit record, en springt het programma door naar het volgende record uit de recordset van de bovenliggende (omvattende query). Er zijn verschillende soorten acties:
 
-* Merge
-* Email
-* SQL
-* Pdf
-* Tag
-* FileCopy
-* Webservice
-* FTP
-* Resource
-* Set
-* SMS
+```xml
+<Action Type="Merge | Email | SQL | Pdf | Tag | FileCopy | Webservice | FTP | Resource | Set | SMS" Mergetwice="0..">
+    ...
+</Action>
+```
+
+De verschillende soorten actie tags worden in de komende paragrafen verder behandeld. Het `Mergetwice` attribuut kan wordne gebruikt om de inhoud van een tag vaker te evalueren. Standaard wordt de tag inhoud 1 keer door de merge enige gehaald om velden te vervangen. Soms komt uit het samenvoegen een nieuw veld dat ook moet worden vervangen, en het is dan nodig om via de `Mergetwice` attribuut aan te geven dat het resultaat vaker dan 1 keer moet worden samengevoegd.
 
 ### Action hierarchie
 Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen dezelfde loop/query zit (zelfde niveau). In dit voorbeeld heeft Actie A geen effect op Actie B of C.
@@ -265,21 +261,22 @@ Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen deze
     <SQL></SQL>
     <Query>
         <SQL></SQL>
-        <Actie A>
-        </Actie A>
+        <Action A>
+        </Action A>
     </Query>
     <Query>
         <SQL></SQL>
-        <Actie B>
-        </Actie B>
+        <Action B>
+        </Action B>
     </Query>
 </Query>
-<Actie C>
-</Actie C>
+<Action C>
+</Action C>
 
 ```
 
 ### OnSuccess en OnFailure
+Met een `OnSuccess` en `OnFailure` tag kunnen vervolg acties conditioneel worden uitgevoerd. Als de omvattende actie met success is uitgevoerd, dan worden de acties binnen de `OnSuccess` tag uitgevoerd. Als de omvattende actie een fout oplevert, dan worden de `OnFailure` acties uitgevoerd. Op deze manier kan zowel conditionele acties worden ingericht, als ook foutafhandeling.
 > **DEPRECATED** In versies van de mergetool voor 5.0.0 was de tag OnSuccesful maar deze wordt vanaf 5.0.0 vervangen door OnSuccess. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt.
 
 Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat van de buitenste is dit:
@@ -292,21 +289,25 @@ Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat
     <Query>
         <SQL></SQL>
     </Query>
-    <Actie A>
+    <Action A>
         <OnSuccess>
-            <Actie C>
-            </Actie C>
+            <Action C>
+            </Action C>
         </OnSuccess>
-    </Actie A>
-    <Actie B>
+    </Action A>
+    <Action B>
         <OnSuccess>
-            <Actie C>
-            </Actie C>
+            <Action C>
+            </Action C>
         </OnSuccess>
-    </Actie B>
+        <OnFailure>
+            <Action D>
+            </Action D>
+        </OnFailure>
+    </Action B>
 </Query>
 ```
-Naast de `OnSucces` is er ook een `OnFailure`. Bij een OnFailure worden er een tweetal tags toegevoegd aan de mergefield collection:
+Bij een `OnFailure` worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
 
 ### Conditional attribuut
@@ -407,9 +408,9 @@ De optionele `Encoding`attribuut geeft aan welke encoding wordt gebruikt om het 
     <ReadReceipt>YES|NO</ReadReceipt>
     <From Name="friendlyname">van</From>
     <Onbehalfof Name="friendlyname">van</Onbehalfof>
-    <Recipient Type="TO|CC|BCC" Name="friendlyname" MergeTwice="TRUE|FALSE"
+    <Recipient Type="TO|CC|BCC" Name="friendlyname" 
         Validate="TRUE|FALSE">emailadres</Recipient>
-    <Subject MergeTwice="TRUE|FALSE">onderwerpregel</Subject>
+    <Subject>onderwerpregel</Subject>
     <Header Name="headertag">van</Header>
     <Body Merge="YES|NO" InnerSource="BLOB|FILE"
         BodyType="HTML|PLAIN">emailbodytext</Body>
