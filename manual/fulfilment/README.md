@@ -336,7 +336,7 @@ De merge actie is de meest voorkomende actie die wordt gebruik om uitvoer te gen
 ```xml
 <Action Type="Merge">
     <Input source="BLOB|FILE">inputtemplate</Input>
-    <Output Append="yes|no" Print="yes|no"
+    <Output Append="yes|no"
         EOL="windows|unix|<characters>"
         Encoding="<encoding>">outputfile</Output>
 </Action>
@@ -345,7 +345,6 @@ De input template kan uit de database komen, of uit een bestand. Voor bestanden 
 
 #### Word
 Voor het gebruik van Word als merge template dient de `source=file` te worden gebruikt en moet het bestand de .docx extensie hebben (en uiteraard een Microsoft Word bestand zijn). Van ieder record wordt een input template gemerged (Source=FILE).
-Op windows kan voor Microsoft Word kan bij de ouput gebruik worden gemaakt van het attribuut `print=yes` om het gegenereerde bestand automatisch te printen.
 
 #### Excel
 Om Excel als input template te gebruiken voor een merge dient dit bestand aan enkele voorwaarden te voldoen.
@@ -353,7 +352,7 @@ Om Excel als input template te gebruiken voor een merge dient dit bestand aan en
 1. Het bestand moet een Excel bestand zijn met extensie .xlsx
 2. Het Excel bestand moet minimaal 1 worksheet bevatten.
 3. Regel 1 in het Excelbestand bevat de header regel en regel 2 in het excel bestand bevat de detail regel.
-4. Indien per export record meerdere Excel rijen geschreven moetne worden kan ook een name region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
+4. Indien per export record meerdere Excel rijen geschreven moeten worden kan ook een name region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
 
 ```xml
 <Action Type="Merge">
@@ -521,14 +520,12 @@ fingerprint. Passive is standaard false, met de Passive tag kan deze op YES word
 <Action Type="PDF" Engine="EO|essentialobjects" EmbedFonts="YES|NO">
     <InputFile Source="BLOB|FILE"
         Location="header|footer|content">inputtemplate</InputFile>
-    <OutputFile Print="yes|no">outputfile</OutputFile>
+    <OutputFile>outputfile</OutputFile>
     <Margins>l;r;t;b;h;f</Margins>
     <Page>DEF|w;h</Page>
 </Action>
 ```
-M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. Dit bestand kan vervolgens worden gebruikt als email bijlage of direct afgedrukt worden (Print = “Yes"). Voor de actie is een licentie nodig op de pdf engine. Voor de pdf-engine is ABC voorlopig nog de standaard i.v.m. backwards compatibility.
-Let wel op dat deze engine in een nieuwe release vervalt.
-Voor de nieuwe Engine (EO) zijn Margins optioneel. De parameters voor de margins zijn als volgt (puntkomma gescheiden):
+M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. Dit bestand kan vervolgens worden gebruikt als email bijlage. Voor de actie is een licentie nodig op de pdf engine. Voor de pdf-engine is EO de standaard. De `Margins` instellingen zijn optioneel. De parameters voor de margins zijn als volgt (puntkomma gescheiden):
 | | | 
 | - | - |
 | l | Linker marge |
