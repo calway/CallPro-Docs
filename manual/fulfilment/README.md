@@ -673,8 +673,19 @@ from AgentDefs a join resdefs r on a.ResID=r.ResID Where r.ResID >= 0
 </Settings>
 ```
 
-Deze api kan worden opgeroepen met ene REST call naar `http://server:port/api/agentlist`
+Deze api kan worden opgeroepen met ene REST POST call naar `http://server:port/api/Query` met een json payload:
 
+```json
+{
+    "queryName": "Agentlist",
+    "parameters": {
+        "Top": "10",
+    },
+    "forceRefesh": true,
+    "cacheSeconds": 0
+}
+```
+In de aanroep wordt vua `queryName` de naam van deze API opgegeven, in `parameter` kunnen (optioneel) paramaters worden meegegeven die als variabele binnenkomen. `forceRefresh` kan optioneel worden gebruikt om de cache te omzeilen, en `cxacheSeconds` geeft aan hoe lang een vorige call, met dezelfde paramaters, zal worden gecached, standaard 1800 seconden (30 minuten).
 
 ### Webservice Action
 De webservice action is een generieke methode om webservices aan te roepen, en resultaten terug te ontvangen. Bijvoorbeeld:
