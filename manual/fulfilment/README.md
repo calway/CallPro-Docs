@@ -377,17 +377,14 @@ de reeds aanwezige regels in de betreffende sheet.
 #### Tekstbestand
 Het resultaat van de input template wordt geschreven naar de outputfile. Met de attribuut `append=yes` kan worden bepaald of een bestaand bestand wordt uitgeebreidt, of overschreven. 
 
-De optionele `Encoding`attribuut geeft aan welke encoding wordt gebruikt om het output bestand te maken en te schrijven. Mogelijke encodings zijn:
-* utf8 - Windows default utf8 (with BOM)
-* utf8-bom - Utf8 encoding with BOM
-* utf8-nobom - Utf8 encoding without BOM
-* utf7
-* utf32
+De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het output bestand te maken en te schrijven. Mogelijke encodings zijn:
+* utf-8 - Windows default
+* utf-7 - Only use for legacy, this encoding is less secure
+* utf-16 - also known as unicode
+* utf-16BE - Bigendian Unicode
 * unicode - Windows default unicode encoding
-* unicode-bom - Unicode encoding with BOM
-* unicode-nobom - Unicode encoding without BOM
-* Bigendianunicode - Bigendian Unicode
-* ascii
+* utf-32
+* us-ascii
 
 > Let op: Wanneer een input template meerdere keren gemergd moet worden gebruikt dan innersource="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
 
