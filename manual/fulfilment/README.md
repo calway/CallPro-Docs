@@ -93,7 +93,7 @@ Deze query levert alle kolommen uit bellijst 212 gefilter op “mannen“ aangev
     >
         [smtpserver,only for SMTP mail actions]
     </MailServer>
-    <LoggingLevel>level</LoggingLevel>
+    <LogLevel>level</LogLevel>
     <Errors>
         <email From="[from adres]">[email adres]</email>
     </Errors>
@@ -145,8 +145,8 @@ smtp.office365.com:587
 ```
 Als de mailserver setting ontbreekt in de config wordt de setting uit de applicatie configuratie gebruikt.
 
-### Logginglevel
-Logginglevel bepaald hoeveel informatie de Mergetool naar een logbestand schrijft. Mogelijke logginglevels zijn:
+### Loglevel
+Loglevel bepaald hoeveel informatie de Mergetool naar een logbestand schrijft. Mogelijke loglevels zijn:
 | LogLevel | Omschrijving |
 | - | - |
 | trace | Alles |
@@ -156,7 +156,7 @@ Logginglevel bepaald hoeveel informatie de Mergetool naar een logbestand schrijf
 | error | Alleen errors en hoger |
 | fatal, critical | Alleen fatal errors |
 
-Wanneer de logginglevel in de config ontbreekt wordt de logginglevel uit de applicatie configuratie gehaald.
+Wanneer de loglevel in de config ontbreekt wordt de loglevel uit de applicatie configuratie gehaald.
 
 Optioneel kan een ReferenceID worden meegegeven aan iedere logregel. Dit kan
 worden aangezet door een expressie op te nemen als Tag attribuut, bijvoorbeeld:
@@ -546,13 +546,13 @@ Daarnaast kan nog de pagina size worden opgegeven. Deze staat standaard op A4. D
 ### TAG Action
 ```xml
 <Action Type="TAG">
-    <TAG errorlevel="<loglevel>">tagstring1</TAG>
+    <TAG loglevel="<loglevel>">tagstring1</TAG>
     <TAG>tagstring2</TAG>
     <TAG>tagstring3</TAG>
 </Action>
 ```
 Deze regels worden in de logfile geschreven. Standaard als een info log. Via de
-loglevel kan een andere level worden gebruikt. Mogelijkheden zijn: debug, trace, info, warning, error en fatal.
+loglevel kan een andere level worden gebruikt. Mogelijkheden zijn: trace, debug, info, warning, error en critical.
 
 ### SET Action
 ```xml 
