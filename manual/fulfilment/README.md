@@ -9,6 +9,7 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inric
 * Optioneel: HTML kennis
 
 # Configuratiebestand
+Een fulfilmentservice configuratiebestand heeft een XML opmaak en ziet er als volgt uit:
 
 ```xml
 <Settings>
@@ -17,7 +18,7 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inric
             <Expression>* * * * *</Expression>
         </Cron>
     </Schedule>
-    <ConnectString>database connectionstring</ConnectString>
+    <ConnectionString>database connectionstring</ConnectionString>
     <MailServer [Domain="maildomain"] 
         [DefaultTimeOutSeconds="300"]
         [Username="username"]
@@ -28,7 +29,7 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inric
     </MailServer>
     <LogLevel>level</LogLevel>
     <Errors>
-        <email From="[from adres]">[email adres]</email>
+        <Email From="[from adres]">[email adres]</Email>
     </Errors>
     <CryptoKey>[cryptokey]</CryptoKey>
     <RegionalSettings>
@@ -49,13 +50,12 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inric
         [Queries en actions]
     </Query>
 </Settings>
-
 ```
 
 ## Algemene instellingen
 Dit zijn de algemene settings die globaal gelden voor alle MergeTool acties die verderop beschreven worden. Wanneer deze niet opgegeven zijn dan worden de gegevens gebruikt uit de mergetool.exe.config.
 
-### Connectstring
+### Connectionstring
 Dit is de database connectie naar de CallPro database. Deze tag is optioneel en hoeft alleen te worden ingevuld als een andere database dan de Callpro database gebruikt dient te worden. Een connectie string ziet er als volgt uit:
 
 ``` 
@@ -68,6 +68,12 @@ data source=<servername>;initial catalog=<databasename>;Application Name=CallPro
 
 In deze connectie string kan optioneel een `querytimeout=30;` attribuut worden meegegeven (default waarde 30) die bepaald hoe lang een query mag duren vorodat deze is afgerond. Ook kan een connection timeout `connect timeout=60;` worden ingesteld die aangeeft hoe lang het verbinden met de database/server mag duren. Met name als gewerkt wordt met remote servers kan het nodig zijn deze waarden te verhogen. Voor lokaal gebruik zijn de defaults voldoende. 
 > Let op: Wanneer de connectionstring naar een andere database wijst dan de CallPro database kan er geen gebruik worden gemaakt van resource acties.
+
+> **DEPRECATED**: In versies van de mergetool voor 5.0.0 was de tag anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
+
+```xml
+<ConnectString>database connectionstring</ConnectString>
+```
 
 ### MailServer
 De mailserver tag is optioneel en hoeft alleen te worden gebruikt als een andere mailserver dan de standaard mailserver gebruikt dient te worden voor het versturen van mail in deze .config.
@@ -102,7 +108,7 @@ Dit zal een logregel opleveren waarbij de logmelding vooraf wordt gegaan door `e
 Een logfile wordt altijd aangemaakt. Deze logfile kan optioneel worden gemaild naar een email adres dat hier wordt ingesteld. De logfile wordt alleen verstuurd wanneer er logmeldingen zijn van het type error.
 ```xml
 <Errors>
-    <email From="[from adres]">[email adres waar de log file naar to gemailt wordt]</email>
+    <Email From="[from adres]">[email adres waar de log file naar to gemailt wordt]</Email>
 </Errors>
 ```
 
@@ -357,9 +363,11 @@ Standaard worden de gegevens overgenomen van de globale MailServer instellingen 
 ##### SMTP
 Hiermee wordt de mail verstuurd via een smtp server. De `MailServer` tag die volgt geeft dan het server adres aan en in de parameters `Username`, `Password` voor het inloggen met basic authentication.
 ##### exchange_ews_basic_auth of Exchange
-Dit is een Exchange webservice koppeling die gebruik maakt van basic authentication. De naam `Exchange` is behouden voor backward compatibility. Gebruik in de `MailServer` tag ghet server adres en in de paramaters `Username`, `Password`, en optioneel `Userdomain` de naam van Active Directory.
+Dit is een Exchange webservice koppeling die gebruik maakt van basic authentication. De naam `Exchange` is behouden voor backward compatibility. Gebruik in de `MailServer` tag het server adres en in de parameters `Username`, `Password`, en optioneel `Userdomain` de naam van Active Directory.
+
 > Vanaf 1-10-2022 kan dit **niet** meer gebruikt worden met Microsoft/Office 365 omdat Microsoft Basic Authentication vanaf die datum heeft uitgeschakelt. Sinds 2018 geeft Microsoft al aan dat de webservices obsolete zijn en niet verder worden doorontwikkeld. Het wordt geadviseerd om over te stappen op de Microsoft Graph API.
 De exchange webservice koppeling kan nog steeds gebruikt worden voor on-premise Exchange servers of mail servers die compatible zijn met de Exchange WebServices.
+
 ##### m365_graph_api
 Hierbij wordt gebruik gemaakt van de Microsoft Graph API. De `MailServer` tag heeft geen inhoud maar wel de parameters `applicationid`, `tenantid` en `clientsecret`. Maak in Azure Portal een App registration die deze gegevens oplevert. 
 #### ReadReciept
@@ -392,7 +400,7 @@ De emailbodytext mag zowel een ascii tekst bestand zijn als een HTML bestand (So
 ```xml
 <Action Type="SQL">
     <SQL>querystring</SQL>
-    <ConnectionString>connectstring</ConnectionString>
+    <ConnectionString>connectionstring</ConnectionString>
 </Action>
 ```
 Deze actie kan bijvoorbeeld gebruikt worden om update en/of insert queries uit te voeren. De ConnectionString is optioneel, en kan wijzen naar een andere ODBC
@@ -563,7 +571,7 @@ Dit voorbeeld importeert de excelsheet “theData" in Excel bestand test.xlsx na
     <Message>username</Message>
 </Action>
 ```
-Verstuurd een sm bericht (message) naar recipient(s). Recipients mag 1 zijn, maar ook meerdere komma gescheiden mobiele nummers. Standaard wordt verstuurd via Speakup, maar ook spryng kan worden gekozen als SMS gateway voor Belgie.
+Verstuurd een sms bericht (message) naar recipient(s). Recipients mag 1 zijn, maar ook meerdere komma gescheiden mobiele nummers. Standaard wordt verstuurd via Speakup, maar ook spryng kan worden gekozen als SMS gateway.
 
 ### API Action
 De API action is niet direct bedoeld voor fulfilment, maar wordt gebruikt als configuratie voor een query-engine. Een API action moet in een config met schedule type API worden geplaatst. De config kan alleen worden gestart middels een API call naar de Mergetool service, en levert uitvoer als json bericht.
@@ -576,24 +584,26 @@ Voorbeeld van een API script dat actieve gebruikers oplevert.
     <Query>
         <SQL Collection="agent">
 select
-TOP %VARIABLE.TOP%
-r.ResID
-,r.Name
-,r.Account
-,a.Name_First
-,a.Name_Last
-,a.Address
-,a.EMail
-,r.CreatedDtm as Since
-,r.Enabled as Active
-from AgentDefs a join resdefs r on a.ResID=r.ResID Where r.ResID >= 0
+TOP %VARIABLE.TOP \SW""?"5"%
+  resdefs.resid
+, resdefs.name
+, resdefs.account
+, agent.firstname
+, agent.lastname
+, agent.address
+, agent.email
+, resdefs.createddtm as Since
+, resdefs.enabled as Active
+from AgentDefs agent 
+join resdefs on agent.ResID=resdefs.ResID 
+where resdefs.resid >= 0
         </SQL>
         <Action Type="API">
             <Column Name="resid">%agent.resid%</Column>
             <Column Name="name">%agent.name%</Column>
             <Column Name="account">%agent.account%</Column>
-            <Column Name="name_first">%agent.name_first%</Column>
-            <Column Name="name_last">%agent.name_last%</Column>
+            <Column Name="firstname">%agent.firstname%</Column>
+            <Column Name="lastname">%agent.lastname%</Column>
             <Column Name="address">%agent.address%</Column>
             <Column Name="email">%agent.email%</Column>
             <Column Name="since">%agent.since%</Column>
@@ -609,13 +619,13 @@ Deze api kan worden opgeroepen met ene REST POST call naar `http://server:port/a
 {
     "queryName": "Agentlist",
     "parameters": {
-        "Top": "10",
+        "top": "10",
     },
     "forceRefesh": true,
     "cacheSeconds": 0
 }
 ```
-In de aanroep wordt vua `queryName` de naam van deze API opgegeven, in `parameter` kunnen (optioneel) paramaters worden meegegeven die als variabele binnenkomen. `forceRefresh` kan optioneel worden gebruikt om de cache te omzeilen, en `cxacheSeconds` geeft aan hoe lang een vorige call, met dezelfde paramaters, zal worden gecached, standaard 1800 seconden (30 minuten).
+In de aanroep wordt via `queryName` de naam van deze API opgegeven, in `parameter` kunnen (optioneel) parameters worden meegegeven die als variabele binnenkomen. `forceRefresh` kan optioneel worden gebruikt om de cache te omzeilen, en `cacheSeconds` geeft aan hoe lang een vorige call, met dezelfde parameters, zal worden gecached, standaard 1800 seconden (30 minuten).
 
 ### Webservice Action
 De webservice action is een generieke methode om webservices aan te roepen, en resultaten terug te ontvangen. Bijvoorbeeld:
@@ -661,11 +671,11 @@ De mergetool kent een aantal systeemvelden die beschikbaar zijn in de collectie 
 Bij ieder veld kunnen format specifiers worden meegegeven die bepalen hoe de
 uiteindelijke string opgebouwd/weergegeven gaat worden. Er kunnen 0 of meer format specifiers bij 1 veld worden meegegeven. Bijvoorbeeld:
 
-`%CL.MODIFIEDDTM \DTddMMyyyy \ALC#10%`
+`%CL.MODIFIEDDTM \DTddMMyyyy \ALC#12%`
 
 Geeft als resultaat
 
-`#01042005#`
+`##01042005##`
 
 <table>
 <tr>
