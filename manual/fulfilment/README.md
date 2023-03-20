@@ -559,7 +559,7 @@ Deze actie importeert een bestand (Excel) naar een bellijst in CallPro op dezelf
     <CallListID>id</CallListID>
     <ImportID>id</ImportID>
     <Filter>filterconditie(sql)</Filter>
-    <InputFile Type="Excel|Text"
+    <InputFile Type="Excel"
         sheet="sheetname">filename</InputFile>
 </Action>
 ```
