@@ -464,6 +464,7 @@ fingerprint. Passive is standaard false, met de Passive tag kan deze op YES word
 </Action>
 ```
 M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. Dit bestand kan vervolgens worden gebruikt als email bijlage. Voor de actie is een licentie nodig op de pdf engine. Voor de pdf-engine is EO de standaard. De `Margins` instellingen zijn optioneel. De parameters voor de margins zijn als volgt (puntkomma gescheiden):
+
 | | | 
 | - | - |
 | l | Linker marge |
@@ -473,6 +474,7 @@ M.b.v. van deze actie van van een html template een pdf bestand worden gemaakt. 
 | optioneel:||
 | h | positie van de header vanaf de bovenkant van het papier |
 | f | positie van de footer vanaf de bovenkant van het papier |
+
 Alle settings moeten in cm of in inch. De parameter bestaat dus uit 4 of 6 cijfers, allemaal gevolgd door of cm of inch. Uiteraard moet alles of in inch, of in cm, dus geen mix!
 Bijvoorbeeld (default settings):
 ```xml
@@ -523,6 +525,7 @@ De URL wordt opgeroepen, en het resultaat (html pagina) wordt in de collectionse
 Dit actie werkt alleen i.c.m. CallPro, en zal een CallPro resource type proberen te laden.
 De ResourceID is verplicht, evenals een geldig ResourceType. De volgende
 Resourcetypen worden ondersteund:
+
 | ResourceType | |
 | - | - |
 | ENTRY | Extra: Alle scriptvelden zijn dan beschikbaar via de collectie |
@@ -532,6 +535,7 @@ Resourcetypen worden ondersteund:
 | APPOINTMENT ||
 | SCRIPTDEF ||
 | CAMPAIGN ||
+
 Naast enkele extra velden zijn alle standaard properties en resvariables beschikbaar van het resourcetype.
 
 ### Export Action
@@ -543,7 +547,7 @@ Naast enkele extra velden zijn alle standaard properties en resvariables beschik
     <Detail>id</Detail>
     <Filter>filterconditie(sql)</Filter>
     <OutputFile Type="Excel|Text"
-        Sheet="sheet1">filename</OutputFile>
+        Sheet="sheetname">filename</OutputFile>
 </Action>
 ```
 Deze actie maakt een export zoals CallPro dat ook doet. De keuze is een export naar excel of naar een text bestand. I.c.m. met de Resource action automatiseert deze actie een volwaardige export, zie voorbeeld:
@@ -552,14 +556,14 @@ Deze actie maakt een export zoals CallPro dat ook doet. De keuze is een export n
 Deze actie importeert een bestand (Excel) naar een bellijst in CallPro op dezelfde manier als in CallPro.
 ```xml
 <Action Type="Import">
-    <CallListID>%INFO.CALLLISTID%</CallListID>
-    <ImportID>%IMPDEF.SYS_IMPORTID%</ImportID>
+    <CallListID>id</CallListID>
+    <ImportID>id</ImportID>
     <Filter>filterconditie(sql)</Filter>
-    <InputFile Type="xlsx"
-        sheet="theData">%ENVIRONMENT.CURRENTDIRECTORY%\test.xlsx</InputFile>
+    <InputFile Type="Excel|Text"
+        sheet="sheetname">filename</InputFile>
 </Action>
 ```
-Dit voorbeeld importeert de excelsheet “theData" in Excel bestand test.xlsx naar bellijst %INFO.CALLLISTID%. Sheet is optioneel, standaard wordt de eerste sheet gebruikt.
+Deze actie importeert de file `filename` vanuit een Excel of tekstbestand. Voor Excel is `sheet` optioneel, standaard wordt de eerste sheet gebruikt.
 
 ### SMS Action
 ```xml
