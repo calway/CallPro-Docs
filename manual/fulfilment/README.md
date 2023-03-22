@@ -543,14 +543,12 @@ Naast enkele extra velden zijn alle standaard properties en resvariables beschik
 <Action Type="Export">
     <CallListID>id</CallListID>
     <ExportID>id</ExportID>
-    <Header>id</Header>
-    <Detail>id</Detail>
     <Filter>filterconditie(sql)</Filter>
     <OutputFile Type="Excel|Text"
         Sheet="sheetname">filename</OutputFile>
 </Action>
 ```
-Deze actie maakt een export zoals CallPro dat ook doet. De keuze is een export naar excel of naar een text bestand. I.c.m. met de Resource action automatiseert deze actie een volwaardige export, zie voorbeeld:
+Deze actie maakt een export zoals CallPro dat ook doet. De keuze is een export naar excel of naar een text bestand. Voor exports naar Excel moet de filename extensie ".xlsx" zijn!
 
 ### Import Action
 Deze actie importeert een bestand (Excel) naar een bellijst in CallPro op dezelfde manier als in CallPro.
