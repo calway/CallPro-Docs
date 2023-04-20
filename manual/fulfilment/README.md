@@ -344,8 +344,7 @@ De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het
     <ReadReceipt>YES|NO</ReadReceipt>
     <From Name="friendlyname">van</From>
     <Onbehalfof Name="friendlyname">van</Onbehalfof>
-    <Recipient Type="TO|CC|BCC" Name="friendlyname" 
-        Validate="TRUE|FALSE">emailadres</Recipient>
+    <Recipient Type="TO|CC|BCC" Name="friendlyname">emailadres</Recipient>
     <Subject>onderwerpregel</Subject>
     <Header Name="headertag">van</Header>
     <Body Merge="YES|NO" InnerSource="BLOB|FILE"
@@ -379,7 +378,6 @@ Indien gezet wordt dit gebruikt om een `onbehalf of` in te stellen. Ook bij deze
 #### Recipient
 De recipient tag mag vaker voorkomen binnen de email actie. 
 Er dient minimaal 1 TO recipient te zijn. Meerdere recipients kunnen zowel in aparte recipient tags, als binnen een recipient tag als , of ; gescheiden lijst worden opgegeven. Bij de recipient kan ook een friendlyname worden meegegeven in de `Name` parameter.
-De `Validate` parameter bepaald of een poging wordt gedaan om te controleren dat het opgegeven email adres geldig is door contact op te nemen met de mailserver van het domein.
 
 #### Subject
 De onderwerp regel van de email
