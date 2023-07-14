@@ -1,14 +1,25 @@
 # CallProPortal Release Notes
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
-<br/>
+
 
 ***
+## v5.0.12 - 2023-07-04
+Dit is een non-breaking database wijziging die nodig is om nog niet aangekondigde functionaliteit te kunnen gebruiken. In deze versie is ondersteuning toegevoegd voor de weergave van de `Alpha` gesprekstranscriptie en AI analyse. Deze functionaliteit is nog in een erg vroeg stadium en de exacte invulling ligt nog niet vast. 
+> Voor gebruikers die deze functionaliteit in dit vroege stadium al willen inzetten, neem contact op met j.bennink@calway.nl. 
 
-<br/>
+### Changed
+- Gespreksopname audiospeler is uitgebreidt met weergave van een gesprekstranscriptie, een gesprekssamenvatting, en enkele per scriptdefinitei instelbare vraag- en antwoorden.
+- De fulfilment validatie is aangepast om ook de nieuwe audio speler te gebruiken.
 
 ***
-## v5.0.9 - 2023-06-01
+## v5.0.10 - 2023-06-01
+### Fixed
+ - Kleine code changes en optimalisaties
+ - Consolidatie release
+
+***
+## v5.0.9 - 2023-05-30
 ### Fixed
 - Een probleem bij specifieke script inrichting plugins met de signalr verbinding opgelost.
 - Tevens verwijderd deze versie functionaliteit die al langere tijd als obsolete is aangegeven, w.o. Informatiebord.
@@ -16,7 +27,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ***
 ## v5.0.8 - 2023-05-30
 ### Fixed
-- Een issue met de weergave van velden in de fulfilment validatie door een boorstrap update is opgelost
+- Een issue met de weergave van velden in de fulfilment validatie door een bootstrap update is opgelost
 - Login issue opgelost voor nieuwe 5.0 databases
 
 ***
