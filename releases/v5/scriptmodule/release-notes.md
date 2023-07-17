@@ -10,11 +10,11 @@ Voor scripts die langer zijn dan een scherm hoog is biedt dit meer vrijheid om a
 
 ***
 ## v5.0.3 - 2023-03-01
-Gebruikers op Windows 10 hadden veel problemen met automatische updates en installatie. Deze versie werkt alleen met het nieuwe developer certificaat en op zowqel Windows 10 als Windows 11. 
+Gebruikers op Windows 10 hadden veel problemen met automatische updates en installatie. Deze versie werkt alleen met het nieuwe developer certificaat en op zowel Windows 10 als Windows 11. 
 
 *** 
 ## v5.0.2 - 2023-02-01
-Door het verlopen van het developer certificaat werkten automatische updates niet meer. Deze versie gebruikt het nieuwe certificaat en ondersteunt op Windows 11 ook upgrade svan het oude certificaat.
+Door het verlopen van het developer certificaat werkten automatische updates niet meer. Deze versie gebruikt het nieuwe certificaat en ondersteunt op Windows 11 ook upgrade van het oude certificaat.
 
 ***
 ## v5.0.1 - 2022-02-01
