@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.5 - 2023-07-18
+### Fixed
+- In de terugbeltijd expressie berekening die gebruikt wordt dvoor de status datum berekening, specifiek voor TimeAdd, konden door een fout geen minuten meer gebruikt worden. De syntax `TimeAdd=5m` (5 minuten) werd niet herkend als geldig, maar `TimeAdd=1h` (1 uur) nog steeds wel. Dit was een feature regressie bug die snel kon worden opgelost.
+
+
+***
 ## v5.0.4 - 2023-07-17
 In deze nieuwe versie is het dialer popup venster modeless gemaakt. Hierdoor kun je terwijl de dialer het nummer belt, maar er nog niet is opgenomen, toch al door het script scrollen en navigeren. Je kunt uiteraard **niet** afcoderen of ander systeemacties uitvoeren.
 Voor scripts die langer zijn dan een scherm hoog is biedt dit meer vrijheid om alvast alles door te nemen. Ook scripts met meerdere tabbladen, of meerdere pagina's.
