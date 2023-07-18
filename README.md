@@ -22,4 +22,4 @@ Dit zijn de Docs pages voor CallPro.
 ## Release notes
 
 * [CallPro v4 Release Notes](./releases/v4/release-notes)
-* [BETA CallPro v5 Release Notes](./releases/v5/release-notes)
+* [CallPro v5 Release Notes](./releases/v5/release-notes)
