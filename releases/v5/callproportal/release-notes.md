@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 
 ***
+## v5.0.16 - 2023-08-08
+Uitbreiding gespreksopname weergave met richting van het gesprek (inbound of oubtound). Voor campagnes die zowel inbound als outbound worden gebruikt is het hnuttig om te kunnen zien op het gesprek en de opname is ontstaan uit een inbound of outbound call.
+
+In de draaitabel voor belresultaten webpart zijn extra kolommen toegevoegd. Tevens is voor het opslaan van templates de mogelijkheid toegevoegd om ook de sorteervolgorde van de kolom en rij vleden vast te leggen.
+
+***
 ## v5.0.12 - 2023-07-04
 Dit is een non-breaking database wijziging die nodig is om nog niet aangekondigde functionaliteit te kunnen gebruiken. In deze versie is ondersteuning toegevoegd voor de weergave van de `Alpha` gesprekstranscriptie en AI analyse. Deze functionaliteit is nog in een erg vroeg stadium en de exacte invulling ligt nog niet vast. 
 > Voor gebruikers die deze functionaliteit in dit vroege stadium al willen inzetten, neem contact op met j.bennink@calway.nl. 
