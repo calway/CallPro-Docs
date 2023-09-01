@@ -5,9 +5,9 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 ***
 ## v5.0.16 - 2023-08-08
-Uitbreiding gespreksopname weergave met richting van het gesprek (inbound of oubtound). Voor campagnes die zowel inbound als outbound worden gebruikt is het hnuttig om te kunnen zien op het gesprek en de opname is ontstaan uit een inbound of outbound call.
+Uitbreiding gespreksopname weergave met richting van het gesprek (inbound of outbound). Voor campagnes die zowel inbound als outbound worden gebruikt is het nuttig om te kunnen zien op het gesprek en de opname is ontstaan uit een inbound of outbound call.
 
-In de draaitabel voor belresultaten webpart zijn extra kolommen toegevoegd. Tevens is voor het opslaan van templates de mogelijkheid toegevoegd om ook de sorteervolgorde van de kolom en rij vleden vast te leggen.
+In de draaitabel voor belresultaten webpart zijn extra kolommen toegevoegd. Tevens is voor het opslaan van templates de mogelijkheid toegevoegd om ook de sorteervolgorde van de kolom en rij velden vast te leggen.
 
 ***
 ## v5.0.12 - 2023-07-04
