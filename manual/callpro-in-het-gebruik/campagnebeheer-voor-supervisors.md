@@ -445,7 +445,7 @@ apart. Dit is in Excel eenvoudig op te lossen.
 1.  Voeg een nieuwe kolom toe direct na de beide velden en geef deze de
     naam van de telefoonnummer kolom.
 
-2.  Zet in de eerste lege cel de formule =K2\&L2 en kopieer de formule
+2.  Zet in de eerste lege cel de formule =K2&L2 en kopieer de formule
     naar de overige cellen door het hele gebied M2 t/m M14 te selecteren
     en dan CTRL-D
 
