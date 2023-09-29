@@ -23,8 +23,8 @@ van CallPro op te roepen via een hyperlink of vanuit javascript.
 
 Bij het gebruik van de hyperlink methode wordt de systeemactie in het
 href attribuut van de hyperlink gebruikt \<a
-href=”**{systeemactie}**”\>{label}\</a\>. Een andere methode is om
-vanuit javascript een document.location=”**{systeemactie}**” uit te
+href="**{systeemactie}**"\>{label}\</a\>. Een andere methode is om
+vanuit javascript een document.location="**{systeemactie}**" uit te
 voeren.
 
 In deze paragraaf worden deze systeemacties behandeld die telkens als
@@ -62,10 +62,10 @@ betreffende scherm is de belopdrachtstatus geselecteerd en kan niet
 gewijzigd worden.
 
 ```
-#SCRIPT_SELECTSTAT?STATCODE=<status-code\>[&AUTOSELECT][&CALLBACKEXPR=<callback-expr>][&CALLBACKAGENT=<agent-pad>][&PRIORITY=<number>][&MOVEENTRY=<bellijst-pad\>][&CHANGENOTE={ON | OFF}][&CHANGETELNR={ ON | OFF}]
+#SCRIPT_SELECTSTAT?STATCODE={status-code}[&AUTOSELECT][&CALLBACKEXPR={callback-expr}][&CALLBACKAGENT={agent-pad}][&PRIORITY={number}][&MOVEENTRY={bellijst-pad}][&CHANGENOTE={ON | OFF}][&CHANGETELNR={ ON | OFF}]
 ```
 
-Een aantal paramaters is optioneel. Deze parameters bepalen enkele extra
+Een aantal parameters is optioneel. Deze parameters bepalen enkele extra
 instellingen bij de status.
 
 | Optionele paramater | Betekenis en gebruik                                                                                                                                                                                                            |
@@ -75,7 +75,7 @@ instellingen bij de status.
 | &CALLBACKAGENT     | Met deze parameter kan de standaard ingestelde (terugbel-)agent worden aangepast. Vul hier het volledige pad naar de Agent resource in.                                                                                         |
 | &PRIORITY          | Met deze parameter kan de standaard prioriteit van de betreffende belopdrachtstatus worden aangepast. De prioriteit moet wel liggen binnen de range die voor het type status (niet bereikt, terugbellen of verwerkt) geldig is. |
 | &MOVEENTRY         | Met deze parameter kan de belopdracht tijdens het afcoderen fysiek worden verplaatst naar een andere bellijst. De bellijst moet compatibel zijn qua velden en belopdrachtstatus met de bellijst waar de belopdracht uit komt.   |
-| \&CHANGENOTE        | Geeft aan of de Agent in het CallPro popupvenster het notitieveld mag bewerken.                                                                                                                                                 |
+| &CHANGENOTE        | Geeft aan of de Agent in het CallPro popupvenster het notitieveld mag bewerken.                                                                                                                                                 |
 | &CHANGETELNR       | Geeft aan of de Agent in het CallPro popupvenster het ingestelde telefoonummerveld dat wordt gebruikt voor het terugbellen mag wijzigen.                                                                                        |
 
 ### Starten windows applicatie
@@ -84,13 +84,13 @@ Met deze systeemactie kan een externe windows applicatie worden geopend.
 Geef het complete pad op naar de .EXE of .BAT/.CMD van het programma
 gestart moet worden.
 ```
-#SCRIPT_WINEXEC?FILE=<bestandsnaam>
+#SCRIPT_WINEXEC?FILE={bestandsnaam}
 ```
 ### Herstellen/annuleren wijzigingen
 
 Met deze systeemactie kunnen de veldwaarden in de actuele belscript
 pagina worden teruggezet naar de waarden zoals ze waren toen de pagina
-werd geladen. Let op\! Dit geldt alleen voor de velden die op deze
+werd geladen. Let op! Dit geldt alleen voor de velden die op deze
 pagina staan.
 ```
 #SCRIPT_RESTOREINPUT
@@ -140,7 +140,7 @@ ook worden gebruikt om een tweede, alternatief nummer, te bellen. Met de
 optionele parameter TELNR kan een willekeurig telefoonnummer ingesteld
 worden.
 ```
-#SCRIPT_DIAL?[TELNR=<telefoonnummer>][&AUTOSELECTSTAT={TRUE | FALSE}]
+#SCRIPT_DIAL?[TELNR={telefoonnummer}][&AUTOSELECTSTAT={TRUE | FALSE}]
 ```
 ### Beëindig gesprek
 
@@ -173,7 +173,7 @@ Met deze systeemactie kan de agent zijn wachtwoord wijzigen.
 
 Met deze systeemactie kan een nieuwe belopdracht worden toegevoegd aan
 een aan de agent gekoppelde bellijst. Deze actie is alleen beschikbaar
-voor <span class="underline">inbound</span> campagnes. Nadat de agent
+voor *inbound* campagnes. Nadat de agent
 een campagne en bellijst heeft geselecteerd wordt het
 Belopdracht-eigenschappenscherm geopend en kunnen de gegevens van de
 nieuwe belopdracht worden ingevoerd.
@@ -183,7 +183,7 @@ nieuwe belopdracht worden ingevoerd.
 ### Zoek belopdracht
 
 Met deze menuoptie wordt het Belopdracht/Prospect Zoeken-applet geopend.
-Deze actie is alleen beschikbaar voor <span class="underline">inbound</span> campagnes.
+Deze actie is alleen beschikbaar voor *inbound* campagnes.
 ```
 #SCRIPT_SEARCHENTRY
 ```
@@ -217,7 +217,7 @@ dient de naam van de agenda te bevatten). Met de parameter DISABLESWITCH
 kan in de agenda voorkomen worden dat de gebruiker tussen meerdere
 agenda's kan schakelen.
 ```
-#SCRIPT_CALLMODULE?MODULE=CALENDAR.APP\[&CALENDAR=<calendar>][&DISABLESWITCH]
+#SCRIPT_CALLMODULE?MODULE=CALENDAR.APP[&CALENDAR={calendar}][&DISABLESWITCH]
 ```
 ### Volgende belopdracht
 
@@ -231,7 +231,7 @@ geannuleerd. Bij uitloggen na instellen van een belopdracht wordt de
 belopdracht automatisch vrijgegeven. De belopdracht mag niet al in
 gebruik (vergrendeld) zijn bij de aanvraag.
 ```
-#SCRIPT_NEXTENTRY?{ENTRYID=<entryid>&CAMPAIGNID=<campaignid> | CLEAR}[&PROMPT]
+#SCRIPT_NEXTENTRY?{ENTRYID={entryid}&CAMPAIGNID={campaignid} | CLEAR}[&PROMPT]
 ```
 ### Call blending; overschakelen op andere dial mode
 
@@ -240,9 +240,9 @@ inbound of outbound switchen. Het commando werkt analoog aan een
 Pauze-verzoek; het verzoek zal ingewilligd worden indien het systeem
 daar toe in staat is.
 ```
-#SCRIPT_SWITCHDIALMODE?[{SET | CLEAR}][&NOCONFIRM][CAMPAIGNID=<id>&NEWENTRY]
+#SCRIPT_SWITCHDIALMODE?[{SET | CLEAR}][&NOCONFIRM][CAMPAIGNID={campaignid&NEWENTRY]
 ```
-Met de optie `CAMPAIGNID=<id>&NEWENTRY` schakelt CallPro voor de
+Met de optie `CAMPAIGNID={campaignid}&NEWENTRY` schakelt CallPro voor de
 volgende call over naar de genoemde campagne en begint een nieuwe blanco
 belopdracht.
 
@@ -281,15 +281,15 @@ Met deze systeemactie wordt een actief gesprek (live call) direct
 doorgeschakeld naar het opgegeven nummer. De agent schakelt hierdoor
 naar de wrapup fase.
 ```
-#SCRIPT_TRANSFER?TYPE=BLIND&CONTEXT=dialer-transfer&TARGET=<telefoonnummer>
+#SCRIPT_TRANSFER?TYPE=BLIND&CONTEXT=dialer-transfer&TARGET={telefoonnummer}
 ```
 Een alternatieve variant hierop is:
 ```
-#SCRIPT_TRANSFER?TYPE=BLINDEARLYMEDIA&CONTEXT=dialer-transfer&TARGET=<telefoonnummer>
+#SCRIPT_TRANSFER?TYPE=BLINDEARLYMEDIA&CONTEXT=dialer-transfer&TARGET={telefoonnummer}
 ```
 Deze variant schakelt het audiokanaal aal door voordat de target heeft
 opgenomen. Dit is vooral bruikbaar als er doorgeschakeld wordt naar
-nummers die geen “answer” geven maar wel al audio afspelen zodat
+nummers die geen "answer" geven maar wel al audio afspelen zodat
 gebruikt bij 0800 en 09xx nummers.
 
 ### Gesprek met ruggespraak doorverbinden (attended transfer) 
@@ -306,7 +306,7 @@ Met deze systeemactie wordt het doorverbinden van een actief gesprek
 (live call) met ruggespraak gestart en wordt direct het nummer gebeld
 waarmee doorverbonden gaat worden na ruggespraak.
 ```
-#SCRIPT_TRANSFER?TYPE=ATTENDED&CONTEXT=dialer-transfer&TARGET=<telefoonnummer>
+#SCRIPT_TRANSFER?TYPE=ATTENDED&CONTEXT=dialer-transfer&TARGET={telefoonnummer}
 ```
 ### Doorverbinden met ruggespraak annuleren
 
@@ -344,7 +344,7 @@ Met deze systeemactie kunnen DTMF tonen worden gestuurd die nodig zijn
 om in een gesprek door een IVR de navigeren. Dit werkt alleen met G711
 codec.
 ```
-#SCRIPT_SENDDTMF?DIGITS=<digits>
+#SCRIPT_SENDDTMF?DIGITS={digits}
 ```
 ### Zet een gesprek on hold
 

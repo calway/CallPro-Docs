@@ -287,7 +287,7 @@ plakken kan ook informatie uit de vorige notitie worden overgenomen.
 ## Pagina footer
 
 In de pagina footer wordt het versienummer van het autoscript afgebeeld
-en staat tussen haakjes \[ \] de naam van de scriptdefinitie afgebeeld.
+en staat tussen haakjes [ ] de naam van de scriptdefinitie afgebeeld.
 Helemaal rechts is een knop om snel naar boven te springen.
 
 ![](./media/image125.png)
@@ -367,10 +367,10 @@ De opmaak is als volgt:
 ```
 {  
 “Version”: “1.0”,  
-“DisplayFormat”: “\<format-strings\>”  
+“DisplayFormat”: “<format-strings>”  
 }
 ```
-Voor \<format-strings\> kunnen vervolgens de volgende functies worden
+Voor `<format-strings>` kunnen vervolgens de volgende functies worden
 gebruikt.
 
 ### Datum velden
