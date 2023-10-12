@@ -510,7 +510,7 @@ De set actie set variabelen die in vervolg acties kunnen worden gebruikt. De var
 <optioneleparameters>waarde</optioneleparameters>
 </Action>
 ```
-De URL wordt opgeroepen, en het resultaat (html pagina) wordt in de collectionset opgenomen met de naam collectionname.URL Optionele parameters worden geurlencode toegevoegd aan de URL voordat deze wordt opgeroepen.
+De URL wordt opgeroepen, en het resultaat (html pagina) wordt in de collection opgenomen met de naam collectionname.DATA. Ook wordt een collectionname.STATUSCODE en collectionname.REASONPHRASE terug gegeven voor de Action. Optionele parameters worden geurlencode toegevoegd aan de URL voordat deze wordt opgeroepen.
 
 ### Resource Action
 ```xml
