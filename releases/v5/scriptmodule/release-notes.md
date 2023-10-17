@@ -8,6 +8,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ### Fixed
 - Bij het afcoderen via scripting werd de `MOVEENTRY` parameter genegeerd. De correcte werking van deze parameter is hersteld
 - Bij het afcoderen via scripting werden alle status parameters  genegeerd en werden de op de status ingestelde instellingen gebruikt. Nu worden weer correct de via scripting ingestelde waarden gebruikt
+
 ### Change
 - In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
 

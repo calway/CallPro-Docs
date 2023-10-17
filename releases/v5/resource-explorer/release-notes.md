@@ -7,6 +7,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ## v5.0.6 - 2023-10-17
 ### Fixed
 - Extra applicatie icoon in Start menu voor Campagne Grid en Suppressielijsten import.
+
 ### Change
 - In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
 
@@ -14,6 +15,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ## v5.0.5 - 2023-07-18
 ### Changed
 - De icons in de toolbar zijn nu uniform van afmeting. Dit ziet er een stuk beter uit
+
 ### Fixed
 - In de terugbeltijd expressie berekening die gebruikt wordt voor de status datum berekening, specifiek voor TimeAdd, konden door een fout geen minuten meer gebruikt worden. De syntax `TimeAdd=5m` (5 minuten) werd niet herkend als geldig, maar `TimeAdd=1h` (1 uur) nog steeds wel. Dit was een feature regressie bug die snel kon worden opgelost.
 
