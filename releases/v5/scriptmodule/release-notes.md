@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.6 - 2023-10-17
+### Fixed
+- Bij het afcoderen via scripting werd de `MOVEENTRY` parameter genegeerd. De correcte werking van deze parameter is hersteld
+- Bij het afcoderen via scripting werden alle status parameters  genegeerd en werden de op de status ingestelde instellingen gebruikt. Nu worden weer correct de via scripting ingestelde waarden gebruikt
+### Change
+- In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
+
+***
 ## v5.0.5 - 2023-07-18
 ### Fixed
 - In de terugbeltijd expressie berekening die gebruikt wordt voor de status datum berekening, specifiek voor TimeAdd, konden door een fout geen minuten meer gebruikt worden. De syntax `TimeAdd=5m` (5 minuten) werd niet herkend als geldig, maar `TimeAdd=1h` (1 uur) nog steeds wel. Dit was een feature regressie bug die snel kon worden opgelost.

@@ -4,6 +4,13 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.6 - 2023-10-17
+### Fixed
+- Extra applicatie icoon in Start menu voor Campagne Grid en Suppressielijsten import.
+### Change
+- In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
+
+***
 ## v5.0.5 - 2023-07-18
 ### Changed
 - De icons in de toolbar zijn nu uniform van afmeting. Dit ziet er een stuk beter uit
