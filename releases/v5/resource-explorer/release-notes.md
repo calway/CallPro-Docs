@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.7 - 2023-10-18
+### Fixed
+- In de standaard zoekvelden was per abuis het filteren met `%` verwijderd waardoor er niet meer kon worden gezocht op bijvoorbeeld bedrijfsnaam bevat "bakker" door in het bedrijfsnaamveld "%bakker" te gebruiken. Voor alle duidelijkheid, met `%` geef je aan dat het niet uit maakt wat er voor staat, maar dat ergens "bakker" in de bedrijfsnaam moet staan. CallPro voegt standaard al een `%` achter de gebruiker-invoer toe (zodat je altijd zoekt op een `begint met`)
+
+    Daarnaast kan ook een `_` worden gebruik om aan te geven dat hier elk willekeurig karakter kan staan of `[]` met tussen deze haken een 1- of meer tekens zoals `9[5678]` om aan te geven dat gezocht moet worden op postcodes die beginnen met "95, 96, 97 of 98". Deze reeks kan nog eenvoudiger als `9[5-8]` worden geschreven.
+
+
+***
 ## v5.0.6 - 2023-10-17
 ### Fixed
 - Extra applicatie icoon in Start menu voor Campagne Grid en Suppressielijsten import.
