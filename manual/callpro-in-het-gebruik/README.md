@@ -10,11 +10,16 @@ CallPro in de context van een supervisor.
 
 # Inhoudsopgave
 
-[CallPro modules](callpro-modules.md#callpro-modules)
+
+[Resource Explorer](callpro-module-resourceexplorer.md)
+
+[Scriptmodule](callpro-module-scriptmodule.md)
 
 [Campagnebeheer voor supervisors](campagnebeheer-voor-supervisors.md#Campagnebeheer-voor-supervisors)
 
 [Belscripts maken voor beginners](belscripts-maken-voor-beginners.md#Belscripts-maken-voor-beginners)
+
+[Belscripts maken voor gevorderden](belscripts-maken-voor-gevorderden.md)
 
 [Wallboard](wallboard.md#wallboard)
 

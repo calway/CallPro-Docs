@@ -216,3 +216,28 @@ Voor vensters zonder icoon is er ook een optie om het venster tussen de
 monitoren te verplaatsen. Druk hiervoor Windows-key+Shift ingedrukt en
 gebruik vervolgens de links en rechts pijltjes om een venster tussen de
 monitoren te wisselen.
+
+## Hoe biedt CallPro een belopdracht aan
+
+CallPro doorloopt meerdere fasen bij het ophalen van een nieuwe
+belopdracht. Deze stappen beschrijven het gedrag zoals dit standaard
+ingesteld staat. Diverse instellingen kunnen deze volgorde beïnvloeden.
+
+1.  Kijk over alle gekoppelde campagnes en actieve bellijsten in deze
+    campagnes naar belopdrachten in de terugbellen categorie
+    (terugbellen hoog) die moeten worden aangeboden. Biedt de eerste
+    belopdracht aan die op basis van prioriteit binnen de terugbellen
+    categorie, en terugbeltijd moet worden gebeld.
+
+2.  Kijk over alle gekoppelde campagnes en actieve bellijsten in deze
+    campagnes naar belopdrachten in de terugbellen categorie
+    (terugbellen laag) die moeten worden aangeboden. Biedt de eerste
+    belopdracht aan die op basis van prioriteit binnen de terugbellen
+    categorie, en terugbeltijd moet worden gebeld.
+
+3.  Kijk over gekoppelde campagnes en actieve bellijsten in deze
+    campagnes op volgorde van campagne prioriteit en daarbinnen bellijst
+    prioriteit naar de belopdrachten in de resterende categorieën (niet
+    bereikt hoog, systeem en niet bereikt laag). Biedt de eerste
+    belopdracht aan die op basis van de prioriteit binnen deze
+    categorieën, en terugbeltijd moet worden gebeld.

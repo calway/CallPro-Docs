@@ -1,15 +1,3 @@
-# Inhoudsopgave
-
-[Belhistoriestatistieken](#belhistoriestatistieken)
-
-[Bellijst statistieken](#bellijst-statistieken)
-
-[Bellijst eigenschappen](#bellijst-eigenschappen)
-
-[Reportserver rapporten](#reportserver-rapporten)
-
-[Exporteren](#exporteren)
-
 # Rapportage
 
 Voor de dagelijkse aansturing is het van belang dat de supervisor een
