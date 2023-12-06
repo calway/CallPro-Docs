@@ -2,6 +2,16 @@
 Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 <br/>
+***
+
+## v5.0.7 - 2023-12-06
+### Fixed
+- Bij het afcoderen met de `CALLBACKAGENT` parameter is een fout opgelost die de meegegeven resource interpreteerde als Bellijst in plaats van Agent. Hierdoor werkte deze functie niet.
+- Bij het gebruik `MOVEENTRY` als de move niet lukte kon daarna niet worden afgecodeerd met een andere status doordat bepaalde settings bleven hangen van de moveentry. Dit is nu opgelost.
+- Bij de `SELECTSTAT` commando worden nu ook de `MINCALLBACKEXPR` en `MAXCALLBACKEXPR` toegevoegd die nog ontbraken.
+
+### Change
+- Cosmetische verbeteringen in keuzelijsten met checkbox selectie.
 
 ***
 ## v5.0.6 - 2023-10-17

@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.8 - 2023-12-06
+### Fix
+- In de rapportage werd bij het gebruik van de "Export naar Excel" optie cijfer kolommen niet gezien als cijfers, maar als tekst. Dit is opgelost. Een resterend probleem is dat tijdsduur kolommen nog steeds als tekst worden gezien en in Excel niet worden herkend als een tijdsduur. Als je de cell bewerkt herkend Excel de *handmatige* invoer wel als tijdsduur. We hebben hier nog geen oplossing voor kunenn vinden anders dan dat je als gebruiker `F2` en `Enter` moet uitvoeren op de cell.
+
+### Change
+- Cosmetische verbeteringen in keuzelijsten met checkbox selectie.
+- Er is een sneltoets toegevoegd `Ctrl-Shift+C` om het volledige pad van de huidige resource in het clipboard te zetten.
+
+
+***
 ## v5.0.7 - 2023-10-18
 ### Fixed
 - In de standaard zoekvelden was per abuis het filteren met `%` verwijderd waardoor er niet meer kon worden gezocht op bijvoorbeeld bedrijfsnaam bevat "bakker" door in het bedrijfsnaamveld "%bakker" te gebruiken. Voor alle duidelijkheid, met `%` geef je aan dat het niet uit maakt wat er voor staat, maar dat ergens "bakker" in de bedrijfsnaam moet staan. CallPro voegt standaard al een `%` achter de gebruiker-invoer toe (zodat je altijd zoekt op een `begint met`)
