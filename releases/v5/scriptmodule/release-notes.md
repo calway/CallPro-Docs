@@ -6,7 +6,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 ## 5.0.8 - 2023-12-11
 ### Fixed
-- Voor  belscripts waar vanuit javascript code de gespreksopnames worden gestart is een bug gefixt die een javascript error gaf `Deze eigenschap of methode wordt niet ondersteund door dit object loScriptAction.CreateParms()` Onderstaande code leverde de genoemde fout. Er zijn gee naanpassingen nodig, de javascript code is correct.
+- Voor  belscripts waar vanuit javascript code de gespreksopnames worden gestart is een bug gefixt die een javascript error gaf `Deze eigenschap of methode wordt niet ondersteund door dit object loScriptAction.CreateParms()` Onderstaande code leverde de genoemde fout. Er zijn geen aanpassingen nodig, de javascript code is correct.
 ```javascript
 function Recording(action) {
 	var loScriptAction = window.external.GetScriptAction();

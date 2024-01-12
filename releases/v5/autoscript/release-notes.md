@@ -5,7 +5,7 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 ***
 ## v5.0.2 - 2023-12-08
-Library updates only
+Alleen interne updates
 
 ***
 ## v5.0.1 - 2023-02-01
