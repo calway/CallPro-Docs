@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 
 ***
+## v5.0.18 - 2024-01-12
+In deze versie is een aanpassing doorgevoerd voor de Agenda synchronisatie autorisatie. Er zat ee nbug in dit onderdeel waardoor Google calendars niet konden wordne geregistreert voor synchronisatie. Vanaf deze versie icm Calendarsync v5.0.4 werkt dit nu wel.
+
+***
+## v5.0.17 - 2023-12-20
+Fulfilment validatie is soms erg traag. In deze versie is hier een  verbetering in aangebracht. Door de manier waarop deze module werkt blijft het een traag onderdeel.
+
+***
 ## v5.0.16 - 2023-08-08
 Uitbreiding gespreksopname weergave met richting van het gesprek (inbound of outbound). Voor campagnes die zowel inbound als outbound worden gebruikt is het nuttig om te kunnen zien op het gesprek en de opname is ontstaan uit een inbound of outbound call.
 

@@ -3,10 +3,13 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+***
+## v5.0.4 - 2024-01-12
+### Fixed
+- In deze versie is de Google Calendar synchronisatie hersteld. Vanaf nu, icm CallProPortal v5.0.17, werkt dit nu wel.
 
 ***
 ## v5.0.2 - 2023-09-28
-
 ### Added
 - Toevoegen van het synchroniseren van herhalende afspraken die in Exchange worden gemaakt. Voor versie 5.0.2 werden deze herhalende afspraken uit Exchange **niet** naar CallPro gesynchroniseert doordat de EWS API gegevens niet compatibel waren met CallPro. De Microsoft 365 Graph API geeft deze gegevens veel beter terug waardoor het nu mogelijk is geworden om deze synchronisatie voor de Microsoft 365 Graph API koppeling toe te voegen.
 - Toevoegen van een optie om CallPro afspraken direct als Teams meeting aan te maken voor de Microsoft 365 Graph API koppeling. Op agenda nivuea kan een variabele `calendarsync.IsOnlineMeeting` worden gemaakt die op `TRUE` wordt gezet om aan te geven dat een Teams meeting gemaakt moet owrden. Hierbij kan ook gebruik worden gemaakt van scriptvelden zoals `%SCRIPT.AFSPRAAK_TYPE \IF"ONLINE"?TRUE:FALSE%` 
