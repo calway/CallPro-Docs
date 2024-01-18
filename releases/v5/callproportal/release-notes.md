@@ -4,15 +4,19 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 
 ***
-## v5.0.18 - 2024-01-12
+## v5.0.18 - 2024-01-18
+Extra zoeken optie voor gespreksopnames. Er kan nu naar tekst gezocht worden in het notitieveld van de belopdracht, en de AI gesprekstranscriptie als die is gemaakt.
+
+***
+## v5.0.17 - 2024-01-12
 In deze versie is een aanpassing doorgevoerd voor de Agenda synchronisatie autorisatie. Er zat ee nbug in dit onderdeel waardoor Google calendars niet konden wordne geregistreert voor synchronisatie. Vanaf deze versie icm Calendarsync v5.0.4 werkt dit nu wel.
 
 ***
-## v5.0.17 - 2023-12-20
+## v5.0.16 - 2023-12-20
 Fulfilment validatie is soms erg traag. In deze versie is hier een  verbetering in aangebracht. Door de manier waarop deze module werkt blijft het een traag onderdeel.
 
 ***
-## v5.0.16 - 2023-08-08
+## v5.0.15 - 2023-08-08
 Uitbreiding gespreksopname weergave met richting van het gesprek (inbound of outbound). Voor campagnes die zowel inbound als outbound worden gebruikt is het nuttig om te kunnen zien op het gesprek en de opname is ontstaan uit een inbound of outbound call.
 
 In de draaitabel voor belresultaten webpart zijn extra kolommen toegevoegd. Tevens is voor het opslaan van templates de mogelijkheid toegevoegd om ook de sorteervolgorde van de kolom en rij velden vast te leggen.
