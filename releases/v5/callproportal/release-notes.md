@@ -2,6 +2,9 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 
+***
+## v5.0.19 - 2024-01-19
+Het Google App verificatie process vroeg om extra informatie op ene pagina die in de App wordt genoemd met uitleg over de Agenda synchronisatie. In deze update wordt zo'n pagina toegevoegd, hopelijk is het nu goed!
 
 ***
 ## v5.0.18 - 2024-01-18
