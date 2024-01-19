@@ -1,5 +1,5 @@
 # Calendarsync instellingen Microsoft 365 OAuth Flow
-> Microsoft heeft aangekondigd dat per 1-10-2022 Basic Authentication deprecated wordt verklaard en zal worden verwijderd uit Exchange EactiveSync (EAS), POP, IMAP, Remote Powershell, Exchange Web Services (EWS), Offline Address Book (OAB) en Outlook for Windows.
+> Sinds 1-10-2022 is dit het alternatief op de Basic authentication die is uitgeschakeld. Wij adviseren klanten om over te gaan op de [Microsoft Graph API](../calendarsync-instellingen-microsoft-365-graph-api/README.md)
 
 Om gebruik te kunnen blijven van de CallPro CalendarSync module adviseren wij klanten uiterlijk na de migratie naar CallPro 5.0 met klanten af te stemmen over de nieuwe instellingen die nodig zijn.
 

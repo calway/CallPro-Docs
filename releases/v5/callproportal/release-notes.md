@@ -9,7 +9,7 @@ Extra zoeken optie voor gespreksopnames. Er kan nu naar tekst gezocht worden in 
 
 ***
 ## v5.0.17 - 2024-01-12
-In deze versie is een aanpassing doorgevoerd voor de Agenda synchronisatie autorisatie. Er zat ee nbug in dit onderdeel waardoor Google calendars niet konden wordne geregistreert voor synchronisatie. Vanaf deze versie icm Calendarsync v5.0.4 werkt dit nu wel.
+In deze versie is een aanpassing doorgevoerd voor de Agenda synchronisatie autorisatie. Er zat een bug in dit onderdeel waardoor Google calendars niet konden worden geregistreert voor synchronisatie. Vanaf deze versie icm Calendarsync v5.0.4 werkt dit nu wel.
 
 ***
 ## v5.0.16 - 2023-12-20
