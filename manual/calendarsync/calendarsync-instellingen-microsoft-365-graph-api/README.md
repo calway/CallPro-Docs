@@ -3,12 +3,12 @@
 Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft vanaf v5.0.0 ondersteuning voor deze nieuwe manier van werken met Microsoft 365. Volg de onderstaande stappen om een App registratie te maken die kan worden gebruikt met de CallPro.
 
 
-## Registreer een applicatie in AzureAd
+## Registreer een applicatie in Microsoft Entra ID (voorheen AzureAd)
 De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een applicatie aanmaken voor de Agenda synchronisatie.
 
 1. Ga naar de Azure portal en log in met een administrator account die Applicatie registraties kan aanmaken.
 
-2. Selecteer nu links in het menu **Azure Active Directory**, en selecteer **App registrations** in de **Manage** sectie
+2. Selecteer nu links in het menu **Microsoft ENtra ID**, en selecteer **App registrations** in de **Manage** sectie
 
 3. Selecteer **New registration**, en vul de volgende waarden in:
 
@@ -35,3 +35,4 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 
 
 Geef nu de **Application (client) ID**, de **Directory (Tenant) ID** en de zojuist gemaakte **Client Secret** door aan het call center. Geef ook de email adressen van de mailboxen die gesynchroniseert moeten worden.
+> **Let op!** De Client Secret heeft een beperkte houdbaarheid en dient minimaal elke 24 maanden te worden vernieuwt, en aangeleverd aan het call center.
