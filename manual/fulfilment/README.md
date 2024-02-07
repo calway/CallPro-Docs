@@ -359,7 +359,7 @@ De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het
 Het mail system dat gebruikt kan worden voor het versturen van email.
 Standaard worden de gegevens overgenomen van de globale MailServer instellingen uit de settings sectie. Wanneer de MailServer tag wordt opgenomen overschrijft dit de globale instellingen voor deze actie.
 
-Voor informatie over het configureren van deze settigns voor het versturen van email namens een extern (klant/opdrachtgever) domein zie: [Configuratie van een extern domein](./mailserver-external-domain-settings.md)
+Voor informatie over het configureren van deze settings voor het versturen van email namens een extern (klant/opdrachtgever) domein zie: [Configuratie van een extern domein](./mailserver-external-domain-settings.md)
 
 ##### SMTP
 Hiermee wordt de mail verstuurd via een smtp server. De `MailServer` tag die volgt geeft dan het server adres aan en in de parameters `Username`, `Password` voor het inloggen met basic authentication. Anonymous authentication kan gebruikt worden, maar wordt sterk afgeraden.

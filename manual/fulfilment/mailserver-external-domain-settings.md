@@ -37,4 +37,6 @@ Ook hier dient de Microsoft 365 omgeving nog steeds een correcte DKIM configurat
 ## Stuur email van een mailbox van het call center
 Soms is de branding van het from adres minder belangrijk. Dan kan email ook direct vanuit het callcenter verstuurd worden. de email komt dan van klant@callcenter.nl waarbij als Friendly naam "Klantnaam" wordt gebruikt.
 
-Ook kan worden gekozen om als call center enkele **fun** domeinen te registreren. De mooiste namen zijn al bezet, maar namen als `filfilmentservices.nl`, `emailservices.nl`, `marketingservices.nl` of `klant-leukenaam.nl` zijn mogelijkheden. Dit domein wordt aan de mail omgeving van het call center gekoppeld en kan vervolgens gebruikt worden voor het versturen van mail. De klant/opdrachtgaver hoeft niks verder in te stellen.
+Ook kan worden gekozen om als call center enkele **fun** domeinen te registreren. De mooiste namen zijn al bezet, maar namen als `fulfilmentservices.nl`, `emailservices.nl`, `marketingservices.nl` of `klant-leukenaam.nl` zijn mogelijkheden. Dit domein wordt aan de mail omgeving van het call center gekoppeld en kan vervolgens gebruikt worden voor het versturen van mail. De klant/opdrachtgaver hoeft niks verder in te stellen.
+
+Het is nog steeds nodig om deze domeinen te koppelen aan een mailserver/dienst die spf en DKIM DMARC ondersteunt. Vanwege de mail volumes die een call center genereert wordt afgeraden om dit te doen met een Microsoft 365 tenant.
