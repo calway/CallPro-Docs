@@ -2,6 +2,14 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.26 - 2024-02-07
+Fix voor queuemonitoring die geen wachtrijen meer weergaven. Met deze update werkt het weer. 
+
+***
+## v5.0.21-25 - 2024-01-20-2024-01-29
+Diverse updates vanwege Google App verificatie eisen. 
+
+***
 ## v5.0.20 - 2024-01-19
 De Fulfilmentvalidatie module is versneld door de lijst met te controleren belopdrachten nu te delen over alle ingelogde gebruikers. Zo kan er ook als meerdere mensen fiatteren, elkaars fiatteren meteen oppakken. Wel blijven opletten dat je niet beide dezelfde controleert!
 
