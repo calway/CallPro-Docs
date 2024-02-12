@@ -738,6 +738,21 @@ Als de veldwaarde niet voorkomt wordt er niets vervangen.
 </td>
 </tr>
 <tr>
+<td>SD</td>
+<td>
+Switch commando, gelijk aan SW maar nu is de laatste optie een default waarde.
+Kommagescheiden lijst. Werkt als volgt:
+"a","1","b","2","c","3","","-1"
+Als de veldwaarde a is wordt een 1 weergegeven
+Als de veldwaarde b is wordt een 2 weergegeven
+Als de veldwaarde c is wordt een 3 weergegeven
+Als geen enkele waarde matcht, dan wordt de laatste waarde -1 weergegeven. De match waarde moet hiervoor "" zijn.
+
+Binnen de " " mogen ook weer velden worden gebruikt.
+Als de veldwaarde niet voorkomt wordt er niets vervangen.
+</td>
+</tr>
+<tr>
 <td>TF</td>
 <td>Formateer het telefoonnummer.
 <br/>Gebruik:
