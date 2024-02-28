@@ -2,9 +2,20 @@
 Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 <br/>
-***
 
-## 5.0.8 - 2023-12-11
+***
+## v5.0.9 - 2024-02-28
+### Change
+Een extra parameter `BREAKID` in het script commando om pauze te activeren zodat vanuit custom scripting de pauze substatus kan worden meegegeven.
+
+```
+#SCRIPT_BREAK?[{SET | CLEAR}][&BREAKID={id}[&NOCONFIRM]
+```
+Met de optionele parameter `BREAKID` wordt aangegeven welke pauze-substatus gebruikt moet worden. Hiervoor wordt gebruik gemaakt van de unieke ID van de pauze-substatus. Deze parameter heeft alleen effect als de pauze-substatus feature is ingeschakeld. 
+> **Let op** Als `NOCONFIRM` optie wordt gebruikt in combinatie met een pauze-substatus waarbij een notitie verplicht is, komt alsnog het dialoogvenster omhoog zodat een notitie kan worden ingevuld!
+
+***
+## v5.0.8 - 2023-12-11
 ### Fixed
 - Voor  belscripts waar vanuit javascript code de gespreksopnames worden gestart is een bug gefixt die een javascript error gaf `Deze eigenschap of methode wordt niet ondersteund door dit object loScriptAction.CreateParms()` Onderstaande code leverde de genoemde fout. Er zijn geen aanpassingen nodig, de javascript code is correct.
 ```javascript

@@ -4,6 +4,13 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.9 - 2024-02-28
+### Fix
+- Bij het bewerken van variabelen van type Memo (er wordt dan een RichtEditbox gebruikt) gaat er iets fout als tekst wordt ingevoerd die foutief herkend wordt als hyperlink. Deze hyperlink detectie gaat de eerste keer goed, maar eenmaal herkende hyperlinks (die geen hyperlink zijn) worden soms verkeerd omgezet in platte tekt wat resultaat in `< >` om de hyperlink. Dit trad op in javascript code in de variabele die hierdoor niet meer correct werkte.
+- Bij het exporteren van bellijsten naar Excel op een Onedrive locatie volgde soms ene foutmelding tijdens het exporteren doordat Onedrive het upload en CallPro geen exclusieve toegang kan krijgen. De melding is vervangen door een Herhaal optie zodat het openen van het exportbestand herhaald kan worden, wat meestal direct werkt, tenzij het uploaden naar Onedrive heel traag gaat, maar dan kan het meerdere keren geprobeert worden totdat het lukt. Een alternatieve optie is om de Onedrive synchronisatie tijdelijk te pauzeren.
+
+
+***
 ## v5.0.8 - 2023-12-06
 ### Fix
 - In de rapportage werd bij het gebruik van de "Export naar Excel" optie cijfer kolommen niet gezien als cijfers, maar als tekst. Dit is opgelost. Een resterend probleem is dat tijdsduur kolommen nog steeds als tekst worden gezien en in Excel niet worden herkend als een tijdsduur. Als je de cell bewerkt herkend Excel de *handmatige* invoer wel als tijdsduur. We hebben hier nog geen oplossing voor kunenn vinden anders dan dat je als gebruiker `F2` en `Enter` moet uitvoeren op de cell.
