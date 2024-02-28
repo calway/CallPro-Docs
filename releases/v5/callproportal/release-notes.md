@@ -2,6 +2,32 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.27 - 2024-02-28
+Ondersteuning voor keuzelijsten in het script waarvan de data uit een json of een externe url komt. Met CallPro 5.0 is deze toevoeging gedaan, maar met name de Fulfilment validatie kon deze gegevens nog niet correct weergeven. Er worden twee soorten json data ondersteunt.
+```json
+[
+    {
+        "id": "Unieke id",
+        "text": "Weergave label"
+    },
+    ...
+]
+```
+
+Het wteede formaat is hetzelfde formaat dat de <a href="https://select2.org/data-sources/formats" target="_blank">Select2 jQuery</a> html control gebruikt:
+```json
+{
+    "results": [
+        {
+        "id": "Unieke id",
+        "text": "Weergave label"
+        },
+        ...
+    ]
+}
+```
+
+***
 ## v5.0.26 - 2024-02-07
 Fix voor queuemonitoring die geen wachtrijen meer weergaven. Met deze update werkt het weer. 
 
