@@ -9,7 +9,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 Een extra parameter `BREAKID` in het script commando om pauze te activeren zodat vanuit custom scripting de pauze substatus kan worden meegegeven.
 
 ```
-#SCRIPT_BREAK?[{SET | CLEAR}][&BREAKID={id}[&NOCONFIRM]
+#SCRIPT_BREAK?[{SET | CLEAR}][&BREAKID={id}][&NOCONFIRM]
 ```
 Met de optionele parameter `BREAKID` wordt aangegeven welke pauze-substatus gebruikt moet worden. Hiervoor wordt gebruik gemaakt van de unieke ID van de pauze-substatus. Deze parameter heeft alleen effect als de pauze-substatus feature is ingeschakeld. 
 > **Let op** Als `NOCONFIRM` optie wordt gebruikt in combinatie met een pauze-substatus waarbij een notitie verplicht is, komt alsnog het dialoogvenster omhoog zodat een notitie kan worden ingevuld!
