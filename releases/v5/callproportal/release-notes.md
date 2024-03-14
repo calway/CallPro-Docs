@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.28 - 2024-03-14
+### Fixed
+* Als de Fulfilment validatie in twee Browser vensters open was  erd bij het opslaan een van de twee overschreven met de andere! Met deze update is het probleem met het gebruik van meerdere vensters opgelost.
+
+***
 ## v5.0.27 - 2024-02-28
 Ondersteuning voor keuzelijsten in het script waarvan de data uit een json of een externe url komt. Met CallPro 5.0 is deze toevoeging gedaan, maar met name de Fulfilment validatie kon deze gegevens nog niet correct weergeven. Er worden twee soorten json data ondersteunt.
 ```json
@@ -14,7 +19,7 @@ Ondersteuning voor keuzelijsten in het script waarvan de data uit een json of ee
 ]
 ```
 
-Het wteede formaat is hetzelfde formaat dat de <a href="https://select2.org/data-sources/formats" target="_blank">Select2 jQuery</a> html control gebruikt:
+Het tweede formaat is hetzelfde formaat dat de <a href="https://select2.org/data-sources/formats" target="_blank">Select2 jQuery</a> html control gebruikt:
 ```json
 {
     "results": [
