@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.29 - 2024-03-18
+### Fixed
+Een bug in de google authorization proces zorgde ervoor dat bepaalde gebruikers zich niet konden aanmelden. Dit probleem is nu opgelost. Dit probleem deed zich alleen voor bij specifieke registratie gegevens en werd bij slechts 1 CallPro klant gemeld. Omdat dit een erg storend probleem is die het synchroniseren van agenda's belemmerde is deze bugfix versneld uitgerold.
+
+***
 ## v5.0.28 - 2024-03-14
 ### Fixed
 * Als de Fulfilment validatie in twee Browser vensters open was  erd bij het opslaan een van de twee overschreven met de andere! Met deze update is het probleem met het gebruik van meerdere vensters opgelost.
