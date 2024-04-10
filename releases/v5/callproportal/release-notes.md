@@ -2,6 +2,16 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.31 - 2024-04-09
+### Changed
+* Bij de transcriptie worden nu ook meldingen van de engine, met name problemen bewaard en weergegeven. Met name de Summarization geeft soms  meldingen over `hate`, `self-harm`, `sexual` en `violence` waarvan bij controle blijkt dat dit tot nu toe altijd false-positives zijn. Omdat er dan geen summary is wordt de melding weergegeven.
+
+***
+## v5.0.30 - 2024-03-26
+### Added
+* Toevoeging van de Spreker. In de huidige (alpha) engine worden spreakers als "Guest-1", "Guest-2"... geidentificeerd. In vroege tests is al duidelijk dat twee sprekers die doorelkaar praten niet goed worden herkend als twee sprekers.
+
+***
 ## v5.0.29 - 2024-03-18
 ### Fixed
 Een bug in de google authorization proces zorgde ervoor dat bepaalde gebruikers zich niet konden aanmelden. Dit probleem is nu opgelost. Dit probleem deed zich alleen voor bij specifieke registratie gegevens en werd bij slechts 1 CallPro klant gemeld. Omdat dit een erg storend probleem is die het synchroniseren van agenda's belemmerde is deze bugfix versneld uitgerold.
