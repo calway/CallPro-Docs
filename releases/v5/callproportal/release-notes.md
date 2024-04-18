@@ -2,6 +2,12 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.32 - 2024-04-18
+### Changed
+* Het afspelen van gespreksopnames vanuit de Resource Explorer loopt vanaf deze versie via CallProPortal. Hierdoor kan dezelfde audioplayer worden gebruikt, en kunnen ook transcripties zichtbaar worden gemaakt. Voor lokaal beheer is nu ook geen toegang tot de opnames nodig op de lokale computer
+> Deze update is vereist om vanaf Resource Explorer 5.0.10 gespreksopnames te kunnen afspelen.
+
+***
 ## v5.0.31 - 2024-04-09
 ### Changed
 * Bij de transcriptie worden nu ook meldingen van de engine, met name problemen bewaard en weergegeven. Met name de Summarization geeft soms  meldingen over `hate`, `self-harm`, `sexual` en `violence` waarvan bij controle blijkt dat dit tot nu toe altijd false-positives zijn. Omdat er dan geen summary is wordt de melding weergegeven.
