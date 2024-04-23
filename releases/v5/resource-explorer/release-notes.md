@@ -3,10 +3,19 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+## v5.0.10 - 2024-04-23
+### Fix
+- Bij het kopieren van scriptvelden tussen verschillende scriptdefinities werden bestaande bellisjten die zijn gebaseerd op de scriptdefinitie die het nieuwe veld ontving **niet** bijgewerkt. Het probleem treedt alleen op bij het kopieren van velden tussen verschillende scriptdefintiies via het clipboard!
+
+### Change
+- **v5.0 database only**: Op de seat kan worden aangegeven dat de auto-provisioning wel/niet moet worden uitgevoerd. Voor deze update erd altijd auto-provisioning gebruikt, en werd Microsip vervolgens automatisch opgestart. 
+- **v5.0 database only**: Op de seat kan nu worden aangegeven dat bij het afsluiten van de Scriptmodule ook Microsip wordt afgesloten. Deze optie is alleen zichtbaar voor CallPro installaties die **database versie 5** hebben, en werkt ook alleen icm een Scriptmodule v5.0.10
+
+
 ***
 ## v5.0.9 - 2024-02-28
 ### Fix
-- Bij het bewerken van variabelen van type Memo (er wordt dan een RichtEditbox gebruikt) gaat er iets fout als tekst wordt ingevoerd die foutief herkend wordt als hyperlink. Deze hyperlink detectie gaat de eerste keer goed, maar eenmaal herkende hyperlinks (die geen hyperlink zijn) worden soms verkeerd omgezet in platte tekt wat resultaat in `< >` om de hyperlink. Dit trad op in javascript code in de variabele die hierdoor niet meer correct werkte.
+- Bij het bewerken van variabelen van type Memo (er wordt dan een RichtEditbox gebruikt) gaat er iets fout als tekst wordt ingevoerd die foutief herkend wordt als hyperlink. Deze hyperlink detectie gaat de eerste keer goed, maar eenmaal herkende hyperlinks (die geen hyperlink zijn) worden soms verkeerd omgezet in platte tekst wat resultaat in `< >` om de hyperlink. Dit trad op in javascript code in de variabele die hierdoor niet meer correct werkte.
 - Bij het exporteren van bellijsten naar Excel op een Onedrive locatie volgde soms ene foutmelding tijdens het exporteren doordat Onedrive het upload en CallPro geen exclusieve toegang kan krijgen. De melding is vervangen door een Herhaal optie zodat het openen van het exportbestand herhaald kan worden, wat meestal direct werkt, tenzij het uploaden naar Onedrive heel traag gaat, maar dan kan het meerdere keren geprobeert worden totdat het lukt. Een alternatieve optie is om de Onedrive synchronisatie tijdelijk te pauzeren.
 
 
