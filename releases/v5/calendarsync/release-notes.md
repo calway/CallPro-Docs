@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 <br/>
 
 ***
+## v5.0.6 - 2024-04-24
+### Added
+- Afspraken werden altijd direct gesynchroniseert. Echter als een afspraak voor Fulfilment validatie in aanmerking komt wil je de synchronisatie uitstellen tot na deze validatie. Dit werkt voor zowel Microsoft Exchange, Microsoft 365 Graph API als voor de Google API synchronisatie. Met deze update herkend de calendarsync dat een belopdracht nog wacht op validatie voor de afspraak, hiervoor wordt het speciale veld "EXP_APP" gebruik dat dan is gezet.
+
+***
+## v5.0.5 - 2024-02-08
+### Added
+- Toevoegen van het synchroniseren van herhalende afsrpaken die in Google worden gemaakt. Dit is dezeflde functionaliteit die in versie 5.0.2 is toegevoegd voor Microsoft 365 Graph API.
+
+***
 ## v5.0.4 - 2024-01-12
 ### Fixed
 - In deze versie is de Google Calendar synchronisatie hersteld. Vanaf nu, icm CallProPortal v5.0.17, werkt dit nu wel.
