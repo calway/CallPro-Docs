@@ -3,6 +3,10 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+*** v5.0.7 - 2024-04-25
+### Fix
+- Logger informatie verbeterd, dit is alleen intern voor Calway zichtbaar
+
 ***
 ## v5.0.6 - 2024-04-24
 ### Added
