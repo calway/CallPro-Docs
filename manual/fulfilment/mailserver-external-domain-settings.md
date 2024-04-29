@@ -29,7 +29,7 @@ Als de connector goed is geconfigureerd kan het callcenter connectie leggen via 
 Bij het gebruik van een connector wordt het instellen van SPF records zoals eerder beschreven aangeraden om te voorkomen dat email als spam wordt aangemerkt. Omdat nu gebruik wordt gemaakt van de Microsoft 365 omgeving van de klant/opdrachtgever is DKIM meestal goed ingesteld.
 
 ## Microsoft Graph API
-Voor Microsoft 365 gebruikers kan ook een Applicatie worden gemaakt in hun Entra ID voor CallPro. Door deze applicatie het recht te geven om email te versturen kan. Kijk [hier](../calendarsync/calendarsync-instellingen-microsoft-365-graph-api/README.md) voor een guide om een applicatie te maken. Belangrijk is dat dat het `SMTP.Send` en `Mail.Send` recht ook wordt toegekend.
+Voor Microsoft 365 gebruikers kan ook een Applicatie worden gemaakt in hun Entra ID voor CallPro. Door deze applicatie het recht te geven om email te versturen kan. Kijk [hier](./mailserver-instellingen-microsoft-365-graph-api.md) voor een guide om een applicatie te maken. Belangrijk is dat dat het `SMTP.Send` en `Mail.Send` recht ook wordt toegekend.
 
 Ook hier dient de Microsoft 365 omgeving nog steeds een correcte DKIM configuratie te hebben.
 

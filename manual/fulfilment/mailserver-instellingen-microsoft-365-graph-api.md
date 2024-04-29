@@ -1,8 +1,4 @@
-# Calendarsync instellingen Office 365 Graph API
-
-Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft vanaf v5.0.0 ondersteuning voor deze nieuwe manier van werken met Microsoft 365. Volg de onderstaande stappen om een App registratie te maken die kan worden gebruikt met de CallPro.
-
-
+# Mailserver installeingen voor Microsoft Graph API
 ## Registreer een applicatie in Microsoft Entra ID (voorheen AzureAd)
 De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een applicatie aanmaken voor de Agenda synchronisatie.
 
@@ -12,7 +8,7 @@ De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een 
 
 1. Selecteer **New registration**, en vul de volgende waarden in:
 
-    * Vul bij **Name** als waarde: `CallPro CalendarSync`
+    * Vul bij **Name** als waarde: `CallPro Fulfilment`
     * Vul bij **Supported account types** een waarde die voor dit bedrijf acceptabel is. Vaak is de Single Tenant optie voldoende.
     * Vul als platform `public client/native (mobile & desktop)`
     * Vul als Redirect URI de waarde: `https://login.microsoftonline.com/common/oauth2/nativeclient`
@@ -30,10 +26,10 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 
 
 * Ga naar **API permissions** in de **Manage** sectie van het navigatie menu.
-* Druk op **Add a permission**, kies dan **Microsoft Graph** , **Application permissions**
-* Zoek naar `calendar` permissions, selecteer `Calendars.ReadWrite` om toegang tot de calendars te geven.
-* Zoek naar `mailbox` permissions, selecteer `MailboxSettings.Read`
-* Indien via de Graph API ook emails gestuurd gaan worden selecteer dan aanvullend `SMTP.Send` en `User.Read` als delegated permission.
+* Druk op **Add a permission**, kies dan **Microsoft Graph**
+* Zoek naar `SMTP.Send` bij de **Delegated permissions** om de  het mogelijk te maken om emails te sturen.
+* Zoek ook naar `User.Read` bij de **Delegated permissions** en ken dit recht ook toe.
+* Zoek naar `mailbox` permissions bij de **Application permissions** en selecteer `MailboxSettings.Read`
 * Kies **Add Permissions** om alle gekozen permissions toe te voegen, je komt nu terug in het vorige scherm.
 * Selecteer nu **Grant admin consent for organisatienaam** en accepteer de consent dialoog.
 
