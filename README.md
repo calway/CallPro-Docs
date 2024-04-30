@@ -6,6 +6,7 @@ Dit zijn de Docs pages voor CallPro.
 * [CallPro in het gebruik](./manual/callpro-in-het-gebruik/README.md)
 * [Fulfilment service handleiding](./manual/fulfilment/README.md)
 * [CalendarSync service](./manual/calendarsync/README.md)
+* [Gesprekstranscriptie en AI](./manual/calltranscription/README.md)
 
 ## CallPro systeem fulfilment processen
 * [Periodieke automatische export van belopdrachten](./manual/fulfilment/automatische-export.md)
