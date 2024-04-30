@@ -15,7 +15,7 @@ De transcriptie kan worden ingesteld op verschillende niveaus. Deze variabel kan
 ### AI.AUDIO.LANGUAGE
 Standaard wordt verondersteld dat de gesprekken in het Nederlans zijn en wordt als culture `nl-NL` gebruikt. Indien een afwijkende, maar door Azure Speech ondersteunde taal wordt gesproken kan dit worde naangepast met deze variabele.
 De instelling kan op zowel de Scriptdefinitie, als op Campagne niveau worden gedaan, waarbij als beide zijn ingesteld de Campagne instelling gebruikt wordt.
-De beschikbare Speech to Text talen zijn te vinden bij de [Speech service documenttation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support)
+De beschikbare Speech to Text talen zijn te vinden bij de [Speech service documenttation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support) hoewel meestal `nl-NL`, `nl-BE`, `fr-BE`, `fr-FR`, `de-DE` of `en-EN` toepasbaar zullen zijn.
 
 ### AI.SUMMARIZATION.PROMPT
 Voor het maken van de samenvatting wordt een standaard prompt gebruikt. De {0} placeholder wordt door CallPr overvangen doro de naam van de Agent.
@@ -48,6 +48,8 @@ Het is een json array met vragen waarbij de schrijfwijze exact moet matchen. Bij
 Met het `AssociationType` wordt aangegeven of dit een vraag is die globaal op scriptdefinitie `ScriptDef` of specifiek slaat op een scriptveld `ScriptField`. Dit wordt gebruikt bij de wergave van de antwoorden.
 
 Het `AssociationLabel` wordt gebruikt als weergave van de vraag en `Question` is de volledige prompt die aan de AI owrdt gegeven.
+
+Om de AI te forceren om met Ja of Nee te antwoorden kun je de vraag-zin eindigen met `, antwoord alleen met 'Ja' of 'Nee'?`  hoewel soms de AI alsnog meer tekst als antwoord geeft.
 
 ## Speciale scriptvelden
 Door in de scriptdefinitie deze velden op te nemen kan de waarde van de transcriptie, of de samenvatting worden overgenomen in de belopdracht.
