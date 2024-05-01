@@ -43,8 +43,8 @@ Een fulfilmentservice configuratiebestand heeft een XML opmaak en ziet er als vo
     <System>true | false</System>
     <WorkingDirectory>c:\data\fulfilment\...</WorkingDirectory>
     <Variables>
-        <VariabaleNaam1>waarde1<VariabaleNaam1>
-        <VariabaleNaam2>waarde2<VariabaleNaam2>
+        <VariabeleNaam1>waarde1<VariabeleNaam1>
+        <VariabeleNaam2>waarde2<VariabeleNaam2>
     </Variables>
     <Query>
         [Queries en actions]
@@ -168,9 +168,9 @@ In plaats van een query kan ook een repeat blok worden gemaakt. Een repeatblok z
 ```
 Binnen de repeat kunnen net als bij een Query actions worden gedefinieerd. Het voorbeeld blok zal alle geneste acties 10x uitvoeren. De variabele %dummy.recordnr% bevat het huidige iteratie nummer en is zero-based.
 Naast een teller kan ook een opsomming worden meegeven die komma gescheiden is.
-Bijvoorbeeld: <Counter Collection="set">a,b,c,10</Counter>
+Bijvoorbeeld: `<Counter Collection="set">a,b,c,10</Counter>`
 De volgende merge velden worden dan gemaakt:
-%set.Recordnr% en %set.Value% met de waarden 0,"a" |1,"b" | 2,"c" en 3,"10"
+%set.recordnr% en %set.value% met de waarden 0,"a" |1,"b" | 2,"c" en 3,"10"
 
 ### Excel loop
 Een excel loop is vergelijkbaar met een Query loop. De data komt echter uit een excel sheet.
@@ -184,15 +184,15 @@ Een excel loop is vergelijkbaar met een Query loop. De data komt echter uit een 
 Sheet bepaald de naam van de sheet met daarin de data.
 
 ## Acties
-Een `actie` is een onderdeel van een `query`, en zal voor ieder record uit de query worden uitgevoerd. Als voor een record een actie niet uitgevoerd kan worden omdat bijvoorbeeld een template niet bestaat dan worden alle volgende acties overgeslagen voor dit record, en springt het programma door naar het volgende record uit de recordset van de bovenliggende (omvattende query). Er zijn verschillende soorten acties:
+Een `actie` is een onderdeel van een `query`, en zal voor ieder record uit de query loop worden uitgevoerd. Als voor een record een actie niet uitgevoerd kan worden omdat bijvoorbeeld een template niet bestaat dan worden alle volgende acties overgeslagen voor dit record, en springt het programma door naar het volgende record uit de recordset van de bovenliggende (omvattende query). Er zijn verschillende soorten acties:
 
 ```xml
-<Action Type="Merge | Email | SQL | Pdf | Tag | FileCopy | Webservice | FTP | Resource | Set | SMS" Mergetwice="0..">
+<Action Type="Merge | Email | SQL | Pdf | Tag | FileCopy | Webservice | FTP | Resource | Set | SMS">
     ...
 </Action>
 ```
 
-De verschillende soorten actie tags worden in de komende paragrafen verder behandeld. Het `Mergetwice` attribuut kan wordne gebruikt om de inhoud van een tag vaker te evalueren. Standaard wordt de tag inhoud 1 keer door de merge enige gehaald om velden te vervangen. Soms komt uit het samenvoegen een nieuw veld dat ook moet worden vervangen, en het is dan nodig om via de `Mergetwice` attribuut aan te geven dat het resultaat vaker dan 1 keer moet worden samengevoegd.
+De verschillende soorten actie tags worden in de komende paragrafen verder behandeld. 
 
 ### Action hierarchie
 Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen dezelfde loop/query zit (zelfde niveau). In dit voorbeeld heeft Actie A geen effect op Actie B of C.
@@ -263,7 +263,7 @@ De laatste operator >< werkt al een “in" statement, bijvoorbeeld:
 3 >< (1,2,3,4,5) zal true opleveren.
 
 ### Cryptokey attribuut
-In de header van iedere action kan een optionele cryptokey worden meegegeven. Deze wordt gebruikt in de xx switch om een mergestring te encrypten. De crytpo key die zo wordt ingesteld geldt alleen voor alle acties en queries binnen deze action. Bijvoorbeeld:
+In de header van iedere action kan een optionele cryptokey worden meegegeven. Deze wordt gebruikt in de `\xx` switch om een mergestring te encrypten. De crytpo key die zo wordt ingesteld geldt alleen voor alle acties en queries binnen deze action. Bijvoorbeeld:
 ```xml
 <Action Type="eMail" cryptokey="%VARIABLE.CRYPTOKEY%">
 …
@@ -291,7 +291,7 @@ Om Excel als input template te gebruiken voor een merge dient dit bestand aan en
 1. Het bestand moet een Excel bestand zijn met extensie .xlsx
 2. Het Excel bestand moet minimaal 1 worksheet bevatten.
 3. Regel 1 in het Excelbestand bevat de header regel en regel 2 in het excel bestand bevat de detail regel.
-4. Indien per export record meerdere Excel rijen geschreven moeten worden kan ook een name region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
+4. Indien per export record meerdere Excel rijen geschreven moeten worden dan moet een named region (CTRL-F3) gemaakt worden`header`en een named region `detail` die de betreffende onderdelen bevatten. Zo kan data over meerdere rijen worden verdeeld.
 
 ```xml
 <Action Type="Merge">
@@ -314,7 +314,7 @@ Excel.
 de reeds aanwezige regels in de betreffende sheet.
 
 #### Tekstbestand
-Het resultaat van de input template wordt geschreven naar de outputfile. Met de attribuut `append=yes` kan worden bepaald of een bestaand bestand wordt uitgeebreidt, of overschreven. 
+Het resultaat van de input template wordt geschreven naar de outputfile. Met de attribuut `append=yes` kan worden bepaald of een bestaand bestand wordt uitgebreidt, of overschreven. 
 
 De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het output bestand te maken en te schrijven. Mogelijke encodings zijn:
 * utf-8 - Windows default
@@ -325,7 +325,7 @@ De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het
 * utf-32
 * us-ascii
 
-> Let op: Wanneer een input template meerdere keren gemergd moet worden gebruikt dan innersource="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
+> Let op: Wanneer een input template meerdere keren gemerged moet worden gebruik dan innersource="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
 
 
 ### Email action
