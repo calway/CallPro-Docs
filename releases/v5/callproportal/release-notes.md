@@ -2,6 +2,12 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.33 - 2024-05-01
+## Changed
+* In de fulfilmentvalidatie koem nu alle calls die zijn gemarkeert als `CONTROLE` **of** `ERROR` waarbij deze laatste gebruikt gaat worden als tijdens de fulfilment iets fout gaat. Dit kan bijvorbeeld zijn als het email adres in de belopdracht niet juist is en het versturen van de mail mislukt, of voor API integraties als de externe API call is mislukt.
+In het geval van `ERROR` wordt het Het info kader rood.
+![Fulfilmentvalidatie](media/v5.0.33-fulfilmentvalidatie.png)
+***
 ## v5.0.32 - 2024-04-18
 ### Changed
 * Het afspelen van gespreksopnames vanuit de Resource Explorer loopt vanaf deze versie via CallProPortal. Hierdoor kan dezelfde audioplayer worden gebruikt, en kunnen ook transcripties zichtbaar worden gemaakt. Voor lokaal beheer is nu ook geen toegang tot de opnames nodig op de lokale computer
