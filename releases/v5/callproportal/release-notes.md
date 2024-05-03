@@ -2,9 +2,16 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.34 - 2024-05-03
+### Changed
+* Fulfilment validatie heeft al heel lang de mogelijkheid om te bepalen welke velden zichtbaar worden.In de scriptdefinitie kan per veld worden aangegeven of deze in de scriptvelden lijst moet worden afgebeeld in Fulfilment validatie. Dit gedrag is nu hersteld. Velden die `hidden` of `html` zijn gemarkeerd en velden met een naam die begint met `EXP_` worden op dit moment nooit getoond, ook moet als het vinkje aan staat.
+
+Mocht er behoefteeen use-case zijn waarvoor het ook voor dit soort velde nhandig is om ze in de Fulfilment validatie zichtbaar te maken laat dit dan weten.
+
+***
 ## v5.0.33 - 2024-05-01
-## Changed
-* In de fulfilmentvalidatie koem nu alle calls die zijn gemarkeert als `CONTROLE` **of** `ERROR` waarbij deze laatste gebruikt gaat worden als tijdens de fulfilment iets fout gaat. Dit kan bijvorbeeld zijn als het email adres in de belopdracht niet juist is en het versturen van de mail mislukt, of voor API integraties als de externe API call is mislukt.
+### Changed
+* In de fulfilmentvalidatie komen nu alle calls die zijn gemarkeert als `CONTROLE` **of** `ERROR` waarbij deze laatste gebruikt gaat worden als tijdens de fulfilment iets fout gaat. Dit kan bijvorbeeld zijn als het email adres in de belopdracht niet juist is en het versturen van de mail mislukt, of voor API integraties als de externe API call is mislukt.
 In het geval van `ERROR` wordt het Het info kader rood.
 ![Fulfilmentvalidatie](media/v5.0.33-fulfilmentvalidatie.png)
 ***
