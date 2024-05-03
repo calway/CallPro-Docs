@@ -8,7 +8,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 Op dit moment worden nieuwe scriptvelden in een scriptdefinitie niet automatisch op *Fulfiilment validatie* gezet. In een volgende release van de Resource Explorer wordt dit aangepast zodat scriptvelden het vinkje standaard aan hebben staan.
 
-Mocht er behoefteeen use-case zijn waarvoor het ook voor dit soort velde nhandig is om ze in de Fulfilment validatie zichtbaar te maken laat dit dan weten.
+Mocht er een use-case zijn waarvoor het ook voor dit soort velden handig is om ze in de Fulfilment validatie zichtbaar te maken laat dit dan weten.
 
 ***
 ## v5.0.33 - 2024-05-01
