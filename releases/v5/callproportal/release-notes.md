@@ -6,6 +6,8 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ### Changed
 * Fulfilment validatie heeft al heel lang de mogelijkheid om te bepalen welke velden zichtbaar worden.In de scriptdefinitie kan per veld worden aangegeven of deze in de scriptvelden lijst moet worden afgebeeld in Fulfilment validatie. Dit gedrag is nu hersteld. Velden die `hidden` of `html` zijn gemarkeerd en velden met een naam die begint met `EXP_` worden op dit moment nooit getoond, ook moet als het vinkje aan staat.
 
+Op dit moment worden nieuwe scriptvelden in een scriptdefinitie niet automatisch op *Fulfiilment validatie* gezet. In een volgende release van de Resource Explorer wordt dit aangepast zodat scriptvelden het vinkje standaard aan hebben staan.
+
 Mocht er behoefteeen use-case zijn waarvoor het ook voor dit soort velde nhandig is om ze in de Fulfilment validatie zichtbaar te maken laat dit dan weten.
 
 ***
