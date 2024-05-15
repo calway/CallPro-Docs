@@ -2,11 +2,16 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.35 - 2024-05-15
+### Fixed
+* De Gespreksopnames pagina gaf een 500 error als de ingelogde gebruiker in een security rol zat waar bijzondere resource-rechten waren uitgedeeld die geen `parent` object hebben. Dit treed alleen op als bepaalde rechten in een rol zijn ingesteld, wat bij een heel klein deel van de gebruikers optrad.
+
+***
 ## v5.0.34 - 2024-05-03
 ### Changed
 * Fulfilment validatie heeft al heel lang de mogelijkheid om te bepalen welke velden zichtbaar worden.In de scriptdefinitie kan per veld worden aangegeven of deze in de scriptvelden lijst moet worden afgebeeld in Fulfilment validatie. Dit gedrag is nu hersteld. Velden die `hidden` of `html` zijn gemarkeerd en velden met een naam die begint met `EXP_` worden op dit moment nooit getoond, ook moet als het vinkje aan staat.
 
-Op dit moment worden nieuwe scriptvelden in een scriptdefinitie niet automatisch op *Fulfiilment validatie* gezet. In een volgende release van de Resource Explorer wordt dit aangepast zodat scriptvelden het vinkje standaard aan hebben staan.
+Op dit moment worden nieuwe scriptvelden in een scriptdefinitie niet automatisch op *Fulfilment validatie* gezet. In een volgende release van de Resource Explorer wordt dit aangepast zodat scriptvelden het vinkje standaard aan hebben staan.
 
 Mocht er een use-case zijn waarvoor het ook voor dit soort velden handig is om ze in de Fulfilment validatie zichtbaar te maken laat dit dan weten.
 
@@ -30,7 +35,7 @@ In het geval van `ERROR` wordt het Het info kader rood.
 ***
 ## v5.0.30 - 2024-03-26
 ### Added
-* Toevoeging van de Spreker. In de huidige (alpha) engine worden spreakers als "Guest-1", "Guest-2"... geidentificeerd. In vroege tests is al duidelijk dat twee sprekers die doorelkaar praten niet goed worden herkend als twee sprekers.
+* Toevoeging van de Spreker. In de huidige (alpha) engine worden speakers als "Guest-1", "Guest-2"... geidentificeerd. In vroege tests is al duidelijk dat twee sprekers die doorelkaar praten niet goed worden herkend als twee sprekers.
 
 ***
 ## v5.0.29 - 2024-03-18
