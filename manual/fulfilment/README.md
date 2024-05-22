@@ -565,15 +565,16 @@ Deze actie importeert de file `filename` vanuit een Excel of tekstbestand. Voor 
 
 ### SMS Action
 ```xml
-<Action Type="SMS" gateway="speakup|spryng">
+<Action Type="SMS" gateway="speakup|spryng|spryng-v1|messagebird" [spryngroute="business|..."]>
     <Username>username</Username>
-    <Password>username</Password>
-    <Originator>username</Originator>
-    <Recipients>username</Recipients>
-    <Message>username</Message>
+    <Password>password</Password>
+    <Originator>CALLPRO</Originator>
+    <Recipients>31612345678</Recipients>
+    <Message>SMS bericht %SCRIPT.NAME_LAST%</Message>
 </Action>
 ```
-Verstuurd een sms bericht (message) naar recipient(s). Recipients mag 1 zijn, maar ook meerdere komma gescheiden mobiele nummers. Standaard wordt verstuurd via Speakup, maar ook spryng kan worden gekozen als SMS gateway.
+Verstuurd een sms bericht (message) naar recipient(s). Recipients mag 1 zijn, maar ook meerdere komma gescheiden mobiele nummers. Standaard wordt verstuurd via Speakup, maar ook spryng (Simple API), spryng-v1 of messagebird kan worden gekozen als SMS gateway.
+Voor spryng en spryng-v1 is er een extra optie om de route te kiezen, de standaard is '*business*'. Kijk bij de betreffende gateway provider hoe en welke account/password combinatie moet worden meegegeven.
 
 ### API Action
 De API action is niet direct bedoeld voor fulfilment, maar wordt gebruikt als configuratie voor een query-engine. Een API action moet in een config met schedule type API worden geplaatst. De config kan alleen worden gestart middels een API call naar de Mergetool service, en levert uitvoer als json bericht.
@@ -615,7 +616,7 @@ where resdefs.resid >= 0
 </Settings>
 ```
 
-Deze api kan worden opgeroepen met ene REST POST call naar `http://server:port/api/Query` met een json payload:
+Deze api kan worden opgeroepen met een Api POST call naar `http[s]://server:port/api/Query` met een json payload:
 
 ```json
 {
@@ -627,14 +628,14 @@ Deze api kan worden opgeroepen met ene REST POST call naar `http://server:port/a
     "cacheSeconds": 0
 }
 ```
-In de aanroep wordt via `queryName` de naam van deze API opgegeven, in `parameter` kunnen (optioneel) parameters worden meegegeven die als variabele binnenkomen. `forceRefresh` kan optioneel worden gebruikt om de cache te omzeilen, en `cacheSeconds` geeft aan hoe lang een vorige call, met dezelfde parameters, zal worden gecached, standaard 1800 seconden (30 minuten).
+In de aanroep wordt via `queryName` de naam van deze API opgegeven, in `parameter` kunnen (optioneel) parameters worden meegegeven die als variabelen binnenkomen. `forceRefresh` kan optioneel worden gebruikt om de cache te omzeilen, en `cacheSeconds` geeft aan hoe lang een vorige call, met dezelfde parameters, zal worden gecached, standaard 1800 seconden (30 minuten).
 
 ### Webservice Action
 De webservice action is een generieke methode om webservices aan te roepen, en resultaten terug te ontvangen. Bijvoorbeeld:
 ```xml 
 <Action Type="webservice" Collection="address">
     <library>addresspro</library>
-    <url>http://addresspro.net</url>
+    <url>https://addresspro.net</url>
     <authorization>url | basic auth</authorization>
     <username></username>
     <password></password>
