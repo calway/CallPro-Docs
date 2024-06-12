@@ -3,7 +3,19 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
-*** v5.0.7 - 2024-04-25
+*** 
+## v5.0.9 - 2024-06-12
+### Fix
+- Probleem opgelost waardoor afspraken die vanuit CallPro naar Exchange werden gesynced via Microsoft Graph, **niet** werden hersteld als ze in Exchange werden verwijderd. Dit is het standaard gedrag wat nu is hersteld.
+### Change
+- Grote upgrade van de Microsoft Graph API 4.54 => 5.56. Dit leverde veel interne wijzigingen. Hou sync gedrag in de gaten en als er iets is gewijzigd laat het ons weten. 
+
+***
+## v5.0.8 - 2024-05-06
+- Fix Exchange OAuth sync die geen Booking agenda's herkende waardoor tenants die dit gebruiken niet konden worden gesynchroniseert.
+
+***
+## v5.0.7 - 2024-04-25
 ### Fix
 - Logger informatie verbeterd, dit is alleen intern voor Calway zichtbaar
 
