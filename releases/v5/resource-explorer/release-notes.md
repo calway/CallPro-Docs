@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+## v5.0.11 - 2024-06-19
+### Change
+- We hebben de rapportage vensters aangepast zodat deze modeless kunnen worden gebruikt, los van de rapportage wizard. Hierdoor kun je de rapporten als los venster gebruiken en ook meerdere tegelijkertijd open hebben. 
+- Ook is aan de rapport een auto-refresh functie toegevoegd in de rechter onderkant van het scherm kun je kiezen voor een auto-refresh interval zodat de rapport inhoud wordt geactualiseerd.
+- Ook het handmatig verversen met de refresh button (die er al was) werkt nu en ververst het rapport handmatig.
+
 ## v5.0.10 - 2024-04-23
 ### Fix
 - Bij het kopieren van scriptvelden tussen verschillende scriptdefinities werden bestaande bellisjten die zijn gebaseerd op de scriptdefinitie die het nieuwe veld ontving **niet** bijgewerkt. Het probleem treedt alleen op bij het kopieren van velden tussen verschillende scriptdefintiies via het clipboard!
