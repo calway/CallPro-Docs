@@ -11,7 +11,7 @@ De merge actie is de meest voorkomende actie die wordt gebruik om uitvoer te gen
 De input template kan uit de database komen, of uit een bestand. Voor bestanden worden enkele typen herkend zoals Word (extensie .docx) of Excel (extensie .xlsx) of tekstbestanden.
 
 #### Word
-Voor het gebruik van Word als merge template dient de `source=file` te worden gebruikt en moet het bestand de .docx extensie hebben (en uiteraard een Microsoft Word bestand zijn). Van ieder record wordt een input template gemerged (Source=FILE).
+Voor het gebruik van Word als merge template dient de `source=file` te worden gebruikt en moet het bestand de .docx extensie hebben (en uiteraard een Microsoft Word bestand zijn). Van ieder record wordt een input template gemerged.
 
 #### Excel
 Om Excel als input template te gebruiken voor een merge dient dit bestand aan enkele voorwaarden te voldoen.

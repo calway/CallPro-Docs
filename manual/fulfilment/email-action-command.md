@@ -18,7 +18,7 @@
     <Subject>onderwerpregel</Subject>
     <Header Name="headertag">van</Header>
     <Body Merge="YES|NO" InnerSource="BLOB|FILE"
-        BodyType="HTML|PLAIN">emailbodytext</Body>
+        BodyType="HTML|PLAIN" Encoding="<encoding>" >emailbodytext</Body>
     <Attachment [cid="content-Id"] [type="FILE|TEXT|BLOB"]
         [OutputFile="attachmentfilename"] [Seperator="+" PathPrefix="path only">
         attachmentfile
@@ -55,7 +55,15 @@ Er dient minimaal 1 TO recipient te zijn. Meerdere recipients kunnen zowel in ap
 De onderwerp regel van de email
 #### Header
 #### Body
-De email body tekst
+De email body tekst. De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt voor de body. Mogelijke encodings zijn:
+* utf-8 - Windows default
+* utf-7 - Only use for legacy, this encoding is less secure
+* utf-16 - also known as unicode
+* utf-16BE - Bigendian Unicode
+* unicode - Windows default unicode encoding
+* utf-32
+* us-ascii
+
 #### Attachment
 De Attachment tag mag vaker voorkomen binnen de email actie. De attachment file mag ook een wildcard naam zijn in plaats van 1 specifieke filename.
 
