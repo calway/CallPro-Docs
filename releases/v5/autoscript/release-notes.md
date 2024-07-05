@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.3 - 2024-07-04
+In deze versie is de `@F(Url)` feature aangepast zodat het juiste venster kan worden geopend als gebruik wordt gemaakt van de -- op dit moment -- experimentele implementatie van de WebView2 browser engine.
+
+En veel interne library updates die functioneel geen verschil maken.
+
+***
 ## v5.0.2 - 2023-12-08
 Alleen interne updates
 
