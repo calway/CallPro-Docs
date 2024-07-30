@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.10 - 2024-07-30
+### Change
+- synchronisatie release voor Resource Explorer
+- Beta support voor WebView2 migratie van de oude MSHTML engine voor weergave van scripts.
+
+***
 ## v5.0.9 - 2024-02-28
 ### Change
 Een extra parameter `BREAKID` in het script commando om pauze te activeren zodat vanuit custom scripting de pauze substatus kan worden meegegeven.

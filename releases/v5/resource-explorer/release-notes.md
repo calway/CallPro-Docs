@@ -3,6 +3,10 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+## v5.0.12 - 2024-07-30
+### Change
+- De default voor scriptvelden **Fulfilment validatie** is nu `true` en de Fulfilment validatie in CallproPortal gebruikt dit veld om te bepalen of een veld zichtbaar moet zijn.
+
 ## v5.0.11 - 2024-06-19
 ### Change
 - We hebben de rapportage vensters aangepast zodat deze modeless kunnen worden gebruikt, los van de rapportage wizard. Hierdoor kun je de rapporten als los venster gebruiken en ook meerdere tegelijkertijd open hebben. 

@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 <br/>
 
 *** 
+## v5.0.10 - 2024-06-27
+### Fix
+- Exchange Teams meetings krijgen server-side een Teams link. Als CalendarSync een update doet van de afspraak, en we zetten opnieuw de Body van de afspraak dan verdwijnt de link. Als we nu een afsrpaak updaten die online is, dan werken we de Body niet meer bij. Hierdoor kun je scriptveld updates missen, maar dit voorkomt dat de Teams link verdwijnt.
+
+*** 
 ## v5.0.9 - 2024-06-12
 ### Fix
 - Probleem opgelost waardoor afspraken die vanuit CallPro naar Exchange werden gesynced via Microsoft Graph, **niet** werden hersteld als ze in Exchange werden verwijderd. Dit is het standaard gedrag wat nu is hersteld.

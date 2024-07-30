@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.36 - 2024-07-30
+### Changed
+- De default voor scriptvelden **Fulfilment validatie** is nu `true` en de Fulfilment validatie in CallproPortal gebruikt dit veld om te bepalen of een veld zichtbaar moet zijn.
+
+***
 ## v5.0.35 - 2024-05-15
 ### Fixed
 * De Gespreksopnames pagina gaf een 500 error als de ingelogde gebruiker in een security rol zat waar bijzondere resource-rechten waren uitgedeeld die geen `parent` object hebben. Dit treed alleen op als bepaalde rechten in een rol zijn ingesteld, wat bij een heel klein deel van de gebruikers optrad.
