@@ -2,6 +2,12 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.37 - 2024-08-01
+### Added
+- Als gespreksopnames worden afgespeeld waarvoor geen transcriptie beschikbaar is kan een handmatige transcriptie worden gestart met de onderstaande button. Het duur dan nog minimaal zo lang als de opname duurt voordat deze transcriptie beschikbaar is. 
+![](media/v5.0.37-manual-transcription.png)
+
+***
 ## v5.0.36 - 2024-07-30
 ### Changed
 - De default voor scriptvelden **Fulfilment validatie** is nu `true` en de Fulfilment validatie in CallproPortal gebruikt dit veld om te bepalen of een veld zichtbaar moet zijn.
