@@ -77,6 +77,15 @@ In dit voorbeeld wordt de eMail actie alleen uitgevoerd wanneer VARIABLE.TESTVAL
 De laatste operator >< werkt al een “in" statement, bijvoorbeeld:
 3 >< (1,2,3,4,5) zal true opleveren.
 
+
+
+Voor string waarden is het verstandig om '' om de waarde te plaatsen. Zo test de onderstaande conditie dat het `NAME_EMAIL` scriptveld gevuld is.
+```xml
+<Action Type="eMail" Condition="'%SCRIPT.NAME_EMAIL%' > ''">
+
+</Action>
+```
+
 ### Cryptokey attribuut
 In de header van iedere action kan een optionele cryptokey worden meegegeven. Deze wordt gebruikt in de `\xx` switch om een mergestring te encrypten. De crytpo key die zo wordt ingesteld geldt alleen voor alle acties en queries binnen deze action. Bijvoorbeeld:
 ```xml
