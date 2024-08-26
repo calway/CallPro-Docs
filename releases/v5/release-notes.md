@@ -6,6 +6,6 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 * [Autoscript](autoscript/release-notes.md)
 * [CallProPortal](callproportal/release-notes.md)
 * [CalendarSync](calendarsync/release-notes.md)
-* [ProxyService](proxyservice/release-notes.md)
-
+* [Proxy Service](proxyservice/release-notes.md)
+* [Fulfilment Service](fulfilmentservice/release-notes.md)
 
