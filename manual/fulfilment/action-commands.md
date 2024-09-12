@@ -65,6 +65,8 @@ Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat
 Bij een `OnFailure` worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
 
+Als gebruik wordt gemaakt van `OnFailure` dan geldt niet meer het standaard gedrag dat opvolgende acties **niet** meer worden uitgevoerd als de huidige actie een error geeft. Nadat een `OnFailure` is uitgevoerd vervolgd de uitvoer met de volgende actie alsof er geen fout is opgetreden. Dit beinvloed dus wel de controlflow.
+
 ### Conditional attribuut
 Dat wil zeggen dat een actie alleen wordt uitgevoerd als aan een bepaalde voorwaarde (condition) wordt voldaan.
 ```xml
