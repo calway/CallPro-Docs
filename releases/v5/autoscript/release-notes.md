@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.5 - 2024-09-23
+Op het leaederboard wordt nu optioneel de resterende beltijd voor vandaag getoond. Hiervoor dient op de `Campaigns` folder een variabale `Leaderboard..TargetAgentTimePerDay` van type Karakter die het aantal uren weergeeft dat gebeld moet worden. Een getal geeft het aantal dagen aan, dus `10` geeft aan 10x24 uur. Alternatief kan ook `14:00` worden gebruikt om aan te gaven dat erde doelstelling 14 uur is.
+
+***
+## v5.0.4 - 2024-09-19
+Rebuild vanwege sommige klanten die een oude SQL Server gebruiken die geen tls1.2 of tls1.3 support heeft. 
+
+***
 ## v5.0.3 - 2024-07-04
 In deze versie is de `@F(Url)` feature aangepast zodat het juiste venster kan worden geopend als gebruik wordt gemaakt van de -- op dit moment -- experimentele implementatie van de WebView2 browser engine.
 
