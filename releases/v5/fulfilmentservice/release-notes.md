@@ -6,7 +6,7 @@ Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de ov
 *** 
 ## v5.0.10 - 2024-09-16
 ### Fix
-- Door een recente wijziging was een probleme ontstaan met het overnemen van instellingen van de MailServer tag. Bij gebruik van afwijkende instellingen voor poort, username en password kon het gebeuren dat verkeerde gegevens werden gebruikt waardoor het versturen van een email niet lukte. Met deze update wordt dat opgelost.
+- Door een recente wijziging was een probleem ontstaan met het overnemen van instellingen van de MailServer tag. Bij gebruik van afwijkende instellingen voor poort, username en password kon het gebeuren dat verkeerde gegevens werden gebruikt waardoor het versturen van een email niet lukte. Met deze update wordt dat opgelost.
 
 Doordat bij sommige fulfilment taken de fulfilment markering veld (uit het EXP_... veld) werd gevuld met **ERROR** als het versturen niet lukte leverde dit ook verwarring bij gebruiks van de Fulfilment Validatie die niet eerder error markeringen hadden gezien. Al geruimte tijd, sinds maart dit jaar, worden **ERROR** markeringen met een rode achtergrond kleur getoond.
 

@@ -8,4 +8,6 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 * [CalendarSync](calendarsync/release-notes.md)
 * [Proxy Service](proxyservice/release-notes.md)
 * [Fulfilment Service](fulfilmentservice/release-notes.md)
+* [Dialer Service](dialerservice/release-notes.md)
+* [Asterisk Service](asteriskservice/release-notes.md)
 
