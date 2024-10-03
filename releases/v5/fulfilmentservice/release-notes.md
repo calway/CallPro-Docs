@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de ov
 <br/>
 
 *** 
+## v5.0.11 - 2024-10-03
+### Fix
+- De response naar aanleiding van een webservice call werd op json content gecontroleert en dan werden velden eruit gehaald. De controle of iets een geldige json was was niet voldoende en leverde soms errors. Dit is nu verbeterd, illegale json responses worden nu netjes afgehandeld.
+
+*** 
 ## v5.0.10 - 2024-09-16
 ### Fix
 - Door een recente wijziging was een probleem ontstaan met het overnemen van instellingen van de MailServer tag. Bij gebruik van afwijkende instellingen voor poort, username en password kon het gebeuren dat verkeerde gegevens werden gebruikt waardoor het versturen van een email niet lukte. Met deze update wordt dat opgelost.
