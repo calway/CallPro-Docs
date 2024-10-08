@@ -4,9 +4,14 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 <br/>
 
 *** 
-## v5.0.11 - 2024-10-08
+## v5.0.12 - 2024-10-08
 ### Fix
-- Recurring Exchange afsrpaken waarvan de eerst afspraak in het verleden ligt worden niet gesynced naar CallPro. In deze versie is een patch voor dit gedrag ingebouwd.
+- Recurring Exchange afspraken waarvan de eerst afspraak in het verleden ligt worden niet gesynced naar CallPro. In deze versie is een patch voor dit gedrag ingebouwd.
+
+*** 
+## v5.0.11 - 2024-09-19
+### Change
+- Interne docker containr aanpassing voor SQL Server
 
 *** 
 ## v5.0.10 - 2024-06-27
