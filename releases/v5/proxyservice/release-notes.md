@@ -9,6 +9,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 - Bij het markeren voor RVV werd strikt gecontroleerd of het suppressielijst gedrag op de bellijst aan staat. Dit is niet de intentie omdat deze API wordt opgeroepen vanuit de telefonie waar een beller aangeeft zich voor RVV af te melden. Dat wij dit gedrag op de ebllijst niet aan hebben zou dan geen blokkade mogen zijn.
 
 *** 
+## v5.0.9 - 2024-09-25
+### Fix
+- Rebuild vanwege sommige klanten die een oude SQL Server gebruiken die geen tls1.2 of tls1.3 support heeft. 
+
+*** 
 ## v5.0.5 - 2024-08-02
 ### Fix
 - In de nieuwe v2 Entry Patch endpoint werd een verkeerde validatie gedaan waardoor het niiet mogelijk was om de `callbackAgentId` te zetten. In deze versie is dat gefixt.
