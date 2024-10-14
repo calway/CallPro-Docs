@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 ***
+## v5.0.11 - 2024-10-14
+### Change
+- Toevoegen Pipeline behaviour voor Logging en Tracing voor de v2 endpoints
+
+***
 ## v5.0.10 - 2024-09-27
 ### Fix
 - Bij het markeren voor RVV werd strikt gecontroleerd of het suppressielijst gedrag op de bellijst aan staat. Dit is niet de intentie omdat deze API wordt opgeroepen vanuit de telefonie waar een beller aangeeft zich voor RVV af te melden. Dat wij dit gedrag op de ebllijst niet aan hebben zou dan geen blokkade mogen zijn.
