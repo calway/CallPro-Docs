@@ -4,6 +4,17 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 <br/>
 
 *** 
+## v5.0.14 - 2024-10-16
+### Change
+- Exceptions na de vorige aanpassing. Kennelijk geeft de Google soms data terug met illegala datums In hjet CreatedDateTimeOffset veld stond ineens '0000-12-31 00:00:00.000' wat duidelijk niet kan kloppen! Extra Exception handling en defaults toegevoegd zodat de Agenda's weer verder syncen. 
+
+
+*** 
+## v5.0.13 - 2024-10-09
+### Change
+- De Google Api geeft aan dat de DateTime properties deprecated zijn en dat de DateTimeDateTimeOffset (mooie naam) velden gebruikt moeten worden. 
+
+*** 
 ## v5.0.12 - 2024-10-08
 ### Fix
 - Recurring Exchange afspraken waarvan de eerst afspraak in het verleden ligt worden niet gesynced naar CallPro. In deze versie is een patch voor dit gedrag ingebouwd.
