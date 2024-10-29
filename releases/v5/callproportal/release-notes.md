@@ -1,6 +1,12 @@
 # CallProPortal Release Notes
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
+
+***
+## v5.0.38 - 2024-10-29
+### Changed
+- Cosmetische aanpassing zodat de `Handmatige transcriptie starten` knop bij een gespreksopname alleen zichtbaar is als transcriptie ook is geactiveerd.
+
 ***
 ## v5.0.37 - 2024-08-01
 ### Added
