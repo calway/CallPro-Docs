@@ -4,6 +4,15 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 <br/>
 
 *** 
+## v5.0.15 - 2024-10-29
+### Change
+- Op verzoek van veel klanten is het gedrag van het synchronisatie vinkje "Wijzigingen van afsrpaken door externe agenda toestaan" uitgebreid met de mogelijkheid om de afspraak in de externe agenda te verwijderen, wat de afspraak dan ook in CallPro verwijderd. Voorheen stonden wij op het standpunt dat call center afspraken alleen door het call center mogen worden verwijderd, echter, veel klanten werken vrijer met hun agenda wat het onhandig maakt als ze voor het verwijderen telkens contact moetne hebben met het call center.
+
+### Fix
+-  Hoewel dit ook gezien kan worden al een `Change` vermelden we het onder `Fix` omdat het gebruik van unicode tekens in de Google afsrpaken resulteerde in een eindeloze reeks van wijzigingen in CallPro, die uiteindelijk geen effect hadden. Google afsrpaken hebben geregeld icoontjes (unicode karakters) maar Callpro (de database) ondersteunt niet het opslaan van deze tekens. Hierdoor kwamen deze tekens als `?` in de database en dat leverde weer problemen met het vergelijken van de CallPro waarde met de actuele waarde uit Google.
+Voorlopig verwijderen we de unicode karakters uit de Google afsrpaak voordat we deze verder gebruiken. Mocht het voor iemand essentieel zijn dat deze unicode karakters gebruikt kunen nworden en ook in CallPro zichtbaar worden laat ons dan de specifieke use-case weten dan kunnen wij nagaan of dit op de backlog moet komen voor ondersteuning.
+
+*** 
 ## v5.0.14 - 2024-10-16
 ### Change
 - Exceptions na de vorige aanpassing. Kennelijk geeft de Google soms data terug met illegala datums In hjet CreatedDateTimeOffset veld stond ineens '0000-12-31 00:00:00.000' wat duidelijk niet kan kloppen! Extra Exception handling en defaults toegevoegd zodat de Agenda's weer verder syncen. 
