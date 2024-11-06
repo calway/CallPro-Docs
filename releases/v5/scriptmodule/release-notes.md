@@ -4,10 +4,20 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.11 - 2024-11-06
+### Change
+- (intern) nieuwe callback schedule optie voor per belopdracht aangeven van tijden waarop de belopdracht aangeboden kan worden. Deze staat gepland voor versie 5.1.0 Dit is alleen in test databases te gebruiken, niet in productie (bij klanten)
+- Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrahctstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de teokomst ingevuld kan worden.
+
+### Fixed
+- Variabelen tabblad werd soms niet weergegeven ondanks dat de gebruiker rechten had.
+- Reistijdcontrole werkte niet bij alle installaties (klanten) door verschillen in de lokale situatie. Dit is in deze versie opgelost zodat het nu altijd werkt.
+
+***
 ## v5.0.10 - 2024-07-30
 ### Change
 - synchronisatie release voor Resource Explorer
-- Beta support voor WebView2 migratie van de oude MSHTML engine voor weergave van scripts.
+- Beta support voor WebView2 migratie van de oude MSHTML engine voor weergave van scripts. Om dit te gebruiken dient een variabele `WebView2Enabled` van type boolean met waarde `true` te worden gezet op de werkplek.
 
 ***
 ## v5.0.9 - 2024-02-28
