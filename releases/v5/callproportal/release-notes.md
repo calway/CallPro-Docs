@@ -1,6 +1,10 @@
 # CallProPortal Release Notes
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
+***
+## v5.0.39 - 2024-11-14
+### Changed
+- Kleine interne aanpassing ter vorobereiding van aanpasisngen in de Resource Explorer mbt gespreksopnames. We geven nu intern niet het hele pad mee, maar alleen het relatieve pad naar de opanmes.
 
 ***
 ## v5.0.38 - 2024-10-29
