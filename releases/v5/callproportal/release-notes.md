@@ -2,6 +2,10 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.40 - 2024-11-21
+- Verwijderen ongebruikte en oude functionaliteit mbt Agenda weergave. Een bezoek evaluatieformulier waar bepaalde statussen konden worden gezet, en een specifieke optie om ene afspraak als vervolgafsrpaak te markeren.
+
+***
 ## v5.0.39 - 2024-11-14
 ### Changed
 - Kleine interne aanpassing ter vorobereiding van aanpasisngen in de Resource Explorer mbt gespreksopnames. We geven nu intern niet het hele pad mee, maar alleen het relatieve pad naar de opanmes.
