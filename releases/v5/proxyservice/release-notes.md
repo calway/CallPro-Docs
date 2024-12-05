@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 <br/>
 
+*** 
+## v5.0.12 - 2024-12-05
+### Added
+- Nieuw recording endpoint om een opname to downloaden. Tevens zijn enkele interne aanpassingen doorgevoerd mbt de toegang tot de fysieke opnames om alles over de verschillende modules uniformer te maken.
+- Eenvoudig zoek endpoint om entries uit een periode met optioneel een status op te halen. Deze gaat mogelijk in de toekomst veranderen.
+
 ***
 ## v5.0.11 - 2024-10-14
 ### Change
