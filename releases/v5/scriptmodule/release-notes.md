@@ -4,10 +4,16 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.12 - 2025-01-09
+### Change
+- Support voor #SCRIPT_SENDDTMF om vanuit het script bijvoorbeeld IVR menu's te navigeren (buiten de softphone om)
+- (intern) Diverse code optimalisaties en kleine cosmetische/functionele wijzigingen in generieke controls
+
+***
 ## v5.0.11 - 2024-11-06
 ### Change
 - (intern) nieuwe callback schedule optie voor per belopdracht aangeven van tijden waarop de belopdracht aangeboden kan worden. Deze staat gepland voor versie 5.1.0 Dit is alleen in test databases te gebruiken, niet in productie (bij klanten)
-- Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrahctstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de teokomst ingevuld kan worden.
+- Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrachtstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de teokomst ingevuld kan worden.
 
 ### Fixed
 - Variabelen tabblad werd soms niet weergegeven ondanks dat de gebruiker rechten had.
