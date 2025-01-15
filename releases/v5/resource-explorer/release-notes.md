@@ -12,6 +12,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ## v5.0.13 - 2025-01-09
 ### Changed
 - Mogelijkheid om de Reistijdcontrole licentiesleutel in te vullen in het control panel
+
 ### Fixed
 - Variabelen tabblad werd soms niet weergegeven ondanks dat de gebruiker rechten had.
 - Als een importbestand op de laatste regel geen `newline` had eindigde de import met een foutmelding doordat regels verkeerd werden geteld en de import voorbij het einde van het bestand wilde lezen.
