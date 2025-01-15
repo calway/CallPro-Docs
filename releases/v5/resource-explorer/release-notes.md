@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.14 - 2025-01-15
+### Fixed
+- Agenda wijzigingen konden niet meer worden bewaard, en nieuwe agenda's konden niet worden aangemaakt doordat er in de code werd verwezen naar een database veld dat er niet is. Er waren nog geen meldingen van gebruikers, maar deze update lost het probleem op.
+
+***
 ## v5.0.13 - 2025-01-09
 ### Changed
 - Mogelijkheid om de Reistijdcontrole licentiesleutel in te vullen in het control panel
