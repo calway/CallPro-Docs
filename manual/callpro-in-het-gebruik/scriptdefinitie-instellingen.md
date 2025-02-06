@@ -143,7 +143,7 @@ Alle overige bellen knoppen in het script laten alleen zien wat het resultaat is
 <tr class="odd">
 <td>SCRIPT.NOTES.LOCATION</td>
 <td>Karakter</td>
-<td>TOP/<strong>BOTTOM</strong>/BOTH Met deze waarde wordt bepaald waar het Notitie &amp; Opmerkingen blok wordt geplaatst.</td>
+<td>TOP/<strong>BOTTOM</strong> Met deze waarde wordt bepaald waar het Notitie &amp; Opmerkingen blok wordt geplaatst.</td>
 </tr>
 <tr class="even">
 <td>SCRIPT.NOTES.CALLHISTORY</td>
