@@ -4,6 +4,18 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.7 - 2025-02-07
+### New
+* De mogelijkheid om de gespreksnotitie die de agent invult door een AI kun laten controler op spel- en type fouten en schrijfstijl. De standaard prompt is redelijk simpel:
+> Als AI assistent bekijk je gespreksnotities van een call center agent. Je corrigeert deze gespreksnotitie op type- en spelfouten en corrigeert het taalgebruik naar een semi-formele stijl. Alle correcties zijn in het Nederlands.
+
+* Je kunt een eigen prompt maken door op de scriptdefinitie (of een scriptdefinitie folder) een variabele `SCRIPT.EntrynoteSpellcheckPrompt` te maken van type `Memo` met een alternatieve prompt.
+
+### Fix
+* De `campagnelijst verversen` knop in het pauze scherm werkte niet. Dit is opgelost.
+* Oplossing van een probleem uit versie 5.0.6 die ervoor zorgde dat script variabelen niet goed werden uitgelezen en daardoor ontbrekende script functionaliteit kon opleveren. Zo staan afcodeer validaties meestal in de variabele `SCRIPT.HEADER` die dus niet werd overgenomen in het script waardoor deze validaties niet werden uitgevoerd, wat weer resulteerde in het niet verschijnen van deze gesprekken in de fulfilment validatie, maar het direct versturen van de emails zonder verder controle doro supervisie.
+
+***
 ## v5.0.6 - 2025-01-08
 ### Changed
 * Mogelijkheid om met de `@F(Email)` optie een email adres te controleren op geldigheid. Dit is alleen een invoer geldigheid, niet perse een bestaand email adres!
