@@ -20,7 +20,7 @@ De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een 
 1. Kies **Register** om de Applicatie te maken. 
 1. Ga nu in de app registratie naar **Certificates & secrets**
     * Druk hier op ** New Client secret**
-    * Geef als naam iets herkenbaars, zoals de naam van het call center, en de huidige datum, ie. "calway-2024-04-02"
+    * Geef als naam iets herkenbaars, zoals de naam van het call center, en de huidige datum, ie. "callpro-2025-02-10"
     * Kies bij Expires de langst mogelijke periode, op dit moment is dat 24 maanden.
     * Vergeet geen herinnering in je agenda te zetten om na 23 maanden een nieuw secret te maken en die aan het call center door te geven anders stop de synchronisatie na 24 maanden!
     * Vergeet niet om de client secret (de waarde zichtbaar in de **Value** kolom) te kopieren en vast te leggen, dit wordt eenmalig afgebeeld!
@@ -37,6 +37,8 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 * Kies **Add Permissions** om alle gekozen permissions toe te voegen, je komt nu terug in het vorige scherm.
 * Selecteer nu **Grant admin consent for organisatienaam** en accepteer de consent dialoog.
 
+Bovenstaande instellingen configureren algemene toegang tot agenda's. Indien er bedrijfsrichtlijnen zijn over striktere toegang tot agenda's kan middels deze [link](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access) aanvullende restricties worden gezet door middel van `ApplicationAccessPolicies`. Hiermee kan de toegang verder worden beperkt tot specifieke agenda's.
 
+## Terugleveren
 Geef nu de **Application (client) ID**, de **Directory (Tenant) ID** en de zojuist gemaakte **Client Secret** door aan het call center. Geef ook de email adressen van de mailboxen die gesynchroniseert moeten worden.
-> **Let op!** De Client Secret heeft een beperkte houdbaarheid en dient minimaal elke 24 maanden te worden vernieuwt, en aangeleverd aan het call center.
+> **Let op!** De Client Secret heeft een beperkte houdbaarheid en dient maximaal elke 24 maanden te worden vernieuwt, en aangeleverd aan het call center.
