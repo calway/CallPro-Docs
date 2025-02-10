@@ -2,7 +2,7 @@
 Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 <br/>
-
+ 
 ***
 ## v5.0.7 - 2025-02-07
 ### New
