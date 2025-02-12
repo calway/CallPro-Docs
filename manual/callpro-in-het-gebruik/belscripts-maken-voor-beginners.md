@@ -319,8 +319,6 @@ worden gebruikt.
 | %VARIABLE._____% | Voor elke variabele dis is gedefinieerd op de scriptdefinitie is er een waarde. Daarna worden de variabelen op de campagne opgenomen. ** LET OP! Als op de campagne variabelen met dezelfde naam als op de scriptdefinitie zijn gedefinieerd dan worden deze waarden overschreven en blijft de waarde die is gedefinieerd bij de campagne over. ** |
 
 
-## [Geavanceerde opmaak met het autoscript](geavanceerde-autoscript-opmaak.md)
-
 # [Antwoordservice pagina](antwoordservice-autoscript.md)
 
 # [Pauze pagina](pauze-autoscript.md)

@@ -4,6 +4,7 @@ Dit zijn de Docs pages voor CallPro.
 ## Handleidingen
 
 * [CallPro in het gebruik](./manual/callpro-in-het-gebruik/README.md)
+* [Belscript tips, tricks and geavanceerde functies](./guides/autoscript/README.md)
 * [Fulfilment service handleiding](./manual/fulfilment/README.md)
 * [CalendarSync service](./manual/calendarsync/README.md)
 * [Gesprekstranscriptie en AI](./manual/calltranscription/README.md)
