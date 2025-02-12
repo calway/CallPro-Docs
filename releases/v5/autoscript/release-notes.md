@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
  
 ***
+## v5.0.8 - 2025-02-12
+### Change
+* Verbetering van de @F(Email) scriptveld controle functie zodat email adressen met accent-tekens ook niet worden geaccepteerd.
+
+***
 ## v5.0.7 - 2025-02-07
 ### New
 * De mogelijkheid om de gespreksnotitie die de agent invult door een AI kun laten controler op spel- en type fouten en schrijfstijl. De standaard prompt is redelijk simpel:
