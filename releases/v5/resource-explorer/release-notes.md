@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.15 - 2025-02-24
+### Change
+- Voor database v5.1.0 is ondersteuning voor lange paden toegevoegd voor import en export bestanden. Met name bij gebruik van Onedrive/Sharepoint worden paden soms veel dieper dan gebruikelijk. Voorheen was de maximale lengte van het pad + bestandnaam 200 tekens, dit is nu verlengt tot de miaxmale lengte die Windows toestaat. Databases met lagere versie nummers hebben hier geen voordeel van omdat dit ook een wijziging in de database nodig heeft.
+- Op de campagne folder is een mogelijkheid toegevoegd om naar belopdrachten te zoeken. Hierbij worden alle actieve bellijsten uit de campagne gebruikt, waarbij ook ingestelde filters worden toegepast.
+- In zoeken vensters is een extra popup verwijderd die als je een zoekcriterium had ingesteld, maar niet toegevoegd elke keer vroeg of je die wilde toevoegen. CallPro gaat er nu van uit dat dit filter niet hoeft te worden meegenomen.
+- Een niet gebruikte feature om met smileys een "agent mood" aan te geven wordt verwijderd. Deze functie is in 2019 toegevoegd maar wordt door niemand gebruikt. Het nut hiervan is ook bij test gebruikers nooit echt naar voren gekomen.
+
+***
 ## v5.0.14 - 2025-01-15
 ### Fixed
 - Agenda wijzigingen konden niet meer worden bewaard, en nieuwe agenda's konden niet worden aangemaakt doordat er in de code werd verwezen naar een database veld dat er niet is. Er waren nog geen meldingen van gebruikers, maar deze update lost het probleem op.
