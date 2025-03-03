@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de ov
 <br/>
 
 *** 
+## v5.0.12 - 2025-03-03
+### Change
+- Verbetering van de opmaak van cellen bij het genereren van Excel bestanden. Voorheen werden alle cellen tekst, wat voor getallen een irritant driehoekje in Excel oplevert die aangeeft dat de cell tekst is maar het lijkt of er een getaal in staat. Ook werden cellen met tijdweergave opmaak niet correct afgebeeld, maar als getal. Met deze update worden de meeste cellen correct afgebeeld op basis van de opmaak die in Excel is ingesteld.
+
+### Fix
+- Bij het uitvoeren van queries is het normaal niet nodig om een unlimited query timeout te gebruiken, maar bij sommige langdurige queries of database operaties kan het wel makkelijk zijn om geen benoemde bovengrens op te geven. Met deze versie wordt QueryTimeout=0 geaccepteert.
+
+*** 
 ## v5.0.11 - 2024-10-03
 ### Fix
 - De response naar aanleiding van een webservice call werd op json content gecontroleert en dan werden velden eruit gehaald. De controle of iets een geldige json was was niet voldoende en leverde soms errors. Dit is nu verbeterd, illegale json responses worden nu netjes afgehandeld.
