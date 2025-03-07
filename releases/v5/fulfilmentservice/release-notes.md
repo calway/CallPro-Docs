@@ -3,6 +3,18 @@ Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de ov
 
 <br/>
 
+***
+## v5.0.13 - 2025-03-07
+### Change
+- Vanwege de vele API integratie configs is een optie `\JS` JsonSafe toegevoegd die uit het mergeveld bepaalde karakters vervangt of verwijderd. Dit maakt het maken van een json payload een stuk leesbaarder.
+    * " wordt vervangen door '
+    * crlf wordt vervangen door een spatie
+    * cr wordt vervangen door een spatie
+    * lf wordt vervangen door een spatie
+    * tab wordt vervangen door een spatie
+    * \ wordt vervangen door \\
+
+
 *** 
 ## v5.0.12 - 2025-03-03
 ### Change
