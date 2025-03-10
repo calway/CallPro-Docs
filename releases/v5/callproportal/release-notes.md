@@ -2,8 +2,12 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.43-44 - 2025-02-14
+- Het Wachtrij overzicht liet niet altijd alle wachtrijen zien door een bug tijdens de conversie van missende data. Hier is een fix voor gemaakt. Helaas is deze fix iets te snel uitgebracht en was meteen een volgende release nodig om ook de statistieken te fixen die door de eerdere fix niet meer werkten.
+
+***
 ## v5.0.42 - 2025-01-06
-- Kleine aanpassing in de fulfilment validatie. Voorheen werden velden die met custom opmaak in het autoscript werde ngebruikt **niet** in de fulfilmentvalidatie weergegeven. Nu wordt het veld als standaard TextBox afgebeeld in de fulfilment validatie. Dit kwam bijvoorbeeld voor bij email veld controle waar je het veld ook in de fulfilment validatie wilt blijven zien.
+- Kleine aanpassing in de fulfilment validatie. Voorheen werden velden die met custom opmaak in het autoscript werden gebruikt **niet** in de fulfilmentvalidatie weergegeven. Nu wordt het veld als standaard TextBox afgebeeld in de fulfilment validatie. Dit kwam bijvoorbeeld voor bij email veld controle waar je het veld ook in de fulfilment validatie wilt blijven zien.
 
 ***
 ## v5.0.41 - 2024-11-29
