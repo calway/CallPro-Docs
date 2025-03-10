@@ -4,6 +4,18 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.13 - 2025-03-10
+### Change
+- (5.1.0 only) Bij het afcoderen van een Terugbellen status waarbij op de belopdracht een tijdrestrictie (terugbel rooster) staat ingesteld en de gekozen terugbeltijd valt buiten dit rooster dan is in de popup melding die volgt een checkbox toegevoegd om aan te geven dat de terugbeltijd mag worden bijgesteld zodat deze in het terugbel rooster valt. Daarna zal het afcoderen normaal vervolgen.
+
+### Fix
+- In de MSHTML engine zijn de namen van CallPro functies die via `window.external` worden benaderd niet case-sensitive. De nieuwe Webview2 engine is wel case-sensitive waardoor enkele javascript functies niet correct werken doordat de schrijfwijze in de javascript afwijkt bij de source-code van CallPro. Met deze release worden onderstaande fouten opgelost die we hebben gevonden:
+
+	- loAgent.Short**c**uts(i)
+	- loAgent.Short**c**utsCount
+
+
+***
 ## v5.0.12 - 2025-01-09
 ### Change
 - Support voor #SCRIPT_SENDDTMF om vanuit het script bijvoorbeeld IVR menu's te navigeren (buiten de softphone om)
@@ -13,7 +25,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ## v5.0.11 - 2024-11-06
 ### Change
 - (intern) nieuwe callback schedule optie voor per belopdracht aangeven van tijden waarop de belopdracht aangeboden kan worden. Deze staat gepland voor versie 5.1.0 Dit is alleen in test databases te gebruiken, niet in productie (bij klanten)
-- Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrachtstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de teokomst ingevuld kan worden.
+- Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrachtstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de toekomst ingevuld kan worden.
 
 ### Fixed
 - Variabelen tabblad werd soms niet weergegeven ondanks dat de gebruiker rechten had.
