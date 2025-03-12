@@ -59,20 +59,6 @@ Geeft als de huidige datum **01-04-2005** is als resultaat:
 <th>Betekenis</th>
 </tr>
 <tr>
-<td>DT</td>
-<td>
-Specificeer een datum/tijd formaat. Er kan gebruik worden gemaakt van
-de volgende combinaties (volledige lijst op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
-<br/>dddd, MMMM dd yyyy :Thursday, August 17 2015
-<br/>ddd, MMM d "'"yy :Thu, Aug 17 '15
-<br/>dddd, MMMM dd :Thursday, August 17
-<br/>M/yy :8/15
-<br/>dd-MM-yy :17-08-15
-<br/>ddMMyyyy :17082015
-<br/>dd-MM-yyyy HH:mm : 17-08-2015 09:15
-</td>
-</tr>
-<tr>
 <td>AL</td>
 <td>
 Alignment van de tekst.
@@ -98,17 +84,94 @@ Hoofdletter/kleineletter conversie
 </td>
 </tr>
 <tr>
-<td>SW</td>
+<td>CO</td>
+<td>Zelfde als de IF, maar dan met een “bevat" vergelijking i.p.v. gelijk-aan
+</td>
+</tr>
+<tr>
+<td>CU</td>
+<td>Change the current culture (restore afterwards to original culture).
+\CU"nl-NL" or \CU"fr-FR"
+</td>
+</tr>
+<tr>
+<td>DT</td>
 <td>
-Switch commando (ook wel case of decode genoemd)
-Kommagescheiden lijst. Werkt als volgt:
-"a","1","b","2","c","3"
-Als de veldwaarde a is wordt een 1 weergegeven
-Als de veldwaarde b is wordt een 2 weergegeven
-Als de veldwaarde c is wordt een 3 weergegeven
-
-Binnen de " " mogen ook weer velden worden gebruikt.
-Als de veldwaarde niet voorkomt wordt er niets vervangen.
+Specificeer een datum/tijd formaat. Er kan gebruik worden gemaakt van
+de volgende combinaties (volledige lijst op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
+<br/>dddd, MMMM dd yyyy :Thursday, August 17 2015
+<br/>ddd, MMM d "'"yy :Thu, Aug 17 '15
+<br/>dddd, MMMM dd :Thursday, August 17
+<br/>M/yy :8/15
+<br/>dd-MM-yy :17-08-15
+<br/>ddMMyyyy :17082015
+<br/>dd-MM-yyyy HH:mm : 17-08-2015 09:15
+</td>
+</tr>
+<tr>
+<td>FL</td>
+<td>Floatingpoint format function
+\FL "<format>"
+Format is een C# format specifier voor floating points zoals beschreven op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
+<br/>f2: 2 decimalen 12.34
+<br/>f1: 1 decimaal 12.3
+<br/>p2: 2 decimale percentage 12.34 %
+<br/>c2: 2 decimale bedragen &euro; 12.34
+</td>
+</tr>
+<tr>
+<td>FS</td>
+<td>Filename safe. Vervangt illegale karakters in de filename door een _ zodat
+de filenaam geldig is.
+</td>
+</tr>
+<tr>
+<td>IF</td>
+<td>If then else constructie
+\IF “condition"?"then-value":"else-value"
+Condition, then-value en else-value mogen zowel constante teksten zijn,
+als velden.
+Bijvoorbeeld: %R.COUNTRY% \IF "NL"?"%R.ZIP R.CITY%":"%R.CITY
+R.ZIP%"
+</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>Json safe
+Maakt een string veilig voor gebruik in een json string. Dit vervangt alle:
+<ul>
+<li> " door '</li>
+<li> crlf, cr, lf door spatie</li>
+<li> tab door spatie</li>
+<li> \ door \\</li>
+</ul> 
+</td>
+</tr>
+<tr>
+<td>LS</td>
+<td>Line safe
+Vervang alle CR en LF door een spatie.
+</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>Filename+path safe. Vervangt illegale karakters door een _ in een volledig
+file+path naam.
+</td>
+</tr>
+<tr>
+<td>QS</td>
+<td>Quote save. Vervangt enkele quotes door dubbele.
+Het quote karakter moet mee worden gegeven als parameter
+Bijvoorbeeld: \QS’
+</td>
+</tr>
+<tr>
+<td>RE</td>
+<td>Replace commando
+Vervang een zoektekst voor een vervangtekst, bijvoorbeeld:
+%CL.ENTRYNOTE \RE"\r\n","< BR/ >"
+Vervangt alle [CR][LF] door < BR />
 </td>
 </tr>
 <tr>
@@ -121,6 +184,28 @@ Als de veldwaarde a is wordt een 1 weergegeven
 Als de veldwaarde b is wordt een 2 weergegeven
 Als de veldwaarde c is wordt een 3 weergegeven
 Als geen enkele waarde matcht, dan wordt de laatste waarde -1 weergegeven. De match waarde moet hiervoor "" zijn.
+
+Binnen de " " mogen ook weer velden worden gebruikt.
+Als de veldwaarde niet voorkomt wordt er niets vervangen.
+</td>
+</tr>
+<tr>
+<td>SU</td>
+<td>Substring constructie
+Hello world \SU6,5 haalt een substring op beginnend op
+positie 2
+(zero based!) met lengte 4. Dus dit levert <b>world</b> op
+</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>
+Switch commando (ook wel case of decode genoemd)
+Kommagescheiden lijst. Werkt als volgt:
+"a","1","b","2","c","3"
+Als de veldwaarde a is wordt een 1 weergegeven
+Als de veldwaarde b is wordt een 2 weergegeven
+Als de veldwaarde c is wordt een 3 weergegeven
 
 Binnen de " " mogen ook weer velden worden gebruikt.
 Als de veldwaarde niet voorkomt wordt er niets vervangen.
@@ -143,79 +228,6 @@ Als de veldwaarde niet voorkomt wordt er niets vervangen.
 <br/>L - verwijder spaties voor de tekst
 <br/>R - verwijder spaties na de tekst
 <br/>A – L en R (default)
-</td>
-</tr>
-<tr>
-<td>QS</td>
-<td>Quote save. Vervangt enkele quotes door dubbele.
-Het quote karakter moet mee worden gegeven als parameter
-Bijvoorbeeld: \QS’
-</td>
-</tr>
-<tr>
-<td>LS</td>
-<td>Linesave
-Vervang alle CR en LF door een spatie.
-</td>
-</tr>
-<tr>
-<td>IF</td>
-<td>If then else constructie
-\IF “condition"?"then-value":"else-value"
-Condition, then-value en else-value mogen zowel constante teksten zijn,
-als velden.
-Bijvoorbeeld: %R.COUNTRY% \IF "NL"?"%R.ZIP R.CITY%":"%R.CITY
-R.ZIP%"
-</td>
-</tr>
-<tr>
-<td>CO</td>
-<td>Zelfde als de IF, maar dan met een “bevat" vergelijking i.p.v. gelijk-aan
-</td>
-</tr>
-<tr>
-<td>SU</td>
-<td>Substring constructie
-Hello world \SU6,5 haalt een substring op beginnend op
-positie 2
-(zero based!) met lengte 4. Dus dit levert <b>world</b> op
-</td>
-</tr>
-<tr>
-<td>RE</td>
-<td>Replace commando
-Vervang een zoektekst voor een vervangtekst, bijvoorbeeld:
-%CL.ENTRYNOTE \RE"\r\n","< BR/ >"
-Vervangt alle [CR][LF] door < BR />
-</td>
-</tr>
-<tr>
-<td>FL</td>
-<td>Floatingpoint format function
-\FL "<format>"
-Format is een C# format specifier voor floating points zoals beschreven op <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">docs.microsoft.com</a>:<br/>
-<br/>f2: 2 decimalen 12.34
-<br/>f1: 1 decimaal 12.3
-<br/>p2: 2 decimale percentage 12.34 %
-<br/>c2: 2 decimale bedragen &euro; 12.34
-</td>
-</tr>
-<tr>
-<td>FS</td>
-<td>Filename safe. Vervangt illegale karakters in de filename door een _ zodat
-de filenaam geldig is.
-</td>
-</tr>
-<tr>
-<td>PS</td>
-<td>Filename+path safe. Vervangt illegale karakters door een _ in een volledig
-file+path naam.
-</td>
-</tr>
-<tr>
-<td>CU</td>
-<td>Change the current culture (restore afterwards to original culture).
-\CU"nl-NL" or \CU"fr-FR"
 </td>
 </tr>
 <tr>
