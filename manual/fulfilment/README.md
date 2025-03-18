@@ -75,7 +75,7 @@ Alignment van de tekst.
 <td>CC</td>
 <td>
 Hoofdletter/kleineletter conversie
-<br/>0|1|2|3
+<br/>0|1|2|3|4
 <br/>0=De eerste letter wordt een hoofdletter, de rest klein.
 <br/>1=Iedere eerste letter (na spatie of -) wordt een hoofdletter.
 <br/>2=Alles hoofdletters
