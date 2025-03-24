@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## 5.0.16 - 2025-03-24
+### Fixed
+- Bij het kopieren van het 1e telefoonnummer veld in een scriptdefinitie ontstond een probleem dat er twee 1e telefoonnummer velden waren. Hierdoor kon de scriptdefintie niet worden bewaard. Je kon het extra veld ook niet meer verwijderen omdat dit als 1e telefoonnummer veld gemarkeerd was. Met deze release is deze bijzondere bug opgelost.
+
+### Change
+- De minimale afmeting van rapportage vensters is verkleind zodat deze beter zijn af te stemmen op de inhoud. Dit is vooral handig als rapportage vensters open blijven met een auto-refresh.
+
+***
 ## v5.0.15 - 2025-02-24
 ### Change
 - Voor database v5.1.0 is ondersteuning voor lange paden toegevoegd voor import en export bestanden. Met name bij gebruik van Onedrive/Sharepoint worden paden soms veel dieper dan gebruikelijk. Voorheen was de maximale lengte van het pad + bestandnaam 200 tekens, dit is nu verlengt tot de miaxmale lengte die Windows toestaat. Databases met lagere versie nummers hebben hier geen voordeel van omdat dit ook een wijziging in de database nodig heeft.
