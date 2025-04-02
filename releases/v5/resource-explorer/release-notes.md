@@ -4,16 +4,22 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## 5.0.17 - 2025-04-02
+### Changed
+- De Resource Explorer ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meet oude computers heeft die alleen 32-bits Windows kunnen draaien.
+- We hebben de maken van variabelen vereenvoudigt. Als je de naam van een variabele begint te typen krijg je een lijstje met bestaande variabelen die met deze letters beginnen. Zo kun je snel een variabele kiezen die elders al in gebruik is. Vooral voor het opnemen van veel voorkomende variabelen maakt dit de invoer sneller en eenvoudiger.
+
+***
 ## 5.0.16 - 2025-03-24
 ### Fixed
 - Bij het kopieren van het 1e telefoonnummer veld in een scriptdefinitie ontstond een probleem dat er twee 1e telefoonnummer velden waren. Hierdoor kon de scriptdefintie niet worden bewaard. Je kon het extra veld ook niet meer verwijderen omdat dit als 1e telefoonnummer veld gemarkeerd was. Met deze release is deze bijzondere bug opgelost.
 
-### Change
+### Changed
 - De minimale afmeting van rapportage vensters is verkleind zodat deze beter zijn af te stemmen op de inhoud. Dit is vooral handig als rapportage vensters open blijven met een auto-refresh.
 
 ***
 ## v5.0.15 - 2025-02-24
-### Change
+### Changed
 - Voor database v5.1.0 is ondersteuning voor lange paden toegevoegd voor import en export bestanden. Met name bij gebruik van Onedrive/Sharepoint worden paden soms veel dieper dan gebruikelijk. Voorheen was de maximale lengte van het pad + bestandnaam 200 tekens, dit is nu verlengt tot de miaxmale lengte die Windows toestaat. Databases met lagere versie nummers hebben hier geen voordeel van omdat dit ook een wijziging in de database nodig heeft.
 - Op de campagne folder is een mogelijkheid toegevoegd om naar belopdrachten te zoeken. Hierbij worden alle actieve bellijsten uit de campagne gebruikt, waarbij ook ingestelde filters worden toegepast.
 - In zoeken vensters is een extra popup verwijderd die als je een zoekcriterium had ingesteld, maar niet toegevoegd elke keer vroeg of je die wilde toevoegen. CallPro gaat er nu van uit dat dit filter niet hoeft te worden meegenomen.
@@ -35,39 +41,39 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 ***
 ## v5.0.12 - 2024-07-30
-### Change
+### Changed
 - De default voor scriptvelden **Fulfilment validatie** is nu `true` en de Fulfilment validatie in CallproPortal gebruikt dit veld om te bepalen of een veld zichtbaar moet zijn.
 
 ***
 ## v5.0.11 - 2024-06-19
-### Change
+### Changed
 - We hebben de rapportage vensters aangepast zodat deze modeless kunnen worden gebruikt, los van de rapportage wizard. Hierdoor kun je de rapporten als los venster gebruiken en ook meerdere tegelijkertijd open hebben. 
 - Ook is aan de rapport een auto-refresh functie toegevoegd in de rechter onderkant van het scherm kun je kiezen voor een auto-refresh interval zodat de rapport inhoud wordt geactualiseerd.
 - Ook het handmatig verversen met de refresh button (die er al was) werkt nu en ververst het rapport handmatig.
 
 ***
 ## v5.0.10 - 2024-04-23
-### Fix
+### Fixed
 - Bij het kopieren van scriptvelden tussen verschillende scriptdefinities werden bestaande bellisjten die zijn gebaseerd op de scriptdefinitie die het nieuwe veld ontving **niet** bijgewerkt. Het probleem treedt alleen op bij het kopieren van velden tussen verschillende scriptdefintiies via het clipboard!
 
-### Change
+### Changed
 - **v5.0 database only**: Op de seat kan worden aangegeven dat de auto-provisioning wel/niet moet worden uitgevoerd. Voor deze update erd altijd auto-provisioning gebruikt, en werd Microsip vervolgens automatisch opgestart. 
 - **v5.0 database only**: Op de seat kan nu worden aangegeven dat bij het afsluiten van de Scriptmodule ook Microsip wordt afgesloten. Deze optie is alleen zichtbaar voor CallPro installaties die **database versie 5** hebben, en werkt ook alleen icm een Scriptmodule v5.0.10
 
 
 ***
 ## v5.0.9 - 2024-02-28
-### Fix
+### Fixed
 - Bij het bewerken van variabelen van type Memo (er wordt dan een RichtEditbox gebruikt) gaat er iets fout als tekst wordt ingevoerd die foutief herkend wordt als hyperlink. Deze hyperlink detectie gaat de eerste keer goed, maar eenmaal herkende hyperlinks (die geen hyperlink zijn) worden soms verkeerd omgezet in platte tekst wat resultaat in `< >` om de hyperlink. Dit trad op in javascript code in de variabele die hierdoor niet meer correct werkte.
 - Bij het exporteren van bellijsten naar Excel op een Onedrive locatie volgde soms ene foutmelding tijdens het exporteren doordat Onedrive het upload en CallPro geen exclusieve toegang kan krijgen. De melding is vervangen door een Herhaal optie zodat het openen van het exportbestand herhaald kan worden, wat meestal direct werkt, tenzij het uploaden naar Onedrive heel traag gaat, maar dan kan het meerdere keren geprobeert worden totdat het lukt. Een alternatieve optie is om de Onedrive synchronisatie tijdelijk te pauzeren.
 
 
 ***
 ## v5.0.8 - 2023-12-06
-### Fix
+### Fixed
 - In de rapportage werd bij het gebruik van de "Export naar Excel" optie cijfer kolommen niet gezien als cijfers, maar als tekst. Dit is opgelost. Een resterend probleem is dat tijdsduur kolommen nog steeds als tekst worden gezien en in Excel niet worden herkend als een tijdsduur. Als je de cell bewerkt herkend Excel de *handmatige* invoer wel als tijdsduur. We hebben hier nog geen oplossing voor kunenn vinden anders dan dat je als gebruiker `F2` en `Enter` moet uitvoeren op de cell.
 
-### Change
+### Changed
 - Cosmetische verbeteringen in keuzelijsten met checkbox selectie.
 - Er is een sneltoets toegevoegd `Ctrl-Shift+C` om het volledige pad van de huidige resource in het clipboard te zetten.
 
@@ -85,7 +91,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ### Fixed
 - Extra applicatie icoon in Start menu voor Campagne Grid en Suppressielijsten import.
 
-### Change
+### Changed
 - In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
 
 ***
