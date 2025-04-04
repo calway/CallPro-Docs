@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## 5.0.18 - 2025-04-03
+### Fixed
+- Opnieuw uitgebrachte versie van 5.0.17 omdat deze vorige versie niet bij klanten wilde installeren?
+
+***
 ## 5.0.17 - 2025-04-02
 ### Changed
 - De Resource Explorer ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meet oude computers heeft die alleen 32-bits Windows kunnen draaien.
