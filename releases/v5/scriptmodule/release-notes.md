@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.14 - 2025-04-07
+### Change
+- De Script module ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meer oude computers heeft die alleen 32-bits Windows kunnen draaien.
+- Om de overstap naar de nieuwe WebVew2 broweser engine te vereenvoudigen kan de WebView2Enabled variabele nu ook op de Seat groep worden vastgelegd en geldt dan voor alle Seats in en onder deze groep. Door de variabele op de Seats groep te plaatsen zijn alle werkplekken overgestapt. Uitzonderingen kunnen dan nog wordne gemaakt door op lagere Seat groepen, of direct op de Seat een WebView2Enabled variabele te definieren.
+
+***
 ## v5.0.13 - 2025-03-10
 ### Change
 - (5.1.0 only) Bij het afcoderen van een Terugbellen status waarbij op de belopdracht een tijdrestrictie (terugbel rooster) staat ingesteld en de gekozen terugbeltijd valt buiten dit rooster dan is in de popup melding die volgt een checkbox toegevoegd om aan te geven dat de terugbeltijd mag worden bijgesteld zodat deze in het terugbel rooster valt. Daarna zal het afcoderen normaal vervolgen.

@@ -11,7 +11,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ***
 ## 5.0.17 - 2025-04-02
 ### Changed
-- De Resource Explorer ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meet oude computers heeft die alleen 32-bits Windows kunnen draaien.
+- De Resource Explorer ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meer oude computers heeft die alleen 32-bits Windows kunnen draaien.
 - We hebben de maken van variabelen vereenvoudigt. Als je de naam van een variabele begint te typen krijg je een lijstje met bestaande variabelen die met deze letters beginnen. Zo kun je snel een variabele kiezen die elders al in gebruik is. Vooral voor het opnemen van veel voorkomende variabelen maakt dit de invoer sneller en eenvoudiger.
 
 ***
