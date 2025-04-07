@@ -4,17 +4,22 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.15 - 2025-04-07
+### Fixed
+- In de vorige update is een fout geslopen waardoor de reistijdcontrole van de agendamodule niet meer werkte en een foutmelding gaf voro elk adres dat werd gecontroleerd.
+
+***
 ## v5.0.14 - 2025-04-07
-### Change
+### Changed
 - De Script module ondersteunt nu zowel x86 als x64 en is hiermee officieel ook 64-bits. Voor sommige acties is nu meer geheugen beschikbaar. Mogelijk zal in de toekomst de x86 (32-bits) versie verdwijnen omdat niemand meer oude computers heeft die alleen 32-bits Windows kunnen draaien.
 - Om de overstap naar de nieuwe WebVew2 broweser engine te vereenvoudigen kan de WebView2Enabled variabele nu ook op de Seat groep worden vastgelegd en geldt dan voor alle Seats in en onder deze groep. Door de variabele op de Seats groep te plaatsen zijn alle werkplekken overgestapt. Uitzonderingen kunnen dan nog wordne gemaakt door op lagere Seat groepen, of direct op de Seat een WebView2Enabled variabele te definieren.
 
 ***
 ## v5.0.13 - 2025-03-10
-### Change
+### Changed
 - (5.1.0 only) Bij het afcoderen van een Terugbellen status waarbij op de belopdracht een tijdrestrictie (terugbel rooster) staat ingesteld en de gekozen terugbeltijd valt buiten dit rooster dan is in de popup melding die volgt een checkbox toegevoegd om aan te geven dat de terugbeltijd mag worden bijgesteld zodat deze in het terugbel rooster valt. Daarna zal het afcoderen normaal vervolgen.
 
-### Fix
+### Fixed
 - In de MSHTML engine zijn de namen van CallPro functies die via `window.external` worden benaderd niet case-sensitive. De nieuwe Webview2 engine is wel case-sensitive waardoor enkele javascript functies niet correct werken doordat de schrijfwijze in de javascript afwijkt bij de source-code van CallPro. Met deze release worden onderstaande fouten opgelost die we hebben gevonden:
 
 	- loAgent.Short**c**uts(i)
@@ -23,13 +28,13 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 ***
 ## v5.0.12 - 2025-01-09
-### Change
+### Changed
 - Support voor #SCRIPT_SENDDTMF om vanuit het script bijvoorbeeld IVR menu's te navigeren (buiten de softphone om)
 - (intern) Diverse code optimalisaties en kleine cosmetische/functionele wijzigingen in generieke controls
 
 ***
 ## v5.0.11 - 2024-11-06
-### Change
+### Changed
 - (intern) nieuwe callback schedule optie voor per belopdracht aangeven van tijden waarop de belopdracht aangeboden kan worden. Deze staat gepland voor versie 5.1.0 Dit is alleen in test databases te gebruiken, niet in productie (bij klanten)
 - Maximale waarde voor enkele spinner controls voor de tijd opgave bij o.a. belopdrachtstatussen verhoogd van 100 naar 9999 omdat anders bij de eenheid minuten niet ver in de toekomst ingevuld kan worden.
 
@@ -39,13 +44,13 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 ***
 ## v5.0.10 - 2024-07-30
-### Change
+### Changed
 - synchronisatie release voor Resource Explorer
 - Beta support voor WebView2 migratie van de oude MSHTML engine voor weergave van scripts. Om dit te gebruiken dient een variabele `WebView2Enabled` van type boolean met waarde `true` te worden gezet op de werkplek.
 
 ***
 ## v5.0.9 - 2024-02-28
-### Change
+### Changed
 Een extra parameter `BREAKID` in het script commando om pauze te activeren zodat vanuit custom scripting de pauze substatus kan worden meegegeven.
 
 ```
@@ -76,7 +81,7 @@ function Recording(action) {
 - Bij het gebruik `MOVEENTRY` als de move niet lukte kon daarna niet worden afgecodeerd met een andere status doordat bepaalde settings bleven hangen van de moveentry. Dit is nu opgelost.
 - Bij de `SELECTSTAT` commando worden nu ook de `MINCALLBACKEXPR` en `MAXCALLBACKEXPR` toegevoegd die nog ontbraken.
 
-### Change
+### Changed
 - Cosmetische verbeteringen in keuzelijsten met checkbox selectie.
 
 ***
@@ -85,7 +90,7 @@ function Recording(action) {
 - Bij het afcoderen via scripting werd de `MOVEENTRY` parameter genegeerd. De correcte werking van deze parameter is hersteld
 - Bij het afcoderen via scripting werden alle status parameters  genegeerd en werden de op de status ingestelde instellingen gebruikt. Nu worden weer correct de via scripting ingestelde waarden gebruikt
 
-### Change
+### Changed
 - In de Agendamodule is een calendar maand control toegevoegd voor snellere navigatie door de agenda.
 
 ***
