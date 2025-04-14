@@ -33,7 +33,7 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 * Druk op **Add a permission**, kies dan **Microsoft Graph** , **Application permissions**
 * Zoek naar `calendar` permissions, selecteer `Calendars.ReadWrite` om toegang tot de calendars te geven.
 * Zoek naar `mailbox` permissions, selecteer `MailboxSettings.Read`
-* Indien via de Graph API ook emails gestuurd gaan worden selecteer dan aanvullend bij **Deletegated permissions** ook `SMTP.Send` en `User.Read`.
+* Indien via de Graph API ook emails gestuurd gaan worden selecteer dan aanvullend ook `Mail.Send` en `User.Read`.
 * Kies **Add Permissions** om alle gekozen permissions toe te voegen, je komt nu terug in het vorige scherm.
 * Selecteer nu **Grant admin consent for organisatienaam** en accepteer de consent dialoog.
 
@@ -42,3 +42,4 @@ Bovenstaande instellingen configureren algemene toegang tot agenda's. Indien er 
 ## Terugleveren
 Geef nu de **Application (client) ID**, de **Directory (Tenant) ID** en de zojuist gemaakte **Client Secret** door aan het call center. Geef ook de email adressen van de mailboxen die gesynchroniseert moeten worden.
 > **Let op!** De Client Secret heeft een beperkte houdbaarheid en dient maximaal elke 24 maanden te worden vernieuwt, en aangeleverd aan het call center.
+
