@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## 5.0.19 - 2024-04-24
+### Changed
+* Diverse zoek vensters hebben nu de mogelijk om de zoek criteria in te klappen zodat het venster meer ruimte heeft voor de zoek resultaten.
+
+### Fixed 
+* Een bug bij het opslaan van de exporthistorie als de `Melding` kolom zichtbaar was is opgelost.
+* De `Volgorde...` en `Volgorde groep...` opties om de volgorde van statussen in te stellen sorteert nu correct op de `Volgorde` kolom. Voorheen werd dit als string-waarde gedaan in plaats van de numerieke waarde waardoor het onmogelijk was deze functie te gebruiken.
+* Het export formaat `Excel (ODBC)` is vanaf deze versie als `deprecated` gemarkeerd en zal in een toekomstige versie worden verwijderd. Bij het gebruik van dit formaat volgt nu ook een melding. Gebruik de native `Excel` formaat.
+
+***
 ## 5.0.18 - 2025-04-03
 ### Fixed
 - Opnieuw uitgebrachte versie van 5.0.17 omdat deze vorige versie niet bij klanten wilde installeren?
