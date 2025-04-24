@@ -2,15 +2,20 @@
 Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 <br/>
- 
+
+***
+## v5.0.9 - 2025-04-23
+### Changed
+* Interne aanpassing: Er zijn nieuwe v2 endpoints toegevoegd die json data in camelCase formaat teruggeven. De bestaande (v1) endpoints geven nog steeds PascalCase terug. Met deze aanpassing sluit he tAPI resultaat beter asan bij wat gebruikelijk is.
+
 ***
 ## v5.0.8 - 2025-02-12
-### Change
+### Changed
 * Verbetering van de @F(Email) scriptveld controle functie zodat email adressen met accent-tekens ook niet worden geaccepteerd.
 
 ***
 ## v5.0.7 - 2025-02-07
-### New
+### Added
 * De mogelijkheid om de gespreksnotitie die de agent invult door een AI kun laten controler op spel- en type fouten en schrijfstijl. De standaard prompt is redelijk simpel:
 > Als AI assistent bekijk je gespreksnotities van een call center agent. Je corrigeert deze gespreksnotitie op type- en spelfouten en corrigeert het taalgebruik naar een semi-formele stijl. Alle correcties zijn in het Nederlands.
 
@@ -18,7 +23,7 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 > **AI Transcriptie werkt op dit moment alleen voor klanten die ook al gebruikmaken van Gesprekstranscriptie.**
 
-### Fix
+### Fixed
 * De `campagnelijst verversen` knop in het pauze scherm werkte niet. Dit is opgelost.
 * Oplossing van een probleem uit versie 5.0.6 die ervoor zorgde dat script variabelen niet goed werden uitgelezen en daardoor ontbrekende script functionaliteit kon opleveren. Zo staan afcodeer validaties meestal in de variabele `SCRIPT.HEADER` die dus niet werd overgenomen in het script waardoor deze validaties niet werden uitgevoerd, wat weer resulteerde in het niet verschijnen van deze gesprekken in de fulfilment validatie, maar het direct versturen van de emails zonder verder controle doro supervisie.
 
