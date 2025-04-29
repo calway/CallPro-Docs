@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.10 - 2024-04-29
+### Fixed
+* Bij de conversie van de v2 endpoints was een fout geintroduceerd waardoor de belhistorie custom javascript niet meer werkte. Dit is nu opgelost.
+### Changed
+* De email validatie is uitgebreid met validatie van meerdere email adressen. De controle werkte voorheen alleen bij 1 email adres. Met deze aanpassing kunnen ook
+meerdere email adressen gescheiden door een `,` of een `;` worden ingevoerd.
+
+***
 ## v5.0.9 - 2025-04-23
 ### Changed
 * Interne aanpassing: Er zijn nieuwe v2 endpoints toegevoegd die json data in camelCase formaat teruggeven. De bestaande (v1) endpoints geven nog steeds PascalCase terug. Met deze aanpassing sluit he tAPI resultaat beter asan bij wat gebruikelijk is.
