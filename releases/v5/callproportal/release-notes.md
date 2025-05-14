@@ -2,19 +2,31 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.45 - 2025-04-14
+### Fixed
+- Issue met de handmatige transcriptie button bij opnames die nog geen transcriptie hebben opgelost waardoro deze button niet werkte!
+
+### Changed
+- Voeg laatste gesprek kolom toe aan wachtrij overzicht
+
+***
 ## v5.0.43-44 - 2025-02-14
+### Changed
 - Het Wachtrij overzicht liet niet altijd alle wachtrijen zien door een bug tijdens de conversie van missende data. Hier is een fix voor gemaakt. Helaas is deze fix iets te snel uitgebracht en was meteen een volgende release nodig om ook de statistieken te fixen die door de eerdere fix niet meer werkten.
 
 ***
 ## v5.0.42 - 2025-01-06
+### Changed
 - Kleine aanpassing in de fulfilment validatie. Voorheen werden velden die met custom opmaak in het autoscript werden gebruikt **niet** in de fulfilmentvalidatie weergegeven. Nu wordt het veld als standaard TextBox afgebeeld in de fulfilment validatie. Dit kwam bijvoorbeeld voor bij email veld controle waar je het veld ook in de fulfilment validatie wilt blijven zien.
 
 ***
 ## v5.0.41 - 2024-11-29
+### Fixed
 - Bugfix release. Bij sommige klanten werden instellingen gebruikt die met een recente update waren omgevallen. Dit hersteld de werking totdat alle gebruikers op dezelfde database versie zitten.
 
 ***
 ## v5.0.40 - 2024-11-21
+### Changed
 - Verwijderen ongebruikte en oude functionaliteit mbt Agenda weergave. Een bezoek evaluatieformulier waar bepaalde statussen konden worden gezet, en een specifieke optie om ene afspraak als vervolgafsrpaak te markeren.
 
 ***
