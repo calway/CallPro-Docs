@@ -1,6 +1,12 @@
 # CallProPortal Release Notes
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
+
+***
+## v5.0.46 - 2025-05-15
+### Changed
+-- Wachtrij overzicht van Abandoned calls en van gepsrekken per uur van de dag aangepast zodat als geen wachtrij is geselecteerd  alle wachtrijen worden getoond.
+
 ***
 ## v5.0.45 - 2025-04-14
 ### Fixed
