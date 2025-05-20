@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor het AsteriskService (dialer support service). Rel
 <br/>
 
 *** 
+## v5.0.5 - 2025-05-20
+### Fix
+- In de vorige versie is bij he twijzigen ook gedrag veranderd waardoor Abandoned gesprekken niet meer als zodanig werden weergegeven in de rapportages en monitoring. Deze versie lost dit probleem op.
+
+*** 
+## v5.0.4 - 2025-04-11
+### Changed
+- Alleen interne wijzigingen
+
+*** 
 ## v5.0.3 - 2024-09-25
 ### Fix
 - Bij het maken van de vorige versie container was een bepaalde dll niet meegekomen. Dit is de fix
