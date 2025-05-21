@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.16 - 2025-05-21
+### Fixed
+- Voor WebView2 is een probleem opgelost dat de browser (script pagina) actief bleef terwijl de Scriptmodule afboekt en de volgende belopdracht ophaalt. Dit kon vreemd gedrag opleveren als de Agent opnieuw probeert af te coderen terwijl het oude script nog in beeld is, maar wel al de nieuwe belopdracht is opgehaald. De nieuwe belopdracht wordt dan afgeboekt, terwijl de Agent in beeld nog de oude belopdracht ziet! Nu is het script in de tijd direct na afcoderen tot aan het compleet weergeven van de nieuwe belopdracht disabled.
+
+***
 ## v5.0.15 - 2025-04-07
 ### Fixed
 - In de vorige update is een fout geslopen waardoor de reistijdcontrole van de agendamodule niet meer werkte en een foutmelding gaf voro elk adres dat werd gecontroleerd.
