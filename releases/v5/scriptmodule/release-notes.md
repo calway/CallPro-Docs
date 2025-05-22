@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.17 - 2025-05-22
+### Changed
+- Vanaf deze versie is de Scriptmodule alleen als x64 versie beschikbaar. De afgelopen maanden hebben we gezien dat de x86 versie helemaal niet meer in gebruikt is wat de overstap naar volledig x64 mogelijk maakte.
+- In de WebView2 Engine is ingesteld dat Autofill en PasswordAutosave voor scriptvelden uitgeschakeld is na feedback dat in he tscript de browser nu soms aanbied om velden te vulden met eerder gebruikte waarden. Dat is in een belscript zeer onwenselijk en met deze instelling zou dit nu niet meer moetne gebeuren. Het is mogelijk dat reeds bewaarde gegevens nog worden aangeboden!
+### Fixed
+- In de vorige versie was een fout geslopen waardoor het zoeken van belopdrachten op de systeem scriptvelden zoals achternaam, postcode, plaats etc.. geen resultaten opleverden.
+
+***
 ## v5.0.16 - 2025-05-21
 ### Fixed
 - Voor WebView2 is een probleem opgelost dat de browser (script pagina) actief bleef terwijl de Scriptmodule afboekt en de volgende belopdracht ophaalt. Dit kon vreemd gedrag opleveren als de Agent opnieuw probeert af te coderen terwijl het oude script nog in beeld is, maar wel al de nieuwe belopdracht is opgehaald. De nieuwe belopdracht wordt dan afgeboekt, terwijl de Agent in beeld nog de oude belopdracht ziet! Nu is het script in de tijd direct na afcoderen tot aan het compleet weergeven van de nieuwe belopdracht disabled.
