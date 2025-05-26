@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.11 - 2025-05-26
+### Changed
+* Velden die als verplicht zijn gemarkeerd in de scriptdefinitie worden nu bij de custom validatie meldingen genoemd, in plaats van als apart validatie popup venster. Dit geeft direct een compleet beeld van alle validatie problemen met de invoer.
+* Performance optimalisatie voor met name inbound scripts.
+
+***
 ## v5.0.10 - 2024-04-29
 ### Fixed
 * Bij de conversie van de v2 endpoints was een fout geintroduceerd waardoor de belhistorie custom javascript niet meer werkte. Dit is nu opgelost.
