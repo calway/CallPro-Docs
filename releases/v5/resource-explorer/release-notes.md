@@ -3,6 +3,18 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+*** 
+## 5.0.20 - 2025-06-03
+### Fixed
+* Bij het maken een een herhalende Gebeurtenis in de Agenda gaf een foutmelding `Invalid column name 'Source'`. Hierdoor konden vanuit de Resource Explorer geen herhalende Gebeurtenissen worden aangemaakt.
+### Changed
+- Vanaf deze versie is de Resource Explorer alleen als x64 versie beschikbaar. De afgelopen maanden hebben we gezien dat de x86 versie helemaal niet meer in gebruikt is wat de overstap naar volledig x64 mogelijk maakte.
+- Bij de eigenschappen van de agenda worden voor de gebeurtenissen nu niet meer alle gebeurtenissen opgehaald. In sommige uitzonderlijke situaties haalde CallPro meer dan 1000 gebeurtenissen op. Nu wordt van de eenmalige gebeurtenissen alleen een beperkte datum reeks opgehaald.
+![Agende gebeurtenis filter](media/v5.0.20-agenda-gebeurtenis-filter.png)
+- Bij het zoeken naar belopdrachten kan in het zoek filter nu voor karakter velden ook gebruik worden gemaakt van de lijst operator `in lijst` om een hele reeks comma gescheiden waarden mee te geven. Hiermee wordt het eenvoudiger om belopdrachten te vinden die een bepaalde `unieke` waarde in een veld hebben staan waarvan je snel een sub-set wilt opzoeken.
+![Karakter filter in operator](media/v5.0.20-karakter-filter-in-operator.png)
+Door te dubbelklikken in het invoerveld opent een grotere editor veld voor eenvoudige invoer, of knippen plakken.
+
 ***
 ## 5.0.19 - 2024-04-24
 ### Changed
