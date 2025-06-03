@@ -16,7 +16,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 Door te dubbelklikken in het invoerveld opent een grotere editor veld voor eenvoudige invoer, of knippen plakken.
 
 ***
-## 5.0.19 - 2024-04-24
+## 5.0.19 - 2025-04-24
 ### Changed
 * Diverse zoek vensters hebben nu de mogelijk om de zoek criteria in te klappen zodat het venster meer ruimte heeft voor de zoek resultaten.
 
