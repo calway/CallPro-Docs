@@ -7,6 +7,7 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 ## 5.0.20 - 2025-06-03
 ### Fixed
 * Bij het maken een een herhalende Gebeurtenis in de Agenda gaf een foutmelding `Invalid column name 'Source'`. Hierdoor konden vanuit de Resource Explorer geen herhalende Gebeurtenissen worden aangemaakt.
+
 ### Changed
 - Vanaf deze versie is de Resource Explorer alleen als x64 versie beschikbaar. De afgelopen maanden hebben we gezien dat de x86 versie helemaal niet meer in gebruikt is wat de overstap naar volledig x64 mogelijk maakte.
 - Bij de eigenschappen van de agenda worden voor de gebeurtenissen nu niet meer alle gebeurtenissen opgehaald. In sommige uitzonderlijke situaties haalde CallPro meer dan 1000 gebeurtenissen op. Nu wordt van de eenmalige gebeurtenissen alleen een beperkte datum reeks opgehaald.
