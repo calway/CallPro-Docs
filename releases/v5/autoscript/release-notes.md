@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.12 - 2025-06-04
+### Fixed
+* In het antwoordservice script (answeringservice) hield het script geen rekening met de hoogte van de toolbar waardoor het bovenste deel van het script niet zichtbaar was, w.o. de eerste afcodeerstaussen.
+
+***
 ## v5.0.11 - 2025-05-26
 ### Changed
 * Velden die als verplicht zijn gemarkeerd in de scriptdefinitie worden nu bij de custom validatie meldingen genoemd, in plaats van als apart validatie popup venster. Dit geeft direct een compleet beeld van alle validatie problemen met de invoer.
