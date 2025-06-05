@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.48 - 2025-06-05
+### Changed
+- Bij een specifieke klant ewrd emelding gemaakt van performance degradatie. Nu is er recent niks gewijzigd, maar bij onderzoek bleek wel dat er 1 query werd gedaan die niet goed matchte met de index, met deze aanpassing matcht de query de index 100%. Het gaat om de belvoorraad die op het belvloer overzicht wordt getoond. Deze wordt periodiek opgehaald voor elke campagne in het overzicht.
+
+***
 ## v5.0.47 - 2025-06-03
 ### Changed
 - Wijziging Google autorisatie pagina voor Agenda synchronisatie. Google wil nu de privacy policy op zijn eigen pagina hebben staan.
