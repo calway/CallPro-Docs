@@ -1,5 +1,5 @@
 # Calendarsync instellingen Microsoft 365 OAuth Flow
-> Sinds 1-10-2022 is dit het alternatief op de Basic authentication die is uitgeschakeld. Wij adviseren klanten om over te gaan op de [Microsoft Graph API](../calendarsync-instellingen-microsoft-365-graph-api/README.md)
+> Sinds 1-10-2022 is dit het alternatief op de Basic authentication die is uitgeschakeld. **Wij adviseren klanten om over te gaan op de [Microsoft Graph API](../calendarsync-instellingen-microsoft-365-graph-api/README.md)**
 
 Om gebruik te kunnen blijven van de CallPro CalendarSync module adviseren wij klanten uiterlijk na de migratie naar CallPro 5.0 met klanten af te stemmen over de nieuwe instellingen die nodig zijn.
 
