@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 *** 
+## 5.0.22 - 2025-06-25
+### Fixed
+* Kort na de release van 5.0.21 kwam een melding binne ndat er in 5.0.20 een fout was geintroduceerd die bij de Events, alle recurring events van alle agenda's weergeeft bij elke agenda. Dat is in deze release opgelost.
+
+*** 
 ## 5.0.21 - 2025-06-25
 ### Changed
 * De vorige release gaf bij sommige gebruikers problemen bij de installatie. Wij konden het reproduceren op nieuwe Windows 11 installaties. Door eerst de Scriptmodule te installeren kon v5.0.20 wel worden geinstalleerd. Deze nieuwe 5.0.21 versie heeft dit probleem niet en installeert wel op een nieuwe Windows 11 computer.
