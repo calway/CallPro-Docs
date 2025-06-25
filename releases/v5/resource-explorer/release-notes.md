@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 *** 
+## 5.0.21 - 2025-06-25
+### Changed
+* De vorige release gaf bij sommige gebruikers problemen bij de installatie. Wij konden het reproduceren op nieuwe Windows 11 installaties. Door eerst de Scriptmodule te installeren kon v5.0.20 wel worden geinstalleerd. Deze nieuwe 5.0.21 versie heeft dit probleem niet en installeert wel op een nieuwe Windows 11 computer.
+
+*** 
 ## 5.0.20 - 2025-06-03
 ### Fixed
 * Bij het maken een een herhalende Gebeurtenis in de Agenda gaf een foutmelding `Invalid column name 'Source'`. Hierdoor konden vanuit de Resource Explorer geen herhalende Gebeurtenissen worden aangemaakt.
