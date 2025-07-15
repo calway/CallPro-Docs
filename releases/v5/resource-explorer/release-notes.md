@@ -4,9 +4,20 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 *** 
+## 5.0.23 - 2025-07-15
+### Fixed
+* Probleem met enkele resourcelijsten dat dubbelklikken niet de eigenschappen opent is opgelost.
+* Een probleem in de Belhistorie statistieken waarbij het niet mogelijk was om de "Alle statussen" optie te kiezen voor een kolom is opgelost.
+* Oplossing voor een specifieke issue waarbij een belopdracht met een afspraak status, waarvan de afspraak in het verleden ligt in inbound mode niet kon worden geannuleerd vanwege de controle dat bij de status afspraak een geldige toekomstige afspraak aanwezig moet zijn. Dit kan nu wel.
+* Het veranderen van de volgorde van velden in een scriptdefinitie is nu beperkt tot het veranderen wanneer de velden in de actuele sorteervolgorde staan. We kregen een melding dat iemand zijn scriptdefinitie flink door elkaar had gegooid door de lijst met velden eerst te sorteren op bijvoorbeeld naam, en dan enkele velden te verschuiven in de lijst. Bij het opslaan zet CallPro de velden in de huidige volgorde in de lijst (wat zeker niet de bedoeling is!). De volgorde kan nu alleen worden aangepast als de sorteervolgorde van de lijst met scriptvelden staat op de huidige Volgorde kolom, anders werken de 4 knoppen onder aan om velden heen en weer te schuiven **niet**!
+
+### Changed
+* In de afgelopen maanden is het enkele keren gebeurd dat gebruikers per ongeluk een verkeerde bellijst verwijderen. We hebben daarom dubbele bevestiging voor het verwijderen van Bellijsten en Agenda's toegevoegd. Je moet bij de tweede bevestiging ook je wachtwoord invullen.
+
+*** 
 ## 5.0.22 - 2025-06-25
 ### Fixed
-* Kort na de release van 5.0.21 kwam een melding binne ndat er in 5.0.20 een fout was geintroduceerd die bij de Events, alle recurring events van alle agenda's weergeeft bij elke agenda. Dat is in deze release opgelost.
+* Kort na de release van 5.0.21 kwam een melding binnen dat er in 5.0.20 een fout was geintroduceerd die bij de Events, alle recurring events van alle agenda's weergeeft bij elke agenda. Dat is in deze release opgelost.
 
 *** 
 ## 5.0.21 - 2025-06-25
