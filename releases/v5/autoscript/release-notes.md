@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.13 - 2025-07-16
+### Changed
+* De AI gespreksnotitie kan worden geblokkeerd door `content policy violations`. In dat geval gebeurde er niks in de UI. Met deze aanpassing krijg je de melding die als `error` terugkomt van de service te zien.
+* Performance optimalisaties waardoor het autoscript 30% sneller het script weergeeft.
+
+***
 ## v5.0.12 - 2025-06-04
 ### Fixed
 * In het antwoordservice script (answeringservice) hield het script geen rekening met de hoogte van de toolbar waardoor het bovenste deel van het script niet zichtbaar was, w.o. de eerste afcodeerstaussen.
