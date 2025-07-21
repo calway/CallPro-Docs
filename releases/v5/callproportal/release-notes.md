@@ -3,6 +3,11 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 
 ***
+## v5.0.50 - 2025-06-12
+### Changed
+- Wijziging Google autorisatie pagina voor Agenda synchronisatie. Google wil nog meer aanpassingen in de tekst.
+
+***
 ## v5.0.49 - 2025-06-10
 ### Changed
 - Wijziging Google autorisatie pagina voor Agenda synchronisatie. Google wil nog meer aanpassingen in de tekst.
