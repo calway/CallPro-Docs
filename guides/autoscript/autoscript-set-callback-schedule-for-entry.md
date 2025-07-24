@@ -9,7 +9,7 @@ Dit terugbel rooster kan worden ingesteld in het Terugbellen venster van CallPro
 Maar deze informatie is ook nuttig tijdens het gesprek.
 
 ## Zichtbaar maken van een ingesteld terugbel rooster
-Om het ingestelde terugbel rooster van de belopdracht zichtbaar te maken in het belscript is een nieuw systeem veld `script_sys_oentry_callbackscheduledescr` toegevoegd. Door dit veld als label of readonly tekstveld in het script te plaatsen wordt het ingestelde rooster weer gegeven. 
+Om het ingestelde terugbelrooster van de belopdracht zichtbaar te maken in het belscript is een nieuw systeem veld `script_sys_oentry_callbackscheduledescr` toegevoegd. Door dit veld als label of readonly tekstveld in het script te plaatsen wordt het ingestelde rooster weer gegeven. 
 ```html
 <label name="script_sys_oentry_callbackscheduledescr">hier komt het terugbel rooster</label>
 ```
@@ -24,17 +24,17 @@ Om in het belscript een button te maken die dit scherm opent is de volgende code
 function SetCallbackSchedule() 
 {
     // Get references to CallPro objects
-	var goCallPro = window.external;
-	var loScript = goCallPro.GetScript();
-	var entry = loScript.GetEntry();
+    var goCallPro = window.external;
+    var loScript = goCallPro.GetScript();
+    var entry = loScript.GetEntry();
     
     // Call the edit form
-	if (entry.EditCallbackSchedule())
-	{
+    if (entry.EditCallbackSchedule())
+    {
         // If closed with OK, update the schedule in the script
-		var browser = goCallPro.GetBrowser();
-		browser.SetDocumentField("SYS_OENTRY_CALLBACKSCHEDULEDESCR"); 
-	}
+        var browser = goCallPro.GetBrowser();
+        browser.SetDocumentField("SYS_OENTRY_CALLBACKSCHEDULEDESCR"); 
+    }
 }
 </script>
 ```
