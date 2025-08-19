@@ -3,6 +3,14 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+***
+## 5.0.24 - 2025-08-19
+### Changed
+* Vanuit de Resource Explorer is een nieuwe audioplayer geintroduceerd die de opnames native kan afspelen. Deze vervangt het gebruik van de audioplayer uit CallProPortal. We gebruiken nu de api vande ProxyService om opnames te benaderen.
+![native audiplayer](media/v5.0.24-native-audioplayer.png)
+
+Om deze nieuwe audioplayer te gebruiken moet de ProxyService url worden geconfigureerd in het control panel Systeem configuratie\Geavanceerd\Overig.
+
 *** 
 ## 5.0.23 - 2025-07-15
 ### Fixed
