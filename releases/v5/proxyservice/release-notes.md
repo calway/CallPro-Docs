@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 *** 
+## v5.0.15
+### Fixed
+- Fix voor een configuratiefout in de ratelimiting defaults die ervoor zorgde dat met lagere limits werd gewerkt dan waren ingesteld.
+
+*** 
 ## v5.0.14 - 2025-08-19
 ### Changed
 - Wijzigingen aan de v2 Recording endpoint zodat deze gebruikt kan worden door de Resource Explorer. Dit is een voorbereiding voor het omzetten van Recordings uit CallProPortal naar de ProxyService
