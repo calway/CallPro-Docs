@@ -3,6 +3,15 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 <br/>
 
+*** 
+## v5.0.18 - 2025-08-28
+## Fixed
+- De verkeerde werkstation naam werd genoemd in de melding die volgt al de Agent al is ingelogd op een andere werkplek.
+## Changed
+- Optimalisatie van de WebView2 engine waardoor deze stukken sneller is geworden in het uitlezen van de velden.
+- Verbetering van de detectie dat een werkplek is gecrashed, of uit is gezet zonder uit te loggen, de Script module netjes af te sluiten.
+- Interne wijzigingen om beter een diagnose te kunnen stellen, vooral toevoegen van logging.
+
 ***
 ## v5.0.17 - 2025-05-22
 ### Changed
