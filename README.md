@@ -14,13 +14,16 @@ Dit zijn de Docs pages voor CallPro.
 
 ## Installatie en onderhoud
 
+### Scriptmodule
+* [Microsip instellingen synchronisatie](./install/scriptmodule/microsip-instellingen-synchronisatie/README.md)
+* [Hoe verwijder je de Scriptmodule](./install/scriptmodule/uninstall-script-module.md)
+* [Hoe installeer je de Scriptmodule](./install/scriptmodule/install-script-module.md)
+
 ### Integraties
 
 * [Facebook Lead naar CallPro via Zapier](./guides/Facebook-Lead-to-CallPro-using-Zapier-Webhook.md)
 * [Microsoft Form naar CallPro via Microsoft Flow](./guides/Microsoft-Form-to-CallPro-using-Microsoft-Flow.md)
 
-### Scriptmodule
-* [Microsip instellingen synchronisatie](./install/scriptmodule/microsip-instellingen-synchronisatie/README.md)
 
 ## Release notes
 
