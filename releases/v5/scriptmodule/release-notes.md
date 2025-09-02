@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.20 - 2025-09-02
+### Fixed
+- Sommige gebruikers melde ndat v5.0.19 niet kon wordne geinstalleerd en een foutmelding gaf. De melding lijkt te zeggen dat de bestanden corrupt zijn maar hoe kunnen veel andere gebruikers deze versie dan wel installeren. Gelukkig was het probleem te reproduceren op een test computer. Alleen het opnieuw maken van de installer lijkt het probleem op te lossen.
+Voor de zekerheid hebben we een nieuw versie nummer gemaakt. Deze versie is identiek aan v5.0.19.
+
+***
 ## v5.0.19 - 2025-09-01
 ### Fixed
 - Door een fout in de configuratie van de Seq logging konden we voor diagnose alleen Trace logs zien. Met deze fix is dit opgelost en zien we nu alle loglevels weer in de Script client logs. 
