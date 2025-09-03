@@ -12,21 +12,21 @@ De verschillende soorten actie tags worden in de komende paragrafen verder behan
 ### Action hierarchie
 Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen dezelfde loop/query zit (zelfde niveau). In dit voorbeeld heeft Actie A geen effect op Actie B of C.
 ```xml
-<Query>
-    <SQL></SQL>
-    <Query>
-        <SQL></SQL>
-        <Action A>
-        </Action A>
-    </Query>
-    <Query>
-        <SQL></SQL>
-        <Action B>
-        </Action B>
-    </Query>
-</Query>
-<Action C>
-</Action C>
+<query>
+    <sql></sql>
+    <query>
+        <sql></sql>
+        <action a>
+        </action a>
+    </query>
+    <query>
+        <sql></sql>
+        <action b>
+        </action b>
+    </query>
+</query>
+<action c>
+</action c>
 
 ```
 
@@ -34,33 +34,33 @@ Het resultaat van een actie gaat mee naar een vervolg actie als deze binnen deze
 Met een `OnSuccess` en `OnFailure` tag kunnen vervolg acties conditioneel worden uitgevoerd. Als de omvattende actie met success is uitgevoerd, dan worden de acties binnen de `OnSuccess` tag uitgevoerd. Als de omvattende actie een fout oplevert, dan worden de `OnFailure` acties uitgevoerd. Op deze manier kan zowel conditionele acties worden ingericht, als ook foutafhandeling.
 > **DEPRECATED** In versies van de mergetool voor 5.0.0 was de tag OnSuccesful maar deze wordt vanaf 5.0.0 vervangen door OnSuccess. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt.
 
-Wat je ook kan doen als je bepaalde acties wilt laten afhangen van het resultaat van de buitenste is dit:
+Wat je ook kunt doen als je bepaalde acties wilt laten afhangen van het resultaat van de buitenste is dit:
 ```xml
-<Query>
-<SQL></SQL>
-    <Query>
-        <SQL></SQL>
-    </Query>
-    <Query>
-        <SQL></SQL>
-    </Query>
-    <Action A>
-        <OnSuccess>
-            <Action C>
-            </Action C>
-        </OnSuccess>
-    </Action A>
-    <Action B>
-        <OnSuccess>
-            <Action C>
-            </Action C>
-        </OnSuccess>
-        <OnFailure>
-            <Action D>
-            </Action D>
-        </OnFailure>
-    </Action B>
-</Query>
+<query>
+<sql></sql>
+    <query>
+        <sql></sql>
+    </query>
+    <query>
+        <sql></sql>
+    </query>
+    <action >
+        <onsuccess>
+            <action c>
+            </action c>
+        </onsuccess>
+    </action a>
+    <action b>
+        <onsuccess>
+            <action c>
+            </action c>
+        </onsuccess>
+        <onfailure>
+            <action d>
+            </action d>
+        </onfailure>
+    </action b>
+</query>
 ```
 Bij een `OnFailure` worden er een tweetal tags toegevoegd aan de mergefield collection:
 DEBUG.ACTION en DEBUG.LASTERROR
@@ -75,11 +75,9 @@ Dat wil zeggen dat een actie alleen wordt uitgevoerd als aan een bepaalde voorwa
 </Action>
 ```
 
-In dit voorbeeld wordt de eMail actie alleen uitgevoerd wanneer VARIABLE.TESTVALUE evalueert naar 1. In de condition kan gebruikt worden gemaakt van de volgende operators: =, <>, <, >, <=, >= en ><. De variabelen worden geanalyseerd en geëvalueerd op types: string, integer, decimaal of datum.
+In dit voorbeeld wordt de eMail actie alleen uitgevoerd wanneer VARIABLE.TESTVALUE evalueert naar 1. In de condition kan gebruiktworden gemaakt van de volgende operators: =, <>, <, >, <=, >= en ><. De variabelen worden geanalyseerd en geëvalueerd op types: string, integer, decimaal of datum.
 De laatste operator >< werkt al een “in" statement, bijvoorbeeld:
 3 >< (1,2,3,4,5) zal true opleveren.
-
-
 
 Voor string waarden is het verstandig om '' om de waarde te plaatsen. Zo test de onderstaande conditie dat het `NAME_EMAIL` scriptveld gevuld is.
 ```xml

@@ -1,7 +1,6 @@
 ## XML kennis
-De Mergetool wordt bestuurd door een configuratiebestand met een XML structuur. Dit standaard fileformaat gebruiken wij een geformaliseerde configuratie af te dwingen.
+De Mergetool wordt bestuurd door een configuratiebestand met een XML structuur. De basis voor XML zijn tags en waarden, bijvoorbeeld:
 
-De basis voor XML zijn tags en waarden, bijvoorbeeld:
 ```xml
 <Naam>Ron</Naam>
 ```
@@ -23,7 +22,7 @@ Naast Tags en waarden zijn er nog **attributen**. Deze zeggen al iets over de wa
 ```
 Hierin is `geslacht` het attribuut met de waarde Man. 
 
-Met deze basis kennis van XML kunnen MergeTool configfiles gemaakt en bewerkt worden qua structuur. Verderop in deze handleiding worden de tags en attributen besproken die de Mergetool gebruikt.
+Met deze basis kennis van XML kunnen MergeTool configuratiebestanden gemaakt en bewerkt worden qua structuur. Verderop in deze handleiding worden de tags en attributen besproken die de Mergetool gebruikt.
 
 ## SQL Kennis
 SQL (Structured Query Language) is een programmeertaal om tegen een database te praten. Meestal bedoeld om informatie op te vragen uit de database, maar ook om wijzigingen aan te brengen in de database.
@@ -34,13 +33,13 @@ Deze werkt als volgt:
 ```
 SELECT kolommen FROM tabel WHERE filter
 ```
-Dus: KIES kolommen UIT TABEL tabel DIE VOLDOEN AAN filter
+Dus: KIES kolommen UIT DE TABEL tabel DIE VOLDOEN AAN filter
 
 Bijvoorbeeld:
 ```
 SELECT name_first, name_last FROM callpro._r1212 WHERE name_gender = ‘Male’
 ```
-Dit zal een lijst opleveren met voor- en achternamen van alle mannen uit de tabel met naam `callpro._r1212`, (een bellijst).
+Dit zal een lijst opleveren met voor- en achternamen van alle mannen uit de tabel met naam `callpro._r1212`, (een bellijst). Alle bellijsten in CallPro hebben een tabel met de unieke Id van de bellijst in de naam.
 
 Belangrijk is te weten welke kolommen je beschikbaar hebt in een tabel, en welke je nodig hebt. Daarnaast moet je enige kennis hebben van het CallPro datamodel om de juiste query’s te formuleren.
 SQL kennis is breed te vinden op internet met veel voorbeelden en uitleg. In deze handleiding gaan we niet verder in op SQL kennis, maar verwijzen we naar andere documentatie.

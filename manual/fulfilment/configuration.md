@@ -32,7 +32,6 @@ Een fulfilmentservice configuratiebestand heeft een XML opmaak en ziet er als vo
         [smtpserver,only for SMTP mail actions]
     </mailserver>
     <loglevel>level</loglevel>
-    <workingdirectory>c:\data\fulfilment\...</workingdirectory>
     <variables>
         <VariabeleName1>waarde1<VariabeleName1>
         <VariabeleName2>waarde2<VariabeleName2>
@@ -63,9 +62,9 @@ Voor de exacte syntax van deze cron regels kijk op [Crontab Guru](https://cronta
 ## Error mail notificatie
 Een logfile wordt altijd aangemaakt. Deze logfile kan optioneel worden gemaild naar een email adres dat hier wordt ingesteld. De logfile wordt alleen verstuurd wanneer er logmeldingen zijn van het type error.
 ```xml
-<Errors>
-    <Email From="[from adres]">[email adres waar de log file naar to gemailt wordt]</Email>
-</Errors>
+<errors>
+    <email From="[from adres]">[email adres waar de log file naar to gemailt wordt]</email>
+</errors>
 ```
 
 > **DEPRECATED**: In versies van de mergetool voor 5.0.0 was de syntax anders. Bij migratie dient deze instelling aangepast te worden omdat de oude syntax bij de opvolgende versie **niet** meer ondersteunt wordt. De oude syntax was:
@@ -82,7 +81,7 @@ De cryptokey kan in iedere action overschreven worden door een actionbased
 cryptokey. Deze wordt echter na de action weer gereset naar de default.
 
 ## Connectionstring
-Dit is de database connectie naar de CallPro database. Deze tag is optioneel en hoeft alleen te worden ingevuld als een andere database dan de Callpro database gebruikt dient te worden. Een connectie string ziet er als volgt uit:
+Dit is de database connectie naar de CallPro database. Deze tag is optioneel en hoeft alleen te worden ingevuld als een andere database dan de CallPro database gebruikt dient te worden. Een connectie string ziet er als volgt uit:
 
 ``` 
 data source=<servername>;initial catalog=<databasename>;Application Name=CallPro Fulfilment; user id=<db-user>;password=<db-password>;persist security info=False;TrustServerCertificates=true
@@ -130,9 +129,8 @@ worden aangezet door een expressie op te nemen als Tag attribuut, bijvoorbeeld:
 ```
 Dit zal een logregel opleveren waarbij de logmelding vooraf wordt gegaan door `e:<entryid>`
 
-## Working directory
-
 ## Variables
+Met variabelen kunnen instelbare parameters op een centrale plaats worden vastgelegd. Dit voorkomt dat dezeflde waarde op diverse plaatsen in de config moeten worden herhaald.
 
-## Querie of Loop
+## Query of Loop
 Na alle configuratie heeft elke config een `query` of `repeat` commando als de basis van alle executie. Binnen deze `root-node` kunnen meerdere `query` en `action` commando's worden gebruikt.
