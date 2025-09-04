@@ -4,9 +4,14 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.21 - 2025-09-04
+### Fixed
+- Deze versie bevat nog een kleine aanpassing die ene potentieel probleem bij inbound calls oplost als hee lsnel inbound calls achter elkaar komen en het script geen tijd heeft om de inbound wacht pagina te tonen voordat alweer een volgende inbound call wordt geladen. We hebben geen meldingen gehad, maar dit zou potentieel de gegevens van de vorige inbound call kunne ngebruiken voor de nieuwe, wat verwarring kan opleveren als de Agent dit niet direct merkt.
+
+***
 ## v5.0.20 - 2025-09-02
 ### Fixed
-- Sommige gebruikers melde ndat v5.0.19 niet kon wordne geinstalleerd en een foutmelding gaf. De melding lijkt te zeggen dat de bestanden corrupt zijn maar hoe kunnen veel andere gebruikers deze versie dan wel installeren. Gelukkig was het probleem te reproduceren op een test computer. Alleen het opnieuw maken van de installer lijkt het probleem op te lossen.
+- Sommige gebruikers melden dat v5.0.19 niet kon worden geinstalleerd en een foutmelding gaf. De melding lijkt te zeggen dat de bestanden corrupt zijn maar hoe kunnen veel andere gebruikers deze versie dan wel installeren. Gelukkig was het probleem te reproduceren op een test computer. Alleen het opnieuw maken van de installer lijkt het probleem op te lossen.
 Voor de zekerheid hebben we een nieuw versie nummer gemaakt. Deze versie is identiek aan v5.0.19.
 
 ***
