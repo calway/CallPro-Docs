@@ -5,12 +5,12 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 ***
 ## v5.0.17 - 2025-09-05
-###
+### Changed
 - Obsolete alle v1 endpoints.
 
 *** 
 ## v5.0.16 - 2025-09-03
-### Change
+### Changed
 - Extra logging en kleine wijziging in de default rate-limiting voor gespreksopnames. Nu 5 opnames tegelijkertijd in een window van 10 seconden.
 
 *** 
@@ -36,7 +36,7 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 ***
 ## v5.0.11 - 2024-10-14
-### Change
+### Changed
 - Toevoegen Pipeline behaviour voor Logging en Tracing voor de v2 endpoints
 
 ***
@@ -60,14 +60,14 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 
 ## v5.0.3 - 2024-07-17
-### Change
+### Changed
 - De api geeft nu status 201 Created terug na het succesvol aanmaken van een nieuwe entry conform de REST standaard.
 
 ## v5.0.2 - 2024-07-17
-### Change
+### Changed
 - Betere api results met standaard error response.
 
 ## v5.0.1 - 2023-07-26
-### Add
+### Added
 - Eerste officiele v5 release
 
