@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 <br/>
 
 *** 
+## v5.0.5 - 2025-09-05
+### Changed
+- Met deze versie is ondersteuning voor Asterisk 22 toegevoegd. 
+
+*** 
 ## v5.0.4 - 2024-09-25
 ### Fix
 - Bij het maken van de vorige versie container was een bepaalde dll niet meegekomen. Dit is de fix
