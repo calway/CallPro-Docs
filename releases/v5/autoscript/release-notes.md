@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.14 - 2025-09-05
+### Fixed
+* Als de scriptvelden van type `Datum` of karakter velden die gebruik maken van de `@F(Date)` optie had de datepicker control die wordt gebruikt voor het invoeren van een datum via een calendar een bug waardoor de `Alleen lezen` scriptveld optie niet werkte.  Met deze fix wordt de control en de beide buttons wel uitgeschakeld zodat de gebruiker geen wijzigingen in de veldinhoud kan doen.
+* Enkele javascript functies voor veld opmaak waren in juni omgezet naar het gebruik van de loDash library. Maar bij nadere inspectie bleken deze versies toch niet zo gelijk te zijn en o.a. internationale tekens te verwijderen en dubbele achternamen gescheiden door een streepje ook he tstreepje te verwijderen. Onze eigen functies waren nog zo gek niet.
+
+***
 ## v5.0.13 - 2025-07-16
 ### Changed
 * De AI gespreksnotitie kan worden geblokkeerd door `content policy violations`. In dat geval gebeurde er niks in de UI. Met deze aanpassing krijg je de melding die als `error` terugkomt van de service te zien.
