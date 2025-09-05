@@ -3,13 +3,18 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 <br/>
 
+***
+## v5.0.17 - 2025-09-05
+###
+- Obsolete alle v1 endpoints.
+
 *** 
-## v5.0.16
+## v5.0.16 - 2025-09-03
 ### Change
 - Extra logging en kleine wijziging in de default rate-limiting voor gespreksopnames. Nu 5 opnames tegelijkertijd in een window van 10 seconden.
 
 *** 
-## v5.0.15
+## v5.0.15 - 2025-08-29
 ### Fixed
 - Fix voor een configuratiefout in de ratelimiting defaults die ervoor zorgde dat met lagere limits werd gewerkt dan waren ingesteld.
 
