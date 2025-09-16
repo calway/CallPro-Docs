@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 ***
+## v5.0.18 - 2025-09-10
+### Changed
+- Interne wijzigingen aan de logging en tracing
+
+***
 ## v5.0.17 - 2025-09-05
 ### Changed
 - Obsolete alle v1 endpoints.
