@@ -6,7 +6,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ***
 ## v5.0.21 - 2025-09-04
 ### Fixed
-- Deze versie bevat nog een kleine aanpassing die ene potentieel probleem bij inbound calls oplost als hee lsnel inbound calls achter elkaar komen en het script geen tijd heeft om de inbound wacht pagina te tonen voordat alweer een volgende inbound call wordt geladen. We hebben geen meldingen gehad, maar dit zou potentieel de gegevens van de vorige inbound call kunne ngebruiken voor de nieuwe, wat verwarring kan opleveren als de Agent dit niet direct merkt.
+- Deze versie bevat nog een kleine aanpassing die een potentieel probleem bij inbound calls oplost als heel snel inbound calls achter elkaar komen en het script geen tijd heeft om de inbound wacht pagina te tonen voordat alweer een volgende inbound call wordt geladen. We hebben geen meldingen gehad, maar dit zou potentieel de gegevens van de vorige inbound call kunnen gebruiken voor de nieuwe, wat verwarring kan opleveren als de Agent dit niet direct merkt.
 
 ***
 ## v5.0.20 - 2025-09-02
