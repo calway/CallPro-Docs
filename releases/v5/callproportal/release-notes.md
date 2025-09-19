@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.53 - 2025-08-19
+### Fixed
+- Na de vorige wijziging was er een foutje ontstaan in de QueueMonitor pagina. In deze versie is die opgelost en wordt deze pagina weer correct weergegeven.
+
+***
 ## v5.0.52 - 2025-08-18
 ### Fixed
 - Bij de wijziging van de gespreksopnames was op 1 plaats vergeten de aanpassing door te voren waardoor de Eigenschappen van de Belopdracht niet meer werden weergegeven vanuit de lijst met gespreksopnames in CallProPortal.
