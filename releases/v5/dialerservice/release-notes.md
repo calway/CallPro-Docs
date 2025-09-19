@@ -3,6 +3,11 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 
 <br/>
 
+***
+## v5.0.6 - 2025-09-19
+### Changed
+- Interne wijzigingen met het opruimen van feature switches voor functionaliteit en toevoegen van tracing support voor logs.
+
 *** 
 ## v5.0.5 - 2025-09-05
 ### Changed

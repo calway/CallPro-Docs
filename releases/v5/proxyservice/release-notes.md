@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 ***
+## v5.0.19 - 2025-09-19
+### Changed
+- De scriptvelden van entries worden nu in de Sorteervolgorde uit de scriptdefinitie teruggegeven voor meer consistentie.
+
+***
 ## v5.0.18 - 2025-09-10
 ### Changed
 - Interne wijzigingen aan de logging en tracing
