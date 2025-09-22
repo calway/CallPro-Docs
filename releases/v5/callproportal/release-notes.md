@@ -2,17 +2,22 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
-## v5.0.53 - 2025-08-19
+## v5.0.54 - 2025-09-22
+### Fixed
+- Helaas is bij de wijziging van het afspelen van gespreksopnames op nog een plek vergeten dit bij te werken waardoor er nog een update nodig is.
+
+***
+## v5.0.53 - 2025-09-19
 ### Fixed
 - Na de vorige wijziging was er een foutje ontstaan in de QueueMonitor pagina. In deze versie is die opgelost en wordt deze pagina weer correct weergegeven.
 
 ***
-## v5.0.52 - 2025-08-18
+## v5.0.52 - 2025-09-18
 ### Fixed
 - Bij de wijziging van de gespreksopnames was op 1 plaats vergeten de aanpassing door te voren waardoor de Eigenschappen van de Belopdracht niet meer werden weergegeven vanuit de lijst met gespreksopnames in CallProPortal.
 
 ***
-## v5.0.51 - 2025-08-17
+## v5.0.51 - 2025-09-17
 ### Changed
 - CallProPortal gebruikt nu de ProxyService om opnames af te spelen (op te halen). Hierdoor is geen lokale file IO meer nodig wat het eenvoudiger maakt om de gespreksopnames op een ander locatie te plaatsen.
 
