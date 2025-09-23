@@ -4,6 +4,14 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## 5.0.25 - 2025-08-23
+### Changed
+* Met database versie 5.1.0 wordt de lengte van de importdefinitie en exportdefinitie naam verlengd. Deze versie bevat de voorbereidende stappen om dit mogelijk te maken.
+
+### Fixed
+* Met het wijzigen van de manier waarop opnames worden afgespeeld was verzuimd om ook de manier om opnames te downloaden bvij te werken. Doordat deze functie afhankelijk was van CallProPortal en het inmiddels uit CallProPortal is gehaald werkte het kopieren van opnames in de Resource Explorer niet meer. Dat is nu opgelost door de nieuwe manier te gebruiken via de ProxyService.
+
+***
 ## 5.0.24 - 2025-08-19
 ### Changed
 * Vanuit de Resource Explorer is een nieuwe audioplayer geintroduceerd die de opnames native kan afspelen. Deze vervangt het gebruik van de audioplayer uit CallProPortal. We gebruiken nu de api vande ProxyService om opnames te benaderen.
