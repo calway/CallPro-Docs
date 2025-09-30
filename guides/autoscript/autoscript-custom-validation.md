@@ -1,7 +1,7 @@
 # Custom validatie tijdens afcoderen
 
 Tijdens het afcoderen roept het autoscript een functie
-“Custom_ValidationCheck” uitgevoerd. Als paramater wordt een
+“Custom_ValidationCheck” uitgevoerd. Als parameter wordt een
 javascript object met de status code die is geklikt doorgegeven. Als
 resultaat geeft deze functie een boolean terug die aangeeft of het
 afcoderen door mag gaan of niet.
@@ -10,49 +10,46 @@ Deze functie oproep wordt vooral gebruikt om extra veld controles te
 laten uitvoeren op basis van de afcodering die is gekozen. Bijvoorbeeld
 om bij een nieuwe afspraak te controleren dat de NAW gegevens wel
 compleet zijn ingevuld, of dat er een email adres voor de lead is
-ingevuld. Doorgaan wordt deze functie in de variabele SCRIPT.HEADER
+ingevuld. Doorgaans wordt deze functie in de variabele SCRIPT.HEADER
 geplaatst.
 
-```
+```javascript
 function Custom_ValidationCheck(status) {
-var validationResult = true;
+
 switch(status.code)
 {
     case "780":
-        // Basic gedrag.
-        setFieldValue("script_app_email_to",
-        getFieldValue("script_name_email"));
+        // Afspraak
+        setFieldValue("script_app_email_to", getFieldValue("script_name_email"));
         setFieldValue("script_exp_app","");
         break;
     case "710":
+        // Stuur informatie + nabellen
         if(getFieldValue("script_info")=="")
         {
-        status.errors.add("Kies eerst een informatiepakket");
-        validationResult = false;
+            status.errors.add("Kies eerst een informatiepakket");
         }
         if(getFieldValue("script_info_email_to")=="")
         {
-        status.errors.add("Kies een email adres voor de verzending");
-        validationResult = false;
+            status.errors.add("Kies een email adres voor de verzending");
         }
-        if(\!checkValidEmail("script_info_email_to"))
+        if(!checkValidEmail("script_info_email_to"))
         {
-        status.errors.add("Het opgegeven email adres is niet geldig");
-        validationResult = false;
+            status.errors.add("Het opgegeven email adres is niet geldig");
         }
-        if(validationResult)
+        if(status.errors.length() == 0)
         {
-        // Last check still valid
-        setFieldValue("script_exp_info","");
+            // Last check still valid
+            setFieldValue("script_exp_info","");
         }
         break;
 }
-return validationResult;
+return (status.errors.length() == 0);
 }
 ```
 
 In deze voorbeeld functie wordt bijvoorbeeld voor het versturen van
-informatie (code 710) gecontroleerd ode diverse verplichte velden wel
+informatie (code 710) gecontroleerd of de diverse verplichte velden wel
 zijn gevuld. Zo niet dan wordt de errors collectie van het status object
 gevuld met een melding die vervolgens door het autoscript wordt
 afgebeeld.
