@@ -4,7 +4,15 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
-## 5.0.25 - 2025-08-23
+## v5.0.26 - 2025-09-30
+### Changed
+- Interne audioplayer heeft een optie gekregen om de opname in CallProPortal te openen.
+![native audiplayer](media/v5.0.26-native-audioplayer.png)
+- Import voorgangsscherm compacter gemaakt.
+- Knoppen in filter scherm breder gemaakt.
+
+***
+## 5.0.25 - 2025-09-23
 ### Changed
 * Met database versie 5.1.0 wordt de lengte van de importdefinitie en exportdefinitie naam verlengd. Deze versie bevat de voorbereidende stappen om dit mogelijk te maken.
 
