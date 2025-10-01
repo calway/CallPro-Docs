@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.22 - 2025-10-01
+### Changed
+- De Scriptmodule sluit de ingelogde agent sessie af als de computer wordt afgesloten zonder CallPro netjes af te sluiten. Dit voorkomt onnodig crashed sessies als gebruiker de Scriptmodule niet afsluiten voordat ze hun computer afsluiten/uit zetten.
+
+***
 ## v5.0.21 - 2025-09-04
 ### Fixed
 - Deze versie bevat nog een kleine aanpassing die een potentieel probleem bij inbound calls oplost als heel snel inbound calls achter elkaar komen en het script geen tijd heeft om de inbound wacht pagina te tonen voordat alweer een volgende inbound call wordt geladen. We hebben geen meldingen gehad, maar dit zou potentieel de gegevens van de vorige inbound call kunnen gebruiken voor de nieuwe, wat verwarring kan opleveren als de Agent dit niet direct merkt.
