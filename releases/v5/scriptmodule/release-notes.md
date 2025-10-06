@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.23 - 2025-10-06
+### Fixed
+- In de nieuwe Webview2 (Chomium) engine werd de script pagina scrollbalk naar de top teruggezet bij het klikken op hyperlinks in de pagina. Dit valt het meest op als er eerst naar beneden wordt gescrolled om de entrynote te lezen, en vervolgens op de `bellen` knop wordt gedrukt. De scrollbalk behoud nu zijn positie.
+
+***
 ## v5.0.22 - 2025-10-01
 ### Changed
 - De Scriptmodule sluit de ingelogde agent sessie af als de computer wordt afgesloten zonder CallPro netjes af te sluiten. Dit voorkomt onnodig crashed sessies als gebruiker de Scriptmodule niet afsluiten voordat ze hun computer afsluiten/uit zetten.
