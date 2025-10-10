@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.27 - 2025-10-09
+### Fixed
+- Vreemd gedrag als twee scriptdefinitie vensters open zijn en je wijzigt iets in de ene dan waren die wijzigingen ook in het andere venster te zien. Dat is nu opgelost.
+- Als er geen printer op de computer is gedefinieert kreeg je een foutmelding bij het weergeven van Rapportages, ook al deed je dat op het scherm.
+
+***
 ## v5.0.26 - 2025-09-30
 ### Changed
 - Interne audioplayer heeft een optie gekregen om de opname in CallProPortal te openen.
