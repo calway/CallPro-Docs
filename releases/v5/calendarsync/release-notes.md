@@ -3,11 +3,18 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+## v5.0.18 - 2025-10-13
+### Fixed
+* Recurring afspraken van M365 (Microsoft Graph) werden bij verwijderen in M365 niet goed opgeruimd in de CallPro Agenda. Alleen de `SeriesMaster` werd opgeruimd. In deze versie is dat probleem opgelost en worden de recurrences ook verwijderd.
+* Bij het vergelijken van Subject regels van Google afspraken worden in CallPro voorloop spaties weggehaald, maar in het vergelijk met de Google waarde werd hier geen rekening mee gehouden waardoor afspraken met een onderwerp die begint met een spatie elke keer als verschillende werden gezien en het aantal afspraken dat gesynced word tsteeds groter werd. Er wordt nuet wel rekening gehouden met spaties waardoor dit niet meer op treedt.
+
+***
 ## v5.0.17 - 2024-04-10
 ### Fixed
-- Een probleem met de mergetool syntax voorkwam dat er gebruik kon worden gemaakt van de action paramaters. Kennelijk zat dit probleem er al heel lang in maar werd er weinig gebruyik gemaakt van de action parameters. Het gebruik van datum opmaak is `%APPOINTMENT.FROMDATE \DTHH:mm%` levert nu correct de tijd van de afspraak op.
+* Een probleem met de mergetool syntax voorkwam dat er gebruik kon worden gemaakt van de action paramaters. Kennelijk zat dit probleem er al heel lang in maar werd er weinig gebruyik gemaakt van de action parameters. Het gebruik van datum opmaak is `%APPOINTMENT.FROMDATE \DTHH:mm%` levert nu correct de tijd van de afspraak op.
 
 
+***
 ## v5.0.16 - 2024-11-04
 ### Changed
 - Interne updates.
@@ -15,10 +22,10 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 *** 
 ## v5.0.15 - 2024-10-29
 ### Changed
-- Op verzoek van veel klanten is het gedrag van het synchronisatie vinkje "Wijzigingen van afsrpaken door externe agenda toestaan" uitgebreid met de mogelijkheid om de afspraak in de externe agenda te verwijderen, wat de afspraak dan ook in CallPro verwijderd. Voorheen stonden wij op het standpunt dat call center afspraken alleen door het call center mogen worden verwijderd, echter, veel klanten werken vrijer met hun agenda wat het onhandig maakt als ze voor het verwijderen telkens contact moetne hebben met het call center.
+* Op verzoek van veel klanten is het gedrag van het synchronisatie vinkje "Wijzigingen van afsrpaken door externe agenda toestaan" uitgebreid met de mogelijkheid om de afspraak in de externe agenda te verwijderen, wat de afspraak dan ook in CallPro verwijderd. Voorheen stonden wij op het standpunt dat call center afspraken alleen door het call center mogen worden verwijderd, echter, veel klanten werken vrijer met hun agenda wat het onhandig maakt als ze voor het verwijderen telkens contact moetne hebben met het call center.
 
 ### Fixed
--  Hoewel dit ook gezien kan worden al een `Change` vermelden we het onder `Fix` omdat het gebruik van unicode tekens in de Google afsrpaken resulteerde in een eindeloze reeks van wijzigingen in CallPro, die uiteindelijk geen effect hadden. Google afsrpaken hebben geregeld icoontjes (unicode karakters) maar Callpro (de database) ondersteunt niet het opslaan van deze tekens. Hierdoor kwamen deze tekens als `?` in de database en dat leverde weer problemen met het vergelijken van de CallPro waarde met de actuele waarde uit Google.
+*  Hoewel dit ook gezien kan worden al een `Change` vermelden we het onder `Fix` omdat het gebruik van unicode tekens in de Google afsrpaken resulteerde in een eindeloze reeks van wijzigingen in CallPro, die uiteindelijk geen effect hadden. Google afsrpaken hebben geregeld icoontjes (unicode karakters) maar Callpro (de database) ondersteunt niet het opslaan van deze tekens. Hierdoor kwamen deze tekens als `?` in de database en dat leverde weer problemen met het vergelijken van de CallPro waarde met de actuele waarde uit Google.
 Voorlopig verwijderen we de unicode karakters uit de Google afsrpaak voordat we deze verder gebruiken. Mocht het voor iemand essentieel zijn dat deze unicode karakters gebruikt kunen nworden en ook in CallPro zichtbaar worden laat ons dan de specifieke use-case weten dan kunnen wij nagaan of dit op de backlog moet komen voor ondersteuning.
 
 *** 
