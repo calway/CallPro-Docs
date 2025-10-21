@@ -4,6 +4,29 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.28 - 2025-10-21
+### New
+- De Resource Explorer kan nu diverse vensters tegelijkertijd openen. Voorheen kon een Eigenschappen scherm maar 1 keer worden geopend. Door de optie `Multiple Document Interface` aan te zetten kunnen meerdere Eigenschappen vensters naast elkaar worden geopend wat het vergelijken van instellingen een stuk eenvoudiger maakt. Ook andere vensters die voorheen slechts 1 keer konden worden geopend kunnen nu meerdere keren worden geopend.
+
+![Multiple Document Interface](media/5.0.28-multi-document-interface.png)
+
+- Bij het maken van een nieuwe variabele krijg je intellisense suggesties op basis van de reeds bestaande variabelen.
+![Intellisense suggesties](media/5.0.28-resource-variabelen-intellisense.png)
+
+### Changed
+- Bij het tabblad variabelen worden nu ook de `inherited` variabelen die op hoger gelegen folders zijn gedefinieerd afgebeeld. Zo is meteen duidelijk welke variabelen actief zijn op een Resource. Deze variabelen worden lichtgrijs afgebeeld. Ook kan door te dubbelklikken op de variabele die waarde worden veranderd. Dit geldt dan voor alle Resources die deze `inherited` waarde overnemen, niet alleen voor de Resource die op dat moment wordt afgebeeld. Via de `Kiezen kolommen...` optie kan ook de waarde van de hoger gelegen variabele worden weergegeven als kolom in de lijstweergave.
+
+![Resource Variabelen](media/5.0.28-resource-variabelen-properties.png)
+
+Via het context menu kan de waarde worden overschreven voor de huidige Resource (ie. op dat niveau worden ingesteld) 
+
+![Overschrijven van standaard waarde](media/5.0.28-resource-variabelen-override.png)
+
+En voor variabelen die zijn overschreven kan via het context menu de waarde worden teruggezet naar de default (de variabele wordt op het niveau van de Resource verwijderd).
+
+![Herstellen naar standaard waarde](media/5.0.28-resource-variabelen-reset-to-default.png)
+
+***
 ## v5.0.27 - 2025-10-09
 ### Fixed
 - Vreemd gedrag als twee scriptdefinitie vensters open zijn en je wijzigt iets in de ene dan waren die wijzigingen ook in het andere venster te zien. Dat is nu opgelost.
