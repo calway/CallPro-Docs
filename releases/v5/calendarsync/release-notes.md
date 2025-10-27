@@ -3,6 +3,10 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+## v5.0.19 - 2025-10-27
+### Fixed
+* Bij Microsoft Graph recurring gebeurtenissen ging er nog steeds iets niet goed. Een ontbrekende SeriesMaster werd niet correct bewaard doordat de oneindige recurrence als datum "0001-01-01" gebruikte als einddatum. Dat is geen geldige SqlDatetime waarde waardoor deze SeriesMaster niet kon worden bewaard. Nu wordt bij oneindige recurrences **voorlopig** een datum 40 jaar in de toekomst gekozen.
+
 ## v5.0.18 - 2025-10-13
 ### Fixed
 * Recurring afspraken van M365 (Microsoft Graph) werden bij verwijderen in M365 niet goed opgeruimd in de CallPro Agenda. Alleen de `SeriesMaster` werd opgeruimd. In deze versie is dat probleem opgelost en worden de recurrences ook verwijderd.
