@@ -33,58 +33,30 @@ Alternatief kan dit ook in de Scriptmodule in het `Extra` menu `Dialing Configur
     domain=%ASTERISK.HOSTNAME \SW"","%DIALING.ASTERISKIP%"%
     ```
 
+## Geavanceerde microsip instellingen
+### Schakel bepaalde knoppen in microsip uit
+De gebruiker kan in de sessie terwijl microsip actief is deze settings wel weer aan zetten en gebruiken, maar initieel staan ze uit.
 
-## Scriptmodule vanaf v5.0.0
+```ini
+DND=0
+denyIncoming=
+forwarding =
+forwardingNumber =
+forwardingDelay =20
+autoRecording=0
+disableMessaging=1
+```
 
-1. Installeer de Scriptmodule via [installer.callpro.nl](https://installer.callpro.nl)
-1. In de Config database van CallPro moet een key aanwezig zijn.
- ![](./media/image2.png)
-1. Controleer dat in de Dialing configuratie bij Dialer eigenschappen
-    voor de “ASTERISK2” dialer de hostname of IP van de asterisk correct
-    staat ingesteld.  
-    ![](./media/image4.png)
+De eerste twee regels zorgen ervoor dat Do-Not-Disturb standaard uit staat, en er geen knop zichtbaar is in microsip om dit aan/uit te zetten.
 
+De volgende 3 regels zorgen ervoor dat er geen call-forwarding optie zichtbaar en actief is.
 
-## Scriptmodule vanaf v4.3.2.65
+Met `autoRecording=0` wordt voorkome ndat Agents lokaal opnames maken van gesprekken en `disableMessaging` zorgt er voor dat de chat functie van microsip uit staat. Zelfs als deze aan wordt gezet werkt chat niet omdat wij dit **niet** configureren in de Asterisk.
 
-Met de nieuwe script.net module (vanaf v4.3.2.65) wordt het beheer van
-de microsip instellingen synchronisatie vereenvoudigd. De instellingen
-van microsip worden overgenomen uit de Seat instellingen, en de Asterisk
-instelling wordt van het dial apparaat gehaald. Hiervoor dient de
-best-practise installatie richtlijn te worden gevolgd.
+### Configureer auto-answer
+Als agents vaak vergeten om hun toestel te beantwoorden kan microsip worden ingesteld om automatisch te antwoorden als Callpro het toestel belt. Voeg hiervoor de volgende regel toe in de `[Settings]` deel van de configuratie.
 
-1.  Zorg ervoor dat de scriptmodule in een sub-folder staat waar ook de portable versie van microsip is geïnstalleerd.  
-    ![](./media/image1.png)
+```ini
+autoAnswer=all
+```
 
-2.  In de Config database van CallPro moet een key aanwezig zijn.
-    
-    1.  De settings override template (mergetool syntax) “Dialing,
-        “MicrosipSettingsOverride” die de .ini onderdelen bevat die
-        door CallPro moeten worden overschreven.
-
-> ![](./media/image2.png)
-
-3.  Dubbelcheck dat in de script.exe.config in de Scriptmodule folder
-    geen uitzondering staat in de instelling “AsteriskHostname”.
-    Verwijder deze instelling en controleer de ingestelde waarde met de
-    instelling van punt 4.
-
-4.  Controleer dat in de Dialing configuratie bij Dialer eigenschappen
-    voor de “ASTERISK2” dialer de hostname of IP van de asterisk correct
-    staat ingesteld.  
-    ![](./media/image3.png)
-
-5.  Zet de instelling “MicrosipDetection” op “1” of beter, verwijder de
-    setting uit de script.exe.config. Als deze key niet aanwezig is, of
-    op “1” staat zal de scriptmodule de auto-configuratie proberen.
-
-Met deze instellingen zal de scriptmodule Microsip instellingen
-gelijkhouden met de actuele Seat instellingen. Als Microsip al gestart
-is voordat de scriptmodule wordt gestart wordt deze automatisch
-afgesloten , aangepast en weer opnieuw gestart.
-
-> Dit betekent ook dat voor remote/thuis werkers de volgorde van
-> opstarten kan worden aangepast van 3 stappen naar 2 stappen:
->
-> 1.  Start de VPN verbinding, wacht tot deze zegt "verbonden"
-> 2.  Start de Scriptmodule, dit start nu automatisch Microsip met de juiste instellingen.
