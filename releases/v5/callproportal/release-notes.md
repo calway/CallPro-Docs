@@ -2,6 +2,13 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.56 - 2025-11-04
+### New
+- Bij de gespreksopnames kan nu in bulk (maximaal 200) gespreksopnames worden geactiveerd voor het maken van een gesprekstranscriptie. Voorheen moest van te voren bij de status worden vastgelegd dat er een transcriptie gemaakt moet worden. Per opname kan in de audioplayer alsnog een transcriptie worden gemaakt. Maar, als achteraf toch van een bepaalde agent,. bellijst, status, of periode toch transcripties gewenst zijn was dit heel tijdrovend. Nu kunnen per 200  Transcripties worden geactiveerd. Hou er rekening mee dat het verwerken enige tijd duurt.
+### Removed
+- Verwijderen oude analyse pagina's die niet of nauwelijks worden gebruikt maar qua functionaliteit niet meer actueel zijn. **Analyses\Klantkaart**, **Analyses\Bellijst statussen** en **Analyses\Agent Statistieken**. Tevens Thema en Agenda instellingen verwijderd.
+
+***
 ## v5.0.55 - 2025-10-15
 ### Fixed
 - Als in de fulfilment validatie een nieuwe status wordt zet op de belopdracht dan werd altijd de laatste belpoging ook gewijzigd. Echter als tijdens een `call` meerdere keren is teruggebeld ontstaan meerdere belpogingen. Als dan bijvoorbeeld een 'Afspraak' status werd gebruikt stellen we dit in op de belpoging van het langste Live gesprek. Dat is dus niet altijd de laatste belpoging. 
