@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 ***
+## v5.0.20 - 2025-11-12
+### Fixed
+- Een security vulnerability kon er voor zorgen dat gebruikers opnames konden downloaden waar ze geen rechten voor hebben.
+
+***
 ## v5.0.19 - 2025-09-19
 ### Changed
 - De scriptvelden van entries worden nu in de Sorteervolgorde uit de scriptdefinitie teruggegeven voor meer consistentie.
