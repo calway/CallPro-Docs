@@ -13,6 +13,8 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 - Bij het maken van een nieuwe variabele krijg je intellisense suggesties op basis van de reeds bestaande variabelen.
 ![Intellisense suggesties](media/5.0.28-resource-variabelen-intellisense.png)
 
+- Niet specifiek van deze versie, maar als gebruik wordt gemaakt van database versie 5.1.0 dan kan bij de belopdrachtstatus ene uitgebreidere manier van terugbelroosters worden ingesteld die per belopdracht per dag van de week tussen 08:00-22:00 in half uur blokken instelbaar is. Hierdoor is in te stellen dat terugbeltijden bijvoorbeeld elke dag tussen 09:00 en 17:00 mogeen, maar op maandagochtend van 08:00-13:00 niet. Zie hier voor meer informatie [uitgebreide terugbel roosters](belopdrachtstatus-terugbel-rooster-v510.md)
+
 ### Changed
 - Bij het tabblad variabelen worden nu ook de `inherited` variabelen die op hoger gelegen folders zijn gedefinieerd afgebeeld. Zo is meteen duidelijk welke variabelen actief zijn op een Resource. Deze variabelen worden lichtgrijs afgebeeld. Ook kan door te dubbelklikken op de variabele die waarde worden veranderd. Dit geldt dan voor alle Resources die deze `inherited` waarde overnemen, niet alleen voor de Resource die op dat moment wordt afgebeeld. Via de `Kiezen kolommen...` optie kan ook de waarde van de hoger gelegen variabele worden weergegeven als kolom in de lijstweergave.
 

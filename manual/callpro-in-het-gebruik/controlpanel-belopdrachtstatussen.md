@@ -1,6 +1,11 @@
 ### Belopdrachtstatussen
 
 In CallPro kunnen zeer eenvoudig belopdrachtstatussen worden aangemaakt.
+
+[TODO standaard instellingen]
+
+Per belopdracht kan ook een terugbel rooster worden ingesteld via de belopdrachtstatus, maar ook los van de belopdrachtstatus kan deze worden aangepast. Zie [uitgebreide terugbel roosters](belopdrachtstatus-terugbel-rooster-v510.md)
+
 Wij (Calway) adviseren om de belopdrachtstatussen een logische indeling
 te geven qua naamgeving en gebruik. Onderstaande lijst is ons voorstel
 voor de indeling van belopdrachtstatussen. Deze indeling is functioneel
@@ -563,3 +568,4 @@ is is afwijken vanuit de software geen probleem.
 </tr>
 </tbody>
 </table>
+
