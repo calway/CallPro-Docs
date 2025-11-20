@@ -1,4 +1,4 @@
-# Stel een callback rooster in op een belopdracht
+# Stel een terugbel rooster in op een belopdracht
 
 > Dit is een feature die alleen beschikbaar is vanaf CallPro v5.1.0
 

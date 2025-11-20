@@ -41,4 +41,4 @@ En ja je kunt hier onnodig complexe roosters mee maken die in de praktijk niet v
 ![rooster voor terugbellen](media/v5.1.0-rooster-voor-terugbellen-03.png)
 
 ## Gebruik het terugbel rooster in een belscript
-Om het terugbel rooster vanuit het belscript direct weer te geven of te wijzigen kan deze guide worden gebruikt: [Stel een callback rooster in op een belopdracht](/guides/autoscript/autoscript-set-callback-schedule-for-entry.md)
+Om het terugbel rooster vanuit het belscript direct weer te geven of te wijzigen kan deze guide worden gebruikt: [Stel een callback rooster in op een belopdracht](../../guides/autoscript/autoscript-set-callback-schedule-for-entry.md)
