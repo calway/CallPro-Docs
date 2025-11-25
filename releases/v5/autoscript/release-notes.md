@@ -3,7 +3,8 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
-*** v5.0.16 - 2025-11-25
+*** 
+## v5.0.16 - 2025-11-25
 ### BREAKING
 - Met deze versie van het autoscript wordt de oude IE11 MSHTML browser engine niet meer ondersteunt! Het is zover, we hebben nu async javascript functionaliteit gebruikt en het wordt te ingewikkeld om hiervoor onderscheidt te maken. Zorg ervoor dat op de Seats folder een variabele `WebView2Enabled` van type `boolean` met waarde `true` staat ingesteld zodat alle werkplekken de WebView2 (Chromium) engine gebruiken.
 
