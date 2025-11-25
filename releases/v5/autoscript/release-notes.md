@@ -3,6 +3,11 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
+*** v5.0.16 - 2025-11-25
+### Changed
+- Bij foutieve invoer van een email adres bij gebruik van de `@F(Email)` functie wordt nu ook een validatiecontrole toegevoegd bij het afcoderen. Voorheen werd een controle uitgevoerd als het veld werd verlaten, maar het bleek dat het nog steeds mogelijk was om af te coderen en deze foutieve invoer te negeren. Dat zou met deze aanpassing nu niet meer mogelijk moeten zijn.
+- Tevens in de email controle via een **cloudflare** API het domein gecontroleerd of dit een bestaand domein is. Zo kunnen typefouten in het domein beter worden herkend.
+
 ***
 ## v5.0.15 - 2025-09-16
 ### Fixed
