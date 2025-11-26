@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
+***
+## v5.0.17 - 2025-11-26
+### Fixed
+- Op de een of ander manier was het script nu standaard in Engels. Alle systeem teksten werden in het Engels weergegeven. De taalkeuze bij de Agent wordt nu weer goed toegepast.
+- Extra check op de email validatie dat mocht Cloudflare een storing hebben dat de emails dan als correct worden gezien.
+
 *** 
 ## v5.0.16 - 2025-11-25
 ### BREAKING
