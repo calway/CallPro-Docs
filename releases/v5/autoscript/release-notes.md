@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.18 - 2025-11-27
+### Fixed
+- Op de email validatie nog een wijziging doorgevoerd omdat de check op A host records niet altijd werkt. Sommige grote bedrijven hebben hun email ook op sub-domeinen en daarvoor hebben ze dan mogelijk geen A host record, maar uiteraard wel een MX record.
+
+***
 ## v5.0.17 - 2025-11-26
 ### Fixed
 - Op de een of ander manier was het script nu standaard in Engels. Alle systeem teksten werden in het Engels weergegeven. De taalkeuze bij de Agent wordt nu weer goed toegepast.
