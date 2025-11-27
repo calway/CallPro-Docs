@@ -3,6 +3,19 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+
+***
+## v5.0.29 - 2025-11-27
+### New
+- Right-click Open... op de snelkoppeling naar de Agenda in een Campagne opent nu de Agenda weer.
+- De Resource Explorer laat nu bij elke nieuwe versie deze Release notes zien om de zichtbaarheid van nieuwe en verbeterde features te vergroten.
+- Bij de Agenda is nu een Email veld toegevoegd. Dit staat op het Geavanceerd/Eigenaar tabblad. Voorlopig wordt dit uitsluitend gebruikt in de Fulfilment als `%CALENDAR.EMAIL%` en dan alleen als er niet al een variabele `APP.EMAIL.TO` is gedefinieerd. Om dit veld te gebruiken kan ook de variabele `APP.EMAIL.TO` die bij de scriptdefinitie wordt vastgelegd als waarde `%CALENDAR.EMAIL%` krijgen om langzaam de overgang te maken. De variabelen die gebruikt worden door de fulfilment kunnen zelf ook weer fulfilment expressies bevatten.
+### Changed
+- Als je een nieuwe bellijst maakt en je staat in een bellijst-groep folder dan opent de wizard nu ook met in stap 1 deze folder geselecteerd. Dit spaart veel kliks en navigatie. Hetzelfde geldt ook voor het maken van een nieuwe Scriptdefinitie.
+- Bij het verplaatsen van resources naar een folder die **niet actief** is, worden de resources die in deze folder worden verplaatst ook **niet actief** gemaakt. Dit maakt het bijvoorbeeld eenvoudiger om agenten die uit dienst zijn in een "uit dienst" folder te verplaatsen en ze meteen inactief te maken. Hetzelfde geldt voor Bellijsten, Agenda's en Werkplekken. 
+- Bij de weergave van de `compatibility` tussen import, export en scriptdefinities is verduidelijkt. Voorheen was dit een onoverzichtelijke lijst met velden en problemen, dat is nu duidelijke weergegeven. Ook wordt in de preview nu meer problemen weergegeven, zoals veldlengte problemen zodat sneller duidelijk is wat er mis is met een importbestand.
+- Ondersteuning voor multiple-select van resources in de Belopdracht zoeken, Afspraken zoeken en Gebeurtenissen zoeken tools. Je kunt nu meerdere bellijsten selecteren en het zoeken gaat dan over al die resources.
+
 ***
 ## v5.0.28 - 2025-10-21
 ### New
