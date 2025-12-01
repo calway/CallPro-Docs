@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.19 - 2025-12-01
+### Fixed
+- Met de vorige aanpassing was over het hoofd gezien dat de regex die wordt gebruikt om email adressen te controleren ook meerdere email adressen accepteert. Met de toevoeging van de DNS controle werkte dat niet meer. Deze fix lost dit probleem op, en nu werken meerdere email adressen gescheiden door een comma of punt-comma ook weer.
+
+***
 ## v5.0.18 - 2025-11-27
 ### Fixed
 - Op de email validatie nog een wijziging doorgevoerd omdat de check op A host records niet altijd werkt. Sommige grote bedrijven hebben hun email ook op sub-domeinen en daarvoor hebben ze dan mogelijk geen A host record, maar uiteraard wel een MX record.
