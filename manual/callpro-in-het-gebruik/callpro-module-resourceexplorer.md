@@ -20,7 +20,7 @@ verzameld.
 
 Voor supervisie staan hier een aantal handige zoek tools zoals de
 Belopdracht/Prospect zoeken, Belpogingen zoeken, Afspraken zoeken,
-Resources zoeken, Sessies zoeken en bel-me-niet registraties zoeken.
+Resources zoeken, Sessies zoeken en Suppressielijst registraties zoeken.
 
 ![](./media/image25.png)
 ![](./media/image26.png)
@@ -230,7 +230,7 @@ CallPro niet aangeboden voor outbound bellen.
 ![](./media/image43.png) ![](./media/image44.png)
 
 Bij de bellijst worden ook de suppressielijst instellingen bewaard die
-worden gebruikt voor bel-me-niet.
+worden gebruikt voor "Niet-mee-bellen".
 
 ### Calendar
 

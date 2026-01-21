@@ -28,17 +28,16 @@ alleen afgebeeld als er een afspraak status wordt gebruik in de lijst
 met belopdrachtstatussen.
 
 Daar weer naast staan 4 tiles voor het bellen, ophangen, doorschakelen
-en optioneel een bel-me-niet tile. Helemaal rechts staat de Pauze tile.
+en optioneel een "Niet-meer-bellen" tile. Helemaal rechts staat de Pauze tile.
 
-Als gebruikt wordt gemaakt van een CTI-koppeling kan met de “Bel nummer”
-knop (groen) het gesprek worden gestart, met “Ophangen” (rood) kan het
+Als gebruikt wordt gemaakt van een CTI-koppeling kan met de "Bel nummer"
+knop (groen) het gesprek worden gestart, met "Ophangen" (rood) kan het
 telefoongesprek worden beëindigd. De doorverbinden tile toont een popup
 met doorverbinden met of zonder ruggespraak.
 
 ![](./media/image115.png)
 
-De “Bel-me-niet” tile (hier niet afgebeeld) kan indien beschikbaar het
-gesprek worden doorgezet naar de bel-me-niet IVR.
+De "Niet-mee-bellen" tile (hier niet afgebeeld) kan indien beschikbaar het gesprek worden doorgezet naar de "Recht-van-Bezwaar" IVR.
 
 Aanvullend kan ook Campagne informatie worden afgebeeld die in het
 informatiebord bij de campagne staat ingesteld (weergeven in belscript).
