@@ -112,20 +112,20 @@ is is afwijken vanuit de software geen probleem.
 <tr class="odd">
 <td></td>
 <td><strong>010</strong></td>
-<td>Bel-me-niet uitsluiting</td>
-<td>Systeemstatus. Deze status wordt gezet als de belopdracht op de Bel-me-niet suppressielijst voorkomt</td>
+<td>Niet-mee-bellen uitsluiting</td>
+<td>Systeemstatus. Deze status wordt gezet als de belopdracht op een aan de bellijst gekoppelde suppressielijst voorkomt</td>
 </tr>
 <tr class="even">
 <td></td>
 <td><strong>011</strong></td>
-<td>Bel-me-niet verlopen</td>
-<td>Systeemstatus. Deze status kan worden gezet als een belopdracht een verlopen bel-me-niet belperiode heeft.</td>
+<td>Niet-mee-bellen verlopen</td>
+<td>Systeemstatus. Deze status kan worden gezet als een belopdracht een verlopen Niet-mee-bellen belperiode heeft.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td><strong>012</strong></td>
-<td>RVV afmelding</td>
-<td>Systeemstatus. Deze status geeft aan dat deze belopdracht via de bel-me-niet IVR is afgemeld voor Recht-van-verzet.</td>
+<td>RVB afmelding</td>
+<td>Systeemstatus. Deze status geeft aan dat deze belopdracht via de IVR is afgemeld voor Recht-van-Bezwaar.</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -298,7 +298,7 @@ is is afwijken vanuit de software geen probleem.
 <tr class="even">
 <td></td>
 <td>210</td>
-<td>Niet meer telefonisch benaderen (Bel-me-niet)</td>
+<td>Niet meer telefonisch benaderen (Niet-meer-bellen)</td>
 <td>Zie ook 410 en 510</td>
 </tr>
 <tr class="odd">
@@ -388,7 +388,7 @@ is is afwijken vanuit de software geen probleem.
 <tr class="odd">
 <td></td>
 <td>410</td>
-<td>Niet meer telefonisch benaderen (Bel-me-niet)</td>
+<td>Niet meer telefonisch benaderen (Niet-meer-bellen)</td>
 <td>Zie ook 210 en 510</td>
 </tr>
 <tr class="even">
@@ -418,7 +418,7 @@ is is afwijken vanuit de software geen probleem.
 <tr class="even">
 <td></td>
 <td>510</td>
-<td>Niet meer telefonisch benaderen (Bel-me-niet)</td>
+<td>Niet meer telefonisch benaderen (Niet-meer-bellen)</td>
 <td>Zie ook 210 en 410</td>
 </tr>
 <tr class="odd">

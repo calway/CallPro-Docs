@@ -152,11 +152,11 @@ telefoonlijn wordt opgehangen.
 ```
 #SCRIPT_HANGUP
 ```
-### Doorschakelen naar Bel-me-niet IVR
+### Doorschakelen naar Recht-van-Bezwaar IVR
 
-Indien de bel-me-niet module beschikbaar is in de licentie wordt met
+Indien de Compliance module beschikbaar is in de licentie wordt met
 deze systeemactie een actief gesprek doorgezet naar de IVR voor een
-bel-me-niet registratie. De agent komt hiermee in wrapup.
+Recht van Bezwaar registratie. De agent komt hiermee in wrapup.
 ```
 #SCRIPT_REGDONOTCALL
 ```

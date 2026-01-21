@@ -5,7 +5,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ## v5.0.57 - 2025-11-07
 ### Changed
 - Bij diverse keuzelijsten werden resources (Campagne, Bellijst, ...) getoond die op inactief staan. Deze lijsten laten nu allee nactieve resources zijn.
-- Beta Draaitabel control voor belresulaten bijegwerkt. Door in de Scriptdefinitie ene veld als Webrapportage te markeren kan op dit veld in de draaitabel worden gegroepeerd. Het is aa nde gebruikers om dit beperkt te gebruiken. Dit is bijvoorbeeld alleen zinvol voor velden met een beperkt aantal waarden, denk aan Geslacht, provincie, product, accountmanager, Ad-campaign code of ander veld met een beperkt aantal unieke waarden.
+- Beta Draaitabel control voor belresulaten bijgewerkt. Door in de Scriptdefinitie ene veld als Webrapportage te markeren kan op dit veld in de draaitabel worden gegroepeerd. Het is aan de gebruikers om dit beperkt te gebruiken. Dit is bijvoorbeeld alleen zinvol voor velden met een beperkt aantal waarden, denk aan Geslacht, provincie, product, accountmanager, Ad-campaign code of ander veld met een beperkt aantal unieke waarden.
 - Bij de gespreksopnames worden nu ook de Transcriptie en de AI samenvatting getoond zodat exports van de selectie deze velden ook bevatten.
 - Om de Bulk gesprekstransciptie optie te kunnen gebruiken moet de gebruiker het Schrijf recht op een gespreksopname hebben. Dit om te voorkomen dat willekeurige gebruikers die wel toegang hebben tot gespreksopnames bulk transcipties maken aangezien hier verbuikskosten aan zijn verbonden.
 
