@@ -3,6 +3,13 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 <br/>
 
+
+***
+## v5.0.24 - 2026-01-22
+- Voor database versie 5.1.0 de #SCRIPT_REGDONOTCALL script actie aangepast zodat deze vastlegd of de actie is gebruikt bij elke belpoging. Dit was nodig omdat het nu niet inzichtelijk te maken is of het is aangeboden, maar alleen als iemand zich had afgemeld (Recht van Bezwaar).
+- Dubbele weergave van 'telefoon gaat over' opgelost. Dit was puur cosmetisch, maar gebruikers dachten dat dit ook iets te maken had met het bellen.
+- Met deze versie wordt de Webview2 browser engine de standaard als niet expliciet de `Webview2Enabled` variabele op de Seat op `false` wordt gezet. Voorheen was het omgekeerd en werd Webview2 juist allen gebruikt als deze variabele `true` was, dat is nu de standaardwaarde.
+
 ***
 ## v5.0.23 - 2025-10-06
 ### Fixed
