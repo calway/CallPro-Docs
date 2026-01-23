@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 <br/>
 
 ***
+## v5.0.7 - 2026-01-23
+### Changed
+- Dit is een onderhoud release waar oud optioneel gedrag is verwijderd en nu he tstandaard gedrag is geworden. Deze versie is nodig om in de scriptmodule vanaf v5.0.24 het belvloer overzicht correct af te beelden.
+
+***
 ## v5.0.6 - 2025-09-19
 ### Changed
 - Interne wijzigingen met het opruimen van feature switches voor functionaliteit en toevoegen van tracing support voor logs.
