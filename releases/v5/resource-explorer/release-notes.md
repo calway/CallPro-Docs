@@ -3,6 +3,16 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+***
+## v5.0.30 - 2026-02-09
+### New
+- Voorbereiding op nieuwe Code-signing certificaat per 31-03-2026 waardoor de appinstaller updates niet meer  automatisch gaan doordat de certificaat subject wijzigt!
+- In de belhistorie statistieken is vanaf database versie 5.1.0 een optie erbij gekomen om het aantal keer dat het Recht-van-Bezwaar is aangeboden, of succesvol doorlopen (afmelding) te tellen. Bij de migratie van de Compliance module was de mogelijkheid om deze aantallen centraal te tellen verloren gegaan. Om dit te herstellen is een database wijziging nodig, vandaar dat dit in database versie 5.1.0 is opgenomen. De voorbereiding zit wel al in de Resource Explorer. Deze wordt alleen weergegeven vanaf database 5.1.0!
+![Telling van aantal Recht-van-Bezwaar](media/5.0.30-belhistoristatistieken-kolom-telling-rechtvanbezwaar.png)
+
+    * `Niet aangeboden` betekent dat de Agent in het gesprek geen gebruik heeft gemaakt van de niet-meer-bellen button om de beller door te zetten naar de Recht van Bezwaar IVR.
+    * `Aangeboden` betekent dat de Agent wel de beller heeft doorgezet naar de IVR, maar dat de IVR niet volledig is doorlopen tot een geldige afmelding.
+    * `Succesvol afgerond (afmelding)` betekent dat de beller de IVR helemaal heeft doorlopen en zich heeft afgemeld volgens Recht-van-Bezwaar.
 
 ***
 ## v5.0.29 - 2025-11-27
