@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
+
+***
+## v5.0.22 - 2025-02-11
+### New
+- In de pauze pagina kan de agent nu ook zijn/haar eigen sessietijd registratie bekijken via het tabblad **Agent Sessietijd overzicht**. Het overzicht geeft tijden weer van Vandaag, Gisteren, de afgelopen 7 dagen of de afgelopen 30 dagen. Ook is het mogelijk om de cijfers naar het clipboard te kopieren, of op te slaan als Excel bestand.
+
 ***
 ## v5.0.21 - 2025-01-19
 ### Fixed
