@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 <br/>
 
 ***
+## v5.0.9 - 2026-02-16
+### Fixed
+- De fix uit 5.0.8 blijkt soms toch nog te kunnen optreden. Met name nadat de service is herstart. In deze versie zou het probleem verholpen moeten zijn.
+
+***
 ## v5.0.8 - 2026-01-29
 ### Fixed
 - Door de aanpassingen in de vorige versie 5.0.7 kwam een bug aan het licht die al heel lang aanwezig is maar nooit eerder optrad. Afhankelijk van de belasting van de dialerservice kon een concurrency probleem optreden waardoor de service crasht en opnieuw start. Bellers merken dit doordat
