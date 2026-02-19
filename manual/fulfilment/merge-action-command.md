@@ -53,4 +53,4 @@ De optionele `Encoding` attribuut geeft aan welke encoding wordt gebruikt om het
 * utf-32
 * us-ascii
 
-> Let op: Wanneer een input template meerdere keren gemerged moet worden gebruik dan innersource="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
+> Let op: Wanneer een input template meerdere keren gemerged moet worden gebruik dan source="file" bij de `<input>` tag. Zonder deze toevoeging wordt het inputbestand “slechts" 1x gemergd.
