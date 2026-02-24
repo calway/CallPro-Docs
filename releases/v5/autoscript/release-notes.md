@@ -9,6 +9,7 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 ## v5.0.23 - 2026-02-24
 ### Fixed
 - Het agent sessietijd overzicht in de pauze pagina gaf bij 7 en 30 dagen de totalen niet correct weer als deze meer dan 24 uur werden. Nu worden totalen van meer dan 24 uur wel correct weergegeven. Tevens is in het overzicht voor meer dagen een sub-totaal per dag toegevoegd.
+
 ### Changed
 - Update to net10.0
 
