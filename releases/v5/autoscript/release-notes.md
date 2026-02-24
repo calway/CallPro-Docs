@@ -4,18 +4,24 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 
+
 ***
-## v5.0.22 - 2025-02-11
+## v5.0.23 - 2026-02-24
+### Fixed
+- Het agent sessietijd overzicht in de pauze pagina gaf bij 7 en 30 dagen de totalen niet correct weer als deze meer dan 24 uur werden. Nu worden totalen van meer dan 24 uur wel correct weergegeven. Tevens is in het overzicht voor meer dagen een sub-totaal per dag toegevoegd.
+
+***
+## v5.0.22 - 2026-02-11
 ### New
 - In de pauze pagina kan de agent nu ook zijn/haar eigen sessietijd registratie bekijken via het tabblad **Agent Sessietijd overzicht**. Het overzicht geeft tijden weer van Vandaag, Gisteren, de afgelopen 7 dagen of de afgelopen 30 dagen. Ook is het mogelijk om de cijfers naar het clipboard te kopieren, of op te slaan als Excel bestand.
 
 ***
-## v5.0.21 - 2025-01-19
+## v5.0.21 - 2026-01-19
 ### Fixed
 - Bij het opruimen van de MSHTML support was een foutje geintroduceerd die hiermee is opgelost.
 
 ***
-## v5.0.20 - 2025-01-16
+## v5.0.20 - 2026-01-16
 ### Changed
 - Het autoscript is met deze versie alleen nog maar compatible met Webview2 en kan niet meer gebruikt worden icm de MSHTML (IE11) browser engine. Dit ondermeer vanwege `async function` support, maar ook vanwege het openen van url's in een extern window.
 
