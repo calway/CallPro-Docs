@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 <br/>
 
 ***
+## v5.0.10 - 2026-03-05
+### New
+- Kleine aanpassingen die nodig waren voor ene nieuwe belvloer monitor
+
+***
 ## v5.0.9 - 2026-02-16
 ### Fixed
 - De fix uit 5.0.8 blijkt soms toch nog te kunnen optreden. Met name nadat de service is herstart. In deze versie zou het probleem verholpen moeten zijn.
