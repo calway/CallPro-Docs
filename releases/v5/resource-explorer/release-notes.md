@@ -4,9 +4,19 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.31 - 2026-03-10
+### New
+- Er zijn nieuwe rapporten toegevoegd die zijn overgenomen van SQL Reportserver veries voor Inbound projecten in het menu Extra\Overzichten.
+    * **Wachtrij overzicht** - Dit overzicht geef voor een periode en een selectie van de wachtrijen de aantallen inkomende gesprekken, of ze voordat ze naar de wachtrij gingen zijn opgehangen (pre-queue), of ze zijn beantwoord, of abandoned in de wachtrij, of tijdens het wachten met optie 9 de wachtrij hebben verlaten (post-queue). ![alt text](media/5.0.31-wachtrij-overzicht.png)
+    * **Wachtij details** - Voor 1 wachtrij de verdeling van gesprekken over de dag. ![alt text](media/5.0.31-wachtrij-details.png)
+    * **Wachtrij gesprekstijden** - Dit overzicht geeft dezelfde gegevens als `Wachtrij overzicht` alleen nu aangevuld met de belpogingen registratie. ![alt text](media/5.0.31-wachtrij-gesprekstijden.png)
+- Tevens is een **Belvoorraad rapportage** overgenomen die per campagne aangeeft hoeveel belbare adressen er zijn. Hierbij wordt rekening gehouden met ingestelde filters. Zo is direct zichtbaar hoeveel belopdracht per direct, en hoeveel na 1 of meerdere dagen/weken beschikbaar komen voor een verbeterde campagne planning. Binnen de periode is een uitsplitsing naar specifieke statussen beschikbaar voor nog meer details. ![alt text](media/5.0.31-bellijst-belvoorraad.png)
+- Als laatste zijn ook twee **Agent Sessietijden** rapportages overgenomen uit SQL Reportserver. De eerste laat per Agent en per dag de inlog en pauze sessies zien. ![alt text](media/5.0.31-agent-sessietijden.png) En het tweede rapport laat per Agent per inlogsessie op de dag de sessietijden en de belpoging tijden zien. ![alt text](media/5.0.31-agent-sessietijden2.png)
+
+***
 ## v5.0.30 - 2026-02-09
 ### New
-- Voorbereiding op nieuwe Code-signing certificaat per 31-03-2026 waardoor de appinstaller updates niet meer  automatisch gaan doordat de certificaat subject wijzigt!
+- Voorbereiding op nieuwe Code-signing certificaat per 31-03-2026 waardoor de appinstaller updates niet meer automatisch gaan doordat de certificaat subject wijzigt! Dit houdt in dat na die datum de oude versie moet worden verwijderd en via https://installer.callpro.nl een nieuwe versie van de Resource Explorer en Script module moeten worden geinstalleerd.
 - In de belhistorie statistieken is vanaf database versie 5.1.0 een optie erbij gekomen om het aantal keer dat het Recht-van-Bezwaar is aangeboden, of succesvol doorlopen (afmelding) te tellen. Bij de migratie van de Compliance module was de mogelijkheid om deze aantallen centraal te tellen verloren gegaan. Om dit te herstellen is een database wijziging nodig, vandaar dat dit in database versie 5.1.0 is opgenomen. De voorbereiding zit wel al in de Resource Explorer. Deze wordt alleen weergegeven vanaf database 5.1.0!
 ![Telling van aantal Recht-van-Bezwaar](media/5.0.30-belhistoristatistieken-kolom-telling-rechtvanbezwaar.png)
 
