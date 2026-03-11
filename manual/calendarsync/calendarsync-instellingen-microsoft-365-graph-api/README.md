@@ -1,6 +1,6 @@
 # Calendarsync instellingen Office 365 Graph API
 
-Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft vanaf v5.0.0 ondersteuning voor deze nieuwe manier van werken met Microsoft 365. Volg de onderstaande stappen om een App registratie te maken die kan worden gebruikt met de CallPro.
+Om gebruik te maken van nieuwe mogelijkheden zoals Online Teams meetings maken moet gebruik worden gemaakt van een Microsoft Graph API. De CallPro CalendarSync module heeft ondersteuning voor deze manier van werken met Microsoft 365. Volg de onderstaande stappen om een App registratie te maken die kan worden gebruikt met de CallPro.
 
 
 ## Registreer een applicatie in Microsoft Entra ID (voorheen AzureAd)
@@ -22,7 +22,7 @@ De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een 
     * Druk hier op ** New Client secret**
     * Geef als naam iets herkenbaars, zoals de naam van het call center, en de huidige datum, ie. "callpro-2025-02-10"
     * Kies bij Expires de langst mogelijke periode, op dit moment is dat 24 maanden.
-    * Vergeet geen herinnering in je agenda te zetten om na 23 maanden een nieuw secret te maken en die aan het call center door te geven anders stop de synchronisatie na 24 maanden!
+    * Vergeet geen herinnering in je agenda te zetten om na 23 maanden een nieuwe secret te maken en die aan het call center door te geven anders stop de synchronisatie na 24 maanden!
     * Vergeet niet om de client secret (de waarde zichtbaar in de **Value** kolom) te kopieren en vast te leggen, dit wordt eenmalig afgebeeld!
 
 ## Configureer app-only authenticatie
@@ -40,6 +40,6 @@ Vervolg nu de volgende stappen om een app-only registratie af te ronden.
 Bovenstaande instellingen configureren algemene toegang tot agenda's. Indien er bedrijfsrichtlijnen zijn over striktere toegang tot agenda's kan middels deze [link](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access) aanvullende restricties worden gezet door middel van `ApplicationAccessPolicies`. Hiermee kan de toegang verder worden beperkt tot specifieke agenda's.
 
 ## Terugleveren
-Geef nu de **Application (client) ID**, de **Directory (Tenant) ID** en de zojuist gemaakte **Client Secret** door aan het call center. Geef ook de email adressen van de mailboxen die gesynchroniseert moeten worden.
+Geef nu de **Application (client) ID**, de **Directory (Tenant) ID** en de zojuist gemaakte **Client Secret Value** door aan het call center. Geef ook de email adressen van de mailboxen die gesynchroniseert moeten worden.
 > **Let op!** De Client Secret heeft een beperkte houdbaarheid en dient maximaal elke 24 maanden te worden vernieuwt, en aangeleverd aan het call center.
 
