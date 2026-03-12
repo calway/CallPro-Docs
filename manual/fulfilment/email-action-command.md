@@ -12,12 +12,12 @@
         [smtpserver,only for SMTP mail actions]
     </MailServer>
     <ReadReceipt>YES|NO</ReadReceipt>
-    <From Name="friendlyname">van</From>
+    <From Name="friendlyname" Source="BLOB|FILE">van</From>
     <Onbehalfof Name="friendlyname">van</Onbehalfof>
     <Recipient Type="TO|CC|BCC" Name="friendlyname">emailadres</Recipient>
-    <Subject>onderwerpregel</Subject>
+    <Subject Source="BLOB|FILE">onderwerpregel</Subject>
     <Header Name="headertag">van</Header>
-    <Body Merge="YES|NO" InnerSource="BLOB|FILE"
+    <Body Merge="YES|NO" Source="BLOB|FILE"
         BodyType="HTML|PLAIN" Encoding="<encoding>" >emailbodytext</Body>
     <Attachment [cid="content-Id"] [type="FILE|TEXT|BLOB"]
         [OutputFile="attachmentfilename"] [Seperator="+" PathPrefix="path only">
@@ -41,6 +41,7 @@ De exchange webservice koppeling kan nog steeds gebruikt worden voor on-premise 
 
 ##### m365_graph_api
 Hierbij wordt gebruik gemaakt van de Microsoft Graph API. De `MailServer` tag heeft geen inhoud maar wel de parameters `applicationid`, `tenantid` en `clientsecret`. Maak in Azure Portal een App registration die deze gegevens oplevert. 
+
 #### ReadReciept
 Geeft aan of de verzender van de email een lees bevestiging wilt ontvangen.
 #### From
@@ -63,6 +64,10 @@ De email body tekst. De optionele `Encoding` attribuut geeft aan welke encoding 
 * unicode - Windows default unicode encoding
 * utf-32
 * us-ascii
+
+Met het `Source` attribuut wordt aangegeven of Body tag een bestandsnaam van de template bevat (`FILE`) of dat de Body tag de complete template bevat (geen Source attribuut opnemen). In bijna alle gevallen zal de Body tag verwijzen naar een Bestand dat de email template bevat!
+> LET OP! Versies van voor 5.1.0 ondersteunen nog de `Innersource` attribuut, die is obsolete en moet vervangen worden door `Source`.
+
 
 #### Attachment
 De Attachment tag mag vaker voorkomen binnen de email actie. De attachment file mag ook een wildcard naam zijn in plaats van 1 specifieke filename.

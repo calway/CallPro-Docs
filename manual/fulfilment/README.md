@@ -1,7 +1,7 @@
 # Fulfilment handleiding
-De Mergetool is een krachtige tool waarmee allerhande fulfilment acties of andere nabewerkingsacties kunnen worden geautomatiseerd. Mogelijkheden van de tool zijn het automatisch e-mailen, brieven maken, wijzigingen doorvoeren in de database, communiceren met externe bronnen (webservices & API’s).
+De Mergetool is een krachtige tool waarmee allerhande fulfilment acties of andere nabewerkingsacties kunnen worden geautomatiseerd. Mogelijkheden van de tool zijn het automatisch e-mailen, brieven maken, SMS versturen, genereren van Excel bestanden, wijzigingen doorvoeren in de database, communiceren met externe systemen door middels van webservices en API’s.
 
-De Mergetool is eenvoudig in gebruik, maar vergt wel enige kennis voor het inrichten van de juiste acties. Vereiste voorkennis voor succesvol gebruik zijn:
+De Mergetool is eenvoudig in gebruik, maar vergt wel kennis voor het inrichten van de juiste acties. Vereiste voorkennis voor succesvol gebruik zijn:
 
 # Inhoud
 
