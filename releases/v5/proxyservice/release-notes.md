@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 <br/>
 
+
+***
+## v5.0.21 - 2026-02-12
+### Changed
+- De do-not-call registraties (Recht van Bezwaar) worden vanaf deze versie in database versie v5.1.0 vastgelegd bij de belpoging.
+
 ***
 ## v5.0.20 - 2025-11-12
 ### Fixed
