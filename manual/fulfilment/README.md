@@ -7,7 +7,11 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel kennis voor het inrichten v
 
 [Het configuratiebestand](./configuration.md)
 
-[Loops en Actions](./loops-actions.md)
+[Basiskennis](./basiskennis.md)
+* [XML kennis](./basiskennis.md#xml-kennis)
+* [SQL kennis](./basiskennis.md#sql-kennis)
+* [CallPro Datamodel kennis](./basiskennis.md#callpro-datamodel)
+
 
 [Loops](./loop-commands.md)
 
@@ -29,12 +33,6 @@ De Mergetool is eenvoudig in gebruik, maar vergt wel kennis voor het inrichten v
 * [Url](./url-action-command.md)
 * [Webservice](./webservice-action-command.md)
 * [Zip](./zip-action-command.md)
-
-
-
-
-
-
 
 
 ## Systeemvelden
