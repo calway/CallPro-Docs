@@ -2,6 +2,16 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.58 - UNRELEASED
+### New
+- Extra webpart voor het aantal belpogingen tot een score status.
+
+### Fixed
+- Bij het wijzigen van de datum reeks van het wachtrij details webpart werd de wachtrij begrenzing verwijderd en viel terug naar alle wachtrijen. Nu blijft een ingestelde wachtij begrenzing behouden.
+- Draaitabel control voor belresultaten laat alleen campagnes zien waar de gebruiker rechten voor heeft.
+- Extra webpart voor weergave van Score per belpoging. In welke belpoging werd de status, via een statuscategorie keuze, gehaald. Bijvoorbeeld bij een statuscategorie-groep "Afspraken" die afspraak statussen telt zie je dan in welke belpoging die statussen zijn toegekend.
+
+***
 ## v5.0.57 - 2025-11-07
 ### Changed
 - Bij diverse keuzelijsten werden resources (Campagne, Bellijst, ...) getoond die op inactief staan. Deze lijsten laten nu allee nactieve resources zijn.
@@ -13,6 +23,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ## v5.0.56 - 2025-11-04
 ### New
 - Bij de gespreksopnames kan nu in bulk (maximaal 200) gespreksopnames worden geactiveerd voor het maken van een gesprekstranscriptie. Voorheen moest van te voren bij de status worden vastgelegd dat er een transcriptie gemaakt moet worden. Per opname kan in de audioplayer alsnog een transcriptie worden gemaakt. Maar, als achteraf toch van een bepaalde agent,. bellijst, status, of periode toch transcripties gewenst zijn was dit heel tijdrovend. Nu kunnen per 200  Transcripties worden geactiveerd. Hou er rekening mee dat het verwerken enige tijd duurt.
+
 ### Removed
 - Verwijderen oude analyse pagina's die niet of nauwelijks worden gebruikt maar qua functionaliteit niet meer actueel zijn. **Analyses\Klantkaart**, **Analyses\Bellijst statussen** en **Analyses\Agent Statistieken**. Tevens Thema en Agenda instellingen verwijderd.
 
@@ -21,7 +32,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ### Fixed
 - Als in de fulfilment validatie een nieuwe status wordt zet op de belopdracht dan werd altijd de laatste belpoging ook gewijzigd. Echter als tijdens een `call` meerdere keren is teruggebeld ontstaan meerdere belpogingen. Als dan bijvoorbeeld een 'Afspraak' status werd gebruikt stellen we dit in op de belpoging van het langste Live gesprek. Dat is dus niet altijd de laatste belpoging. 
 
-    Met deze fix wordt de juiste belpogin gezocht en bijgewerkt, **niet** altijd de laatste.
+    Met deze fix wordt de juiste belpoging gezocht en bijgewerkt, **niet** altijd de laatste.
 
 ***
 ## v5.0.54 - 2025-09-22
@@ -71,7 +82,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ***
 ## v5.0.45 - 2025-04-14
 ### Fixed
-- Issue met de handmatige transcriptie button bij opnames die nog geen transcriptie hebben opgelost waardoro deze button niet werkte!
+- Issue met de handmatige transcriptie button bij opnames die nog geen transcriptie hebben opgelost waardoor deze button niet werkte!
 
 ### Changed
 - Voeg laatste gesprek kolom toe aan wachtrij overzicht
@@ -94,12 +105,12 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ***
 ## v5.0.40 - 2024-11-21
 ### Changed
-- Verwijderen ongebruikte en oude functionaliteit mbt Agenda weergave. Een bezoek evaluatieformulier waar bepaalde statussen konden worden gezet, en een specifieke optie om ene afspraak als vervolgafsrpaak te markeren.
+- Verwijderen ongebruikte en oude functionaliteit mbt Agenda weergave. Een bezoek evaluatieformulier waar bepaalde statussen konden worden gezet, en een specifieke optie om ene afspraak als vervolgafspraak te markeren.
 
 ***
 ## v5.0.39 - 2024-11-14
 ### Changed
-- Kleine interne aanpassing ter vorobereiding van aanpasisngen in de Resource Explorer mbt gespreksopnames. We geven nu intern niet het hele pad mee, maar alleen het relatieve pad naar de opanmes.
+- Kleine interne aanpassing ter voorbereiding van aanpassingen in de Resource Explorer mbt gespreksopnames. We geven nu intern niet het hele pad mee, maar alleen het relatieve pad naar de opanmes.
 
 ***
 ## v5.0.38 - 2024-10-29
@@ -125,7 +136,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ***
 ## v5.0.34 - 2024-05-03
 ### Changed
-* Fulfilment validatie heeft al heel lang de mogelijkheid om te bepalen welke velden zichtbaar worden.In de scriptdefinitie kan per veld worden aangegeven of deze in de scriptvelden lijst moet worden afgebeeld in Fulfilment validatie. Dit gedrag is nu hersteld. Velden die `hidden` of `html` zijn gemarkeerd en velden met een naam die begint met `EXP_` worden op dit moment nooit getoond, ook moet als het vinkje aan staat.
+* Fulfilment validatie heeft al heel lang de mogelijkheid om te bepalen welke velden zichtbaar worden. In de scriptdefinitie kan per veld worden aangegeven of deze in de scriptvelden lijst moet worden afgebeeld in Fulfilment validatie. Dit gedrag is nu hersteld. Velden die `hidden` of `html` zijn gemarkeerd en velden met een naam die begint met `EXP_` worden op dit moment nooit getoond, ook moet als het vinkje aan staat.
 
 Op dit moment worden nieuwe scriptvelden in een scriptdefinitie niet automatisch op *Fulfilment validatie* gezet. In een volgende release van de Resource Explorer wordt dit aangepast zodat scriptvelden het vinkje standaard aan hebben staan.
 
@@ -134,13 +145,15 @@ Mocht er een use-case zijn waarvoor het ook voor dit soort velden handig is om z
 ***
 ## v5.0.33 - 2024-05-01
 ### Changed
-* In de fulfilmentvalidatie komen nu alle calls die zijn gemarkeert als `CONTROLE` **of** `ERROR` waarbij deze laatste gebruikt gaat worden als tijdens de fulfilment iets fout gaat. Dit kan bijvorbeeld zijn als het email adres in de belopdracht niet juist is en het versturen van de mail mislukt, of voor API integraties als de externe API call is mislukt.
+* In de fulfilmentvalidatie komen nu alle calls die zijn gemarkeert als `CONTROLE` **of** `ERROR` waarbij deze laatste gebruikt gaat worden als tijdens de fulfilment iets fout gaat. Dit kan bijvoorbeeld zijn als het email adres in de belopdracht niet juist is en het versturen van de mail mislukt, of voor API integraties als de externe API call is mislukt.
 In het geval van `ERROR` wordt het Het info kader rood.
 ![Fulfilmentvalidatie](media/v5.0.33-fulfilmentvalidatie.png)
+
 ***
 ## v5.0.32 - 2024-04-18
 ### Changed
-* Het afspelen van gespreksopnames vanuit de Resource Explorer loopt vanaf deze versie via CallProPortal. Hierdoor kan dezelfde audioplayer worden gebruikt, en kunnen ook transcripties zichtbaar worden gemaakt. Voor lokaal beheer is nu ook geen toegang tot de opnames nodig op de lokale computer
+* Het afspelen van gespreksopnames vanuit de Resource Explorer loopt vanaf deze versie via CallProPortal. Hierdoor kan dezelfde audioplayer worden gebruikt, en kunnen ook transcripties zichtbaar worden gemaakt. Voor lokaal beheer is nu ook geen toegang tot de opnames nodig op de lokale computer.
+
 > Deze update is vereist om vanaf Resource Explorer 5.0.10 gespreksopnames te kunnen afspelen.
 
 ***
