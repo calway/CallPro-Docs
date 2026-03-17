@@ -4,6 +4,15 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.32 - 2026-03-17
+### New
+- In de Resource Explorer is nu ook een realtime belvloer overzicht opgenomen vergelijkbaar met het overzicht dat in CallProPortal beschikbaar is. ![alt text](media/5.0.32-belvloer-overzicht.png) 
+In dit overzicht staat elke Agent die is ingelogd met zijn of haar status, in welke belfase ze staan, aantallen gesprekken en andere statistieken. De weergave van de kolommen kan worden ingesteld. Dit zijn de beschikbare kolommen. ![alt text](media/5.0.32-belvloer-overzicht-kiezen-kolommen.png) 
+
+    Er is ook een volledig schermvullende modus beschikbaar door op `F11` te drukken of het symbool rechtsonder te drukken. Verlaat deze modus door weer op `F11` of op `ESC` te drukken. In deze modus zijn de kolommen los van de normale weergave in te stellen. Ook is er voor deze modus een instelling om het font groter te maken. ![alt text](media/5.0.32-belvloer-overzicht-tekengrootte.png)
+
+
+***
 ## v5.0.31 - 2026-03-10
 ### New
 - Er zijn nieuwe rapporten toegevoegd die zijn overgenomen van SQL Reportserver veries voor Inbound projecten in het menu Extra\Overzichten.
