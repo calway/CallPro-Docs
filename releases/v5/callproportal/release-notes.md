@@ -2,7 +2,10 @@
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
-## v5.0.58 - UNRELEASED
+## v5.0.58 - 2026-03-18
+### Fix
+- Probleem met bijwerken belopdrachten icm database v5.1.0 waardoor Fulfilment validatie niet werkte.
+
 ### New
 - Extra webpart voor het aantal belpogingen tot een score status.
 
