@@ -3,9 +3,6 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 
 ***
 ## v5.0.58 - 2026-03-18
-### Fix
-- Probleem met bijwerken belopdrachten icm database v5.1.0 waardoor Fulfilment validatie niet werkte.
-
 ### New
 - Extra webpart voor het aantal belpogingen tot een score status.
 
@@ -13,6 +10,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 - Bij het wijzigen van de datum reeks van het wachtrij details webpart werd de wachtrij begrenzing verwijderd en viel terug naar alle wachtrijen. Nu blijft een ingestelde wachtij begrenzing behouden.
 - Draaitabel control voor belresultaten laat alleen campagnes zien waar de gebruiker rechten voor heeft.
 - Extra webpart voor weergave van Score per belpoging. In welke belpoging werd de status, via een statuscategorie keuze, gehaald. Bijvoorbeeld bij een statuscategorie-groep "Afspraken" die afspraak statussen telt zie je dan in welke belpoging die statussen zijn toegekend.
+- Probleem met bijwerken belopdrachten icm database v5.1.0 waardoor Fulfilment validatie niet werkte.
 
 ***
 ## v5.0.57 - 2025-11-07
