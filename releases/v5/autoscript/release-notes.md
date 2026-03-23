@@ -4,6 +4,10 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 
+***
+## v5.0.24 - 2026-03-23
+### Changed
+- De Score Tile op de pauze pagina gebruikt geen custom variabelen 'Score.Type' en 'Score.ConversionRate' meer maar kijkt nu naar de 'Positief per uur' instelling op het doelstelling tabblad van de campagne (of de parent campagne). Voor de telling van statussen wordt gekeken naar de 'Positief' systeem statuscategoriegroep. Controleer dat de waarde die bij 'Positief per uur' staat is aangevinkt en het zelfde is als een variabele 'Score.CoversionRate' op diezelfde campagne. Hiermee zijn beide variabelen niet meer nodig en kunnen worden verwijderd.
 
 ***
 ## v5.0.23 - 2026-02-24
