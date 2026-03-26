@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.33 - 2026-03-26
+### New
+- Kleine toevoeging aan de `Markeer als crashed` optie bij de Agent. Deze stuurt nu ook een `kill` bericht naar de dialer die wordt opgepakt en naar de Scriptmodule van de betreffende Agent wordt gestuurd om af te sluiten. Zowel het opruimen van de dialer processen als het afsluiten van de scriptmodule (zonder gebruiker interventie) betekent dat deze Agent sneller opnieuw kan inloggen op een andere computer. Dit is niet vaak nodig omdat de dialer al controleert of er nog verbinding met de Scriptmodule is, maar in sommige randgevallen kan dit toch handig zijn. Denk aan een computer die nog wel aan staat, maar niet reageert, of een computer van een thusiwerker die nu op kantoor is maar zijn computer niet had uitgezet.
+> Deze functie werkt samen met Dialerservice v5.0.11 en Scriptmodule v5.0.26.
+
+### Fixed
+- Op diverse plaatsen crashte de Zoeken tool als deze werd opgeroepen, dat is nu verholpen.
+- Sommige resource-lijsten gaven nieuw toegevoegde resources wel weer, maar dubbelklikken om de eigenschappen te openen werkte niet. Dat is nu verholpen.
+
+***
 ## v5.0.32 - 2026-03-17
 ### New
 - In de Resource Explorer is nu ook een realtime belvloer overzicht opgenomen vergelijkbaar met het overzicht dat in CallProPortal beschikbaar is. Het belvloer overzicht is te vinden in het control panel. ![alt text](media/5.0.32-belvloer-overzicht.png) 

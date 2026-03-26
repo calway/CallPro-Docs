@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.26 - 2026-03-26
+### New
+- De scriptmodule reageert op `kill` berichten van de dialer om af te sluiten.
+> Deze functie werkt samen met Dialerservice v5.0.11 en Resource Explorer v5.0.33.
+
+***
 ## v5.0.25 - 2026-02-09
 ### New
 - Voorbereiding op nieuwe Code-signing certificaat per 31-03-2026 waardoor de appinstaller updates niet meer  automatisch gaan doordat de certificaat subject wijzigt!
@@ -13,7 +19,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ### CHanged
 - Voor database versie 5.1.0 de #SCRIPT_REGDONOTCALL script actie aangepast zodat deze vastlegd of de actie is gebruikt bij elke belpoging. Dit was nodig omdat het nu niet inzichtelijk te maken is of het is aangeboden, maar alleen als iemand zich had afgemeld (Recht van Bezwaar).
 - Dubbele weergave van 'telefoon gaat over' opgelost. Dit was puur cosmetisch, maar gebruikers dachten dat dit ook iets te maken had met het bellen.
-- Met deze versie wordt de Webview2 browser engine de standaard als niet expliciet de `Webview2Enabled` variabele op de Seat op `false` wordt gezet. Voorheen was het omgekeerd en werd Webview2 juist allen gebruikt als deze variabele `true` was, dat is nu de standaardwaarde.
+- Met deze versie wordt de Webview2 browser engine de standaard als niet expliciet de `Webview2Enabled` variabele op de Seat op `false` wordt gezet. Voorheen was het omgekeerd en werd Webview2 juist alleen gebruikt als deze variabele `true` was, dat is nu de standaardwaarde.
 
 ***
 ## v5.0.23 - 2025-10-06

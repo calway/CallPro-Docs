@@ -4,9 +4,15 @@ Dit zijn de Release Notes voor het DialerService. Release Notes voor de overige 
 <br/>
 
 ***
+## v5.0.11 - 2026-03-26
+### New
+- De dialerservice reageert op `kill` berichten van de Resource Explroer om de Agent geforceerd te verwijderen. Ook wordt dit bericht doorgestuurd naar de Scriptmodule van de betreffende Agent.
+> Deze functie werkt samen met Resource Explorer v5.0.33 en Scriptmodule v5.0.26.
+
+***
 ## v5.0.10 - 2026-03-05
 ### New
-- Kleine aanpassingen die nodig waren voor ene nieuwe belvloer monitor
+- Kleine aanpassingen die nodig waren voor een nieuwe belvloer monitor
 
 ***
 ## v5.0.9 - 2026-02-16
