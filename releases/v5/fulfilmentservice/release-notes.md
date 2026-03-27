@@ -1,7 +1,10 @@
 # FulfilmentService Release Notes
 Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
-<br/>
+***
+## v5.0.14 - 2025-04-08
+### Fix
+- Herstel het oude Cache gedrag omdat de nieuwe methode veel problemen gaf en het noodzakelijk maakte dat elke taak 10 seconden bleef wachten. Onacceptabel.
 
 ***
 ## v5.0.13 - 2025-03-07
