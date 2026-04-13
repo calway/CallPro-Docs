@@ -2,6 +2,12 @@
 Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.16 - 2026-04-13
+### Fixed
+- Het genereren van Excel bestanden via een `merge` actie ging sinds de vorige versie niet meer goed. De Excel templates werden als tekstbestanden gebruikt waardoor onbruikbare Excel bestanden werden geschreven.
+- Als Excelbestanden niet werden gemailt met de `FlushCache` attribuut was het bestand nog niet compleet. Er is nu nog een extra FlushCache toegevoegd aan het eind van de uitvoer van een config zodat ook als de bestande nalleen worden gegenereerd als laatste alsnog een FlushCahce wordt gedaan om de uitvoer te schrijven. `FlushCache` blijft nodig als de Excel file wordt gebruikt tijdens de verwerking.
+
+***
 ## v5.0.15 - 2026-04-08
 ### Added
 - Een nieuw commando `if` die op basis van de `condition` attribuut de `then` of `else` sub-tag uitvoert.
