@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 <br/>
 
 ***
+## v5.0.26 - 2026-04-16
+### Changed
+- De Bellen Tile heeft nu geen dropdownlijst met de nummers van alle telefoonnummer velden meer. Dit gaf problemen icm javascript vanwege het gebruik van een `id` attribuut voor het vullen van het label dat voor weergave werd gebruikt.
+- De variabele `FEATURE.CSS` werkt nu ook hierarchisch zodat je dit op het globale niveau kunt instellen en dan werkt dit door in alle autoscript pagina's. Hoewel de Resource Explorer dit al liet zien, had dit geen effect in het autoscript.
+
+***
 ## v5.0.25 - 2026-03-24
 ### Fixed
 - Het autoscript werkte niet meer goed met de antwoordservice waardoor geen contactpersonen werden afgebeeld. In deze release is dat probleem opgelost.
