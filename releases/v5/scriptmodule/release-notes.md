@@ -7,7 +7,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 ## v5.0.27 - 2026-04-17
 Deze versie van de Script module komt niet automatisch mee als gebruikers een eerdere versie hebben geinstalleerd. De oorzaak ligt in het signing certificaat 
 dat wordt gebruikt om de installer te beveiligen. Door een wijziging in de velden in het nieuwe certificaat, waar wij geen controle over hebben, werkt het nieuwe certificaat niet meer met het oude samen en krijgen gebruikers van v5.0.33 deze update niet aangeboden.
-> Om deze versie te installeren dient eerst de oude versie te worden verwijderd van de computer en dan deze versie te worden geinstalleerd via http://installer.callpro.nl
+> Om deze versie te installeren dient eerst de oude versie te worden verwijderd van de computer en dan deze versie te worden geinstalleerd via https://installer.callpro.nl
 
 ***
 ## v5.0.26 - 2026-03-26
