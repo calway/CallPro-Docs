@@ -4,6 +4,20 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.34 - 2026-04-17
+Deze versie van de Resource Explorer komt niet automatisch mee als gebruikers een eerdere versie hebben geinstalleerd. De oorzaak ligt in het signing certificaat 
+dat wordt gebruikt om de installer te beveiligen. Door een wijziging in de velden in het nieuwe certificaat, waar wij geen controle over hebben, werkt het nieuwe certificaat niet meer met het oude samen en krijgen gebruikers van v5.0.33 deze update niet aangeboden.
+> Om deze versie te installeren dient eerst de oude versie te worden verwijderd van de computer en dan deze versie te worden geinstalleerd via http://installer.callpro.nl
+
+### Fixed
+- Het rapport "Bellijst Belvoorraad" kan nu echt maximaal 10 campagnes kiezen zoals de melding aangeeft als je er meer selecteert. Door een genrsgeval fout kon je er maximaal 9 selecteren!
+- Het rapport "Agent sessietijden" gaf bij het uitklappen van de dagen een extra regel weer met de som van alle dagen. Die kolom is nu verwijderd!
+- Bij het zoeken van campagnes kan nu ook worden gezocht op het "CLI voor uitgaande gesprekken" veld. Dit maakt het mogelijk om te zoeken naar campagnes die hetzelfde callerid gebruiken.
+- In speciale situaties waar iemand de Resource Explorer heel lang open houdt (meerdere dagen) konden `licentie verstrijkt in xx dagen` meldingen worden afgevinkt door nieuw gestarte Resource Explorer en werden dan weer aangemaakt door de lang openstaande Resource Explorer. Dit is puur een cosmetisch probleem, maar dit is nu opgelost.
+- In de belhistorie statistieken is een bug opgelost die optrad bij het draaien van de rapporten met het vinkje "Alleen actieve bellijsten" aangevinkt. Er wolgde dan een foutmelding over het veld `CLRESDEFS.ENABLED` dat niet werd gevonden. 
+- Op de Agenda resource is het openen van het `Zoeken Gebeurtenissen...` applet hersteld. Deze was sinds enkele versies niet meer functioneel, maar kan nu wer worden gebruikt.
+
+***
 ## v5.0.33 - 2026-03-26
 ### New
 - Kleine toevoeging aan de `Markeer als crashed` optie bij de Agent. Deze stuurt nu ook een `kill` bericht naar de dialer die wordt opgepakt en naar de Scriptmodule van de betreffende Agent wordt gestuurd om af te sluiten. Zowel het opruimen van de dialer processen als het afsluiten van de scriptmodule (zonder gebruiker interventie) betekent dat deze Agent sneller opnieuw kan inloggen op een andere computer. Dit is niet vaak nodig omdat de dialer al controleert of er nog verbinding met de Scriptmodule is, maar in sommige randgevallen kan dit toch handig zijn. Denk aan een computer die nog wel aan staat, maar niet reageert, of een computer van een thusiwerker die nu op kantoor is maar zijn computer niet had uitgezet.
