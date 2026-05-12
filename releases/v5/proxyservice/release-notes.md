@@ -3,6 +3,17 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 
 <br/>
 
+***
+## v5.0.23 - 2026-05-12
+### Fixed
+- In de vorige update waren ook updates meegekomen in externe libraries die er voor zorgden dat de logging minder nuttig werd doordat bepaalde informatie niet meer in de log terecht kwam. Deze versie lost dat op door voorlopig terug te gaan naar de oude library.
+- Toevoegen v2/Entry/by-uid update endpoint om belopdrachten op basis van het ontdubbelveld bij te werken in plaats van op basis van de Id. De payload moet wel de CallListId bevatten.
+- Memory leak opgelost in combinatie met security checks.
+
+***
+## v5.0.22 - 2026-04-30
+### Fixed
+- Uit monitoring bleek dat er een memoryleak zat in de ProxyService, deze versie zou dit moeten oplossen.
 
 ***
 ## v5.0.21 - 2026-02-12
