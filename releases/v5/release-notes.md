@@ -13,7 +13,7 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 
 ### Clients
 * [Resource Explorer](resource-explorer/release-notes.md)
-* [Scriptmodule](scriptmodule/release-notes.md)
+* [Scriptmodule](script/release-notes.md)
 
 ### Web
 * [CallProPortal](callproportal/release-notes.md)
