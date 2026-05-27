@@ -5,7 +5,7 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 
 ***
 ## v5.0.28 - 2026-05-27
-- Wijziging in de Agendamodule icm reistijdcontrole. Als een afspraak nog geen coordinaten heeft wordt dit bij het zoeken naar geschikte agendablokken alsnog gedaan. Dit treedt vooral op als een agenda eerst geen reistijdcontrole gebruikte en later, terwijl er al afspraken zijn dit alsnog wel gaat doen. Voor reistijdcontrole is minimaal een gevuld postcode veld (addr_zip) nodig.
+- Wijziging in de Agendamodule icm reistijdcontrole. Als een afspraak nog geen coordinaten heeft wordt dit bij het zoeken naar geschikte agendablokken alsnog gedaan. Dit treedt vooral op als een agenda eerst geen reistijdcontrole gebruikte en later, terwijl er al afspraken zijn, dit alsnog wel gaat doen. Voor reistijdcontrole is minimaal een gevuld postcode veld (addr_zip) nodig.
 
 *** 
 ## v5.0.27 - 2026-04-17
