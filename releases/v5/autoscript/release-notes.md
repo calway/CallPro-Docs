@@ -3,6 +3,13 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
+
+
+***
+## v5.0.27 - 2026-05-21
+### Changed
+- belhistorie css fix de tekst was lichtgrijs en is nu zwart voor betere leesbaarheid. Eerder kon dit via een `FEATURE.CSS` variabele op de sriptdefinitie al wel worden ingesteld, maar het is nu de default.
+
 ***
 ## v5.0.26 - 2026-04-16
 ### Changed
