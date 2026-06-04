@@ -4,6 +4,21 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.29 - 2026-06-04
+### Fixed
+- Bij het gebruik van de `#SCRIPT_DIAL?TELNR=` script commando w.o. in het autoscript wordt het telefoonnummer meegegeven zoals het op het scherm staat. 
+Hier werd niet goed de telefoonnummer normalisatie op toegepast waardoor in speciale situaties niet de juiste landcode werd gebruikt wat er voor zorgde dat het nummer als `Informatietoon` 
+(telefoonnummer bestaat niet) werd aangemerkt. Dit probleem is in deze versie opgelost.
+- Bij het zoeken naar een beschikbaar blok in de agendamodule werd de afspraak altijd aan het begin van het blok geplaatst, ook als het een agendablok was waar meerdere afspraken in kunnen. Ook werd het blok niet getoond als er nog een afspraak tussen past in het geval van een blok voor meerdere afspraken. Beide problemen zijn opgelost met deze fix.
+- Extra opties voor het zoeken naar agendablokken met reistijd.
+	* Zoek alleen in de huidige agenda. Dit is nuttig als een campagnes meerdere agenda's heeft maar op basis van bepaalde condities maar 1 agenda relevant is. Het is dan zonde om steeds alle agenda's mee te nemen in het zoeken.
+	* Toon alleen agendablokken als er een afspraak voor of na staat en de reistijd correct is.
+	* Zoek automatisch na openen agenda scherm indien `Vrije blokken in opgegeven tijdvak` geselecteerd is.
+- Plaatsing afspraken met reistijdcontrole tussen twee bestaande afspraken zet de afspraak nu dichtbij de afspraak met de kortste reistijd.
+- Het zoeken naar beschikbare tijdvakken in de agenda wordt nu duidelijker aangegeven.
+- In hele speciale situaties als gebruik wordt gemaakt van een `SetCallProAutoSelectStat` functie was sinds 5.0.28 een bug ontstaan waarbij CallPro 2x probeerde af te boeken. Hierdoor kwamen navigates van de browser in de war wat kon leiden tot scripts die niet gevuld werden, en in sommige situaties tot applicatie crashes. Dit is nu gefixt.
+
+***
 ## v5.0.28 - 2026-05-27
 - Wijziging in de Agendamodule icm reistijdcontrole. Als een afspraak nog geen coordinaten heeft wordt dit bij het zoeken naar geschikte agendablokken alsnog gedaan. Dit treedt vooral op als een agenda eerst geen reistijdcontrole gebruikte en later, terwijl er al afspraken zijn, dit alsnog wel gaat doen. Voor reistijdcontrole is minimaal een gevuld postcode veld (addr_zip) nodig.
 
