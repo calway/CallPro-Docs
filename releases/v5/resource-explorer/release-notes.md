@@ -4,6 +4,18 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.35 - 2026-06-04
+### Changed
+- Er zijn in het belvloer overzicht nu extra kolommen beschikbaar voor aanvullende inzichten. Het gaat om deze nieuwe kolommen:
+    
+    * `Positief aantal` - Eerder kon alleen het `Positief/uur` worden afgebeeld, nu is ook het aantal calls met een Positief (statuscategoriegroep) status beschikbaar.
+    * `Live/uur` - Dit is `Live call aantal` / `Wait+Call+Wrapup`
+    * `Belpoging positief%` - Dit is het percentage `Positief aantal` / `Belpoging aantal`
+    * `Live positief%` - Dit is het percentage `Positief aantal` / `Live calls aantal`
+- Bij de Importhistorie is de weergave van de importproblemen verbeterd door de cel die het probleem geeft met een kleur te markeren voor alle problemen.
+- Bij de Importhistorie is een optie toegevoegd voor het geval het importbestand niet meer op de betreffende locatie staat om deze aan te wijzen zodat toch deze weergave gebruikt kan worden.
+
+***
 ## v5.0.34 - 2026-04-17
 Deze versie van de Resource Explorer komt niet automatisch mee als gebruikers een eerdere versie hebben geinstalleerd. De oorzaak ligt in het signing certificaat 
 dat wordt gebruikt om de installer te beveiligen. Door een wijziging in de velden in het nieuwe certificaat, waar wij geen controle over hebben, werkt het nieuwe certificaat niet meer met het oude samen en krijgen gebruikers van v5.0.33 deze update niet aangeboden.
