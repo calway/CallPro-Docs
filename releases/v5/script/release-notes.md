@@ -4,6 +4,12 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.30 - 2026-06-11
+### Changed
+- Agendamodule gebruikt nu ook de afspraak instellingen voor gevonden agendablokken zoals de afspraak duur instellingen. Verbetering weergave reistijd vrijeblokken.
+- Enkele interne aanpassingen van de reistijdberekening. Azuremaps gaat niet altijd goed om met verkeerd geschreven straat en plaatsnamen, waardoor er soms ee nvreemd gps coordinaat wordt gevonden. We kijken nu voorlopig alleen naar de postcode. In Nederland is dat een straat dus voor reistijdberekening al voldoende.
+
+***
 ## v5.0.29 - 2026-06-04
 ### Fixed
 - Bij het gebruik van de `#SCRIPT_DIAL?TELNR=` script commando w.o. in het autoscript wordt het telefoonnummer meegegeven zoals het op het scherm staat. 
