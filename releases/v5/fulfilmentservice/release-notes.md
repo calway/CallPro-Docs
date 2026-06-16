@@ -2,6 +2,11 @@
 Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
 ***
+## v5.0.17 - 2026-05-16
+### Fixed
+- Bij het verwerken van responses van Webservice calls kon een fout optreden doordat array responses niet goed werden gecontroleerd. Nu worden index bounds correct gecontroleerd.
+
+***
 ## v5.0.16 - 2026-04-13
 ### Fixed
 - Het genereren van Excel bestanden via een `merge` actie ging sinds de vorige versie niet meer goed. De Excel templates werden als tekstbestanden gebruikt waardoor onbruikbare Excel bestanden werden geschreven.
