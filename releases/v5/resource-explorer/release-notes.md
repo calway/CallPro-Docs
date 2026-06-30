@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.36 - 2026-06-30
+### Changed
+- In de agendamodule een extra optie toegevoegd om de Jaar/Weeknummer control boven de agenda weer zichtbaar te maken.
+
+    ![alt text](../script/media/script-agenda-weeknummer-weergave-v5.0.31.png)
+- Tevens is in de weergave het weeknummer van de huidige week zichtbaar gemaakt ook als de Jaar/Weeknummer control niet zichtbaar is.
+
+    ![alt text](../script/media/script-weergave-weeknummer-v5.0.31.png)
+
+***
 ## v5.0.35 - 2026-06-04
 ### Changed
 - Er zijn in het belvloer overzicht nu extra kolommen beschikbaar voor aanvullende inzichten. Het gaat om deze nieuwe kolommen:
