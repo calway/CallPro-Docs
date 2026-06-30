@@ -4,6 +4,16 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.31 - 2026-06-30
+### Changed
+- In de agendamodule een extra optie toegevoegd om de Jaar/Weeknummer control boven de agenda weer zichtbaar te maken.
+
+	![alt text](media/script-agenda-weeknummer-weergave-v5.0.31.png)
+- Tevens is in de weergave het weeknummer van de huidige week zichtbaar gemaakt ook als de Jaar/Weeknummer control niet zichtbaar is.
+
+	![alt text](media/script-weergave-weeknummer-v5.0.31.png)
+
+***
 ## v5.0.30 - 2026-06-11
 ### Changed
 - Agendamodule gebruikt nu ook de afspraak instellingen voor gevonden agendablokken zoals de afspraak duur instellingen. Verbetering weergave reistijd vrijeblokken.
