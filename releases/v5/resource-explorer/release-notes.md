@@ -4,14 +4,20 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 <br/>
 
 ***
+## v5.0.37 - 2026-07-10
+### Changed
+* De beperking van maximaal 10 campagnes uit de **Bellijst belvoorraad** rapportage is verwijderd. ![Bellijst belvoorraad meer dan 10 campagnes selecteerbaar](media/5.0.37-bellijst-belvoorraad-max-campagnes.png)Het is nu tevens mogelijk om via de bovenliggende campagne folders alle onderliggende campagnes in een keer te selecteren.
+* Bij het importeren van een Suppressielijst kan er nu ook voor worden gekozen om niet het complete bestand te verwerken, maar alleen registraties die sinds een bepaalde datum zijn toegevoegd/bijgewerkt. ![Suppressielijst registraties importeren datum selectie](media/5.0.37-suppressielijst-registraties-importeren.png)Hierdoor kan een totaal bestand met meer dan 1 miljoen records veel sneller worden verwerkt omdat meestal oudere registraties al zijn verwerkt. Bijwerken snelheid gaat hier van meer dan 20 uur naar 15 minuten.
+
+***
 ## v5.0.36 - 2026-06-30
 ### Changed
 - In de agendamodule een extra optie toegevoegd om de Jaar/Weeknummer control boven de agenda weer zichtbaar te maken.
 
-    ![alt text](../script/media/script-agenda-weeknummer-weergave-v5.0.31.png)
+    ![Menu Beeld \ Week selectie](../script/media/script-agenda-weeknummer-weergave-v5.0.31.png)
 - Tevens is in de weergave het weeknummer van de huidige week zichtbaar gemaakt ook als de Jaar/Weeknummer control niet zichtbaar is.
 
-    ![alt text](../script/media/script-weergave-weeknummer-v5.0.31.png)
+    ![Weergave weeknummer in agendamodule](../script/media/script-weergave-weeknummer-v5.0.31.png)
 
 ***
 ## v5.0.35 - 2026-06-04
@@ -52,21 +58,21 @@ dat wordt gebruikt om de installer te beveiligen. Door een wijziging in de velde
 ***
 ## v5.0.32 - 2026-03-17
 ### New
-- In de Resource Explorer is nu ook een realtime belvloer overzicht opgenomen vergelijkbaar met het overzicht dat in CallProPortal beschikbaar is. Het belvloer overzicht is te vinden in het control panel. ![alt text](media/5.0.32-belvloer-overzicht.png) 
-In dit overzicht staat elke Agent die is ingelogd met zijn of haar status, in welke belfase ze staan, aantallen gesprekken en andere statistieken. De weergave van de kolommen kan worden ingesteld. Dit zijn de beschikbare kolommen. ![alt text](media/5.0.32-belvloer-overzicht-kiezen-kolommen.png) 
+- In de Resource Explorer is nu ook een realtime belvloer overzicht opgenomen vergelijkbaar met het overzicht dat in CallProPortal beschikbaar is. Het belvloer overzicht is te vinden in het control panel. ![Belvloer overzicht met realtime gegevens](media/5.0.32-belvloer-overzicht.png) 
+In dit overzicht staat elke Agent die is ingelogd met zijn of haar status, in welke belfase ze staan, aantallen gesprekken en andere statistieken. De weergave van de kolommen kan worden ingesteld. Dit zijn de beschikbare kolommen. ![Kiezen weergave kolommen in Belvloer overzicht](media/5.0.32-belvloer-overzicht-kiezen-kolommen.png) 
 
-    Er is ook een volledig schermvullende modus beschikbaar door op `F11` te drukken of het symbool rechtsonder te drukken. Verlaat deze modus door weer op `F11` of op `ESC` te drukken. In deze modus zijn de kolommen los van de normale weergave in te stellen. Ook is er voor deze modus een instelling om het font groter te maken. ![alt text](media/5.0.32-belvloer-overzicht-tekengrootte.png)
+    Er is ook een volledig schermvullende modus beschikbaar door op `F11` te drukken of het symbool rechtsonder te drukken. Verlaat deze modus door weer op `F11` of op `ESC` te drukken. In deze modus zijn de kolommen los van de normale weergave in te stellen. Ook is er voor deze modus een instelling om het font groter te maken. ![Instelling tekengrootte voor volledige scherm weergave van Belvloer overzicht](media/5.0.32-belvloer-overzicht-tekengrootte.png)
 
 
 ***
 ## v5.0.31 - 2026-03-10
 ### New
 - Er zijn nieuwe rapporten toegevoegd die zijn overgenomen van SQL Reportserver veries voor Inbound projecten in het menu Extra\Overzichten.
-    * **Wachtrij overzicht** - Dit overzicht geef voor een periode en een selectie van de wachtrijen de aantallen inkomende gesprekken, of ze voordat ze naar de wachtrij gingen zijn opgehangen (pre-queue), of ze zijn beantwoord, of abandoned in de wachtrij, of tijdens het wachten met optie 9 de wachtrij hebben verlaten (post-queue). ![alt text](media/5.0.31-wachtrij-overzicht.png)
-    * **Wachtij details** - Voor 1 wachtrij de verdeling van gesprekken over de dag. ![alt text](media/5.0.31-wachtrij-details.png)
-    * **Wachtrij gesprekstijden** - Dit overzicht geeft dezelfde gegevens als `Wachtrij overzicht` alleen nu aangevuld met de belpogingen registratie. ![alt text](media/5.0.31-wachtrij-gesprekstijden.png)
-- Tevens is een **Belvoorraad rapportage** overgenomen die per campagne aangeeft hoeveel belbare adressen er zijn. Hierbij wordt rekening gehouden met ingestelde filters. Zo is direct zichtbaar hoeveel belopdracht per direct, en hoeveel na 1 of meerdere dagen/weken beschikbaar komen voor een verbeterde campagne planning. Binnen de periode is een uitsplitsing naar specifieke statussen beschikbaar voor nog meer details. ![alt text](media/5.0.31-bellijst-belvoorraad.png)
-- Als laatste zijn ook twee **Agent Sessietijden** rapportages overgenomen uit SQL Reportserver. De eerste laat per Agent en per dag de inlog en pauze sessies zien. ![alt text](media/5.0.31-agent-sessietijden.png) En het tweede rapport laat per Agent per inlogsessie op de dag de sessietijden en de belpoging tijden zien. ![alt text](media/5.0.31-agent-sessietijden2.png)
+    * **Wachtrij overzicht** - Dit overzicht geef voor een periode en een selectie van de wachtrijen de aantallen inkomende gesprekken, of ze voordat ze naar de wachtrij gingen zijn opgehangen (pre-queue), of ze zijn beantwoord, of abandoned in de wachtrij, of tijdens het wachten met optie 9 de wachtrij hebben verlaten (post-queue). ![Rapportage Wachtrij overzicht](media/5.0.31-wachtrij-overzicht.png)
+    * **Wachtij details** - Voor 1 wachtrij de verdeling van gesprekken over de dag. ![Rapportage Wachtrij details](media/5.0.31-wachtrij-details.png)
+    * **Wachtrij gesprekstijden** - Dit overzicht geeft dezelfde gegevens als `Wachtrij overzicht` alleen nu aangevuld met de belpogingen registratie. ![Rapportage Wachtrij gesprekstijden](media/5.0.31-wachtrij-gesprekstijden.png)
+- Tevens is een **Belvoorraad rapportage** overgenomen die per campagne aangeeft hoeveel belbare adressen er zijn. Hierbij wordt rekening gehouden met ingestelde filters. Zo is direct zichtbaar hoeveel belopdracht per direct, en hoeveel na 1 of meerdere dagen/weken beschikbaar komen voor een verbeterde campagne planning. Binnen de periode is een uitsplitsing naar specifieke statussen beschikbaar voor nog meer details. ![Rapportage Bellijst belvoorraad](media/5.0.31-bellijst-belvoorraad.png)
+- Als laatste zijn ook twee **Agent Sessietijden** rapportages overgenomen uit SQL Reportserver. De eerste laat per Agent en per dag de inlog en pauze sessies zien. ![Rapportage Agent sessietijden](media/5.0.31-agent-sessietijden.png) En het tweede rapport laat per Agent per inlogsessie op de dag de sessietijden en de belpoging tijden zien. ![Rapportage Agent sessietijden per inlogsessie](media/5.0.31-agent-sessietijden2.png)
 
 ***
 ## v5.0.30 - 2026-02-09
@@ -100,6 +106,7 @@ In dit overzicht staat elke Agent die is ingelogd met zijn of haar status, in we
 ![Multiple Document Interface](media/5.0.28-multi-document-interface.png)
 
 - Bij het maken van een nieuwe variabele krijg je intellisense suggesties op basis van de reeds bestaande variabelen.
+
 ![Intellisense suggesties](media/5.0.28-resource-variabelen-intellisense.png)
 
 - Niet specifiek van deze versie, maar als gebruik wordt gemaakt van database versie 5.1.0 dan kan bij de belopdrachtstatus ene uitgebreidere manier van terugbelroosters worden ingesteld die per belopdracht per dag van de week tussen 08:00-22:00 in half uur blokken instelbaar is. Hierdoor is in te stellen dat terugbeltijden bijvoorbeeld elke dag tussen 09:00 en 17:00 mogeen, maar op maandagochtend van 08:00-13:00 niet. Zie hier voor meer informatie [uitgebreide terugbel roosters](../../../manual/callpro-in-het-gebruik/belopdrachtstatus-terugbel-rooster-v510.md)
@@ -127,7 +134,7 @@ En voor variabelen die zijn overschreven kan via het context menu de waarde word
 ## v5.0.26 - 2025-09-30
 ### Changed
 - Interne audioplayer heeft een optie gekregen om de opname in CallProPortal te openen.
-![native audiplayer](media/v5.0.26-native-audioplayer.png)
+![Native audioplayer](media/v5.0.26-native-audioplayer.png)
 - Import voorgangsscherm compacter gemaakt.
 - Knoppen in filter scherm breder gemaakt.
 
@@ -143,7 +150,7 @@ En voor variabelen die zijn overschreven kan via het context menu de waarde word
 ## 5.0.24 - 2025-08-19
 ### Changed
 * Vanuit de Resource Explorer is een nieuwe audioplayer geintroduceerd die de opnames native kan afspelen. Deze vervangt het gebruik van de audioplayer uit CallProPortal. We gebruiken nu de api vande ProxyService om opnames te benaderen.
-![native audiplayer](media/v5.0.24-native-audioplayer.png)
+![Native audioplayer](media/v5.0.24-native-audioplayer.png)
 
 Om deze nieuwe audioplayer te gebruiken moet de ProxyService url worden geconfigureerd in het control panel Systeem configuratie\Geavanceerd\Overig.
 
