@@ -3,6 +3,16 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+## v5.0.21 - 2026-07-10
+### Changed
+* Bij afspraken uit een externe agenda die naar CallPro worden gehaald als *Gebeurtenis* wordt nu niet meer de tekst `(afspraak uit externe agenda)` gebruikt als prefix voor de afspraak body. Dat scheelt weer wat tekens. Tevens is de maximale lenbte gecorrigeerd. Het veld werd afgeknipt op 250 tekens terwijl het in de database 1024 tekens lang mag zijn.
+### Fixed
+* Bij sommige afspraken uit de externe agenda was geen BodyPreview wat resulteerde in een Exception. Dit is nu afgevangen. Dit trad heel soms op bij zowel Google als Microsoft 365 afspraken.
+
+## v5.0.20 - 2026-03-10
+### Fixed
+* Bij Microsoft Graph ontvingen we soms een changeset die we al eerder hadde ngehad waardoor de synchronisatie in een loop terecht kwam. Dit is iets in de Graph API en dit zit er al heel lang in. Diverse oplossingen geprobeerd er is een github issue [#3070](https://github.com/microsoftgraph/msgraph-sdk-dotnet/issues/3070) met enige uitleg. Ik heb een soort van workaround gevonden waardoro he tniet meer in een loop terecht komt maar het probleem zit elders!
+
 ## v5.0.19 - 2025-10-27
 ### Fixed
 * Bij Microsoft Graph recurring gebeurtenissen ging er nog steeds iets niet goed. Een ontbrekende SeriesMaster werd niet correct bewaard doordat de oneindige recurrence als datum "0001-01-01" gebruikte als einddatum. Dat is geen geldige SqlDatetime waarde waardoor deze SeriesMaster niet kon worden bewaard. Nu wordt bij oneindige recurrences **voorlopig** een datum 40 jaar in de toekomst gekozen.
