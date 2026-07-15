@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor de Scriptmodule. Release Notes voor de overige on
 <br/>
 
 ***
+## v5.0.32 - 2026-07-15
+### Fixed
+- De belpoging begrenzing werkte niet betrouwbaar als een belopdracht meerdere actieve telefoonnummers heeft die verschillende belresultaten geven. Vaak is er 1 actief nummer dat gebeled wordt en worden extra telefoonnummers uitgesloten voor de dialer. Ze kunnen dan nog steeds in het script met een knop gebeld worden. Als meerdere telefoonnummers actief zijn voor de dialer probeert de dialer ze allemaal. Als dit dan tegenstrijdige resulaten gaf, zoals `Informatietoon` en `Geen gehoor` (belangrijk is dat een resultaat een verwerkt status is)  ging de Belpoging begrenzing hier niet goed mee om waardoor de ingestelde limiet overschreden kon worden. Dat is in deze update opgelost.
+
+***
 ## v5.0.31 - 2026-06-30
 ### Changed
 - In de agendamodule een extra optie toegevoegd om de Jaar/Weeknummer control boven de agenda weer zichtbaar te maken.
