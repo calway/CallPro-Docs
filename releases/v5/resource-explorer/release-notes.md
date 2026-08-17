@@ -3,6 +3,21 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+
+***
+## v5.1.0 - 2026-08-17
+### New
+- Een extra optie bij de `Wijzigen belopdrachten` wizard om bij het wijzigen van de status datum een random tijdstip op de dag te kiezen. Dit kon altijd al maar we hebben er nu een snel-keuze voor gemaakt. De expressie die gebruikt wordt stelt de `status datum` in op een willekeurig tijdstip op de dag. 
+> Dit kan worden gebruikt om een import die is gedaan waarbij de belopdrachten in een volgorde stonden die niet de bedoeling is, zoals wanneer de volgorde op bedrijfsnaam stond waardoor nu eerst alle *autobedrijf ...* worden aangeboden.
+- In de Maandoverzicht calendar kunnen nu ook weeknummers worden afgebeeld.
+![Weeknummers in het maandoverzicht](media/5.0.38-weeknummers-maandoverzicht.png)
+- **(vanaf database versie 5.2.0)** Bij de statuscategorie selectie in het Details tabblad van de bellijst kan vanaf `v5.2.0` een percentage worden gekozen van belopdrachten die ongeacht de status prioriteit worden aangeboden. Dit is vooral bedoeld om `Nieuwe belopdrachten` aan te bieden voor bellijsten die heel veel actieve terugbellers hebben. Normaal gesproken komt dan de status categorie van de `Nieuwe belopdrahct` niet aan bod totdat alle andere belopdrachten met een hogere status prioriteit (lagere waarde) op zijn, of een status datum hebben die in de toekomst ligt. 
+
+    Met deze optie kan worden geforceerd dat in `X %` van de gevallen een belopdracht uit de betreffende statuscategorie wordt aangeboden. Het blijft nodig dat de terugbeltijd in het verleden ligt.
+
+### Changed
+- Diverse kleine reistijdberekening verbeteringen voor de Agenda.
+
 ***
 ## v5.0.37 - 2026-07-10
 ### Changed
