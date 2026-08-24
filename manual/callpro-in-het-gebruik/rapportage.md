@@ -3,7 +3,7 @@
 Voor de dagelijkse aansturing is het van belang dat de supervisor een
 overzicht heeft van de resultaten per campagne. Voor de aansturing van
 de medewerkers heeft de supervisor ook inzicht in de performance van de
-agenten nodig. Binnen de Resource Explorer zijn hiervoor enkel
+agenten nodig. Binnen de Resource Explorer zijn hiervoor enkele
 overzichten beschikbaar.
 
 ## Belhistoriestatistieken
@@ -93,35 +93,6 @@ filter dat op de bellijst in de betreffende campagne is gezet.
 In de kolom “Aantal gedeactiveerd” worden belopdrachten getoond met de
 betreffende status, maar die inactief staan en dus ook niet door CallPro
 zullen worden aangeboden. \<REF:Verwijzing deactiveren belopdrachten\>
-
-## Reportserver rapporten
-
-Microsoft levert met SQL Server een rapportage tool “Reportserver” mee.
-Vanuit een web-interface kunnen rapporten worden benaderd en op het
-scherm, als pdf, of als Excel bestand worden weergegeven en opgehaald.
-
-Ook biedt deze tool de mogelijkheid om rapporten periodiek uit te voeren
-en het resultaat als email te versturen (niet bij de Express versie).
-Bij CallPro worden standaard rapporten geleverd die op Reportserver
-kunnen worden geïnstalleerd. Uitvoerige behandeling van deze rapporten
-valt buiten de scope van dit handboek.
-
-| Rapport                                      | Inhoud/gebruik                                                                                                                                                                                                                                                                                                                                               |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Standaard bellijst rapportage                | Dit rapport geeft een overzicht van een resultaten in de bellijst op basis van de huidige belopdrachtstatus. Statussen worden gegroepeerd onder “Te benaderen”, “Uitval”, “Geen interesse” en “Positief.. |
-| Standaard bellijst rapportage met beluren    | Hetzelfde rapport als de voorgaande, maar nu worden ook de beluren weergegeven. |
-| Standaard bellijst rapportage met scriptveld | Hetzelfde als de eerste, maar nu met de mogelijkheid om ook een uitsplitsing op een belscriptveld op te nemen. |
-| Standaard bellijst belvoorraad rapportage    | Dit rapport geeft een overzicht van de belbare adressen van alle campagne en per campagne de bellijsten uitgesplitst naar status. Hierbij wordt ook rekening gehouden met filters die op de bellijst in de campagnes zijn ingesteld. |
-| Standaard Campagne voortgangsrapportage      | Dit rapport geeft de voortgang van een campagne weer op basis van de van te voren ingestelde parameters op de campagne. Zo worden het gesprekstarief, maximaal aantal gesprekken, conversie per live gesprek en conversie op gesprekken ingesteld en wordt op basis van de werkelijke cijfers een prognose van de totale kosten en kosten per score bepaald. |
-| Standaard Agent conversie rapportage         | Dit rapport geeft per Agent inzicht in de beluren, en belpogingen gegroepeerd op belopdrachtstatus groepen. Tevens worden conversies per groep getoond in percentage en per uur. |
-| Agent sessietijden Rapportage                | Geeft inzage in het inlog- en pauze gedrag van agenten. |
-| Agent sessietijden Rapportage 2              | Een alternatieve versie met meer uitsplitsing |
-| Standaard Bellijst conversie rapportage      | Hetzelfde rapport als de voorgaande, maar nu per bellijst. |
-| Belvoorraad per scriptveld rapportage        | Dit rapport geeft een overzicht van de belbare adressen in een bellijst uitgesplitst naar de verdeling over een scriptveld (of een expressie) |
-
-| Wachtrij overzicht                           | Geeft per wachtrij statistieken van aantallen gesprekken en wachttijd weer |
-| Campagne Performance                         | Geeft voor 1 dag voor 1 of meer campagnes een performance overzicht van de dialer. |
-| Agendavulling                                | Een rapport dat voor een week de vulling van elke agenda per dag van de week weergeeft. Per dag is te zien hoeveel afspraken er staan, en hoeveel beschikbare blokken over zijn. Ook als een gebeurtenis op of over een afspraakblok staat telt deze niet meer als beschikbaar. |
 
 # Exporteren
 
