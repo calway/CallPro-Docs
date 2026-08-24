@@ -30,18 +30,19 @@
 Als bij het aanmelden vanuit pauze de volgende melding komt kan dit twee
 oorzaken hebben.
 
-![](./media/image188.png)
+![Extensie niet verbonden](media/extensie-niet-verbonden-login.png)
+1. De agent heeft de oproep van zijn toestel (softphone) niet tijdig beantwoord. CallPro laat het toestel ongeveer 20 seconden overgaan. Soms komt de popup van Microsip achter andere windows vensters. Controleer daarom eerst of Microsip actief is en verbonden is. 
 
-1.  De agent heeeft de oproep van zijn toestel (softphone) niet tijdig
-    beantwoord. CallPro laat het toestel ongeveer 20 seconden overgaan.
+    Controle Hiervan kan zijn om met microsip even je eigen mobiel te bellen om te zien over de telefonie wel verbonden is. Die actie kan ook de verbonding herstellen, wat anders tot enkele minute nkan duren voordat microsip dit automatisch hersteld.
+1. De softphone is niet (meer) verbonden met de telefonie. Voor thuisbellers kan het zijn dat de VPN verbinding tijdelijk is verbroken geweest, of nog is. Dan kan de telefonie het toestel tijdelijk niet bereiken. Ook hier is de snelste controle of je via microsip direct je eigen mobiel kunt bellen.
 
-2.  Het toestel bij de werkplek ging helemaal niet over. Ook dit kan
+2.  Het toestel bij de werkplek ging nog steeds niet over. Ook dit kan
     weer meerdere oorzaken hebben.
     
-    1.  Controleer eerst of het juiste toestelnummer is gebruikt
+    1.  Controleer eerst of het juiste toestelnummer is gebruikt. Dit is alleen een mogelijke oorzaak bij nieuw ingerichte werkplekken.
     
     2.  Controleer of het toestel kan bellen en gebeld worden op het
-        nummer.
+        (interne) nummer.
 
 Na het oplossen van de problemen kan het aanmelden opnieuw worden
 geprobeerd.
@@ -51,36 +52,16 @@ geprobeerd.
 Als bij het opstarten van de Scriptmodule de onderstaande melding volgt
 dan kan dit verschillende oorzaken hebben:
 
-![](./media/image189.png)
+![Applicatie Scripty is al opgertart](media/applicatie_script_is_al_opgestart.png)
 
 Voor Windows werkstations gelden de volgende stappen:
 
 1.  Kijk in de statusbalk in windows of er niet al een Scriptmodule is
-    gestart. ![](./media/image190.png)
+    gestart. ![Windows statusbalk](media/windows_statusbalk_controle_script_opstarten.png)
 
 2.  Open de Taskmanager en kijk of er nog een script.exe proces extra
-    is. ![](./media/image191.png)
+    is. ![alt text](media/windows_taskmanager_controle_script_opstarten.png)
 
-3.  Start de computer opnieuw en probeer de scriptmodule te starten. Als
-    zich het probleem blijft voordoen dan is op de server (SQL Server)
-    een proces voor dit werkstation blijven hangen). Start de Resource
-    Explorer, ga naar de Werkplek resource toe, open de eigenschappen en
-    ga naar het tabblad Inlogstatus. Gebruik nu de knop “Opruimen
-    processen” of “Markeer als crashed” om de server processen op te
-    ruimen.  
-    ![](./media/image192.png)![](./media/image193.png)
-
-Voor Terminalserver thin-clients gelden de volgende stappen:
-
-1.  Kijk op de terminal server of er een gedisconnecte sessie is voor de
-    betreffende thin-client waar deze melding optreedt. Log deze sessie
-    uit. Deze actie is meestal voorbehouden aan een windows gebruiker
-    met administrator rechten. Het inloggen zou daarna weer mogelijk
-    moeten zijn.
-
-2.  Eventueel kan het nog nodig zijn om in de Resource Explorer met de
-    optie “Processen opruimen” of “Markeer als crashed” de werkplek vrij
-    te geven voor opnieuw inloggen.
 
 ## Ik krijg de melding “Belopdracht is al in gebruik” hoe kan dat?
 
@@ -126,7 +107,7 @@ maakt een terugbelafspraak voor over een uur, dan zal CallPro deze
 belopdracht direct weer aanleveren omdat de terugbeltijd die de agent
 zal ingeven 1 uur achterloopt ten opzichte van de klok op de server.
 
-Het is verstandig om via netwerk policies en Active Directory de rechten
+Het is verstandig om via lokale netwerk policies of Active Directory de rechten
 van lokale gebruikers om de klok op het werkstation te wijzigen uit te
 schakelen. Ook dient de klok op de werkstations en server te worden
 gesynchroniseerd met 1 centrale klok in het netwerk (ntp).
@@ -168,10 +149,9 @@ de volgende voorwaarden:
     sessie niet wordt hergebruikt) kan CallPro niet opstarten omdat er
     al iemand op deze thin-client is ingelogd in CallPro.
 
-Callpro gebruikt op Terminalserver de environment variabele CLIENTNAME
-om te bepalen welke seat moet worden gebruikt. Windows zet deze
-standaard op de naam van de RDP client die verbindt met de server, maar
-dit kan ook voor het starten van de scriptmodule worden gewijzigd.
+Callpro gebruikt op Terminalserver de environment variabele `CALLPROSEAT`
+om te bepalen welke seat moet worden gebruikt. Als deze variabele niet aanwezig is dan wordt als fallback gekeken naar de Windows environment variabele `CLIENTNAME`, Windows zet deze
+standaard op de naam van de RDP client die verbindt met de server.
 
 ## Kan de agent zien in welke fase hij/zij zit?
 
