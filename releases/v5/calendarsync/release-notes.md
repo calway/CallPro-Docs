@@ -3,6 +3,10 @@ Dit zijn de Release Notes voor het CalendarSync Service. Release Notes voor de o
 
 <br/>
 
+## v5.0.22 - 2026-09-04
+### Fixed
+- Door een validatie fout werden agenda's die al 60 dagen een synchronisatie error geven niet uitgezet. Dit is nu opgelost. Agenda's die meer dan 60 dagen geen correcte synchronisatie uitvoeren, meestal door login problemen, worden op inactief gezet. In de praktijk blijkt dat veel agenda's als projecten stoppen niet op inactief worden gezet en ook niet de synchronisatie wordt verwijderd waardoor de sync blijft doorlopen en veelal met login errors omdat de opdrachtgever de toegang heeft teruggetrokken. In sommige gevallen, met name bij Google caldendar zien we ook dat gebruikers helemaal geen toestemming geven.
+
 ## v5.0.21 - 2026-07-10
 ### Changed
 * Bij afspraken uit een externe agenda die naar CallPro worden gehaald als *Gebeurtenis* wordt nu niet meer de tekst `(afspraak uit externe agenda)` gebruikt als prefix voor de afspraak body. Dat scheelt weer wat tekens. Tevens is de maximale lenbte gecorrigeerd. Het veld werd afgeknipt op 250 tekens terwijl het in de database 1024 tekens lang mag zijn.
