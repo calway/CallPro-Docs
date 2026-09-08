@@ -10,9 +10,6 @@ Als de SMTP server van de klant/opdrachtgever basic authentication ondersteunt k
 
  Deze gegevens worden in CallPro gebruikt om voor de fulfilment de juiste smtp server te selecteren.
 
-#### Sendgrid
-Ook Sendgrid biedt de mogelijkheid om smtp servers te gebruiken, dus als een klant/opdrachtgever Sendgrid gebruikt kan dit ook worden ingezet. Sendgrid biedt bovendien aardige statistieken en metrics.
-
 ## Gebruik mailserver van callcenter
 Om mail namens het domein van de klant/opdrachtgever te kunnen versturen moeten SPF records op het externe domein worden ingesteld.
 Op het externe domein wordt in de SPF record een extra include opgenomen van het call center door een `include:spf.callcenter.nl` op te nemen.
@@ -42,7 +39,7 @@ Ook kan worden gekozen om als call center enkele **fun** domeinen te registreren
 Het is nog steeds nodig om deze domeinen te koppelen aan een mailserver/dienst die spf en DKIM DMARC ondersteunt. Vanwege de mail volumes die een call center genereert wordt afgeraden om dit te doen met een Microsoft 365 tenant.
 
 ## Gebruik een externe dienst zoals SendGrid
-Neem als callcenter , of vraag de klant om een sendgrid account te nemen. Gebruik de SMTP instellingen van deze account om mail te versturen. Diensten als SendGrid hebben voorzieningen voor spf, DKIM en DMARC wat de ontvangts tegoed komt. Bovendien hebben deze diensten ook aardige telemetry om de email volumes te monitoren.
+Neem als callcenter, of vraag de klant om een sendgrid account te nemen. Gebruik de SMTP instellingen van deze account om mail te versturen. Diensten als SendGrid hebben voorzieningen voor spf, DKIM en DMARC wat de ontvangst tegoed komt. Bovendien hebben deze diensten ook aardige telemetry om de email volumes te monitoren.
 
 * [SendGrid](https://sendgrid.com/)
 * [Mailgun](https://www.mailgun.com/)
