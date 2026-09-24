@@ -3,6 +3,12 @@ Dit zijn de Release Notes voor de Resource Explorer. Release Notes voor de overi
 
 <br/>
 
+***
+## v5.1.1 - 2026-09-24
+### Fixed
+- Het automatisch verversen van de Rapportages werkte niet. De weergave werd wel vernieuwd, maar geen nieuwe data werd opgehaald. Dat is in deze release opgelost.
+### Changed
+- Als de Resource Explorer wordt gestart en er zijn actieve logmeldingen dan krijgt die folder de focus.
 
 ***
 ## v5.1.0 - 2026-08-17
