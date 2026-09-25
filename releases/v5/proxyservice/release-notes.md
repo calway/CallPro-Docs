@@ -4,6 +4,11 @@ Dit zijn de Release Notes voor het ProxyService. Release Notes voor de overige o
 <br/>
 
 ***
+## v5.0.25 - 2026-09-25
+### Changed
+- Verbetering van de performance van het v2 entries endpoint `by-status-and-daterange` bij het ophalen van meerdere pagina's.
+
+***
 ## v5.0.24 - 2026-06-30
 ### Added
 - In deze release wordt een nieuw endpoint `Info` toegevoegd met voorlopig 1 method `Address` om een Nederlands adres aan te vullen. Als parameter moet een `postcode` en een `huisnummer` worden meegegeven. Voor dit endpoint is een transactie abonnement nodig.

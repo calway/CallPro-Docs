@@ -10,7 +10,7 @@ De transcriptie kan worden ingesteld op verschillende niveaus. Deze variabele ka
 
 * Door bij de scriptdefinitie de variabele vast te leggen worden alle gesprekken van belopdrachten uit een bellijst die is gebaseerd op deze definitie voorzien van een transcriptie en samenvatting.
 
-* Door op een campagne de variabele vast te leggen worden alle gesprekken die binnen deze camagagne ontstaan voorzien van een transcriptie en samenvatting.
+* Door op een campagne de variabele vast te leggen worden alle gesprekken die binnen deze campagne ontstaan voorzien van een transcriptie en samenvatting.
 
 ### AI.AUDIO.LANGUAGE
 Standaard wordt verondersteld dat de gesprekken in het Nederlands zijn en wordt als culture `nl-NL` gebruikt. Indien een afwijkende, maar door Azure Speech ondersteunde taal wordt gesproken kan dit worden aangepast met deze variabele.
