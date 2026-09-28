@@ -3,6 +3,16 @@ Dit zijn de Release Notes voor het AsteriskService (dialer support service). Rel
 
 <br/>
 
+***
+## v5.1.0 - 2026-09-28
+### Changed
+- Algemene updates en code refactoring. Tevens package updates en verbetering van logging
+
+***
+## v5.0.7 - 2026-05-18
+### Changed
+- Algemene updates en code refactoring
+
 *** 
 ## v5.0.6 - 2025-12-09
 ### Changed
