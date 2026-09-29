@@ -22,7 +22,7 @@ De klant moet in zijn/haar Microsoft 365 omgeving in Azure Active Directory een 
     * Druk hier op **Nieuw clientgeheim**
     * Geef als beschrijving iets herkenbaars, zoals de naam van het call center, en de huidige datum, ie. `callpro-2025-02-10`
     * Kies bij **Verloop op** de langst mogelijke periode, op dit moment is dat 24 maanden.
-    * Vergeet geen herinnering in je agenda te zetten om na 23 maanden een nieuwe secret te maken en die aan het call center door te geven anders stop de synchronisatie na 24 maanden!
+    * Vergeet niet een herinnering in je agenda te zetten om na 23 maanden een nieuwe secret te maken en die aan het call center door te geven anders stop de synchronisatie na 24 maanden!
     * Vergeet niet om de client secret (de code zichtbaar in de **Waarde** kolom) te kopieren en vast te leggen, dit wordt eenmalig afgebeeld!
 
 ## Configureer API-machtigingen

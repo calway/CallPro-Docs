@@ -1,4 +1,5 @@
 # Calendarsync instellingen Office 365
+## DEPRECATED, niet meer gebruiken!
 
 > Microsoft heeft aangekondigd dat per 1-10-2022 Basic Authentication deprecated wordt verklaard en zal worden verwijderd uit Exchange ActiveSync (EAS), POP, IMAP, Remote Powershell, Exchange Web Services (EWS), Offline Address Book (OAB) en Outlook for Windows. **Wij adviseren klanten om over te gaan op de [Microsoft Graph API](../calendarsync-instellingen-microsoft-365-graph-api/README.md)**
 

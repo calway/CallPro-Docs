@@ -1,5 +1,8 @@
 # Calendarsync instellingen Microsoft 365 OAuth Flow
+## DEPRECATED, niet meer gebruiken!
 > Sinds 1-10-2022 is dit het alternatief op de Basic authentication die is uitgeschakeld. **Wij adviseren klanten om over te gaan op de [Microsoft Graph API](../calendarsync-instellingen-microsoft-365-graph-api/README.md)**
+
+> Per 1-10-2026 zal de oAuth Flow (of eigenlijk alle oude EWS services) langzaamaan worden verwijderd van tennants. Het is tot 01-04-2027 mogelijk om met kunstgrepen deze koppeling nog te gebruiken, maar wij raden aan zo snel mogelijkk over te gaan op de Microsoft Graph API.
 
 Om gebruik te kunnen blijven van de CallPro CalendarSync module adviseren wij klanten uiterlijk na de migratie naar CallPro 5.0 met klanten af te stemmen over de nieuwe instellingen die nodig zijn.
 
