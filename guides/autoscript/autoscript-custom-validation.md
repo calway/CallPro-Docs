@@ -10,7 +10,7 @@ Deze functie oproep wordt vooral gebruikt om extra veld controles te
 laten uitvoeren op basis van de afcodering die is gekozen. Bijvoorbeeld
 om bij een nieuwe afspraak te controleren dat de NAW gegevens wel
 compleet zijn ingevuld, of dat er een email adres voor de lead is
-ingevuld. Doorgaans wordt deze functie in de variabele SCRIPT.HEADER
+ingevuld. Doorgaans wordt deze functie in de variabele `SCRIPT.HEADER`
 geplaatst.
 
 ```javascript
@@ -65,18 +65,22 @@ uitgelezen en gebruikt.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>code</td>
-<td>Dit is de code van de belopdrachtstatus die de agent heeft geklikt om af te coderen. Wij hanteren een 3-cijferige code</td>
+<tr>
+<td>id</td>
+<td>Dit is de (interne) unieke code van de belopdrachtstatus</td>
 </tr>
-<tr class="even">
+<tr>
+<td>code</td>
+<td>Dit is de code van de belopdrachtstatus die de agent heeft geklikt om af te coderen. Wij hanteren standaard een 3-cijferige code bij de belopdrachtstatussen maar de waard edie je hier gebruikt is de waarde die bij de belopdrachtstatus is vastgelegd.</td>
+</tr>
+<tr>
 <td>logicalcategory</td>
 <td><p>Dit is het type veld van de belopdrachtstatus zoals ingesteld op het tabblad “Type en Tijd”. Mogelijk waarden zijn:</p>
 <p>1 – Niet bereikt</p>
 <p>2 – Terugbellen</p>
 <p>3 – Verwerkt</p></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>prioritycategory</td>
 <td><p>Dit is de prioriteitscategory van de belopdrachtstatus. Mogelijke waarden:<br />
 1 – Niet bereikt hoog</p>
@@ -86,31 +90,31 @@ uitgelezen en gebruikt.
 <p>5 – Niet bereikt laag</p>
 <p>6 – Terugbellen hoog</p></td>
 </tr>
-<tr class="even">
+<tr>
 <td>errors</td>
 <td>Een collectie met fouten. Via de Add functie kunnen aan de errors collectie extra meldingen worden toegevoegd (zie ook het voorbeeld)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>callbackexpr</td>
 <td>Hiermee kan tijdens het afcoderen het standaard gedrag van de belopdrachtstatus worden overschreven voor wat betreft de terugbeltijd expressie.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>callbackagent</td>
 <td>Volledige pad+naam van de agent die als terugbelagent moet worden ingesteld.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>mincallbackexpr</td>
 <td>Als callbackexpr maar nu voor de betrefende parameter</td>
 </tr>
-<tr class="even">
+<tr>
 <td>maxcallbackexpr</td>
 <td>Als callbackexpr maar nu voor de betrefende parameter</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>autoselect</td>
 <td>Een boolean veld dat aangeeft dat CallPro direct moet afcoderen en <strong>niet</strong> eerst het popupvenster van CallPro moet afbeelden.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>entrynote</td>
 <td>Door dit veld te vullen kan het notitieveld worden gezet met de betreffende waarde. Deze waarde heeft voorrang boven een waarde die de agent in een veld in het belscript heeft ingevuld.</td>
 </tr>
