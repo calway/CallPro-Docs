@@ -48,6 +48,8 @@ return (status.errors.length() == 0);
 }
 ```
 
+> In bovenstaande voorbeeld kan ook gebruik worden gemaakt van de `id` property in plaats van `code`.
+
 In deze voorbeeld functie wordt bijvoorbeeld voor het versturen van
 informatie (code 710) gecontroleerd of de diverse verplichte velden wel
 zijn gevuld. Zo niet dan wordt de errors collectie van het status object

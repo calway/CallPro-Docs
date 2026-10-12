@@ -434,6 +434,7 @@ aanvullende objecten en properties die kunnen worden uitgelezen.
 | SelectedTelNr             | Het telefoonnummer dat CallPro op dit moment actief benaderd                                                                                                                                   |
 | SelectedRAWTelNr          | De RAW versie van het actieve telefoonnummer                                                                                                                                                   |
 | RAWTelNr                  | Het telefoonnummer zoals het in de database is opgeslagen                                                                                                                                      |
+| CallbackScheduleDescr | Het op deze belopdracht ingestelde callback rooster. Afhankelijk van het rooster kan dit een korte tekst zijn, of een langre comma gescheiden lijst met het complete (week) rooster |
 
 ## oAttempt
 
