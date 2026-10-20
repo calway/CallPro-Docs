@@ -1,6 +1,14 @@
 # CallProPortal Release Notes
 Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
+
+***
+## v5.0.59 - 2026-10-20
+### Fixed
+- Hidden velden die wel voor fulfilmentvalidatie zijn gemarkeerd worden nu ook weergegeven als textveld.
+- Verbeteren QueueMonitor Abandoned en Servicelevel kleur. De Abandoned kolom kreeg de kleur die bij de ServiceLevel kolom hoorde. Abandoned kleur toegevoegd en tevens betere detectie dat iets groen moet zijn, met name bij 0 waarden.
+- Onderhoud gemak. AzuremapsApiKey komt nu niet meer uit de General secie maar uit de Calendar sectie die in de Resource Explorer is in te stellen.
+
 ***
 ## v5.0.58 - 2026-03-18
 ### New
@@ -23,7 +31,7 @@ Dit zijn de Release Notes voor CallProPortal. Release Notes voor de overige onde
 ***
 ## v5.0.56 - 2025-11-04
 ### New
-- Bij de gespreksopnames kan nu in bulk (maximaal 200) gespreksopnames worden geactiveerd voor het maken van een gesprekstranscriptie. Voorheen moest van te voren bij de status worden vastgelegd dat er een transcriptie gemaakt moet worden. Per opname kan in de audioplayer alsnog een transcriptie worden gemaakt. Maar, als achteraf toch van een bepaalde agent,. bellijst, status, of periode toch transcripties gewenst zijn was dit heel tijdrovend. Nu kunnen per 200  Transcripties worden geactiveerd. Hou er rekening mee dat het verwerken enige tijd duurt.
+- Bij de gespreksopnames kan nu in bulk (maximaal 200) gespreksopnames worden geactiveerd voor het maken van een gesprekstranscriptie. Voorheen moest van te voren bij de status worden vastgelegd dat er een transcriptie gemaakt moet worden. Per opname kan in de audioplayer alsnog een transcriptie worden gemaakt. Maar, als achteraf toch van een bepaalde agent, bellijst, status, of periode toch transcripties gewenst zijn was dit heel tijdrovend. Nu kunnen per 200  Transcripties worden geactiveerd. Hou er rekening mee dat het verwerken enige tijd duurt.
 
 ### Removed
 - Verwijderen oude analyse pagina's die niet of nauwelijks worden gebruikt maar qua functionaliteit niet meer actueel zijn. **Analyses\Klantkaart**, **Analyses\Bellijst statussen** en **Analyses\Agent Statistieken**. Tevens Thema en Agenda instellingen verwijderd.
