@@ -3,7 +3,45 @@ Dit zijn de Release Notes voor het Autoscript. Release Notes voor de overige ond
 
 <br/>
 
+***
+## v5.0.28 - 2026-10-21
+### Changed
+- het status object dat in de `Custom_validationCheck(status)` functie wordt meegegeven bevat vanaf deze versie ook de `id` waarde van de gekozen status. 
 
+```javascript
+var status = {
+    id: id,
+    code: code,
+    logicalcategory: logicalcategory,
+    category: logicalcategory,
+    prioritycategory: prioritycategory,
+    //
+    // client-side error handling
+    //
+    errors: {
+        items: new Array(),
+        add: function (msg) {
+            this.items[this.length()] = msg;
+        },
+        length: function () {
+            return this.items.length;
+        }
+    },
+
+    // overrides
+    callbackexpr: "",
+    callbackagent: "",
+    mincallbackexpr: "",
+    maxcallbackexpr: "",
+    moveentry: "",
+    autoselect: "",
+    entrynote: ""
+};
+```
+
+ Voorheen gebruikten we vooral het code veld om onderscheid te maken, maar we zien dat ook steeds meer gebruikers tekst gebruiken in de code en deze soms ook aanpassen. Het is dan bewerkelijk om dit overal aan te moeten passen terwijl de `id` een constante unieke waarde is.
+
+Als we kijken naar het voorbeeld van [custom validation](../../../guides/autoscript/autoscript-custom-validation.md) kunnen we in plaats van de `switch(status.code)` gebruik maken van `switch(status.id)` en in de case statements dan bijvoorbeeld niet `"780"` maar `8` de interne unieke code van deze systeem belopdracht status.
 
 ***
 ## v5.0.27 - 2026-05-21
