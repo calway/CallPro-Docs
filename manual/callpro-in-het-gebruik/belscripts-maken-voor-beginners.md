@@ -63,20 +63,15 @@ Voor de groepering wordt gebruik gemaakt van de status groep waar de betreffende
 ## Scriptvelden
 
 Alle velden uit de scriptdefinitie worden in een standaard opmaak
-afgebeeld. Vanaf V4.30 wordt het onderscheid tussen een blok met NAW en
-BODY afgeschaft. Alle velden komen in 1 blok te staan in de volgorde
-zoals ze in de scriptdefinitie staan. Hoewel de SCRIPT.NAW en
-SCRIPT.BODY variabelen in de huidige versie nodig wel werken worden die
-in de toekomst verwijderd en adviseren wij om nu al het gebruik af te
-bouwen.
+afgebeeld. Alle velden komen in 1 blok te staan in de volgorde
+zoals ze in de scriptdefinitie staan. 
 
 ![](./media/image120.png)
 
 De scriptvelden worden standaard in de volgorde
 uit de scriptdefinitie met 1 veld per regel weergegeven. Met de optie
 “Laatste veld op de regel” wordt bepaald op het volgende veld op een
-nieuwe regel komt, door dit bij een veld uit te zetten komt het volgende
-veld ook op dezelfde horizontale regel.
+nieuwe regel komt, door dit bij een veld uit te zetten komt het volgende veld ook op dezelfde horizontale regel.
 
 ![](./media/image121.png)
 
@@ -106,7 +101,7 @@ Helemaal rechts is een knop om snel naar boven te springen.
 ![](./media/image125.png)
 
 Met het hyperlink symbool gevolgd door een cijfer wordt aangegeven of
-deprecated opties of ander problemen zijn herkend met de gebruikte
+deprecated opties of andere problemen zijn herkend met de gebruikte
 autoscript opties. Klik op dit item om een venster te openen met de
 details.
 
@@ -139,20 +134,24 @@ waarbij altijd 1 antwoord/keuze de juiste is.
 
 ### Checkbox
 
-![](./media/image126.png)De checkbox geeft de mogelijkheid om 1 of meer
+![](./media/image126.png)
+
+De checkbox geeft de mogelijkheid om 1 of meer
 keuzes waarbij het mogelijk is om, anders dan bij de radiobutton, ook
 meerdere keuze te selecteren. Meestal gaat het om vragen over
 kennisgebieden zoals “welke merken kent u”.
 
 ### Combobox
 
-![](./media/image127.png)Een combobox werkt op dezelfde manier als een
+![](./media/image127.png)
+
+Een combobox werkt op dezelfde manier als een
 radiobutton, er is slechts 1 keuze mogelijk. Qua weergave biedt de
 combobox een compacte weergave indien de lijst met opties erg lang is.
 
 ### Label
 
-Inde de inhoud van het scriptveld alleen hoeft te worden afgebeeld, maar
+In de de inhoud van het scriptveld alleen hoeft te worden afgebeeld, maar
 het niet nodig is om de waarde te wijzigen kan gebruik worden gemaakt
 van een label. Het autoscript gebruikt in de Pagina header bijvoorbeeld
 labels voor het weergaven van de waarden.
@@ -174,7 +173,7 @@ worden gebruikt. Hiermee wordt het veld onzichtbaar op de pagina gezet.
 ![](./media/image128.png)
 
 Het autoscript ondersteund speciale opties die de weergave beïnvloeden.
-Deze worden opgegeven in het Opties veld. In dit veld kan een json object worden geplaatst met custom instellingen. Voor backward compatibility wordt tot 4.3.3 het noemen van de @functies driect in het veld ondersteund.
+Deze worden opgegeven in het Opties veld. In dit veld kan een json object worden geplaatst met custom instellingen. Voor backward compatibility wordt het noemen van de @functies direct in het veld ondersteund.
 
 De opmaak is als volgt:
 ```
@@ -315,16 +314,15 @@ worden gebruikt.
 
 | Veld                | Waarde                                                   |
 | ------------------- | -------------------------------------------------------- |
-| %VARIABLE._____% | Voor elke variabele dis is gedefinieerd op de scriptdefinitie is er een waarde. Daarna worden de variabelen op de campagne opgenomen. ** LET OP! Als op de campagne variabelen met dezelfde naam als op de scriptdefinitie zijn gedefinieerd dan worden deze waarden overschreven en blijft de waarde die is gedefinieerd bij de campagne over. ** |
+| %VARIABLE._____% | Voor elke variabele die is gedefinieerd op de scriptdefinitie is er een waarde. Daarna worden de variabelen op de campagne opgenomen. ** LET OP! Als op de campagne variabelen met dezelfde naam als op de scriptdefinitie zijn gedefinieerd dan worden deze waarden overschreven en blijft de waarde die is gedefinieerd bij de campagne over. ** |
 
 
 # [Antwoordservice pagina](antwoordservice-autoscript.md)
 
 # [Pauze pagina](pauze-autoscript.md)
 
-# [Belscripts voor gevorderen](belscripts-maken-voor-gevorderden.md)
 
-# Belscript systeemvelden (deprecated)
+# Belscript systeemvelden
 
 In het belscript worden de velden voorafgegaan door een speciale prefix
 **script_**. De waarden van deze velden worden in de CallPro-database

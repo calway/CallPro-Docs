@@ -21,7 +21,6 @@ CallPro in de context van een supervisor.
 
 [Belscripts maken voor gevorderden](belscripts-maken-voor-gevorderden.md)
 
-[Wallboard](wallboard.md#wallboard)
 
 [Rapportage](rapportage.md#Rapportage)
 
