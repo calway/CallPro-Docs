@@ -19,6 +19,9 @@ Dit zijn de Docs pages voor CallPro.
 * [Hoe verwijder je de Scriptmodule](./install/scriptmodule/uninstall-script-module.md)
 * [Hoe installeer je de Scriptmodule](./install/scriptmodule/install-script-module.md)
 
+### Fulfilment
+* [Mail sturen vanuit een extern domein van de opdrachtgever](./manual/fulfilment/mailserver-external-domain-settings.md)
+
 ### Integraties
 
 * [Facebook Lead naar CallPro via Zapier](./guides/Facebook-Lead-to-CallPro-using-Zapier-Webhook.md)
