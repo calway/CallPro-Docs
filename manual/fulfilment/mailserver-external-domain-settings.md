@@ -23,13 +23,13 @@ v=spf1 a:x.x.x.x -all
 > **Let op!** Vanaf April 2024 hebben Google en Yahoo aangegeven dat ze alleen nog mail accepteren voor hun klanten als zowel SPF als DKIM correct zijn geconfigureerd. Effectief moet de mail DMARC ondersteunen. Dit betekent dat bovenstaande niet voldoende is om email te bezorgen bij deze providers.
 
 ### Configuratie DKIM
-Om ervoor te zorgen dat email ook bij gmail.com ontvangers niet in de spam terecht komt dient ook DKIM ingesteld te worden. Hiervoor wordt ene public private keypair gemaakt op de mailserver. Vervolgens moet deze als `callpro._domainkey` TXT record aan de DNS van het callcenter worden toegevoegd.
+Om ervoor te zorgen dat email ook bij gmail.com ontvangers niet in de spam terecht komt dient ook DKIM ingesteld te worden. Hiervoor wordt een public private keypair gemaakt op de mailserver. Vervolgens moet deze als `callpro._domainkey` TXT record aan de DNS van het callcenter worden toegevoegd.
 
 ```
 k=rsa; p=PUBLIC-KEY
 ```
 
-Hier dient **PUBLIC-KEY** te worden vervange ndoor de vanuit Calway aangeleverde public key. Voor klanten/opdrahctgever moet ook een DKIM regel worden toegevoegd aan he tdomein waarvanuit het callcenter email kan versturen. Dit kan een CNAM record zijn voor `callpro._domainkey` met als waarde `callpro._domainkey.callcenter.nl`
+Hier dient **PUBLIC-KEY** te worden vervangen door de vanuit Calway aangeleverde public key. Voor klanten/opdrachtgever moet ook een DKIM regel worden toegevoegd aan het domein vanwaaruit het callcenter email kan versturen. Dit kan een CNAME record zijn voor `callpro._domainkey` met als waarde `callpro._domainkey.callcenter.nl`
 
 Wij raden ook aan om altijd een `_dmarc` TXT record op hte domein te zetten met bijvoorbeeld `v=DMARC1; p=reject; sp=reject; pct=100`. 
 
