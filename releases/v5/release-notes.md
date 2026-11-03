@@ -9,7 +9,7 @@ Dit zijn de Release Notes van CallPro. Omdat verschillende onderdelen hun eigen 
 * [Dialer Service](dialerservice/release-notes.md)
 * [Fulfilment Service](fulfilmentservice/release-notes.md)
 * [Proxy Service](proxyservice/release-notes.md)
-* TranscribeCallrecordingsService
+* [TranscribeCallrecordingsService](transcribecallrecordingsservice/release-notes.md)
 
 ### Clients
 * [Resource Explorer](resource-explorer/release-notes.md)
