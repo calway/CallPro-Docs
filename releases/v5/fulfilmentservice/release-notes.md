@@ -1,6 +1,23 @@
 # FulfilmentService Release Notes
 Dit zijn de Release Notes voor het Fulfilment service.  Release Notes voor de overige onderdelen van CallPro zijn [hier](/releases/v5/release-notes) te vinden.
 
+*** 
+## v5.1.0 - 2025-11-05
+- Aanpassing in merge syntax. `source="file"` is nu als enige nodig en `innersource="file"` is verwijderd.
+- Aanpassing in hoe de EmailAction attachments bijvoegd. Met `source="file"` wordt aangegeven dat de attribuut parameter verwijst naar een file-on-disk, en niet naar de inhoud. Onderstaande zijn geldige manieren om een bestand bij te voegen. Dit bestand wordt niet verwerkt met fulfilment velden.
+
+    ```xml
+    <Attachment>%ENVIRONMENT.CURRENTDIRECTORY%/flag-nl.png</Attachment>
+    <Attachment seperator="+">%ENVIRONMENT.CURRENTDIRECTORY%/flag-nl.png+%ENVIRONMENT.CURRENTDIRECTORY%/flag-be.png</Attachment>
+    <Attachment seperator="+" pathprefix="%ENVIRONMENT.CURRENTDIRECTORY%">flag-nl.png+flag-be.png</Attachment>
+    ```
+
+    Onderstaande voorbeeld voegt de inhoud van het bestand `info-template.txt` bij.  Eventuele fulfilment velden in dit template bestand worden ook verwerkt.
+
+    ```xml
+    <Attachment source="file" type="text" outputfile="informatie.txt">%ENVIRONMENT.CURRENTDIRECTORY%/info-template.txt</Attachment>
+    ```
+
 ***
 ## v5.0.18 - 2026-09-15
 ### Changed
